@@ -13,7 +13,7 @@ body {
 	color: @text;
 	// Footer colour; results in a weird distracting dark scrollbar in firefox, but fuck firefox
 	// Setting it here avoids a jump to white after the footer, which is even more distracting
-	background: @base30;
+	background: @base80;
 	font-size: @font-size;
 	line-height: 1.5;
 }
@@ -35,26 +35,8 @@ body {
 }
 
 .mw-footer-container {
-	border-top: solid 1px @base20;
-	box-shadow: inset 0 7px 2px -4px rgba( 0, 0, 0, 0.1 );
-	color: @base100;
-
-	a {
-		color: darken( @blue-bright, 3% );
-
-		&:hover {
-			color: darken( @blue-bright, 6% );
-		}
-
-		&:visited {
-			color: darken( @blue-bright, 8% );
-
-			&:hover {
-				color: darken( @blue-bright, 12% );
-			}
-		}
-	}
-
+	color: @base80;
+	font-size: 0.925em;
 	ul {
 		margin: 0;
 	}
@@ -164,8 +146,8 @@ body {
 /* Footer */
 
 .mw-footer {
-	padding-top: 0.5em;
-	padding-bottom: 1em;
+	margin: auto;
+	padding: 1.25em 1.75em;
 
 	ul,
 	li {
@@ -195,7 +177,6 @@ body {
 
 #mw-content-container {
 	background: @base80;
-	border-bottom: solid 4px @green;
 
 	/* Background image (default cat) */
 	background-image: @backdrop-image;
@@ -819,32 +800,10 @@ body :not( :checked ) > .toctogglespan:after {
 	width: 100%;
 }
 
-.color-left {
-	height: @color-height;
-	background: @red-dark;
-	width: 50%;
-	float: left;
-}
-
-.color-right {
-	display: inline-block;
-	height: @color-height;
-	background: @green-dark;
-	width: 50%;
-	float: right;
-}
-
 .color-middle-container {
 	max-width: @content-width;
 	margin: 0 auto -@color-height;
 	position: relative;
-}
-
-.color-middle {
-	height: @color-height;
-	background: @blue-dark;
-	margin-left: @column-left-size + 1em;
-	margin-right: @column-right-size + 1em;
 }
 
 /* Portlets */

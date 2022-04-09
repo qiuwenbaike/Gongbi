@@ -629,20 +629,9 @@ class TimelessTemplate extends BaseTemplate {
 		$html = '';
 
 		// These are almost exactly the same and this is stupid.
-		$html .= Html::rawElement( 'div', [ 'id' => 'mw-header-hack', 'class' => 'color-bar' ],
-			Html::rawElement( 'div', [ 'class' => 'color-middle-container' ],
-				Html::element( 'div', [ 'class' => 'color-middle' ] )
-			) .
-			Html::element( 'div', [ 'class' => 'color-left' ] ) .
-			Html::element( 'div', [ 'class' => 'color-right' ] )
-		);
 		$html .= Html::rawElement( 'div', [ 'id' => 'mw-header-nav-hack' ],
 			Html::rawElement( 'div', [ 'class' => 'color-bar' ],
-				Html::rawElement( 'div', [ 'class' => 'color-middle-container' ],
-					Html::element( 'div', [ 'class' => 'color-middle' ] )
-				) .
-				Html::element( 'div', [ 'class' => 'color-left' ] ) .
-				Html::element( 'div', [ 'class' => 'color-right' ] )
+				Html::Element( 'div', [ 'class' => 'color-middle-container' ])
 			)
 		);
 

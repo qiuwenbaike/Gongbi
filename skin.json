@@ -1,8 +1,11 @@
 {
 	"name": "Timeless",
 	"version": "0.9.1",
-	"author": "Isarra Yos",
-	"url": "https://www.mediawiki.org/wiki/Skin:Timeless",
+	"author": [
+		"Isarra Yos",
+		"Qiuwen Baike Contributors"
+	],
+	"url": "https://git.qiuwen.wiki/qiuwen/Timeless",
 	"descriptionmsg": "timeless-desc",
 	"namemsg": "skinname-timeless",
 	"license-name": "GPL-2.0-or-later",
