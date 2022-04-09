@@ -138,7 +138,16 @@ class TimelessTemplate extends BaseTemplate {
 			[ 'id' => 'content', 'class' => 'mw-body',  'role' => 'main' ],
 			$this->getSiteNotices() .
 			$this->getIndicators() .
-			$templateData[ 'html-title-heading' ] .
+			// $templateData[ 'html-title-heading' ] .
+			Html::rawElement(
+				'h1',
+				[
+					'id' => 'firstHeading',
+					'class' => 'firstHeading',
+					'lang' => $this->get( 'pageLanguage' )
+				],
+				$this->get( 'title' )
+			) .
 			Html::rawElement( 'div', [ 'id' => 'bodyContentOuter' ],
 				Html::rawElement( 'div', [ 'id' => 'siteSub' ], $this->getMsg( 'tagline' )->parse() ) .
 				Html::rawElement( 'div', [ 'id' => 'mw-page-header-links' ],
@@ -166,7 +175,7 @@ class TimelessTemplate extends BaseTemplate {
 					)
 				) .
 				$this->getClear() .
-				Html::rawElement( 'div', [ 'id' => 'bodyContent' ],
+				Html::rawElement( 'div', [ 'class' => 'mw-body-content', 'id' => 'bodyContent' ],
 					$this->getContentSub() .
 					$this->get( 'bodytext' ) .
 					$this->getClear()
