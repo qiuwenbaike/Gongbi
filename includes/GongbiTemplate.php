@@ -1,11 +1,11 @@
 <?php
 /**
- * BaseTemplate class for the Timeless skin
+ * BaseTemplate class for the Gongbi skin
  *
  * @ingroup Skins
  */
 
-namespace MediaWiki\Skin\Timeless;
+namespace MediaWiki\Skin\Gongbi;
 
 use BaseTemplate;
 use File;
@@ -17,7 +17,7 @@ use ResourceLoaderSkinModule;
 use Sanitizer;
 use SpecialPage;
 
-class TimelessTemplate extends BaseTemplate {
+class GongbiTemplate extends BaseTemplate {
 
 	/** @var array */
 	protected $pileOfTools;
@@ -87,12 +87,12 @@ class TimelessTemplate extends BaseTemplate {
 					$this->getMainNavigation() .
 					$this->getSidebarChunk(
 						'site-tools',
-						'timeless-sitetools',
+						'gongbi-sitetools',
 						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 						$this->getPortlet(
 							'tb',
 							$this->pileOfTools['general'],
-							'timeless-sitetools'
+							'gongbi-sitetools'
 						)
 					)
 				) .
@@ -155,14 +155,14 @@ class TimelessTemplate extends BaseTemplate {
 					$this->getPortlet(
 						'namespaces',
 						$this->pileOfTools['namespaces'],
-						'timeless-namespaces',
+						'gongbi-namespaces',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
 					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'more',
 						$this->pileOfTools['more'],
-						'timeless-more',
+						'gongbi-more',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
 					$this->getVariants() .
@@ -170,7 +170,7 @@ class TimelessTemplate extends BaseTemplate {
 					$this->getPortlet(
 						'views',
 						$this->pileOfTools['page-primary'],
-						'timeless-pagetools',
+						'gongbi-pagetools',
 						[ 'extra-classes' => 'tools-inline' ]
 					)
 				) .
@@ -502,7 +502,7 @@ class TimelessTemplate extends BaseTemplate {
 		);
 		$logos = ResourceLoaderSkinModule::getAvailableLogos( $config );
 		if ( $part !== 'image' ) {
-			$wordmarkImage = $this->getLogoImage( $config->get( 'TimelessWordmark' ), true );
+			$wordmarkImage = $this->getLogoImage( $config->get( 'GongbiWordmark' ), true );
 			if ( !$wordmarkImage && isset( $logos['wordmark'] ) ) {
 				$wordmarkData = $logos['wordmark'];
 				$wordmarkImage = Html::element( 'img', [
@@ -518,9 +518,9 @@ class TimelessTemplate extends BaseTemplate {
 				$langConv = MediaWikiServices::getInstance()->getLanguageConverterFactory()
 					->getLanguageConverter( $this->getSkin()->getLanguage() );
 				if ( $langConv->hasVariants() ) {
-					$siteTitle = $langConv->convert( $this->getMsg( 'timeless-sitetitle' )->escaped() );
+					$siteTitle = $langConv->convert( $this->getMsg( 'gongbi-sitetitle' )->escaped() );
 				} else {
-					$siteTitle = $this->getMsg( 'timeless-sitetitle' )->escaped();
+					$siteTitle = $this->getMsg( 'gongbi-sitetitle' )->escaped();
 				}
 				// width is 11em; 13 characters will probably fit?
 				if ( mb_strlen( $siteTitle ) > 13 ) {
@@ -539,7 +539,7 @@ class TimelessTemplate extends BaseTemplate {
 
 		}
 		if ( $part !== 'text' ) {
-			$logoImage = $this->getLogoImage( $config->get( 'TimelessLogo' ) );
+			$logoImage = $this->getLogoImage( $config->get( 'GongbiLogo' ) );
 			if ( $logoImage === false ) {
 				$logoSrc = $logos['svg'] ?? $logos['icon'] ?? '';
 				if ( $logoSrc !== '' ) {
@@ -553,7 +553,7 @@ class TimelessTemplate extends BaseTemplate {
 				'a',
 				array_merge(
 					[
-						'class' => [ 'mw-wiki-logo', !$logoImage ? 'fallback' : 'timeless-logo' ],
+						'class' => [ 'mw-wiki-logo', !$logoImage ? 'fallback' : 'gongbi-logo' ],
 						'href' => $this->data['nav_urls']['mainpage']['href']
 					],
 					Linker::tooltipAndAccesskeyAttribs( 'p-logo' )
@@ -657,19 +657,19 @@ class TimelessTemplate extends BaseTemplate {
 		$pageTools = $this->getPortlet(
 			'cactions',
 			$this->pileOfTools['page-secondary'],
-			'timeless-pageactions'
+			'gongbi-pageactions'
 		);
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageTools .= $this->getPortlet(
 			'userpagetools',
 			$this->pileOfTools['user'],
-			'timeless-userpagetools'
+			'gongbi-userpagetools'
 		);
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageTools .= $this->getPortlet(
 			'pagemisc',
 			$this->pileOfTools['page-tertiary'],
-			'timeless-pagemisc'
+			'gongbi-pagemisc'
 		);
 		if ( isset( $this->collectionPortlet ) ) {
 			$pageTools .= $this->getPortlet(
@@ -678,7 +678,7 @@ class TimelessTemplate extends BaseTemplate {
 			);
 		}
 
-		return $this->getSidebarChunk( 'page-tools', 'timeless-pageactions', $pageTools );
+		return $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
 	}
 
 	/**
@@ -713,19 +713,19 @@ class TimelessTemplate extends BaseTemplate {
 
 		// Re-label some messages
 		if ( isset( $personalTools['userpage'] ) ) {
-			$personalTools['userpage']['links'][0]['text'] = $this->getMsg( 'timeless-userpage' )->text();
+			$personalTools['userpage']['links'][0]['text'] = $this->getMsg( 'gongbi-userpage' )->text();
 		}
 		if ( isset( $personalTools['mytalk'] ) ) {
-			$personalTools['mytalk']['links'][0]['text'] = $this->getMsg( 'timeless-talkpage' )->text();
+			$personalTools['mytalk']['links'][0]['text'] = $this->getMsg( 'gongbi-talkpage' )->text();
 		}
 
 		// Labels
 		if ( $user->isRegistered() ) {
 			$dropdownHeader = $userName;
-			$headerMsg = [ 'timeless-loggedinas', $userName ];
+			$headerMsg = [ 'gongbi-loggedinas', $userName ];
 		} else {
-			$dropdownHeader = $this->getMsg( 'timeless-anonymous' )->text();
-			$headerMsg = 'timeless-notloggedin';
+			$dropdownHeader = $this->getMsg( 'gongbi-anonymous' )->text();
+			$headerMsg = 'gongbi-notloggedin';
 		}
 		$html = Html::openElement( 'div', [ 'id' => 'user-tools' ] );
 
@@ -870,7 +870,7 @@ class TimelessTemplate extends BaseTemplate {
 		$pileOfTools = $this->sidebar['TOOLBOX'];
 		if ( $namespace >= 0 ) {
 			$pileOfTools['pagelog'] = [
-				'text' => $this->getMsg( 'timeless-pagelog' )->text(),
+				'text' => $this->getMsg( 'gongbi-pagelog' )->text(),
 				'href' => SpecialPage::getTitleFor( 'Log' )->getLocalURL(
 					[ 'page' => $title->getPrefixedText() ]
 				),
@@ -880,7 +880,7 @@ class TimelessTemplate extends BaseTemplate {
 
 		// Mobile toggles
 		$pileOfTools['more'] = [
-			'text' => $this->getMsg( 'timeless-more' )->text(),
+			'text' => $this->getMsg( 'gongbi-more' )->text(),
 			'id' => 'ca-more',
 			'class' => 'dropdown-toggle'
 		];
@@ -888,7 +888,7 @@ class TimelessTemplate extends BaseTemplate {
 		if ( !empty( $this->sidebar['LANGUAGES'] ) || $sortedPileOfTools['variants']
 			|| isset( $this->otherProjects ) ) {
 			$pileOfTools['languages'] = [
-				'text' => $this->getMsg( 'timeless-languages' )->escaped(),
+				'text' => $this->getMsg( 'gongbi-languages' )->escaped(),
 				'id' => 'ca-languages',
 				'class' => 'dropdown-toggle'
 			];
@@ -1132,7 +1132,7 @@ class TimelessTemplate extends BaseTemplate {
 		if ( $show ) {
 			$html .= $this->getSidebarChunk(
 				'other-languages',
-				'timeless-projects',
+				'gongbi-projects',
 				$variants . $languages . $otherprojects,
 				$variantsOnly ? [ 'variants-only' ] : []
 			);

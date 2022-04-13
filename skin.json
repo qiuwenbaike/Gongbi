@@ -1,59 +1,59 @@
 {
-	"name": "Timeless",
-	"version": "0.9.1",
+	"name": "Gongbi",
+	"version": "1.0.0",
 	"author": [
 		"Isarra Yos",
 		"Qiuwen Baike Contributors"
 	],
-	"url": "https://git.qiuwen.wiki/qiuwen/Timeless",
-	"descriptionmsg": "timeless-desc",
-	"namemsg": "skinname-timeless",
+	"url": "https://git.qiuwen.wiki/qiuwen/Gongbi",
+	"descriptionmsg": "gongbi-desc",
+	"namemsg": "skinname-gongbi",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.37"
 	},
 	"ValidSkinNames": {
-		"timeless": {
-			"displayname": "Timeless",
-			"class": "MediaWiki\\Skin\\Timeless\\SkinTimeless",
+		"gongbi": {
+			"displayname": "Gongbi",
+			"class": "MediaWiki\\Skin\\Gongbi\\SkinGongbi",
 			"args": [
 				{
-					"name": "timeless",
-					"template": "MediaWiki\\Skin\\Timeless\\TimelessTemplate",
+					"name": "gongbi",
+					"template": "MediaWiki\\Skin\\Gongbi\\GongbiTemplate",
 					"responsive": true,
 					"styles": [
-						"skins.timeless"
+						"skins.gongbi"
 					],
 					"scripts": [
-						"skins.timeless.js"
+						"skins.gongbi.js"
 					]
 				}
 			]
 		}
 	},
 	"MessagesDirs": {
-		"Timeless": [
+		"Gongbi": [
 			"i18n"
 		]
 	},
 	"config": {
-		"TimelessLogo": {
+		"GongbiLogo": {
 			"value": null,
-			"description": "Special logo rendering, allowing for custom logos for Timeless"
+			"description": "Special logo rendering, allowing for custom logos for Gongbi"
 		},
-		"TimelessWordmark": {
+		"GongbiWordmark": {
 			"value": null,
 			"description": "To use an image instead of the default Linux Libertine serif text for the header banner wordmark"
 		}
 	},
 	"ResourceModules": {
-		"skins.timeless": {
+		"skins.gongbi": {
 			"targets": [
 				"desktop",
 				"mobile"
 			],
-			"class": "MediaWiki\\Skin\\Timeless\\TimelessVariablesModule",
+			"class": "MediaWiki\\Skin\\Gongbi\\GongbiVariablesModule",
 			"features": {
 				"normalize": false,
 				"logo": true,
@@ -110,7 +110,7 @@
 			},
 			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating."
 		},
-		"skins.timeless.js": {
+		"skins.gongbi.js": {
 			"targets": [
 				"desktop",
 				"mobile"
@@ -128,10 +128,10 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Timeless"
+		"remoteSkinPath": "Gongbi"
 	},
 	"ResourceModuleSkinStyles": {
-		"timeless": {
+		"gongbi": {
 			"+oojs-ui-core.styles": "resources/ooui.less",
 			"+ext.echo.styles.badge": "resources/extensions/Echo.less",
 			"+ext.eventLogging.jsonSchema.styles": "resources/extensions/EventLogging.jsonSchema.less",
@@ -148,7 +148,7 @@
 		}
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Skin\\Timeless\\": "includes/"
+		"MediaWiki\\Skin\\Gongbi\\": "includes/"
 	},
 	"manifest_version": 2
 }

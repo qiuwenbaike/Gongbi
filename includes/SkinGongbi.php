@@ -1,15 +1,15 @@
 <?php
 
-namespace MediaWiki\Skin\Timeless;
+namespace MediaWiki\Skin\Gongbi;
 
 use SkinTemplate;
 
 /**
- * SkinTemplate class for the Timeless skin
+ * SkinTemplate class for the Gongbi skin
  *
  * @ingroup Skins
  */
-class SkinTimeless extends SkinTemplate {
+class SkinGongbi extends SkinTemplate {
 	/**
 	 * @inheritDoc
 	 */

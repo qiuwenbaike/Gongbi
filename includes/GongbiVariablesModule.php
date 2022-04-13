@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Skin\Timeless;
+namespace MediaWiki\Skin\Gongbi;
 
 use ResourceLoaderContext;
 use ResourceLoaderSkinModule;
@@ -8,7 +8,7 @@ use ResourceLoaderSkinModule;
 /**
  * ResourceLoader module to set some LESS variables for the skin
  */
-class TimelessVariablesModule extends ResourceLoaderSkinModule {
+class GongbiVariablesModule extends ResourceLoaderSkinModule {
 	/**
 	 * Add our LESS variables
 	 *

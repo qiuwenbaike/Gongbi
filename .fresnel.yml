@@ -6,7 +6,7 @@ scenarios:
     # But its actual name is configurable/unknown (T216791).
     # Omit 'title' to let MediaWiki show the default (which is the main page),
     # and a query string to prevent a normalization redirect.
-    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?noredirectplz&useskin=timeless"
+    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?noredirectplz&useskin=gongbi"
     viewport:
       width: 1100
       height: 700
@@ -18,7 +18,7 @@ scenarios:
       - screenshot
       - trace
   Load the editor:
-    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?action=edit&useskin=timeless"
+    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?action=edit&useskin=gongbi"
     viewport:
       width: 1100
       height: 700
@@ -30,7 +30,7 @@ scenarios:
       - screenshot
       - trace
   View recent changes:
-    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?title=Special:RecentChanges&useskin=timeless"
+    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?title=Special:RecentChanges&useskin=gongbi"
     viewport:
       width: 1100
       height: 700
@@ -42,7 +42,7 @@ scenarios:
       - screenshot
       - trace
   View MW version page:
-    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?title=Special:Version&useskin=timeless"
+    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?title=Special:Version&useskin=gongbi"
     viewport:
       width: 1100
       height: 700
@@ -54,7 +54,7 @@ scenarios:
       - screenshot
       - trace
   View the blank special page:
-    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?title=Special:BlankPage&useskin=timeless"
+    url: "{MW_SERVER}{MW_SCRIPT_PATH}/index.php?title=Special:BlankPage&useskin=gongbi"
     viewport:
       width: 1100
       height: 700
