@@ -19,18 +19,9 @@ class TimelessVariablesModule extends ResourceLoaderSkinModule {
 		$vars = parent::getLessVars( $context );
 		$config = $this->getConfig();
 
-		// Backdrop image
-		$backdrop = $config->get( 'TimelessBackdropImage' );
-
-		if ( $backdrop === 'cat.svg' ) {
-			// expand default
-			$backdrop = 'images/cat.svg';
-		}
-
 		return array_merge(
 			$vars,
 			[
-				'backdrop-image' => "url($backdrop)",
 				// 'logo-image' => ''
 				// 'wordmark-image' => ''
 				// +width cutoffs ...
@@ -46,9 +37,8 @@ class TimelessVariablesModule extends ResourceLoaderSkinModule {
 	 */
 	public function getDefinitionSummary( ResourceLoaderContext $context ) {
 		$summary = parent::getDefinitionSummary( $context );
-		$summary[] = [
-			'TimelessBackdropImage' => $this->getConfig()->get( 'TimelessBackdropImage' )
-		];
+		$summary[] = [];
+		
 		return $summary;
 	}
 }

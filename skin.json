@@ -38,10 +38,6 @@
 		]
 	},
 	"config": {
-		"TimelessBackdropImage": {
-			"value": "cat.svg",
-			"description": "Set it as you would $wgLogo to an appropriate background image. Recommendation is an svg set to 500-750px wide"
-		},
 		"TimelessLogo": {
 			"value": null,
 			"description": "Special logo rendering, allowing for custom logos for Timeless"
