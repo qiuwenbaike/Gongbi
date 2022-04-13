@@ -10,10 +10,11 @@
 			"Looong",
 			"Shizhao",
 			"Xiplus",
-			"Xzonn"
+			"Xzonn",
+			"WaitSpring"
 		]
 	},
-	"gongbi-desc": "基于Brandon Harris的Winter皮肤原型，和一些来自维基媒体基金会的风格设计的“永恒的”（Gongbi）皮肤",
+	"gongbi-desc": "基于Timeless的新一代求闻百科主题",
 	"gongbi-anonymous": "匿名",
 	"gongbi-loggedinas": "以'''$1'''登录",
 	"gongbi-notloggedin": "未登录",
@@ -21,7 +22,7 @@
 	"gongbi-talkpage": "{{GENDER:$1|用户}}讨论",
 	"gongbi-pagelog": "页面日志",
 	"gongbi-more": "更多",
-	"gongbi-sitetools": "Wiki工具",
+	"gongbi-sitetools": "工具",
 	"gongbi-pageactions": "页面工具",
 	"gongbi-userpagetools": "用户页面工具",
 	"gongbi-action-addsection": "新建话题",

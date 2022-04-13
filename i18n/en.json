@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Isarra"
+			"Isarra",
+			"WaitSpring"
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "A gongbi skin designed after the Winter prototype by Brandon Harris, and various styles by the Wikimedia Foundation",
+	"gongbi-desc": "A New-generation skin for Qiuwen Baike based on Timeless skin",
 	"gongbi-anonymous": "Anonymous",
 	"gongbi-loggedinas": "Logged in as '''$1'''",
 	"gongbi-notloggedin": "Not logged in",
@@ -13,7 +14,7 @@
 	"gongbi-talkpage": "{{GENDER:$1|User}} talk",
 	"gongbi-pagelog": "Page logs",
 	"gongbi-more": "More",
-	"gongbi-sitetools": "Wiki tools",
+	"gongbi-sitetools": "Tools",
 	"gongbi-pageactions": "Page tools",
 	"gongbi-userpagetools": "User page tools",
 	"gongbi-action-addsection": "New topic",

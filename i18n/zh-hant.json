@@ -8,11 +8,12 @@
 			"LNDDYL",
 			"Liuxinyu970226",
 			"Wehwei",
-			"Winston Sung"
+			"Winston Sung",
+			"WaitSpring"
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "Gongbi 外觀是 Brandon Harris 繼 Winter 外觀的原型所設計的，其中的各種樣式來自維基媒體基金會",
+	"gongbi-desc": "來自 Timeless 的新一代外觀",
 	"gongbi-anonymous": "匿名",
 	"gongbi-loggedinas": "以 '''$1''' 登入。",
 	"gongbi-notloggedin": "尚未登入",
@@ -20,7 +21,7 @@
 	"gongbi-talkpage": "{{GENDER:$1|使用者}}討論",
 	"gongbi-pagelog": "頁面日誌",
 	"gongbi-more": "更多",
-	"gongbi-sitetools": "wiki工具",
+	"gongbi-sitetools": "工具",
 	"gongbi-pageactions": "頁面工具",
 	"gongbi-userpagetools": "使用者頁面工具",
 	"gongbi-action-addsection": "新增話題",
