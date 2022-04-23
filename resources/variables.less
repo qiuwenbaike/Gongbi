@@ -1,5 +1,49 @@
 @import 'mediawiki.mixins';
-@import 'themes/wikimedia.less'; // default theme
+
+// Default color scheme
+@base100: #fff;
+@base90: #f8f9fa;
+@base80: #eaecf0;
+@base70: #c8ccd1;
+@base30: #72777d;
+@base20: #54595d;
+@base0: #000;
+
+@red: #d33;
+@red-bright: #fee;
+@red-dark: #b22;
+
+@green: #0a8;
+@green-bright: #cfc;
+@green-dark: #181;
+
+@blue: #36c;
+@blue-bright: #def;
+@blue-dark: #248;
+
+@background: @base100;
+@text: @base0;
+
+@link: @blue;
+@link-visited: @blue-dark;
+
+@link-red: @red;
+@link-red-visited: @red-dark;
+
+@link-ext: #37a;
+@link-ext-visited: darken( @link-ext, 10% );
+
+// Fonts are chosen for consistent metrics, not necessarily overall prettiness.
+@fonts-sans: 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+@fonts-serif: 'Noto Serif', 'Times New Roman', 'Times', serif;
+@fonts-mono: 'Consolas', 'Monaco', 'Noto Mono', monospace;
+
+@fonts: @fonts-sans;
+@fonts-secondary: @fonts-serif;
+
+@border: 1px;
+@radius: 0.2em;
+
 // .import-themes(); // might be how we apply any selected theme(s); not implemented
 
 // Should really be part of the theme, but currently too much alignment/positioning
