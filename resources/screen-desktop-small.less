@@ -1,5 +1,9 @@
 @import 'variables.less';
 
+#mw-header-container {
+	position: inherit;
+}
+
 // Single-column layout with dropdown menus
 
 #mw-content-block {
@@ -16,11 +20,8 @@
 #mw-content {
 	border-width: 0 0 1px;
 	clear: both;
-	margin-top: 5.425em;
-}
-
-#mw-content-container {
-	padding-bottom: 0;
+	margin-top: 3.75em;
+	padding-top: 3em;
 }
 
 .categories-bottom();
@@ -63,7 +64,7 @@
 	}
 
 	.sidebar-chunk {
-		margin: 0.5em 1em 0 0;
+		margin: 0 1em 0 0;
 	}
 }
 
@@ -89,7 +90,7 @@
 
 #mw-site-navigation {
 	position: absolute;
-	top: -2.35em;
+	top: 0;
 	left: 2em;
 
 	.sidebar-inner {
@@ -127,7 +128,7 @@
 
 #mw-related-navigation {
 	position: absolute;
-	top: -2.35em;
+	top: 0;
 	right: 2em;
 
 	.sidebar-inner {
