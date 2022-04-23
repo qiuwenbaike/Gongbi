@@ -1,9 +1,5 @@
 @import 'variables.less';
 
-#mw-header-container {
-	position: inherit;
-}
-
 // Single-column layout with dropdown menus
 
 #mw-content-block {
@@ -46,7 +42,6 @@
 	display: none !important;
 }
 
-// Have these cover the fixed header color-bar using the mw-header-nav-hack (with its own color-bar at the bottom)
 #mw-site-navigation,
 #mw-related-navigation {
 	display: inline-block;
@@ -72,20 +67,6 @@
 	.sidebar-inner {
 		display: block !important;
 	}
-}
-
-#mw-header-nav-hack {
-	border-top: solid 2px @base80;
-	display: block;
-	position: absolute;
-	z-index: 98;
-	background: @background;
-	width: 100%;
-	box-shadow: none;
-}
-
-#mw-header-nav-hack .color-bar {
-	margin-top: 2.5em; // Height of expected menu header contents
 }
 
 #mw-site-navigation {

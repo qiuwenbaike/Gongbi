@@ -71,7 +71,6 @@ class GongbiTemplate extends BaseTemplate {
 			) .
 			$this->getClear()
 		);
-		$html .= $this->getHeaderHack();
 
 		// For mobile
 		$html .= Html::element( 'div', [ 'id' => 'menus-cover' ] );
@@ -626,25 +625,6 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		return $this->getSidebarChunk( 'site-navigation', 'navigation', $html );
-	}
-
-	/**
-	 * The colour bars
-	 * Split this out so we don't have to look at it/can easily kill it later
-	 *
-	 * @return string html
-	 */
-	protected function getHeaderHack() {
-		$html = '';
-
-		// These are almost exactly the same and this is stupid.
-		$html .= Html::rawElement( 'div', [ 'id' => 'mw-header-nav-hack' ],
-			Html::rawElement( 'div', [ 'class' => 'color-bar' ],
-				Html::Element( 'div', [ 'class' => 'color-middle-container' ])
-			)
-		);
-
-		return $html;
 	}
 
 	/**
