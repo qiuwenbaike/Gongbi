@@ -86,7 +86,7 @@
 					"media": "screen"
 				},
 				"resources/screen-desktop.less": {
-					"media": "screen and (min-width: 851px)"
+					"media": "screen and (min-width: 850px)"
 				},
 				"resources/screen-desktop-full.less": {
 					"media": "screen and (min-width: 1340px)"
