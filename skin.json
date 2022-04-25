@@ -98,7 +98,7 @@
 					"media": "screen and (min-width: 851px) and (max-width: 1099px)"
 				},
 				"resources/screen-mobile.less": {
-					"media": "screen and (max-width: 851px)"
+					"media": "screen and (max-width: 850px)"
 				},
 				"0": "resources/screen-misc.less",
 				"resources/libraries/common-print.less": {
