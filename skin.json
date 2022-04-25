@@ -97,9 +97,6 @@
 				"resources/screen-desktop-small.less": {
 					"media": "screen and (min-width: 851px) and (max-width: 1099px)"
 				},
-				"resources/screen-transition.less": {
-					"media": "screen and (min-width: 850px) and (max-width: 851px)"
-				},
 				"resources/screen-mobile.less": {
 					"media": "screen and (max-width: 850px)"
 				},
