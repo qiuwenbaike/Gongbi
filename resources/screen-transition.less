@@ -1,0 +1,124 @@
+@import 'variables.less';
+
+/* Header */
+
+#mw-header-container {
+	/* Stupid IE10+ bug requires defining the height property for this to work
+	 * the way it is intended; without doing that this'll break horribly under
+	 * IE10 and IE11.
+	 * @see https://phabricator.wikimedia.org/T173769
+	 */
+	height: 0;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	background: @background;
+	color: @text;
+	padding: 0.5em 0;
+	min-height: @fixed-header-height;
+	box-sizing: border-box;
+	box-shadow: 0 1px 1px 1px rgba( 0, 0, 0, 0.08 ), 0 0 2px rgba( 0, 0, 0, 0.2 );
+}
+
+div#personal {
+    padding-left: 0;
+    float: right;
+}
+
+#personal-extra {
+    float: left;
+}
+
+// Header navigation
+
+.sidebar-chunk {
+	display: inline-block;
+	position: relative;
+
+	h2 {
+		display: inline-block;
+	}
+}
+
+.sidebar-inner,
+#p-logo {
+	display: none !important;
+}
+
+#mw-site-navigation,
+#mw-related-navigation {
+	display: inline-block;
+	position: relative;
+	z-index: 99;
+
+	h2 {
+		font-weight: normal;
+		font-family: @fonts-secondary;
+		font-size: 1.25em;
+		padding: 0.5em 0 0.2em;
+		margin: 0;
+
+		.dropdown-header();
+	}
+
+	.sidebar-chunk {
+		margin: 0 1em 0 0;
+	}
+}
+
+.client-nojs .sidebar-chunk:hover {
+	.sidebar-inner {
+		display: block !important;
+	}
+}
+
+#mw-site-navigation {
+	position: absolute;
+	top: 0;
+	left: 2em;
+
+	.sidebar-inner {
+		.dropdown-menu( left );
+	}
+}
+
+#mw-site-navigation .sidebar-chunk h2 span {
+	.dropdown-pokey();
+
+	&:before,
+	&:after {
+		right: -5px;
+		display: none;
+	}
+
+	&:before {
+		top: 34px;
+	}
+
+	&:after {
+		top: 36px;
+	}
+}
+
+#mw-site-navigation .dropdown-active,
+.client-nojs #mw-site-navigation .sidebar-chunk:hover {
+	h2 span {
+		&:before,
+		&:after {
+			display: block;
+		}
+	}
+}
+
+#mw-related-navigation {
+	position: absolute;
+	top: 0;
+	right: 2em;
+
+	.sidebar-inner {
+		.dropdown-menu();
+		.dropdown-pokey();
+		top: 3em !important; // to override mobile positioning
+	}
+}
