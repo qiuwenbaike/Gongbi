@@ -362,7 +362,7 @@ class GongbiTemplate extends BaseTemplate {
 		$options = $setOptions + [
 			'id' => 'footer',
 			'class' => 'mw-footer',
-			'order' => 'iconsfirst',
+			'order' => 'iconslast',
 			'link-prefix' => 'footer',
 			'link-style' => null
 		];
@@ -381,24 +381,6 @@ class GongbiTemplate extends BaseTemplate {
 			'lang' => $this->get( 'userlang' ),
 			'dir' => $this->get( 'dir' )
 		] );
-
-		$iconsHTML = '';
-		if ( count( $validFooterIcons ) > 0 ) {
-			$iconsHTML .= Html::openElement( 'ul', [ 'id' => "{$options['link-prefix']}-icons" ] );
-			foreach ( $validFooterIcons as $blockName => $footerIcons ) {
-				$iconsHTML .= Html::openElement( 'li', [
-					'id' => Sanitizer::escapeIdForAttribute(
-						"{$options['link-prefix']}-{$blockName}ico"
-					),
-					'class' => 'footer-icons'
-				] );
-				foreach ( $footerIcons as $icon ) {
-					$iconsHTML .= $this->getSkin()->makeFooterIcon( $icon );
-				}
-				$iconsHTML .= Html::closeElement( 'li' );
-			}
-			$iconsHTML .= Html::closeElement( 'ul' );
-		}
 
 		$linksHTML = '';
 		if ( count( $validFooterLinks ) > 0 ) {
@@ -436,6 +418,24 @@ class GongbiTemplate extends BaseTemplate {
 				}
 				$linksHTML .= Html::closeElement( 'div' );
 			}
+		}
+
+		$iconsHTML = '';
+		if ( count( $validFooterIcons ) > 0 ) {
+			$iconsHTML .= Html::openElement( 'ul', [ 'id' => "{$options['link-prefix']}-icons" ] );
+			foreach ( $validFooterIcons as $blockName => $footerIcons ) {
+				$iconsHTML .= Html::openElement( 'li', [
+					'id' => Sanitizer::escapeIdForAttribute(
+						"{$options['link-prefix']}-{$blockName}ico"
+					),
+					'class' => 'footer-icons'
+				] );
+				foreach ( $footerIcons as $icon ) {
+					$iconsHTML .= $this->getSkin()->makeFooterIcon( $icon );
+				}
+				$iconsHTML .= Html::closeElement( 'li' );
+			}
+			$iconsHTML .= Html::closeElement( 'ul' );
 		}
 
 		if ( $options['order'] === 'iconsfirst' ) {
