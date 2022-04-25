@@ -9,9 +9,14 @@
 	padding: 0 @content-padding;
 }
 
-#mw-footer .footer-icons {
-	clear: both;
-	margin-bottom: 0.5em;
+#mw-footer #footer-icons {
+	display: flex;
+    flex-direction: row;
+
+	.footer-icons {
+		clear: both;
+		margin: 0 1em 0.5em 0;
+	}
 }
 
 .categories-bottom();
