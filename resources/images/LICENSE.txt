@@ -20,7 +20,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ------
-Files included:
+Files included (all modified):
 - gear-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/settings.svg
 - arrow-down-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/indicators/down.svg
 - user-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/userActive.svg
@@ -31,3 +31,4 @@ Files included:
 - redirect-grey-rtl.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/articleRedirect-rtl.svg
 - clock-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/history.svg
 - page-misc-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/pageSettings.svg
+- talk-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/userTalk-ltr.svg
