@@ -105,7 +105,7 @@
 					"media": "print"
 				}
 			},
-			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating; resources/screen-desktop-small.less ((min-width: 850px) and (max-width: 1100px)) removed."
+			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating."
 		},
 		"skins.gongbi.js": {
 			"targets": [
