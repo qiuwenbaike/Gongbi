@@ -368,6 +368,10 @@ a.new,
 .mw-parser-output a.extiw:active,
 .mw-parser-output a.external {
 	color: @link-ext;
+	background-image: url( images/external-ltr.svg );
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 13px;
 
 	&:hover {
 		color: darken( @link-ext, 10% );
@@ -380,6 +384,12 @@ a.new,
 			color: darken( @link-ext-visited, 10% );
 		}
 	}
+}
+
+.mw-content-rtl .mw-parser-output a.extiw,
+.mw-content-rtl .mw-parser-output a.extiw:active,
+.mw-content-rtl .mw-parser-output a.external {
+	background-image: url( images/external-rtl.svg );
 }
 
 a.mw-selflink {
