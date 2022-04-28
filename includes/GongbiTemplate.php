@@ -792,6 +792,7 @@ class GongbiTemplate extends BaseTemplate {
 	 */
 	protected function getAfterContent() {
 		$html = '';
+		$skin = $this->getSkin();
 		$config = $skin->getContext()->getConfig();
 		$catSidebarEnbaled = $config->get( 'GongbiCatlinkSidebar' );
 
