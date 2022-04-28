@@ -648,7 +648,7 @@ class GongbiTemplate extends BaseTemplate {
 
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageMore = $this->getPortlet(
-			'gongbi-pagemisc',
+			'pagemisc',
 			$this->pileOfTools['page-tertiary']
 		);
 		if ( isset( $this->collectionPortlet ) ) {
