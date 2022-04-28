@@ -157,6 +157,7 @@ class GongbiTemplate extends BaseTemplate {
 						'gongbi-namespaces',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
+					$this->getVariants() .
 					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'more',
@@ -164,7 +165,6 @@ class GongbiTemplate extends BaseTemplate {
 						'gongbi-more',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
-					$this->getVariants() .
 					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'views',
