@@ -27,16 +27,16 @@ $( function () {
 			$( '#page-tools .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-more' ).on( 'click', function () {
-		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
-		if ( $( window ).width() < 851 ) {
-			$( '#page-more .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
-		}
-	} );
 	$( '#ca-languages' ).on( 'click', function () {
 		$( '#other-languages .sidebar-inner' ).css( 'top', $( '#ca-languages' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
 			$( '#other-languages .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
+		}
+	} );
+	$( '#ca-more' ).on( 'click', function () {
+		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
+		if ( $( window ).width() < 851 ) {
+			$( '#page-more .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
 
