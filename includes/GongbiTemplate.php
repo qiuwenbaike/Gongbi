@@ -917,9 +917,8 @@ class GongbiTemplate extends BaseTemplate {
 		foreach ( $pileOfTools as $navKey => $navBlock ) {
 			$currentSet = null;
 
-			if ( $navKey === 'contributions' ) {
-				$currentSet = 'page-primary';
-			} elseif ( in_array( $navKey, [
+			if ( in_array( $navKey, [
+				'contributions',
 				'blockip',
 				'userrights',
 				'log',

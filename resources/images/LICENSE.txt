@@ -30,6 +30,7 @@ Files included (all modified):
 - redirect-grey-ltr.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/articleRedirect-ltr.svg
 - redirect-grey-rtl.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/articleRedirect-rtl.svg
 - clock-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/history.svg
-- page-misc-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/pageSettings.svg
+- page-tools-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/pageSettings.svg
 - more-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/ellipsis.svg
 - talk-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/userTalk-ltr.svg
+- plus-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/add.svg
