@@ -16,11 +16,6 @@ $( function () {
 			$( '#site-navigation .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#site-tools h2' ).on( 'click', function () {
-		if ( $( window ).width() < 851 ) {
-			$( '#site-tools .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
-		}
-	} );
 	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
