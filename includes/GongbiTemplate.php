@@ -612,14 +612,14 @@ class GongbiTemplate extends BaseTemplate {
 			// Numeric strings gets an integer when set as key, cast back - T73639
 			$name = (string)$name;
 			$html .= $this->getPortlet( $name, $content );
-
-			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-			$html .= $this->getPortlet(
-				'tb',
-				$this->pileOfTools['general'],
-				'gongbi-sitetools'
-			);
 		}
+
+		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+		$html .= $this->getPortlet(
+			'tb',
+			$this->pileOfTools['general'],
+			'gongbi-sitetools'
+		);
 
 		return $this->getSidebarChunk( 'site-navigation', 'navigation', $html );
 	}
