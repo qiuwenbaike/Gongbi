@@ -955,10 +955,6 @@ class GongbiTemplate extends BaseTemplate {
 			$sortedPileOfTools[$currentSet][$navKey] = $navBlock;
 		}
 
-		if ( !isset( $this->pileOfTools['page-secondary'] ) && !isset( $this->pileOfTools['user'] ) ) {
-			unset( $sortedPileOfTools['more']['tools'] );
-		}
-
 		// Extra sorting for Extension:ProofreadPage namespace items
 		$tabs = [
 			// This is the order we want them in...
