@@ -644,12 +644,6 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['user'],
 			'gongbi-userpagetools'
 		);
-		if ( isset( $this->collectionPortlet ) ) {
-			$pageTools .= $this->getPortlet(
-				'coll-print_export',
-				$this->collectionPortlet
-			);
-		}
 
 		$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
 
@@ -659,6 +653,12 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
 		);
+		if ( isset( $this->collectionPortlet ) ) {
+			$pageMore .= $this->getPortlet(
+				'coll-print_export',
+				$this->collectionPortlet
+			);
+		}
 
 		$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
 
