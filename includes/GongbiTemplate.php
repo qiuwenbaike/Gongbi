@@ -865,11 +865,6 @@ class GongbiTemplate extends BaseTemplate {
 			'id' => 'ca-tools',
 			'class' => 'dropdown-toggle'
 		];
-		$pileOfTools['more'] = [
-			'text' => $this->getMsg( 'gongbi-more' )->text(),
-			'id' => 'ca-more',
-			'class' => 'dropdown-toggle'
-		];
 		// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 		if ( !empty( $this->sidebar['LANGUAGES'] ) || $sortedPileOfTools['variants']
 			|| isset( $this->otherProjects ) ) {
@@ -879,6 +874,11 @@ class GongbiTemplate extends BaseTemplate {
 				'class' => 'dropdown-toggle'
 			];
 		}
+		$pileOfTools['more'] = [
+			'text' => $this->getMsg( 'gongbi-more' )->text(),
+			'id' => 'ca-more',
+			'class' => 'dropdown-toggle'
+		];
 
 		// This is really dumb, and you're an idiot for doing it this way.
 		// Obviously if you're not the idiot who did this, I don't mean you.

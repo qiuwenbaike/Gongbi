@@ -30,7 +30,7 @@ $( function () {
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
-			$( '#page-tools .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
+			$( '#page-more .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
