@@ -933,7 +933,8 @@ class GongbiTemplate extends BaseTemplate {
 				$currentSet = 'page-tertiary';
 			} elseif ( in_array( $navKey, [
 				'more',
-				'languages'
+				'languages',
+				'tools'
 			] ) ) {
 				$currentSet = 'more';
 			} else {
