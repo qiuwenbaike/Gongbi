@@ -792,10 +792,12 @@ class GongbiTemplate extends BaseTemplate {
 	 */
 	protected function getAfterContent() {
 		$html = '';
+		$config = $skin->getContext()->getConfig();
+		$catSidebarEnbaled = $config->get( 'GongbiCatlinkSidebar' );
 
 		if ( $this->data['catlinks'] || $this->data['dataAfterContent'] ) {
 			$html .= Html::openElement( 'div', [ 'id' => 'content-bottom-stuff' ] );
-			if ( $this->data['catlinks'] ) {
+			if ( $this->data['catlinks'] && $catSidebarEnbaled == false ) {
 				$html .= $this->get( 'catlinks' );
 			}
 			if ( $this->data['dataAfterContent'] ) {
@@ -980,6 +982,8 @@ class GongbiTemplate extends BaseTemplate {
 		$skin = $this->getSkin();
 		$catHeader = 'categories';
 		$catList = '';
+		$config = $skin->getContext()->getConfig();
+		$catSidebarEnbaled = $config->get( 'GongbiCatlinkSidebar' );
 
 		$allCats = $skin->getOutput()->getCategoryLinks();
 		if ( !empty( $allCats ) ) {
@@ -1015,7 +1019,7 @@ class GongbiTemplate extends BaseTemplate {
 			}
 		}
 
-		if ( $catList !== '' ) {
+		if ( $catList !== '' && $catSidebarEnbaled == true ) {
 			return $this->getSidebarChunk( 'catlinks-sidebar', $catHeader, $catList );
 		}
 

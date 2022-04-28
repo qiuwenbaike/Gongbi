@@ -45,6 +45,10 @@
 		"GongbiWordmark": {
 			"value": null,
 			"description": "To use an image instead of the default Linux Libertine serif text for the header banner wordmark"
+		},
+		"GongbiCatlinkSidebar": {
+			"value": false,
+			"description": "To decide whether to display categories on sidebar"
 		}
 	},
 	"ResourceModules": {
