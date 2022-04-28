@@ -644,10 +644,14 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['user'],
 			'gongbi-userpagetools'
 		);
-
-		if ( isset( $this->pileOfTools['page-secondary'] ) || isset( $this->pileOfTools['user'] ) ) {
-			$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
+		if ( isset( $this->collectionPortlet ) ) {
+			$pageTools .= $this->getPortlet(
+				'coll-print_export',
+				$this->collectionPortlet
+			);
 		}
+
+		$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
 
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageMore = $this->getPortlet(
@@ -655,16 +659,8 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
 		);
-		if ( isset( $this->collectionPortlet ) ) {
-			$pageMore .= $this->getPortlet(
-				'coll-print_export',
-				$this->collectionPortlet
-			);
-		}
 
-		if ( isset( $this->pileOfTools['page-tertiary'] ) || isset( $this->collectionPortlet ) ) {
-			$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
-		}
+		$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
 
 		return $html;
 	}
