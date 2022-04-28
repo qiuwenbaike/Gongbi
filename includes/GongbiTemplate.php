@@ -95,10 +95,9 @@ class GongbiTemplate extends BaseTemplate {
 						) .
 						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 						$this->getPortlet(
-							'more',
-							$this->pileOfTools['more'],
-							'gongbi-more',
-							[ 'extra-classes' => 'tools-inline' ]
+							'pagemisc',
+							$this->pileOfTools['page-tertiary'],
+							'gongbi-pagemisc'
 						)
 					)
 				) .
@@ -162,6 +161,13 @@ class GongbiTemplate extends BaseTemplate {
 						'namespaces',
 						$this->pileOfTools['namespaces'],
 						'gongbi-namespaces',
+						[ 'extra-classes' => 'tools-inline' ]
+					) .
+					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+					$this->getPortlet(
+						'more',
+						$this->pileOfTools['more'],
+						'gongbi-more',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
 					$this->getVariants() .
@@ -644,12 +650,6 @@ class GongbiTemplate extends BaseTemplate {
 			'userpagetools',
 			$this->pileOfTools['user'],
 			'gongbi-userpagetools'
-		);
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-		$pageTools .= $this->getPortlet(
-			'pagemisc',
-			$this->pileOfTools['page-tertiary'],
-			'gongbi-pagemisc'
 		);
 		if ( isset( $this->collectionPortlet ) ) {
 			$pageTools .= $this->getPortlet(
