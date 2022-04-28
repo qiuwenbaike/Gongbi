@@ -646,7 +646,7 @@ class GongbiTemplate extends BaseTemplate {
 		);
 
 		if ( isset( $this->pileOfTools['page-secondary'] ) || isset( $this->pileOfTools['user'] ) ) {
-			$html .= $pageTools;
+			$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
 		}
 
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
@@ -663,7 +663,7 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		if ( isset( $this->pileOfTools['page-tertiary'] ) || isset( $this->collectionPortlet ) ) {
-			$html .= $pageMore;
+			$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
 		}
 
 		return $html;
