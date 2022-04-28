@@ -92,6 +92,13 @@ class GongbiTemplate extends BaseTemplate {
 							'tb',
 							$this->pileOfTools['general'],
 							'gongbi-sitetools'
+						) .
+						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+						$this->getPortlet(
+							'more',
+							$this->pileOfTools['more'],
+							'gongbi-more',
+							[ 'extra-classes' => 'tools-inline' ]
 						)
 					)
 				) .
@@ -155,13 +162,6 @@ class GongbiTemplate extends BaseTemplate {
 						'namespaces',
 						$this->pileOfTools['namespaces'],
 						'gongbi-namespaces',
-						[ 'extra-classes' => 'tools-inline' ]
-					) .
-					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-					$this->getPortlet(
-						'more',
-						$this->pileOfTools['more'],
-						'gongbi-more',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
 					$this->getVariants() .
