@@ -92,7 +92,7 @@ class GongbiTemplate extends BaseTemplate {
 							'tb',
 							$this->pileOfTools['general'],
 							'gongbi-sitetools'
-						) .
+						). 
 						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 						$this->getPortlet(
 							'pagemisc',
