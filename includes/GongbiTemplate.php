@@ -624,13 +624,6 @@ class GongbiTemplate extends BaseTemplate {
 			$html .= $this->getPortlet( $name, $content );
 		}
 
-		// Test: move gongbi-pagemisc to left
-		$html .= $this->getPortlet(
-			'pagemisc',
-			$this->pileOfTools['page-tertiary'],
-			'gongbi-pagemisc'
-		);
-
 		return $this->getSidebarChunk( 'site-navigation', 'navigation', $html );
 	}
 
@@ -653,11 +646,11 @@ class GongbiTemplate extends BaseTemplate {
 			'gongbi-userpagetools'
 		);
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-		// $pageTools .= $this->getPortlet(
-		// 	'pagemisc',
-		// 	$this->pileOfTools['page-tertiary'],
-		// 	'gongbi-pagemisc'
-		// );
+		$pageTools .= $this->getPortlet(
+			'pagemisc',
+			$this->pileOfTools['page-tertiary'],
+			'gongbi-pagemisc'
+		);
 		if ( isset( $this->collectionPortlet ) ) {
 			$pageTools .= $this->getPortlet(
 				'coll-print_export',
