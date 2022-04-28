@@ -1,6 +1,6 @@
 {
 	"name": "Gongbi",
-	"version": "1.3.0",
+	"version": "1.4.0",
 	"author": [
 		"Isarra Yos",
 		"Qiuwen Baike Contributors"
@@ -118,10 +118,14 @@
 			],
 			"scripts": [
 				"resources/main.js",
+				"resources/toc.js",
 				"resources/mobile.js"
 			],
 			"styles": {
 				"resources/main.js.less": {
+					"media": "screen"
+				},
+				"resources/toc.js.less": {
 					"media": "screen"
 				}
 			}
