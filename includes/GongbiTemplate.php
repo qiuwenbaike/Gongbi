@@ -463,7 +463,7 @@ class GongbiTemplate extends BaseTemplate {
 					$this->getMsg( $headerMessage )->text()
 				)
 			) .
-			Html::rawElement( 'div', [ 'class' => [ 'sidebar-inner', 'emptyPortlet' => !$content] ], $content )
+			Html::rawElement( 'div', [ 'class' => 'sidebar-inner' ], $content )
 		);
 
 		return $html;
@@ -642,6 +642,12 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['user'],
 			'gongbi-userpagetools'
 		);
+		if ( isset( $this->collectionPortlet ) ) {
+			$pageTools .= $this->getPortlet(
+				'coll-print_export',
+				$this->collectionPortlet
+			);
+		}
 
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageMore = $this->getPortlet(
@@ -649,12 +655,6 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
 		);
-		if ( isset( $this->collectionPortlet ) ) {
-			$pageMore .= $this->getPortlet(
-				'coll-print_export',
-				$this->collectionPortlet
-			);
-		}
 
 		return $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools ) . 
 			$this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
