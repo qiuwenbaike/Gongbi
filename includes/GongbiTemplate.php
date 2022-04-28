@@ -645,20 +645,21 @@ class GongbiTemplate extends BaseTemplate {
 			$this->pileOfTools['user'],
 			'gongbi-userpagetools'
 		);
+
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-		$pageTools .= $this->getPortlet(
+		$pageMore = $this->getPortlet(
 			'pagemisc',
-			$this->pileOfTools['page-tertiary'],
-			'gongbi-pagemisc'
+			$this->pileOfTools['page-tertiary']
 		);
 		if ( isset( $this->collectionPortlet ) ) {
-			$pageTools .= $this->getPortlet(
+			$pageMore .= $this->getPortlet(
 				'coll-print_export',
 				$this->collectionPortlet
 			);
 		}
 
-		return $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
+		return $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools ) . 
+			$this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
 	}
 
 	/**
@@ -859,11 +860,16 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		// Mobile toggles
+		$pileOfTools['tools'] = [
+			'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
+			'id' => 'ca-tools',
+			'class' => 'dropdown-toggle'
+		];
 		$pileOfTools['more'] = [
 			'text' => $this->getMsg( 'gongbi-more' )->text(),
 			'id' => 'ca-more',
 			'class' => 'dropdown-toggle'
-		];
+		];		
 		// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 		if ( !empty( $this->sidebar['LANGUAGES'] ) || $sortedPileOfTools['variants']
 			|| isset( $this->otherProjects ) ) {

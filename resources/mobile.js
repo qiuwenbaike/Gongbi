@@ -21,8 +21,14 @@ $( function () {
 			$( '#site-tools .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
+	$( '#ca-tools' ).on( 'click', function () {
+		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
+		if ( $( window ).width() < 851 ) {
+			$( '#page-tools .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
+		}
+	} );
 	$( '#ca-more' ).on( 'click', function () {
-		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
+		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
 			$( '#page-tools .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
