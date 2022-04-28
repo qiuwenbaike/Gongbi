@@ -92,7 +92,7 @@ class GongbiTemplate extends BaseTemplate {
 							'tb',
 							[ $this->pileOfTools['general'], $this->pileOfTools['page-tertiary'] ],
 							'gongbi-sitetools'
-						). 
+						)
 					)
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
