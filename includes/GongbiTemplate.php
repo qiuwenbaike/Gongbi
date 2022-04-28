@@ -880,11 +880,19 @@ class GongbiTemplate extends BaseTemplate {
 				'class' => 'dropdown-toggle'
 			];
 		}
-		$pileOfTools['tools'] = [
-			'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
-			'id' => 'ca-tools',
-			'class' => 'dropdown-toggle'
-		];
+		if ( $namespace > 0 ||  in_array( $pileOfTools, [
+			'contributions',
+			'blockip',
+			'userrights',
+			'log',
+			'emailuser'
+		] ) ) {
+			$pileOfTools['tools'] = [
+				'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
+				'id' => 'ca-tools',
+				'class' => 'dropdown-toggle'
+			];
+		}
 		$pileOfTools['more'] = [
 			'text' => $this->getMsg( 'gongbi-more' )->text(),
 			'id' => 'ca-more',
