@@ -1,3 +1,4 @@
+/* eslint-disable no-jquery/variable-pattern */
 $( function () {
 	// sidebar-chunk only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
