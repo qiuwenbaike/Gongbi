@@ -853,6 +853,9 @@ class GongbiTemplate extends BaseTemplate {
 			} elseif ( $navKey == 'variants' ) {
 				// wat
 				$sortedPileOfTools['variants'] = $navBlock;
+			}  elseif ( $navKey == 'user' ) {
+				// wat
+				$sortedPileOfTools['user'] = $navBlock;
 			} else {
 				$pileOfEditTools = array_merge( $pileOfEditTools, $navBlock );
 			}
