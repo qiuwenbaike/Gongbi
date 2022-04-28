@@ -871,7 +871,7 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		// Mobile toggles
-		if ( $namespace >= 0 ) {
+		if ( $namespace >= 0 || $sortedPileOfTools['user'] ) {
 			$pileOfTools['tools'] = [
 				'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
 				'id' => 'ca-tools',
