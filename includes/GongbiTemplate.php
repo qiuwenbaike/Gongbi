@@ -871,13 +871,11 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		// Mobile toggles
-		if ( $namespace >= 0 || $this->pileOfTools['page-secondary'] || $this->pileOfTools['user'] ) {
-			$pileOfTools['tools'] = [
-				'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
-				'id' => 'ca-tools',
-				'class' => 'dropdown-toggle'
-			];
-		}
+		$pileOfTools['tools'] = [
+			'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
+			'id' => 'ca-tools',
+			'class' => 'dropdown-toggle'
+		];
 		// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 		if ( !empty( $this->sidebar['LANGUAGES'] ) || $sortedPileOfTools['variants']
 			|| isset( $this->otherProjects ) ) {
