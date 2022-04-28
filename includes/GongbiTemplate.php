@@ -91,14 +91,9 @@ class GongbiTemplate extends BaseTemplate {
 						$this->getPortlet(
 							'tb',
 							$this->pileOfTools['general'],
+							$this->pileOfTools['page-tertiary'],
 							'gongbi-sitetools'
 						). 
-						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-						$this->getPortlet(
-							'pagemisc',
-							$this->pileOfTools['page-tertiary'],
-							'gongbi-pagemisc'
-						)
 					)
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
