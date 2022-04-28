@@ -463,7 +463,7 @@ class GongbiTemplate extends BaseTemplate {
 					$this->getMsg( $headerMessage )->text()
 				)
 			) .
-			Html::rawElement( 'div', [ 'class' => 'sidebar-inner' ], $content )
+			Html::rawElement( 'div', [ 'class' => [ 'sidebar-inner', 'emptyPortlet' => !$content] ], $content )
 		);
 
 		return $html;
