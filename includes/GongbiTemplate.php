@@ -853,9 +853,6 @@ class GongbiTemplate extends BaseTemplate {
 			} elseif ( $navKey == 'variants' ) {
 				// wat
 				$sortedPileOfTools['variants'] = $navBlock;
-			}  elseif ( $navKey == 'user' ) {
-				// wat
-				$sortedPileOfTools['user'] = $navBlock;
 			} else {
 				$pileOfEditTools = array_merge( $pileOfEditTools, $navBlock );
 			}
@@ -874,7 +871,7 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		// Mobile toggles
-		if ( $namespace >= 0 || $sortedPileOfTools['user'] ) {
+		if ( $namespace >= 0 || $this->pileOfTools['page-secondary'] || $this->pileOfTools['user'] ) {
 			$pileOfTools['tools'] = [
 				'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
 				'id' => 'ca-tools',
