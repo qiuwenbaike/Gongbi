@@ -648,7 +648,7 @@ class GongbiTemplate extends BaseTemplate {
 
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageMore = $this->getPortlet(
-			'pagemisc',
+			'gongbi-pagemisc',
 			$this->pileOfTools['page-tertiary']
 		);
 		if ( isset( $this->collectionPortlet ) ) {
@@ -869,7 +869,7 @@ class GongbiTemplate extends BaseTemplate {
 			'text' => $this->getMsg( 'gongbi-more' )->text(),
 			'id' => 'ca-more',
 			'class' => 'dropdown-toggle'
-		];		
+		];
 		// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 		if ( !empty( $this->sidebar['LANGUAGES'] ) || $sortedPileOfTools['variants']
 			|| isset( $this->otherProjects ) ) {
