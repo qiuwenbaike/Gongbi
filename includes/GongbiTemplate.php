@@ -880,13 +880,11 @@ class GongbiTemplate extends BaseTemplate {
 				'class' => 'dropdown-toggle'
 			];
 		}
-		if ( isset( $this->pileOfTools['page-secondary'] ) || isset(  $this->pileOfTools['user'] ) ) {
-			$pileOfTools['tools'] = [
-				'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
-				'id' => 'ca-tools',
-				'class' => 'dropdown-toggle'
-			];
-		}
+		$pileOfTools['tools'] = [
+			'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
+			'id' => 'ca-tools',
+			'class' => 'dropdown-toggle'
+		];
 		$pileOfTools['more'] = [
 			'text' => $this->getMsg( 'gongbi-more' )->text(),
 			'id' => 'ca-more',
@@ -955,6 +953,10 @@ class GongbiTemplate extends BaseTemplate {
 				$currentSet = 'general';
 			}
 			$sortedPileOfTools[$currentSet][$navKey] = $navBlock;
+		}
+
+		if ( !isset( $this->pileOfTools['page-secondary'] ) && !isset( $this->pileOfTools['user'] ) ) {
+			unset( $sortedPileOfTools['more']['tools'] );
 		}
 
 		// Extra sorting for Extension:ProofreadPage namespace items
