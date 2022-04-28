@@ -842,12 +842,7 @@ class GongbiTemplate extends BaseTemplate {
 		foreach ( $contentNavigation as $navKey => $navBlock ) {
 			// Just use namespaces items as they are
 			if ( $navKey == 'namespaces' ) {
-				if ( $namespace < 0 && count( $navBlock ) < 2 ) {
-					// Put special page ns_pages in the more pile so they're not so lonely
-					$sortedPileOfTools['page-tertiary'] = $navBlock;
-				} else {
-					$sortedPileOfTools['namespaces'] = $navBlock;
-				}
+				$sortedPileOfTools['namespaces'] = $navBlock;
 			} elseif ( $navKey == 'variants' ) {
 				// wat
 				$sortedPileOfTools['variants'] = $navBlock;
