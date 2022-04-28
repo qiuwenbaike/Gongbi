@@ -918,7 +918,6 @@ class GongbiTemplate extends BaseTemplate {
 				'userrights',
 				'log',
 				'emailuser'
-
 			] ) ) {
 				$currentSet = 'user';
 			} elseif ( in_array( $navKey, [
@@ -934,8 +933,7 @@ class GongbiTemplate extends BaseTemplate {
 				$currentSet = 'page-tertiary';
 			} elseif ( in_array( $navKey, [
 				'more',
-				'languages',
-				'tools'
+				'languages'
 			] ) ) {
 				$currentSet = 'more';
 			} else {
