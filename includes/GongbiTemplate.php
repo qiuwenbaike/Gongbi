@@ -98,7 +98,7 @@ class GongbiTemplate extends BaseTemplate {
 							'pagemisc',
 							$this->pileOfTools['page-tertiary'],
 							'gongbi-pagemisc'
-						);
+						)
 					)
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
