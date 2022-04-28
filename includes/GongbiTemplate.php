@@ -631,29 +631,30 @@ class GongbiTemplate extends BaseTemplate {
 	 */
 	protected function getPageToolSidebar() {
 		$html = '';
+		$pageTools = '';
+		$pageMore = '';
 
 		if ( $this->pileOfTools['page-secondary'] ) {
 			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-			$pageTools = $this->getPortlet(
+			$pageTools .= $this->getPortlet(
 				'cactions',
 				$this->pileOfTools['page-secondary'],
 				'gongbi-pageactions'
 			);
+
+			$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
 		}
+
+		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		if ( $this->pileOfTools['user'] ) {
 			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-			$pageTools .= $this->getPortlet(
+			$pageMore .= $this->getPortlet(
 				'userpagetools',
 				$this->pileOfTools['user'],
 				'gongbi-userpagetools'
 			);
 		}
-		if ( $this->pileOfTools['page-secondary'] || $this->pileOfTools['user'] ) {
-			$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
-		}
-
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-		$pageMore = $this->getPortlet(
+		$pageMore .= $this->getPortlet(
 			'pagemisc',
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
@@ -664,7 +665,7 @@ class GongbiTemplate extends BaseTemplate {
 				$this->collectionPortlet
 			);
 		}
-		if ( $this->pileOfTools['page-tertiary'] || isset( $this->collectionPortlet ) ) {
+		if ( $this->pileOfTools['page-tertiary'] || $this->pileOfTools['user'] || isset( $this->collectionPortlet ) ) {
 			$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
 		}
 
@@ -880,11 +881,13 @@ class GongbiTemplate extends BaseTemplate {
 				'class' => 'dropdown-toggle'
 			];
 		}
-		$pileOfTools['tools'] = [
-			'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
-			'id' => 'ca-tools',
-			'class' => 'dropdown-toggle'
-		];
+		if ( $namespace >= 0 ) {
+			$pileOfTools['tools'] = [
+				'text' => $this->getMsg( 'gongbi-pageactions' )->text(),
+				'id' => 'ca-tools',
+				'class' => 'dropdown-toggle'
+			];
+		}
 		$pileOfTools['more'] = [
 			'text' => $this->getMsg( 'gongbi-more' )->text(),
 			'id' => 'ca-more',
