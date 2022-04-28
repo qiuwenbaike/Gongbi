@@ -632,20 +632,25 @@ class GongbiTemplate extends BaseTemplate {
 	protected function getPageToolSidebar() {
 		$html = '';
 
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-		$pageTools = $this->getPortlet(
-			'cactions',
-			$this->pileOfTools['page-secondary'],
-			'gongbi-pageactions'
-		);
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-		$pageTools .= $this->getPortlet(
-			'userpagetools',
-			$this->pileOfTools['user'],
-			'gongbi-userpagetools'
-		);
-
-		$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
+		if ( $this->pileOfTools['page-secondary'] ) {
+			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+			$pageTools = $this->getPortlet(
+				'cactions',
+				$this->pileOfTools['page-secondary'],
+				'gongbi-pageactions'
+			);
+		}
+		if ( $this->pileOfTools['user'] ) {
+			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+			$pageTools .= $this->getPortlet(
+				'userpagetools',
+				$this->pileOfTools['user'],
+				'gongbi-userpagetools'
+			);
+		}
+		if ( $this->pileOfTools['page-secondary'] || $this->pileOfTools['user'] ) {
+			$html .= $this->getSidebarChunk( 'page-tools', 'gongbi-pageactions', $pageTools );
+		}
 
 		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$pageMore = $this->getPortlet(
@@ -659,8 +664,9 @@ class GongbiTemplate extends BaseTemplate {
 				$this->collectionPortlet
 			);
 		}
-
-		$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
+		if ( $this->pileOfTools['page-tertiary'] || isset( $this->collectionPortlet ) ) {
+			$html .= $this->getSidebarChunk( 'page-more', 'gongbi-pagemisc', $pageMore );
+		}
 
 		return $html;
 	}
