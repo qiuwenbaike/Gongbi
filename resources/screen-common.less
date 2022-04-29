@@ -861,15 +861,22 @@ body :not( :checked ) > .toctogglespan:after {
 
 #catlinks {
 	.nav-block();
-	
-	margin: 0 @content-padding;
 	padding: 1em 2em;
 
 	li {
+		padding: 0.25em 0.5em
 		border-left: 0;
 	}
 
 	div {
 		margin: 0 0 0.35em;
+	}
+
+	div:last-of-type {
+		margin: 0;
+	}
+
+	.catlinks-allhidden {
+		display: none !important;
 	}
 }
