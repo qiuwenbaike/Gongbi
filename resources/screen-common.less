@@ -18,21 +18,21 @@ body {
 }
 
 /* Scroll bar */
-::-webkit-scrollbar {
+html {
+	scrollbar-color: @base70 @background;
+	scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
 	width: 0.5em;
 }
 
-::-webkit-scrollbar-track {
-    background-color: @background;
+html::-webkit-scrollbar-track {
+	background-color: @background;
 }
 
-::-webkit-scrollbar-thumb {
-	background: @base60;
-}
-
-html {
-	scrollbar-color: @base60 @background;
-    scrollbar-width: thin;
+html::-webkit-scrollbar-thumb {
+	background: @base70;
 }
 
 #mw-content {
