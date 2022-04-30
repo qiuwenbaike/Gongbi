@@ -1,3 +1,7 @@
+'use strict';
+
+/* TOC (Left Sidebar) */
+
 /* eslint-disable no-jquery/variable-pattern */
 $( function () {
 	if ( $( '#toc' ).length !== 0 ) {

@@ -1,4 +1,5 @@
-/* eslint-disable no-jquery/variable-pattern */
+'use strict';
+
 $( function () {
 	// sidebar-chunk only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
@@ -60,6 +61,7 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	function setScrollClass( $table ) {
 		var $tableWrapper = $table.parent(),
 			$wrapper = $tableWrapper.parent(),
+
 			// wtf browser rtl implementations
 			scroll = Math.abs( $tableWrapper.scrollLeft() );
 
@@ -104,7 +106,8 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 
 		// Set up sticky captions
 		$content.find( '.content-table > table > caption' ).each( function () {
-			var $container, tableHeight,
+			var $container,
+				tableHeight,
 				$table = $( this ).parent(),
 				$wrapper = $table.parent().parent();
 
@@ -162,7 +165,10 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	function determineActiveSpoofScrollbars() {
 		$content.find( '.overflowed .content-table' ).each( function () {
 			var $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first(),
-				tableTop, tableBottom, viewBottom, captionHeight;
+				tableTop,
+				tableBottom,
+				viewBottom,
+				captionHeight;
 
 			// Skip caption
 			captionHeight = $( this ).find( 'caption' ).outerHeight();
