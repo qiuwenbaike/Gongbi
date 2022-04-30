@@ -1,11 +1,6 @@
 @import 'variables.less';
 
 // Three-column layout
-#mw-content {
-	border: solid 0.5px @base80;
-	border-width: 0 1px;
-}
-
 #mw-content-block {
 	.flex-display;
 	clear: both;
@@ -29,6 +24,12 @@
 #mw-related-navigation {
 	.column-right();
 	.flex(0, 0, @column-right-size, 3);
+}
+
+#mw-content,
+#content-bottom-stuff {
+	border: solid 0.5px @base80;
+	border-width: 0 1px;
 }
 
 // For the more responsive user tools support
