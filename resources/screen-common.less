@@ -232,34 +232,6 @@ body {
 	}
 }
 
-/* Style for Wikiplus */
-#Wikiplus-Edit-TopBtn a {
-	.ca-icon( 'images/wikitext-grey' );
-}
-
-/* Style for ToolsRedirect */
-#ca-redirect a {
-	.ca-icon( 'images/redirect-grey-ltr' );
-}
-
-.mw-content-rtl #ca-redirect a {
-	.ca-icon( 'images/redirect-grey-rtl' );
-}
-
-/* Style for MassEditRegex */
-#ca-masseditregex a {
-	.ca-icon( 'images/pencil-batch-grey' );
-}
-
-
-#p-namespaces {
-	float: left;
-
-	li {
-		margin-right: 1em;
-	}
-}
-
 #p-views,
 #p-more {
 	float: right;
@@ -288,7 +260,8 @@ body {
 	.ca-icon( 'images/pencil-grey' );
 }
 
-#ca-history a {
+#ca-history a,
+#ca-undelete a {
 	.ca-icon( 'images/clock-grey' );
 }
 
@@ -313,6 +286,34 @@ body {
 	.hidden();
 }
 
+/* Style for Wikiplus */
+#Wikiplus-Edit-TopBtn a {
+	.ca-icon( 'images/wikitext-grey' );
+}
+
+/* Style for ToolsRedirect */
+#ca-redirect a {
+	.ca-icon( 'images/redirect-grey-ltr' );
+}
+
+.mw-content-rtl #ca-redirect a {
+	.ca-icon( 'images/redirect-grey-rtl' );
+}
+
+/* Style for MassEditRegex */
+#ca-masseditregex a {
+	.ca-icon( 'images/pencil-batch-grey' );
+}
+
+#p-namespaces {
+	float: left;
+
+	li {
+		margin-right: 1em;
+	}
+}
+
+/* Fallback */
 .tools-inline li[ id^='ca-nstab-' ] a {
 	.ca-icon( 'images/page-grey' );
 }
