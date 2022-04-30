@@ -898,6 +898,7 @@ class GongbiTemplate extends BaseTemplate {
 		// Obviously if you're not the idiot who did this, I don't mean you.
 		foreach ( $pileOfEditTools as $navKey => $navBlock ) {
 			if ( in_array( $navKey, [
+				'view',
 				'watch',
 				'unwatch'
 			] ) ) {
