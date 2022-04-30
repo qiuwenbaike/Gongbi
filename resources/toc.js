@@ -1,7 +1,6 @@
 'use strict';
 
 /* TOC (Left Sidebar) */
-
 $( function () {
 	if ( $( '#toc' ).length !== 0 ) {
 		var $div = $( '<div>' ).attr( 'id', 'site-toc' ).addClass( 'sidebar-chunk' ),
