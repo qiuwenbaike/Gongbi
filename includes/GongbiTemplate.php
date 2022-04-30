@@ -846,11 +846,7 @@ class GongbiTemplate extends BaseTemplate {
 		foreach ( $contentNavigation as $navKey => $navBlock ) {
 			// Just use namespaces items as they are
 			if ( $navKey == 'namespaces') {
-				if ( $namespace < 0 ) {
-					$navBlock = null; // Hide namespace tag when on special pages
-				} else {
-					$sortedPileOfTools['namespaces'] = $navBlock;
-				}
+				$sortedPileOfTools['namespaces'] = $navBlock;
 			} elseif ( $navKey == 'variants' ) {
 				// wat
 				$sortedPileOfTools['variants'] = $navBlock;
