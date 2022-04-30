@@ -8,7 +8,7 @@
 	"skinname-gongbi": "Gongbi",
 	"gongbi-desc": "A New-generation skin for Qiuwen Baike based on Timeless skin",
 	"gongbi-anonymous": "Anonymous",
-	"gongbi-loggedinas": "Logged in as '''$1'''",
+	"gongbi-loggedinas": "'''$1'''",
 	"gongbi-notloggedin": "Not logged in",
 	"gongbi-userpage": "{{GENDER:$1|User}} page",
 	"gongbi-talkpage": "{{GENDER:$1|User}} talk",
@@ -28,5 +28,5 @@
 	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
 	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "History",
-	"gongbi-action-undelete": "Undelete {{PLURAL:$1|one edit|$1 edits}}"
+	"gongbi-action-undelete": "Undelete {{PLURAL:$1|1 edit|$1 edits}}"
 }

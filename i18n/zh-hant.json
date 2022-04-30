@@ -15,7 +15,7 @@
 	"skinname-gongbi": "Gongbi",
 	"gongbi-desc": "來自 Timeless 的新一代外觀",
 	"gongbi-anonymous": "匿名",
-	"gongbi-loggedinas": "以 '''$1''' 登入。",
+	"gongbi-loggedinas": "'''$1'''",
 	"gongbi-notloggedin": "尚未登入",
 	"gongbi-userpage": "{{GENDER:$1|使用者}}頁面",
 	"gongbi-talkpage": "{{GENDER:$1|使用者}}討論",
@@ -34,5 +34,5 @@
 	"gongbi.css": "/* 此處所有的 CSS 都會在使用者使用 Gongbi 外觀時載入 */",
 	"gongbi.js": "/* 此處所有的 JavaScript 都會在使用者使用 Gongbi 外觀時載入 */",
 	"gongbi-view-history": "歷史",
-	"gongbi-action-undelete": "取消刪除 {{PLURAL:$1|1|$1}} 個編輯"
+	"gongbi-action-undelete": "取消刪除{{PLURAL:$1|1|$1}}個編輯"
 }
