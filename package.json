@@ -1,17 +1,18 @@
 {
-	"private": true,
-	"scripts": {
-		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images",
-		"test": "grunt test",
-		"eslint-fix": "eslint resources/*.js  --fix"
-	},
-	"devDependencies": {
-		"eslint-config-wikimedia": "0.20.0",
-		"grunt": "1.4.0",
-		"grunt-banana-checker": "0.9.0",
-		"grunt-eslint": "23.0.0",
-		"grunt-stylelint": "0.16.0",
-		"stylelint-config-wikimedia": "0.11.1",
-		"svgo": "2.8.0"
-	}
+  "private": true,
+  "scripts": {
+    "minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images",
+    "test": "grunt test",
+    "eslint-fix": "eslint resources/*.js  --fix"
+  },
+  "devDependencies": {
+    "eslint-config-wikimedia": "0.20.0",
+    "grunt": "1.4.0",
+    "grunt-banana-checker": "0.9.0",
+    "grunt-eslint": "23.0.0",
+    "grunt-stylelint": "0.16.0",
+    "stylelint": "^14.8.1",
+    "stylelint-config-wikimedia": "0.11.1",
+    "svgo": "2.8.0"
+  }
 }
