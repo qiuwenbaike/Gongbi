@@ -141,12 +141,20 @@
 
 #p-logo-text {
 	position: absolute;
-	top: 0.75em;
+	top: 0.8em;
 	left: @content-padding + 4.5em;
 	text-align: left;
 
 	a {
 		padding-left: 0;
+
+		/* images */
+		&.wordmark img {
+			max-width: 20vw;
+			object-fit: contain;
+			width: 90%;
+			height: 90%;
+		}
 	}
 }
 
