@@ -1,3 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-	<path d="M1 3v3h18V3zm0 8.5h18v-3H1zM1 17h18v-3H1z" opacity=".5"/>
+	<path d="M2 2v3h16V2Zm0 9.5h16v-3H2ZM2 18h16v-3H2Z" opacity=".5"/>
 </svg>
