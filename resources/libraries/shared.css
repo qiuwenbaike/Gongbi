@@ -271,9 +271,9 @@ p.mw-delete-editreasons {
  * incl. log entries for these warnings
  */
 div.mw-warning-with-logexcerpt {
-	padding: 3px;
+	padding: 0.5em 2em 1em;
 	margin-bottom: 3px;
-	border: 2px solid #2a4b8d;
+	border: 1px solid #2a4b8d;
 	clear: both;
 }
 
