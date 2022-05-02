@@ -21,18 +21,19 @@ body {
 html {
 	scrollbar-color: @base70 @background;
 	scrollbar-width: thin;
-}
 
-html ::-webkit-scrollbar {
-	width: 0.5em;
-}
+	::-webkit-scrollbar {
+		width: 0.75em;
+		height: 0.75em;
+	}
 
-html ::-webkit-scrollbar-track {
-	background-color: @background;
-}
+	::-webkit-scrollbar-track {
+		background-color: @background;
+	}
 
-html ::-webkit-scrollbar-thumb {
-	background: @base70;
+	::-webkit-scrollbar-thumb {
+		background: @base70;
+	}
 }
 
 #mw-content {
