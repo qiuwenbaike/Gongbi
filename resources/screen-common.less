@@ -10,9 +10,9 @@ body {
 body {
 	font-family: @fonts;
 	color: @text;
-	// Footer colour; results in a weird distracting dark scrollbar in firefox, but fuck firefox
+	// Footer colour
 	// Setting it here avoids a jump to white after the footer, which is even more distracting
-	background: @base90;
+	background: @base80;
 	font-size: @font-size;
 	line-height: 1.5;
 }
@@ -178,16 +178,11 @@ html ::-webkit-scrollbar-thumb {
 	}
 
 	#footer-list {
-		display: -ms-flexbox;
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 100%;
+		.flex(1, 1, 100%, 1);
 	}
 
 	#footer-icons {
-		display: -ms-flexbox;
-		display: flex;
-		flex-direction: row;
+		margin-right: 2em;
 	}
 
 	.footer-icons {
