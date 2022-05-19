@@ -3,5 +3,5 @@
 /composer.lock
 /.eslintcache
 .DS_Store
-code.docx
-code.pdf
+code.*
+README.*
