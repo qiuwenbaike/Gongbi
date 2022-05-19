@@ -5,6 +5,7 @@ Install:
 2. add following code to LocalSettings.php:
    wfLoadSkin( 'Timeless' );
 3. Navigate to Special:Version of your wiki.
+4. OK!
 
 Design:
 There are 3 resolution ranges for responsive design: 
