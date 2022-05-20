@@ -160,13 +160,15 @@
 /* Logo */
 
 #p-logo-text {
-	position: absolute;
-	top: 0.8em;
-	left: @content-padding + 4.5em;
-	text-align: left;
+	position: static;
 
 	a {
 		padding-left: 0;
+		
+		/* images */
+		&.wordmark {
+			padding: 0 0.5em;
+		}
 	}
 }
 
