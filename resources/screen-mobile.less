@@ -158,6 +158,7 @@
 }
 
 /* Logo */
+// Prevent logo text overlapping icons on small displays
 
 #p-logo-text {
 	position: static;
@@ -168,6 +169,10 @@
 		/* images */
 		&.wordmark {
 			padding: 0 0.5em 0.5em;
+		}
+
+		&.long {
+			padding-bottom: 0.5em;
 		}
 	}
 }
