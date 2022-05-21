@@ -718,22 +718,30 @@ class GongbiTemplate extends BaseTemplate {
 
 		// Labels
 		if ( $user->isRegistered() ) {
-			$dropdownHeader = $userName;
+			$userDropdownHeader = $userName;
 			$headerMsg = [ 'gongbi-loggedinas', $userName ];
 		} else {
-			$dropdownHeader = $this->getMsg( 'gongbi-anonymous' )->text();
+			$userDropdownHeader = $this->getMsg( 'gongbi-anonymous' )->text();
 			$headerMsg = 'gongbi-notloggedin';
 		}
+		$sidebarDropdownHeader = $this->getMsg( 'navigation' )->text();
+
 		$html = Html::openElement( 'div', [ 'id' => 'user-tools' ] );
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'personal' ],
 			Html::rawElement( 'h2', [],
-				Html::element( 'span', [], $dropdownHeader )
+				Html::element( 'span', [], $userDropdownHeader )
 			) .
 			Html::rawElement( 'div', [ 'id' => 'personal-inner', 'class' => 'dropdown' ],
 				$this->getPortlet( 'personal', $personalTools, $headerMsg )
 			)
 		);
+
+		$html .= Html::openElement( 'div', [ 'id' => 'sidebar-tools' ],
+			Html::rawElement( 'h2', [],
+				Html::element( 'span', [], $sidebarDropdownHeader )
+			)
+	 	);
 
 		// Extra icon stuff (echo etc)
 		if ( !empty( $extraTools ) ) {

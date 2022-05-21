@@ -32,7 +32,7 @@ $( function () {
 			$( '#personal-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#site-navigation h2' ).on( 'click', function () {
+	$( '#sidebar-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#site-navigation .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
