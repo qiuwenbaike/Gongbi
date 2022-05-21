@@ -172,19 +172,13 @@
 // Prevent logo text overlapping icons on small displays
 
 #p-logo-text {
-	position: static;
+	position: absolute;
+	top: 0.5em;
+	left: @content-padding + 4.5em;
+	text-align: left;
 
 	a {
 		padding-left: 0;
-
-		/* images */
-		&.wordmark {
-			padding: 0 0.5em 0.5em;
-		}
-
-		&.long {
-			padding-bottom: 0.5em;
-		}
 	}
 }
 
