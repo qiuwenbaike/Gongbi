@@ -761,7 +761,7 @@ class GongbiTemplate extends BaseTemplate {
 			Html::rawElement( 'div', [ 'id' => 'sidebar-tools' ],
 				Html::rawElement( 'h2', [],
 					Html::element( 'span', [], $sidebarDropdownHeader )
-				). 
+				) 
 			) . 
 			Html::rawElement( 'div', [ 'id' => 'search-button' ],
 				Html::rawElement( 'h2', [],
