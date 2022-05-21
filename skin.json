@@ -126,7 +126,7 @@
 				"resources/toc.js.less": {
 					"media": "screen"
 				},
-				"resources/table-scroll.js.less" : {
+				"resources/table-scroll.js.less": {
 					"media": "screen"
 				}
 			}

@@ -1,5 +1,5 @@
 'use strict';
-/** 
+/**
  * Gongbi Skin
  * © 2015-2021 Isarra
  * © 2021-2022 WaitSpring
