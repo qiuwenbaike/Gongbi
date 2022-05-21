@@ -724,7 +724,6 @@ class GongbiTemplate extends BaseTemplate {
 			$userDropdownHeader = $this->getMsg( 'gongbi-anonymous' )->text();
 			$headerMsg = 'gongbi-notloggedin';
 		}
-		$sidebarDropdownHeader = $this->getMsg( 'navigation' )->text();
 
 		$html = Html::openElement( 'div', [ 'id' => 'user-tools' ] );
 
@@ -736,12 +735,6 @@ class GongbiTemplate extends BaseTemplate {
 				$this->getPortlet( 'personal', $personalTools, $headerMsg )
 			)
 		);
-
-		$html .= Html::openElement( 'div', [ 'id' => 'sidebar-tools' ],
-			Html::rawElement( 'h2', [],
-				Html::element( 'span', [], $sidebarDropdownHeader )
-			)
-	 	);
 
 		// Extra icon stuff (echo etc)
 		if ( !empty( $extraTools ) ) {
