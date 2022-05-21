@@ -752,6 +752,18 @@ class GongbiTemplate extends BaseTemplate {
 
 		$html .= Html::closeElement( 'div' );
 
+		// Add sidebar button
+		
+		$sidebarDropdownHeader = $this->getMsg( 'navigation' )->text();
+
+		$html .= Html::openElement( 'div', [ 'id' => 'sidebar-tools' ],
+			Html::rawElement( 'h2', [],
+				Html::element( 'span', [], $sidebarDropdownHeader )
+			)
+	 	);
+		
+		$html .= Html::closeElement( 'div' );
+
 		return [
 			'html' => $html,
 			'class' => $class
