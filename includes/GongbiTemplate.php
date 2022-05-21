@@ -757,22 +757,19 @@ class GongbiTemplate extends BaseTemplate {
 		$sidebarDropdownHeader = $this->getMsg( 'navigation' )->text();
 		$searchButtonTitle = $this->getMsg( 'searchbutton' )->text();
 
-		$html = Html::openElement( 'div', [ 'id' => 'site-functions' ] );
-
-		$html .= Html::rawElement( 'div', [ 'id' => 'sidebar-tools' ],
-			Html::rawElement( 'h2', [],
-				Html::element( 'span', [], $sidebarDropdownHeader )
-			)
-	 	);
-		
-		$html .= Html::rawElement( 'div', [ 'id' => 'search-button' ],
-			Html::rawElement( 'h2', [],
-				Html::element( 'span', [], $searchButtonTitle )
+		$html = Html::rawElement( 'div', [ 'id' => 'site-functions' ],
+			Html::rawElement( 'div', [ 'id' => 'sidebar-tools' ],
+				Html::rawElement( 'h2', [],
+					Html::element( 'span', [], $sidebarDropdownHeader )
+				). 
+			) . 
+			Html::rawElement( 'div', [ 'id' => 'search-button' ],
+				Html::rawElement( 'h2', [],
+					Html::element( 'span', [], $searchButtonTitle )
+				)
 			)
 		);
 
-		$html .= Html::closeElement( 'div' );
-		
 		return [
 			'html' => $html,
 			'class' => $class
