@@ -52,6 +52,47 @@
 	display: none;
 }
 
+// Flex test
+#mw-header-container {
+	padding: 0.5em !important;
+}
+
+#mw-header {
+	.flex-display;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#user-tools {
+	.flex-display;
+    .flex(1, 1, auto, 3);
+
+	#personal-extra {
+		.flex(1, 1, auto, 1);
+	}
+
+	#personal {
+		.flex(1, 1, auto, 2);
+
+		h2 {
+			margin: 0.5em 0.25em;
+		}
+	}
+}
+
+#sidebar-tools {
+	.flex(1, 1, auto, 1);
+}
+
+#p-logo-text {
+	.flex(1, 1, auto, 2);
+}
+
+div#p-search {
+    .flex(1, 1, 100%, 4);
+}
+
 #mw-header-container {
 	background: @background;
 	padding: 3em @content-padding 0.5em;
