@@ -517,8 +517,8 @@ class GongbiTemplate extends BaseTemplate {
 				} else {
 					$siteTitle = $this->getMsg( 'gongbi-sitetitle' )->escaped();
 				}
-				// width is 11em; 13 characters will probably fit?
-				if ( mb_strlen( $siteTitle ) > 13 ) {
+				// width is 11em; 7 characters will probably fit?
+				if ( mb_strlen( $siteTitle ) > 7 ) {
 					$titleClass = 'long';
 				}
 			} else {
