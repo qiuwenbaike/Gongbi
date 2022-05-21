@@ -67,13 +67,15 @@
 #p-search {
 	.flex(1, 1, 100%, 4);
 	margin: 0.25em 1em;
-	width: 100%;
+	
+	.sidebar-inner {
+		width: 100%;
+	}
 }
 
 /* Dropdowns */
 .sidebar-inner,
-.dropdown,
-#p-search {
+.dropdown {
 	display: none;
 	.nav-block();
 	background: @background;

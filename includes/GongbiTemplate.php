@@ -575,6 +575,8 @@ class GongbiTemplate extends BaseTemplate {
 			Html::rawElement( 'label', [ 'for' => 'searchInput' ], $this->getMsg( 'search' )->escaped() )
 		);
 
+		$html .= Html::openElement( 'div', [ 'class' => 'sidebar-inner'] );
+		
 		$html .= Html::rawElement( 'form', [ 'action' => $this->get( 'wgScript' ), 'id' => 'searchform' ],
 			Html::rawElement( 'div', [ 'id' => 'simpleSearch' ],
 				Html::rawElement( 'div', [ 'id' => 'searchInput-container' ],
@@ -594,7 +596,13 @@ class GongbiTemplate extends BaseTemplate {
 			)
 		);
 
-		return $html . Html::closeElement( 'div' );
+		// End of .sidebar-inner
+		$html .= Html::closeElement( 'div' );
+
+		// End of #p-search
+		$html .= Html::closeElement( 'div' );
+
+		return $html;
 	}
 
 	/**

@@ -39,7 +39,7 @@ $( function () {
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
-			$( '#p-search, #menus-cover' ).fadeToggle( toggleTime );
+			$( '#p-search .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
