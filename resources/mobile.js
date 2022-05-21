@@ -37,6 +37,11 @@ $( function () {
 			$( '#site-navigation .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
 		}
 	} );
+	$( '#search-button h2' ).on( 'click', function () {
+		if ( $( window ).width() < 851 ) {
+			$( '#p-search, #menus-cover' ).fadeToggle( toggleTime );
+		}
+	} );
 	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
