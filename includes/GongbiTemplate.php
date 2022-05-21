@@ -752,16 +752,27 @@ class GongbiTemplate extends BaseTemplate {
 
 		$html .= Html::closeElement( 'div' );
 
-		// Add sidebar button
+		// Add sidebar button and search button on mobile devices
 
 		$sidebarDropdownHeader = $this->getMsg( 'navigation' )->text();
+		$searchButtonTitle = $this->getMsg( 'searchbutton' )->text();
+
+		$html = Html::openElement( 'div', [ 'id' => 'site-functions' ] );
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'sidebar-tools' ],
 			Html::rawElement( 'h2', [],
 				Html::element( 'span', [], $sidebarDropdownHeader )
 			)
 	 	);
+		
+		$html .= Html::rawElement( 'div', [ 'id' => 'search-button' ],
+			Html::rawElement( 'h2', [],
+				Html::element( 'span', [], $searchButtonTitle )
+			)
+		);
 
+		$html .= Html::closeElement( 'div' );
+		
 		return [
 			'html' => $html,
 			'class' => $class

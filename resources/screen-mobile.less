@@ -113,9 +113,18 @@
 }
 
 /* Dropdown toggles */
-#sidebar-tools {
+#site-functions {
 	.flex(1, 1, auto, 2);
-	margin: @content-padding @content-padding + 0.5em;
+	
+	#sidebar-tools {
+		margin: @content-padding @content-padding + 0.5em;
+		.flex(1, 1, auto, 1);
+	}
+
+	#search-button {
+		margin: @content-padding @content-padding + 0.5em;
+		.flex(1, 1, auto, 2);
+	}
 }
 
 #user-tools {
@@ -155,6 +164,18 @@
 
 #sidebar-tools h2 {
 	background-image: url( images/menu-grey.svg );
+	background-size: 20px;
+	margin: 0 0.5em;
+}
+
+#search-button h2 {
+	background-image: url( images/search-ltr.svg );
+	background-size: 20px;
+	margin: 0 0.5em;
+}
+
+.mw-content-rtl #search-button h2 {
+	background-image: url( images/search-rtl.svg );
 	background-size: 20px;
 	margin: 0 0.5em;
 }
