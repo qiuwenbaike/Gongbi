@@ -55,7 +55,6 @@
 #mw-header-container {
 	background: @background;
 	padding: @content-padding 0 0;
-	border-bottom: 1px solid @base80;
 }
 
 #mw-header {
@@ -63,6 +62,9 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
+	margin: 0 @content-padding 0;
+	border-bottom: 1px solid @base80;
+	
 }
 
 #p-search {
@@ -122,8 +124,7 @@
 #site-functions {
 	.flex-display;
 	.flex(0, 1, auto, 2);
-	margin-left: 1em;
-	
+		
 	#sidebar-tools {
 		.flex(0, 1, auto, 1);
 		margin: 0.5em;
@@ -138,8 +139,7 @@
 #user-tools {
 	.flex-display;
     .flex(0, 1, auto, 3);
-	margin-right: 1em;
-
+	
 	#personal {
 		.flex(1, 1, auto, 2);
 		padding: 0.5em 0;
@@ -170,7 +170,7 @@
 #user-tools h2 {
 	background-image: url( images/user-grey.svg );
 	background-size: 20px;
-	margin: 0 0.5em;
+	margin: 0 0.5em 0 0;
 }
 
 #sidebar-tools h2 {
