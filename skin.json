@@ -90,16 +90,16 @@
 					"media": "screen"
 				},
 				"resources/screen-desktop.less": {
-					"media": "screen and (min-width: 768px)"
+					"media": "screen and (min-width: 850px)"
 				},
 				"resources/screen-desktop-full.less": {
 					"media": "screen and (min-width: 1024px)"
 				},
 				"resources/screen-desktop-mid.less": {
-					"media": "screen and (min-width: 768px) and (max-width: 1024px)"
+					"media": "screen and (min-width: 850px) and (max-width: 1024px)"
 				},
 				"resources/screen-mobile.less": {
-					"media": "screen and (max-width: 768px)"
+					"media": "screen and (max-width: 850px)"
 				},
 				"0": "resources/screen-misc.less",
 				"resources/libraries/common-print.less": {
