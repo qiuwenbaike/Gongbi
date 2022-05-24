@@ -2,8 +2,7 @@
 	"private": true,
 	"scripts": {
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images",
-		"test": "grunt test",
-		"eslint-fix": "eslint resources/*.js  --fix"
+		"test": "grunt test"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.20.0",

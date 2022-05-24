@@ -8,7 +8,7 @@ module.exports = function ( grunt ) {
 		eslint: {
 			options: {
 				cache: true,
-				fix: grunt.option( 'fix' )
+				fix: true
 			},
 			all: [
 				'**/*.js{,on}',
