@@ -21,6 +21,10 @@ module.exports = function ( grunt ) {
 			all: 'i18n/'
 		},
 		stylelint: {
+			options: {
+				cache: true,
+				fix: true
+			},
 			all: [
 				'**/*.css',
 				'**/*.less',
