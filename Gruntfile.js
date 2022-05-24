@@ -28,6 +28,7 @@ module.exports = function ( grunt ) {
 			all: [
 				'**/*.css',
 				'**/*.less',
+				'!resources/extensions/**',
 				'!resources/libraries/**',
 				'!node_modules/**',
 				'!vendor/**'
