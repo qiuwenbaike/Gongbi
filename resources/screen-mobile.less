@@ -123,7 +123,7 @@
 		
 	#sidebar-tools {
 		.flex(0, 1, auto, 1);
-		margin: 0 0.5em;
+		margin: 0 0 0 1em;
 		padding: 0.5em 0;
 	}
 
@@ -165,27 +165,38 @@
 	}
 }
 
+#user-tools h2,
+#sidebar-tools h2 {
+	align-items: center;
+	padding-left: 3em;
+    margin-left: -1.5em;
+
+	&:after {
+		display: inline-block;
+		content: '';
+		background-image: url( images/arrow-down-grey.svg );
+		background-position: center center;
+		background-repeat: no-repeat;
+		height: 12px;
+		width: 12px;
+	}
+}
+
 #user-tools h2 {
 	background-image: url( images/user-grey.svg );
-	background-size: 20px;
-	margin: 0 0.5em 0 0;
 }
 
 #sidebar-tools h2 {
 	background-image: url( images/menu-grey.svg );
-	background-size: 20px;
-	margin: 0 0.5em;
 }
 
 #search-button h2 {
 	background-image: url( images/search-ltr.svg );
-	background-size: 20px;
 	margin: 0 0.5em;
 }
 
 .mw-content-rtl #search-button h2 {
 	background-image: url( images/search-rtl.svg );
-	background-size: 20px;
 	margin: 0 0.5em;
 }
 
