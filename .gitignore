@@ -2,6 +2,7 @@
 /vendor
 /composer.lock
 /.eslintcache
+/.stylelintcache
 .DS_Store
 code.*
 README.*
