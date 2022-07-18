@@ -118,32 +118,14 @@
 			],
 			"scripts": [
 				"resources/main.js",
-				"resources/mobile.js"
-			]
-		},
-		"skins.gongbi.table-scroll": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"scripts": [
+				"resources/mobile.js",
+				"resources/toc.js",
 				"resources/table-scroll.js"
 			],
 			"styles": {
 				"resources/table-scroll.js.less": {
 					"media": "screen"
-				}
-			}
-		},
-		"skins.gongbi.toc": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"scripts": [
-				"resources/toc.js"
-			],
-			"styles": {
+				},
 				"resources/toc.js.less": {
 					"media": "screen"
 				}
