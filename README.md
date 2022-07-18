@@ -10,8 +10,8 @@ Install:
 Design:
 There are 3 resolution ranges for responsive design: 
 1. <=850px: mobile design;
-2. =>850px & <=1024px: tablet design; and
-3. =>1024px: desktop design.
+2. =>850px & <=1200px: tablet design; and
+3. =>1200px: desktop design.
 
 Feature:
 1. Responsive design;
