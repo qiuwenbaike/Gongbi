@@ -7,7 +7,7 @@
  */
 namespace MediaWiki\Skin\Gongbi;
 
-use ResourceLoaderContext;
+use MediaWiki\ResourceLoader\Context;
 use ResourceLoaderSkinModule;
 
 /**
@@ -17,16 +17,24 @@ class GongbiVariablesModule extends ResourceLoaderSkinModule {
 	/**
 	 * Add our LESS variables
 	 *
-	 * @param ResourceLoaderContext $context
+	 * @param Context $context
 	 * @return array LESS variables
 	 */
-	protected function getLessVars( ResourceLoaderContext $context ) {
+	protected function getLessVars( Context $context ) {
 		$vars = parent::getLessVars( $context );
-		$config = $this->getConfig();
+		// $config = $this->getConfig();
+
+		// Backdrop image (abadoned)
+		// $backdrop = $config->get( 'GongbiBackdropImage' );
+		// if ( $backdrop === 'cat.svg' ) {
+		// 	// expand default
+		// 	$backdrop = 'images/cat.svg';
+		// }
 
 		return array_merge(
 			$vars,
 			[
+				// 'backdrop-image' => "url($backdrop)",
 				// 'logo-image' => ''
 				// 'wordmark-image' => ''
 				// +width cutoffs ...
@@ -37,10 +45,10 @@ class GongbiVariablesModule extends ResourceLoaderSkinModule {
 	/**
 	 * Register the config var with the caching stuff so it properly updates the cache
 	 *
-	 * @param ResourceLoaderContext $context
+	 * @param Context $context
 	 * @return array
 	 */
-	public function getDefinitionSummary( ResourceLoaderContext $context ) {
+	public function getDefinitionSummary( Context $context ) {
 		$summary = parent::getDefinitionSummary( $context );
 		$summary[] = [];
 		
