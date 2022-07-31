@@ -49,6 +49,10 @@
 		"GongbiCatlinkSidebar": {
 			"value": false,
 			"description": "To decide whether to display categories on sidebar"
+		},
+		"GongbiBackdropImage": {
+			"value": "",
+			"description": "Set it as you would $wgLogo to an appropriate background image. Recommendation is an svg set to 500-750px wide"
 		}
 	},
 	"ResourceModules": {
