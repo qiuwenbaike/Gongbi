@@ -32,7 +32,7 @@
 	"gongbi-pagetools": "页面操作",
 	"gongbi-languages": "语言",
 	"gongbi-projects": "其他项目",
-	"gongbi-turnoff": "关闭菜单",
+	"gongbi-menus-hover-title": "关闭菜单",
 	"gongbi.css": "/* 这里放置的CSS将应用于Gongbi皮肤 */",
 	"gongbi.js": "/* 将为Gongbi皮肤的用户加载此处的所有JavaScript  */",
 	"gongbi-view-history": "历史",

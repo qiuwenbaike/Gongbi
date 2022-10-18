@@ -79,7 +79,7 @@ class GongbiTemplate extends BaseTemplate {
 		);
 
 		// For mobile
-		$html .= Html::element( 'div', [ 'id' => 'menus-cover' ] );
+		$html .= Html::element( 'div', [ 'id' => 'menus-cover', 'title' => $this->getMsg( 'gongbi-menus-hover-title' )->text() ] );
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'mw-content-container', 'class' => 'ts-container' ],
 			Html::rawElement( 'div', [ 'id' => 'mw-content-block', 'class' => 'ts-inner' ],
