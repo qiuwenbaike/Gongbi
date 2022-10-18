@@ -31,6 +31,7 @@
 	"gongbi-pagetools": "頁面操作",
 	"gongbi-languages": "語言",
 	"gongbi-projects": "其它專案",
+	"gongbi-turnoff": "関閉選單",
 	"gongbi.css": "/* 此處所有的 CSS 都會在使用者使用 Gongbi 外觀時載入 */",
 	"gongbi.js": "/* 此處所有的 JavaScript 都會在使用者使用 Gongbi 外觀時載入 */",
 	"gongbi-view-history": "歷史",

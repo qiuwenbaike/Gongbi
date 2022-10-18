@@ -24,6 +24,7 @@
 	"gongbi-pagetools": "Page actions",
 	"gongbi-languages": "Languages",
 	"gongbi-projects": "Other projects",
+	"gongbi-turnoff": "Turn off the menu",
 	"gongbi-sitetitle": "{{int:Sitetitle}}",
 	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
 	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",

@@ -29,6 +29,7 @@
 	"gongbi-pagetools": "Label for other page tools",
 	"gongbi-languages": "Label for the other languages dropdown\n{{Identical|Language}}",
 	"gongbi-projects": "Label for the other projects dropdown",
+	"gongbi-turnoff": "Turn off the menu",
 	"gongbi-sitetitle": "{{ignore}}\nSite title for site banner",
 	"gongbi.css": "{{optional}}\nCSS applied to users using gongbi skin.",
 	"gongbi.js": "{{optional}}\nJS for users using gongbi skin.",
