@@ -34,6 +34,6 @@ $( function () {
 			$portletBody = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUl = $( '#toc>ul' ).html();
 		$div.append( $titleH2 ).append( $divInner.append( $divPortlet.append( $titleH3 ).append( $portletBody.append( $tocUl ) ) ) ).appendTo( $( '#mw-site-navigation' ) );
-		$divRight.append( $titleH2 ).append( $divInner.append( $divPortletRight.append( $titleH3Right ).append( $portletBody.append( $tocUl ) ) ) ).appendTo( $( '#mw-related-navigation' ) );
+		$divRight.append( $titleH2 ).append( $divInner.clone().append( $divPortletRight.append( $titleH3Right ).append( $portletBody.clone().append( $tocUl.clone() ) ) ) ).appendTo( $( '#mw-related-navigation' ) );
 	}
 } );
