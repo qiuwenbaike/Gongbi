@@ -1,6 +1,7 @@
 /**
  * Gongbi Skin
- * © 2015-2021 Isarra Yos
+ * © 2015-2021 Issara
+ * © 2022 WaitSpring
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
