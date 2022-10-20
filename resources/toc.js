@@ -18,22 +18,27 @@
  */
 'use strict';
 
-/* TOC (Left Sidebar) */
+/* TOC (Sidebar) */
 
 $( function () {
 	if ( $( '#toc>ul' ).length !== 0 ) {
 		var $div = $( '<div>' ).attr( 'id', 'site-toc' ).addClass( 'sidebar-chunk' ),
-			$divRight = $( '<div>' ).attr( 'id', 'site-toc-right' ).addClass( 'sidebar-chunk' ),
 			$title = $( '#mw-toc-heading' ).html(),
 			$titleH2 = $( '<h2><span>' + $title + '</span></h2>' ),
 			$titleH3 = $( '<h3 id="p-toc-label">' + $title + '</h3>' ),
-			$titleH3Right = $( '<h3 id="p-toc-right-label">' + $title + '</h3>' ),
 			$divInner = $( '<div>' ).addClass( 'sidebar-inner' ),
 			$divPortlet = $( '<div>' ).attr( 'id', 'p-toc' ).attr( 'role', 'navigation' ).attr( 'aria-labelledby', 'p-toc-label' ).addClass( 'mw-portlet' ),
 			$divPortletRight = $( '<div>' ).attr( 'id', 'p-toc-right' ).attr( 'role', 'navigation' ).attr( 'aria-labelledby', 'p-toc-label' ).addClass( 'mw-portlet' ),
 			$portletBody = $( '<ul>' ).addClass( 'mw-portlet-body' ),
-			$tocUl = $( '#toc>ul' ).html();
+			$tocUl = $( '#toc>ul' ).html(),
+			$divRight = $( '<div>' ).attr( 'id', 'site-toc-right' ).addClass( 'sidebar-chunk' ),
+			$titleRight = $( '#mw-toc-heading' ).html(),
+			$titleH2Right = $( '<h2><span>' + $titleRight + '</span></h2>' ),
+			$titleH3Right = $( '<h3 id="p-toc-right-label">' + $titleRight + '</h3>' ),
+			$divInnerRight = $divInner.clone(),
+			$portletBodyRight = $portletBody.clone(),
+			$tocUlRight = $( '#toc>ul' ).html();
 		$div.append( $titleH2 ).append( $divInner.append( $divPortlet.append( $titleH3 ).append( $portletBody.append( $tocUl ) ) ) ).appendTo( $( '#mw-site-navigation' ) );
-		$divRight.append( $titleH2 ).append( $divInner.clone().append( $divPortletRight.append( $titleH3Right ).append( $portletBody.clone().append( $tocUl.clone() ) ) ) ).appendTo( $( '#mw-related-navigation' ) );
+		$divRight.append( $titleH2Right ).append( $divInnerRight.append( $divPortletRight.append( $titleH3Right ).append( $portletBodyRight.append( $tocUlRight ) ) ) ).appendTo( $( '#mw-related-navigation' ) );
 	}
 } );
