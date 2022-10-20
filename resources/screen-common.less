@@ -628,26 +628,6 @@ pre,
 		margin-bottom: 0;
 	}
 
-	.mw-changeslist-legend {
-		float: none;
-		margin: 0 0 0 auto;
-		width: 200px;
-	}
-
-	.mw-changeslist-legend dt {
-		margin: 0 0.5em 0 0;
-	}
-
-	.mw-changeslist-legend dd {
-		margin-bottom: 0;
-		white-space: inherit;
-		word-break: break-word;
-	}
-
-	.mw-changeslist-line-inner {
-		word-break: break-word;
-	}
-
 	/* overflow:hidden on the header itself breaks tall scripts, but we need to hide
 	 * overflow on the border itself in output for proper thumb handling. Too weird to
 	 * change this everywhere, so we'll just do it for parser output for now.
@@ -950,4 +930,19 @@ body :not( :checked ) > .toctogglespan:after {
 	.catlinks-allhidden {
 		display: none;
 	}
+}
+
+// Code for Special:Recentchanges
+.mw-changeslist-legend dt {
+	margin: 0 0.5em 0 0;
+}
+
+.mw-changeslist-legend dd {
+	margin-bottom: 0;
+	white-space: inherit;
+	word-break: break-word;
+}
+
+.mw-changeslist-line-inner {
+	word-break: break-word;
 }
