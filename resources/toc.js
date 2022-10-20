@@ -30,16 +30,5 @@ $( function () {
 			$portletBody = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUl = $( '#toc>ul' ).html();
 		$div.append( $titleH2 ).append( $divInner.append( $divPortlet.append( $titleH3 ).append( $portletBody.append( $tocUl ) ) ) ).appendTo( $( '#mw-site-navigation' ) );
-
-		/* TOC (Right) */
-		var $divRight = $( '<div>' ).attr( 'id', 'site-toc-right' ).addClass( 'sidebar-chunk' ),
-			$titleRight = $( '#mw-toc-heading' ).html(),
-			$titleH2Right = $( '<h2><span>' + $titleRight + '</span></h2>' ),
-			$titleH3Right = $( '<h3 id="p-toc-right-label">' + $titleRight + '</h3>' ),
-			$divInnerRight = $( '<div>' ).addClass( 'sidebar-inner' ),
-			$divPortletRight = $( '<div>' ).attr( 'id', 'p-toc-right' ).attr( 'role', 'navigation' ).attr( 'aria-labelledby', 'p-toc-label' ).addClass( 'mw-portlet' ),
-			$portletBodyRight = $( '<ul>' ).addClass( 'mw-portlet-body' ),
-			$tocUlRight = $( '#toc>ul' ).html();
-		$divRight.append( $titleH2Right ).append( $divInnerRight.append( $divPortletRight.append( $titleH3Right ).append( $portletBodyRight.append( $tocUlRight ) ) ) ).appendTo( $( '#mw-related-navigation' ) );
 	}
 } );
