@@ -33,11 +33,9 @@
 }
 
 /* TOC Left */
-@media screen and ( min-width: @desktop-large-floor ) {
-	#site-toc {
-		position: sticky;
-		top: 4.375em;
-	}
+#site-toc {
+	position: sticky;
+	top: 4.375em;
 }
 
 @media screen and ( max-width: @desktop-large-floor ) {
@@ -47,14 +45,12 @@
 }
 
 /* TOC Right */
-@media screen and ( min-width: @desktop-mid-floor ) and ( max-width: @desktop-large-floor ) {
-	#mw-toc-navigation {
-		.column-left();
-		display: block;
-		width: @column-left-size;
-		position: sticky;
-		top: 4.475em;
-	}
+#mw-toc-navigation {
+	.column-left();
+	display: block;
+	width: @column-left-size;
+	position: sticky;
+	top: 4.475em;
 }
 
 @media screen and ( min-width: @desktop-large-floor ) , ( max-width: @desktop-mid-floor ) {
