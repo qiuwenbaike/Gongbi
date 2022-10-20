@@ -36,9 +36,9 @@ $( function () {
 			$titleRight = $( '#mw-toc-heading' ).html(),
 			$titleH2Right = $( '<h2><span>' + $titleRight + '</span></h2>' ),
 			$titleH3Right = $( '<h3 id="p-toc-right-label">' + $titleRight + '</h3>' ),
-			$divInnerRight = $divInner.clone(),
+			$divInnerRight = $( '<div>' ).addClass( 'sidebar-inner' ),
 			$divPortletRight = $( '<div>' ).attr( 'id', 'p-toc-right' ).attr( 'role', 'navigation' ).attr( 'aria-labelledby', 'p-toc-label' ).addClass( 'mw-portlet' ),
-			$portletBodyRight = $portletBody.clone(),
+			$portletBodyRight = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUlRight = $( '#toc>ul' ).html();
 		$divRight.append( $titleH2Right ).append( $divInnerRight.append( $divPortletRight.append( $titleH3Right ).append( $portletBodyRight.append( $tocUlRight ) ) ) ).appendTo( $( '#mw-related-navigation' ) );
 	}
