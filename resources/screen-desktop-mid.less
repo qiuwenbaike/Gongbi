@@ -44,23 +44,26 @@
 #mw-site-navigation {
 	// keep margins from overlapping
 	overflow: hidden;
-	border: solid 0.5px @base80;
-	border-width: 0 1px 0 0;
 }
 
 #mw-related-navigation > div.sidebar-chunk:first-child {
 	margin-top: 0;
 }
 
+#mw-content {
+	border: solid 0.5px @base80;
+	border-width: 0 1px 0 0;
+}
+
 #mw-content-wrapper {
 	float: right;
-	margin-left: -@column-left-size - 1em;
+	margin-left: -@column-left-size;
 	width: 100%;
 }
 
 #mw-content,
 #content-bottom-stuff {
-	margin-left: @column-left-size + 1em;
+	margin-left: @column-left-size;
 }
 
 .ts-inner {
