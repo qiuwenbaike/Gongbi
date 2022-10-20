@@ -81,6 +81,9 @@
 				"toc": true
 			},
 			"styles": {
+				"resources/content.media-common.less": {
+					"media": "all"
+				},
 				"resources/libraries/normalise.css": {
 					"media": "screen"
 				},
@@ -88,6 +91,9 @@
 					"media": "screen"
 				},
 				"resources/forms.less": {
+					"media": "screen"
+				},
+				"resources/content.media-screen.less": {
 					"media": "screen"
 				},
 				"resources/screen-common.less": {
@@ -110,6 +116,9 @@
 					"media": "print"
 				},
 				"resources/print.css": {
+					"media": "print"
+				},
+				"resources/content.media-print.less": {
 					"media": "print"
 				}
 			},
