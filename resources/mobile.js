@@ -50,7 +50,7 @@ $( function () {
 	} );
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
-		$( '#page-more .mobile-close-button' ).css( { top: $( '#ca-more' ).offset().top - 5, right: '1em' } );
+		$( '#page-more .mobile-close-button' ).css( 'top', $( '#ca-more' ).offset().top - 5 ).css( 'right', '1em' );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
@@ -59,7 +59,7 @@ $( function () {
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
-		$( '#page-tools .mobile-close-button' ).css( { top: $( '#ca-tools' ).offset().top - 5, right: '4em' } );
+		$( '#page-tools .mobile-close-button' ).css( 'top', $( '#ca-tools' ).offset().top - 5 ).css( 'right', '4em' );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
@@ -68,7 +68,7 @@ $( function () {
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
 		$( '#other-languages .sidebar-inner' ).css( 'top', $( '#ca-languages' ).offset().top + 25 );
-		$( '#other-languages .mobile-close-button' ).css( { top: $( '#ca-languages' ).offset().top - 5, right: '7em' } );
+		$( '#other-languages .mobile-close-button' ).css( 'top', $( '#ca-languages' ).offset().top - 5 ).css( 'right', '7em' );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
