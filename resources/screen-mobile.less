@@ -88,11 +88,13 @@
 	position: absolute;
 	padding: 1em 2.5em;
 	margin: 0;
+	right: 0;
+	top: 6em;
 	min-width: 9em;
 	max-width: 80%;
-	top: 6em;
-	right: 0;
-	overflow: visible;
+	max-height: calc( 100vh - 6em );
+	overflow-y: scroll;
+	overflow-x: visible;
 	z-index: 100;
 
 	h3 {
@@ -119,6 +121,19 @@
 	background: @base80;
 	opacity: 0.8;
 	overflow: hidden;
+}
+
+.sidebar-chunk .mobile-close-button {
+	margin: 0;
+	padding-top: 0.4em;
+	padding-left: 25px;
+	font-family: @fonts-secondary;
+	font-weight: 600;
+	font-size: 1.2em;
+	background-image: url( images/close-grey.svg );
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 18px;
 }
 
 /* Dropdown toggles */

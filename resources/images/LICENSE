@@ -21,6 +21,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ------
 Files included (all modified):
+- close-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/close.svg
 - gear-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/settings.svg
 - arrow-down-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/indicators/down.svg
 - user-grey.svg: https://github.com/wikimedia/oojs-ui/blob/e1e633410d61c3122f989551961f8693cc5d3901/src/themes/wikimediaui/images/icons/userActive.svg
