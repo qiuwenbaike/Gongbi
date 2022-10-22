@@ -163,7 +163,8 @@
 			"+ext.wikiLove.icon": "resources/extensions/WikiLove.icon.less",
 			"+ext.proofreadpage.page.navigation": "resources/extensions/Proofreadpage.page.navigation.less",
 			"+ext.CodeMirror": "resources/extensions/CodeMirror.less",
-			"+ext.wikiEditor.styles": "resources/extensions/WikiEditor.less"
+			"+ext.wikiEditor.styles": "resources/extensions/WikiEditor.less",
+			"+ext.uploadWizard": "resources/extensions/UploadWizard.less"
 		}
 	},
 	"AutoloadNamespaces": {
