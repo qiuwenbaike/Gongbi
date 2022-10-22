@@ -63,11 +63,16 @@ $( function () {
 
 	// Close menus on click outside
 	$( document ).on( 'click touchstart', function ( e ) {
-		if ( $( e.target ).closest( '#menus-cover, #site-navigation .sidebar-inner .mobile-close-button, #page-tools .sidebar-inner .mobile-close-button, #page-more .sidebar-inner .mobile-close-button' ).length > 0 ) {
+		if ( $( e.target ).closest( '#menus-cover' ).length > 0 ||
+			$( e.target ).closest( '#site-navigation .sidebar-inner .mobile-close-button' ).length > 0 ||
+			$( e.target ).closest( '#page-tools .sidebar-inner .mobile-close-button' ).length > 0 ||
+			$( e.target ).closest( '#page-more .sidebar-inner .mobile-close-button' ).length > 0 ) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
 			$( '#menus-cover' ).fadeOut( toggleTime );
-			$( '.mobile-close-button' ).fadeOut( toggleTime );
+			$( '#site-navigation .sidebar-inner .mobile-close-button' ).fadeOut( toggleTime );
+			$( '#page-tools .sidebar-inner .mobile-close-button' ).fadeOut( toggleTime );
+			$( '#page-more .sidebar-inner .mobile-close-button' ).fadeOut( toggleTime );
 		}
 	} );
 } );
