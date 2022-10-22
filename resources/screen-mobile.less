@@ -123,19 +123,6 @@
 	overflow: hidden;
 }
 
-.sidebar-chunk .mobile-close-button {
-	margin: 0;
-	padding-top: 0.4em;
-	padding-left: 25px;
-	font-family: @fonts-secondary;
-	font-weight: 600;
-	font-size: 1.2em;
-	background-image: url( images/close-grey.svg );
-	background-position: left center;
-	background-repeat: no-repeat;
-	background-size: 18px;
-}
-
 /* Dropdown toggles */
 #site-functions {
 	.flex-display;
@@ -212,6 +199,20 @@
 
 .mw-content-rtl #search-button h2 {
 	background-image: url( images/search-rtl.svg );
+}
+
+.sidebar-chunk .mobile-close-button {
+	cursor: pointer;
+	position: absolute;
+    right: 1em;
+    top: 1em;
+	width: 20px;
+	height: 20px;
+	padding-bottom: 0;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-image: url( images/close-grey.svg );
+	background-size: 18px;
 }
 
 #site-navigation {
