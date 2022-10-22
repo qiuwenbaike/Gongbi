@@ -528,7 +528,6 @@ class GongbiTemplate extends BaseTemplate {
 					'id' => 'p-banner',
 					'class' => [ 'mw-wiki-title', $titleClass ],
 					'href' => $this->data['nav_urls']['mainpage']['href'],
-					'title' => $siteTitle
 				],
 				$wordmarkImage ?: $siteTitle
 			);
