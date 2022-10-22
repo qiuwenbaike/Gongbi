@@ -29,50 +29,54 @@ $( function () {
 	// Open the various menus
 	$( '#user-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
-			$( '#personal-inner, #menus-cover' ).fadeToggle( toggleTime );
+			$( '#menus-cover' ).fadeToggle( toggleTime );
+			$( '#personal-inner' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
-			$( '#site-navigation .sidebar-inner, #menus-cover, #site-navigation .sidebar-inner .mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#menus-cover' ).fadeToggle( toggleTime );
+			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
-			$( '#p-search .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
+			$( '#menus-cover' ).fadeToggle( toggleTime );
+			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
-			$( '#page-tools .sidebar-inner, #menus-cover, #page-tools .sidebar-inner .mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#menus-cover' ).fadeToggle( toggleTime );
+			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
 		$( '#other-languages .sidebar-inner' ).css( 'top', $( '#ca-languages' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
-			$( '#other-languages .sidebar-inner, #menus-cover' ).fadeToggle( toggleTime );
+			$( '#menus-cover' ).fadeToggle( toggleTime );
+			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
-			$( '#page-more .sidebar-inner, #menus-cover, #page-more .sidebar-inner .mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#menus-cover' ).fadeToggle( toggleTime );
+			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
 
 	// Close menus on click outside
 	$( document ).on( 'click touchstart', function ( e ) {
-		if ( $( e.target ).closest( '#menus-cover' ).length > 0 ||
-			$( e.target ).closest( '#site-navigation .sidebar-inner .mobile-close-button' ).length > 0 ||
-			$( e.target ).closest( '#page-tools .sidebar-inner .mobile-close-button' ).length > 0 ||
-			$( e.target ).closest( '#page-more .sidebar-inner .mobile-close-button' ).length > 0 ) {
+		if ( $( e.target ).closest( '#menus-cover' ).length > 0 ) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
 			$( '#menus-cover' ).fadeOut( toggleTime );
-			$( '#site-navigation .sidebar-inner .mobile-close-button' ).fadeOut( toggleTime );
-			$( '#page-tools .sidebar-inner .mobile-close-button' ).fadeOut( toggleTime );
-			$( '#page-more .sidebar-inner .mobile-close-button' ).fadeOut( toggleTime );
+		}
+		if ( $( e.target ).closest( '.mobile-close-button' ).length > 0 ) {
+			console.log( e.target );
+			console.log( $( e.target ).closest( '.mobile-close-button' ).length > 0 );
 		}
 	} );
 } );
