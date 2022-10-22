@@ -31,18 +31,21 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
+			$( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
+			$( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
+			$( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
@@ -50,6 +53,7 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
+			$( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
@@ -57,6 +61,7 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
+			$( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-more' ).on( 'click', function () {
@@ -64,19 +69,17 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
+			$( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 
 	// Close menus on click outside
 	$( document ).on( 'click touchstart', function ( e ) {
-		if ( $( e.target ).closest( '#menus-cover' ).length > 0 ) {
+		if ( $( e.target ).closest( '#menus-cover' ).length > 0 || $( e.target ).closest( '.mobile-close-button' ).length > 0 ) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
 			$( '#menus-cover' ).fadeOut( toggleTime );
-		}
-		if ( $( e.target ).closest( '.mobile-close-button' ).length > 0 ) {
-			console.log( e.target );
-			console.log( $( e.target ).closest( '.mobile-close-button' ).length > 0 );
+			$( '.mobile-close-button' ).fadeOut( toggleTime );
 		}
 	} );
 } );
