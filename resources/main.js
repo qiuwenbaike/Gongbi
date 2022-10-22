@@ -7,7 +7,7 @@
 $( function () {
 	// sidebar-chunk only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
-	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-chunk' );
+	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-chunk:not(.mobile-close-button)' );
 
 	/**
 	 * Desktop menu click-toggling
