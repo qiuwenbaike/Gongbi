@@ -5,9 +5,9 @@
  * © 2021-2022 WaitSpring
  */
 $( function () {
-	// sidebar-chunk only applies to desktop-small, but the toggles are hidden at
+	// sidebar-inner only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
-	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-chunk' );
+	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
 
 	/**
 	 * Desktop menu click-toggling
