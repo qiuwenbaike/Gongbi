@@ -38,7 +38,7 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '#sidebar-tools  .mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#site-navigation .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
