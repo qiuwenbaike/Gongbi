@@ -576,6 +576,8 @@ class GongbiTemplate extends BaseTemplate {
 			Html::rawElement( 'label', [ 'for' => 'searchInput' ], $this->getMsg( 'search' )->escaped() )
 		);
 
+		$html .= Html::rawElement( 'div', [ 'class' => 'mobile-close-button', 'title' => $this->getMsg( 'gongbi-menus-hover-title' )->text() ] );
+
 		$html .= Html::openElement( 'div', [ 'class' => 'sidebar-inner'] );
 		
 		$html .= Html::rawElement( 'form', [ 'action' => $this->get( 'wgScript' ), 'id' => 'searchform' ],
@@ -740,6 +742,7 @@ class GongbiTemplate extends BaseTemplate {
 			Html::rawElement( 'h2', [],
 				Html::element( 'span', [], $userDropdownHeader )
 			) .
+			Html::rawElement( 'div', [ 'class' => 'mobile-close-button', 'title' => $this->getMsg( 'gongbi-menus-hover-title' )->text() ] ) .
 			Html::rawElement( 'div', [ 'id' => 'personal-inner', 'class' => 'dropdown' ],
 				$this->getPortlet( 'personal', $personalTools, $headerMsg )
 			)

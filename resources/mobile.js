@@ -31,7 +31,7 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
-			// $( '.mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#personal .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
@@ -45,7 +45,7 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
-			// $( '.mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
