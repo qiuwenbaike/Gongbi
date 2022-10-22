@@ -56,6 +56,27 @@
 }
 
 @media screen and (max-width: @desktop-mid-floor) {
+	ul#mwe-upwiz-steps {
+		margin: 0 auto;
+    	display: flex;
+    	flex-wrap: wrap;
+
+		li {
+			margin: 0 0 5px 0;
+			flex: 1 1 100px;
+			border: 1px solid #fff;
+
+			div {
+				padding-left: 0;
+			}
+
+			&:before,
+			&:after {
+				content: none;
+			}
+		}
+	}
+
 	.mwe-upwiz-deed-license-group-body {
 		padding-left: 0;
 	}
