@@ -61,9 +61,9 @@ $( function () {
 		}
 	} );
 
-	// Close menus on click outside
+	// Close menus on click outside or click close button
 	$( document ).on( 'click touchstart', function ( e ) {
-		if ( $( e.target ).closest( '#menus-cover' ).length > 0 ) {
+		if ( $( e.target ).closest( '#menus-cover' ).length > 0 || $( e.target ).closest( '.mobile-close-button' ).length > 0 ) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
 			$( '#menus-cover' ).fadeOut( toggleTime );
