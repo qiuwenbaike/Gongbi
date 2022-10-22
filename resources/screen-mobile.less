@@ -114,13 +114,23 @@
 	display: none;
 	.nav-block();
 	cursor: pointer;
-	width: 20px;
-	height: 20px;
-	padding-bottom: 0;
-	background-position: right center;
+	background-color: @background;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-image: url( images/close-grey.svg );
 	background-size: 18px;
+	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
+	position: absolute;
+	padding: 1em;
+	margin: 0;
+	right: 0;
+	top: 4em;
+	min-width: 9em;
+	max-width: 80%;
+	max-height: calc( 100vh - 6em );
+	overflow-y: scroll;
+	overflow-x: visible;
+	z-index: 100;
 }
 
 #menus-cover {
@@ -221,6 +231,11 @@
 		&:after {
 			display: none;
 		}
+	}
+
+	.mobile-close-button {
+		top: 4em;
+		left: 0;
 	}
 
 	.sidebar-inner {

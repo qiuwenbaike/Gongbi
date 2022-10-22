@@ -31,45 +31,48 @@ $( function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
-			$( '.mobile-close-button' ).fadeToggle( toggleTime );
+			// $( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '.mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#sidebar-tools  .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '.mobile-close-button' ).fadeToggle( toggleTime );
+			// $( '.mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
+		$( '#page-tools .mobile-close-button' ).css( 'top', $( '#ca-tools' ).offset().top );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '.mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#page-tools .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
 		$( '#other-languages .sidebar-inner' ).css( 'top', $( '#ca-languages' ).offset().top + 25 );
+		$( '#other-languages .mobile-close-button' ).css( 'top', $( '#ca-more' ).offset().top );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '.mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#other-languages .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
+		$( '#page-more .mobile-close-button' ).css( 'top', $( '#ca-more' ).offset().top );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '.mobile-close-button' ).fadeToggle( toggleTime );
+			$( '#page-more .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 
