@@ -4,13 +4,16 @@
  * Recommended options from:
  * https://www.mediawiki.org/wiki/Manual:Coding_conventions/SVG#Exemplified_safe_configuration
  */
-module.exports = {
+ module.exports = {
 	plugins: [
 		{
 			// Set of built-in plugins enabled by default.
 			name: 'preset-default',
 			params: {
 				overrides: {
+					cleanupIDs: false,
+					removeDesc: false,
+					removeTitle: false,
 					removeViewBox: false,
 					// If the SVG doesn't start with an XML declaration, then its MIME type will
 					// be detected as "text/plain" rather than "image/svg+xml" by libmagic and,
@@ -25,7 +28,7 @@ module.exports = {
 		'sortAttrs'
 	],
 	// Set whitespace according to Wikimedia Coding Conventions.
-	// @see https://github.com/svg/svgo/blob/main/lib/svgo/coa.js#L194 for more config options
+	// @see https://github.com/svg/svgo/blob/v2.8.0/lib/stringifier.js#L41 for available options.
 	js2svg: {
 		eol: 'lf',
 		finalNewline: true,
