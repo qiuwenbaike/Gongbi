@@ -24,9 +24,9 @@ $( function () {
 		var $div = $( '<div>' ).attr( 'id', 'site-toc' ).addClass( 'sidebar-chunk' ),
 			$title = $( '#mw-toc-heading' ).html(),
 			$titleH2 = $( '<h2><span>' + $title + '</span></h2>' ),
-			$titleH3 = $( '<h3 id="p-toc-label">' + $title + '</h3>' ),
+			$titleH3 = $( '<h3>' ).attr( 'id', 'p-toc-label' ).text( $title ),
 			$divInner = $( '<div>' ).addClass( 'sidebar-inner' ),
-			$divPortlet = $( '<div>' ).attr( 'id', 'p-toc' ).attr( 'role', 'navigation' ).attr( 'aria-labelledby', 'p-toc-label' ).addClass( 'mw-portlet' ),
+			$divPortlet = $( '<div>' ).attr( { id: 'p-toc', role: 'navigation', 'aria-labelledby': 'p-toc-label' } ).addClass( 'mw-portlet' ),
 			$portletBody = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUl = $( '#toc>ul' ).html();
 		$div.append( $titleH2 ).append( $divInner.append( $divPortlet.append( $titleH3 ).append( $portletBody.append( $tocUl ) ) ) ).appendTo( $( '#mw-site-navigation' ) );
@@ -36,9 +36,9 @@ $( function () {
 			$divRight = $( '<div>' ).attr( 'id', 'site-toc-right' ).addClass( 'sidebar-chunk' ),
 			$titleRight = $( '#mw-toc-heading' ).html(),
 			$titleH2Right = $( '<h2><span>' + $titleRight + '</span></h2>' ),
-			$titleH3Right = $( '<h3 id="p-toc-right-label">' + $titleRight + '</h3>' ),
+			$titleH3Right = $( '<h3>' ).attr( 'id', 'p-toc-right-label' ).text( $titleRight ),
 			$divInnerRight = $( '<div>' ).addClass( 'sidebar-inner' ),
-			$divPortletRight = $( '<div>' ).attr( 'id', 'p-toc-right' ).attr( 'role', 'navigation' ).attr( 'aria-labelledby', 'p-toc-label' ).addClass( 'mw-portlet' ),
+			$divPortletRight = $( '<div>' ).attr( { id: 'p-toc-right', role: 'navigation', 'aria-labelledby': 'p-toc-label' } ).addClass( 'mw-portlet' ),
 			$portletBodyRight = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUlRight = $( '#toc>ul' ).html();
 		$divNavi.append( $divRight.append( $titleH2Right ).append( $divInnerRight.append( $divPortletRight.append( $titleH3Right ).append( $portletBodyRight.append( $tocUlRight ) ) ) ) ).insertAfter( $( '#mw-related-navigation' ) );
