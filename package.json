@@ -1,5 +1,5 @@
 {
-	"name": "Timeless",
+	"name": "gongbi",
 	"private": true,
 	"scripts": {
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images",
