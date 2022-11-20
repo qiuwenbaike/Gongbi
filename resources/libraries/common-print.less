@@ -23,8 +23,6 @@
  * © 2001-2019 MediaWiki Contributors <https://www.mediawiki.org/wiki/Special:Version/Credits>
  */
 
-/* stylelint-disable selector-class-pattern */
-
 @content-background: #fff;
 @text: #000;
 @block-background: #f9f9f9;
@@ -64,16 +62,16 @@ body {
 
 /* Links */
 a {
-	background: none !important; /* stylelint-disable-line declaration-no-important */
-	padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+	background: none !important;
+	padding: 0 !important;
 }
 
 a,
 a.external,
 a.new,
 a.stub {
-	color: inherit !important; /* stylelint-disable-line declaration-no-important */
-	text-decoration: inherit !important; /* stylelint-disable-line declaration-no-important */
+	color: inherit !important;
+	text-decoration: inherit !important;
 }
 
 dt {
@@ -154,7 +152,7 @@ ul {
 
 		a {
 			display: block;
-			padding: 0.125em 0 !important; /* stylelint-disable-line declaration-no-important */
+			padding: 0.125em 0 !important;
 		}
 	}
 
@@ -286,9 +284,9 @@ img.thumbborder {
 .mw_metadata th,
 .mw_metadata td {
 	/* Important is required to override any inline styles provided by editors */
-	background: @content-background !important; /* stylelint-disable-line declaration-no-important */
+	background: @content-background !important;
 	/* We need to also set color in case editors applied a light text color */
-	color: @text !important; /* stylelint-disable-line declaration-no-important */
+	color: @text !important;
 	border: 1pt solid @block-border;
 	padding: 0.4em 0.6em;
 }
@@ -297,7 +295,7 @@ img.thumbborder {
 .wikitable > * > tr > th,
 .mw_metadata th {
 	text-align: center;
-	background: #eee !important; /* stylelint-disable-line declaration-no-important */
+	background: #eee !important;
 }
 
 table.listing,

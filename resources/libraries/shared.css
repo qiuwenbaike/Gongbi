@@ -17,14 +17,12 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
- /**
+/**
  * Yoinked from mw 1.34, because everything is all features in 1.35, and
  * most of the features are styled for monobook specifically in 1.36+.
  *
  * Remove this file if that ever gets fixed?
  */
-
-/* stylelint-disable selector-class-pattern */
 
 /* GENERAL CLASSES FOR DIRECTIONALITY SUPPORT */
 
@@ -325,8 +323,8 @@ a.new {
 /* Plainlinks - this can be used to switch
  * off special external link styling */
 .plainlinks a.external {
-	background: none !important; /* stylelint-disable-line declaration-no-important */
-	padding: 0 !important; /* stylelint-disable-line declaration-no-important */
+	background: none !important;
+	padding: 0 !important;
 }
 
 /* External URLs should always be treated as LTR (T6330) */

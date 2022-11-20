@@ -555,8 +555,7 @@ pre,
 	h3,
 	h4,
 	h5,
-	h6,
-	dt {
+	h6 {
 		font-weight: normal;
 		font-family: @fonts-secondary;
 		line-height: 1.125;
@@ -567,13 +566,11 @@ pre,
 		font-weight: bold;
 		font-family: @fonts-secondary;
 		line-height: 1.125;
-		margin: 1.5em 0 0.5em;
-		margin-bottom: 0.1em;
+		margin: 0.5em 0;
 	}
 
 	dl {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin: 0.5em 0;
 	}
 
 	form dt {
@@ -617,7 +614,7 @@ pre,
 	}
 
 	dd {
-		margin-bottom: 0;
+		margin: 0 0 0 2em;
 	}
 
 	/* overflow:hidden on the header itself breaks tall scripts, but we need to hide
@@ -685,12 +682,15 @@ p {
 ul,
 ol {
 	padding: 0;
-	margin: 0.3em 0 0.3em 2em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-left: 2em;
 }
 
 p + ul,
 p + ol {
-	margin: 0 0 0 2em;
+	margin-top: 0;
+	margin-left: 2em;
 }
 
 /* body */ .mw-hide-empty-elt .mw-parser-output:not( .mw-show-empty-elt ) .mw-empty-elt {
