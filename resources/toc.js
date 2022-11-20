@@ -23,7 +23,7 @@ $( function () {
 		/* TOC (Left) */
 		var $div = $( '<div>' ).attr( 'id', 'site-toc' ).addClass( 'sidebar-chunk' ),
 			$title = $( '#mw-toc-heading' ).html(),
-			$titleH2 = $( '<h2><span>' + $title + '</span></h2>' ),
+			$titleH2 = $( '<h2>' ).append( $( '<span>' ).text( $title ) ),
 			$titleH3 = $( '<h3>' ).attr( 'id', 'p-toc-label' ).text( $title ),
 			$divInner = $( '<div>' ).addClass( 'sidebar-inner' ),
 			$divPortlet = $( '<div>' ).attr( { id: 'p-toc', role: 'navigation', 'aria-labelledby': 'p-toc-label' } ).addClass( 'mw-portlet' ),
@@ -35,7 +35,7 @@ $( function () {
 		var $divNavi = $( '<div>' ).attr( 'id', 'mw-toc-navigation' ),
 			$divRight = $( '<div>' ).attr( 'id', 'site-toc-right' ).addClass( 'sidebar-chunk' ),
 			$titleRight = $( '#mw-toc-heading' ).html(),
-			$titleH2Right = $( '<h2><span>' + $titleRight + '</span></h2>' ),
+			$titleH2Right = $( '<h2>' ).append( $( '<span>' ).text( $titleRight ) ),
 			$titleH3Right = $( '<h3>' ).attr( 'id', 'p-toc-right-label' ).text( $titleRight ),
 			$divInnerRight = $( '<div>' ).addClass( 'sidebar-inner' ),
 			$divPortletRight = $( '<div>' ).attr( { id: 'p-toc-right', role: 'navigation', 'aria-labelledby': 'p-toc-label' } ).addClass( 'mw-portlet' ),
