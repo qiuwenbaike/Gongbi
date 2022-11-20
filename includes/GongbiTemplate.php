@@ -89,7 +89,20 @@ class GongbiTemplate extends BaseTemplate {
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-site-navigation' ],
 					$this->getLogo( 'p-logo', 'image' ) .
+<<<<<<< HEAD:includes/GongbiTemplate.php
 					$this->getMainNavigation()
+=======
+					$this->getMainNavigation() .
+					$this->getSidebarChunk(
+						'site-tools',
+						'timeless-sitetools',
+						$this->getPortlet(
+							'tb',
+							$this->pileOfTools['general'],
+							'timeless-sitetools'
+						)
+					)
+>>>>>>> 6bf13b62eafb0b62b0d8da264d738b1b15c3e3d3:includes/TimelessTemplate.php
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
 					$this->getPageToolSidebar() .
@@ -146,15 +159,23 @@ class GongbiTemplate extends BaseTemplate {
 			Html::rawElement( 'div', [ 'id' => 'bodyContentOuter' ],
 				Html::rawElement( 'div', [ 'id' => 'siteSub' ], $this->getMsg( 'tagline' )->parse() ) .
 				Html::rawElement( 'div', [ 'id' => 'mw-page-header-links' ],
-					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'namespaces',
 						$this->pileOfTools['namespaces'],
+<<<<<<< HEAD:includes/GongbiTemplate.php
 						'gongbi-namespaces',
+=======
+						'timeless-namespaces',
+						[ 'extra-classes' => 'tools-inline' ]
+					) .
+					$this->getPortlet(
+						'more',
+						$this->pileOfTools['more'],
+						'timeless-more',
+>>>>>>> 6bf13b62eafb0b62b0d8da264d738b1b15c3e3d3:includes/TimelessTemplate.php
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
 					$this->getVariants() .
-					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'more',
 						$this->pileOfTools['more'],
@@ -647,6 +668,7 @@ class GongbiTemplate extends BaseTemplate {
 	 * @return string html
 	 */
 	protected function getPageToolSidebar() {
+<<<<<<< HEAD:includes/GongbiTemplate.php
 		$html = '';
 		$pageTools = '';
 		$pageMore = '';
@@ -672,6 +694,19 @@ class GongbiTemplate extends BaseTemplate {
 			);
 		}
 		$pageMore .= $this->getPortlet(
+=======
+		$pageTools = $this->getPortlet(
+			'cactions',
+			$this->pileOfTools['page-secondary'],
+			'timeless-pageactions'
+		);
+		$pageTools .= $this->getPortlet(
+			'userpagetools',
+			$this->pileOfTools['user'],
+			'timeless-userpagetools'
+		);
+		$pageTools .= $this->getPortlet(
+>>>>>>> 6bf13b62eafb0b62b0d8da264d738b1b15c3e3d3:includes/TimelessTemplate.php
 			'pagemisc',
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
@@ -1094,7 +1129,6 @@ class GongbiTemplate extends BaseTemplate {
 			implode( '', $categoryItems )
 		);
 
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$html .= $this->getPortlet( $id, $categoriesHtml, $message );
 
 		return $html . Html::closeElement( 'div' );
@@ -1111,7 +1145,6 @@ class GongbiTemplate extends BaseTemplate {
 		$html = '';
 
 		if ( $this->pileOfTools['variants'] ) {
-			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 			$html .= $this->getPortlet(
 				'variants-desktop',
 				$this->pileOfTools['variants'],
@@ -1136,7 +1169,6 @@ class GongbiTemplate extends BaseTemplate {
 		$variantsOnly = false;
 
 		if ( $this->pileOfTools['variants'] ) {
-			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 			$variants = $this->getPortlet(
 				'variants',
 				$this->pileOfTools['variants']
