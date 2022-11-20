@@ -37,7 +37,8 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 * @param {jQuery} $table
 	 */
 	function setScrollClass( $table ) {
-		var $tableWrapper = $table.parent(), $wrapper = $tableWrapper.parent(),
+		var $tableWrapper = $table.parent(),
+			$wrapper = $tableWrapper.parent(),
 			// wtf browser rtl implementations
 			scroll = Math.abs( $tableWrapper.scrollLeft() );
 
@@ -47,17 +48,14 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 		} else {
 			$wrapper.removeClass( 'scroll-left' );
 		}
-
 		if ( $table.outerWidth() - $tableWrapper.innerWidth() - scroll > 1 ) {
 			$wrapper.addClass( 'scroll-right' );
 		} else {
 			$wrapper.removeClass( 'scroll-right' );
 		}
 	}
-
 	$content.find( '.content-table' ).on( 'scroll', function () {
 		setScrollClass( $( this ).children( 'table' ).first() );
-
 		if ( $content.attr( 'dir' ) === 'rtl' ) {
 			$( this ).find( 'caption' ).css( 'margin-right', Math.abs( $( this ).scrollLeft() ) + 'px' );
 		} else {
@@ -70,7 +68,8 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 */
 	function unOverflowTables() {
 		$content.find( '.content-table > table' ).each( function () {
-			var $table = $( this ), $wrapper = $table.parent().parent();
+			var $table = $( this ),
+				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$wrapper.addClass( 'overflowed' );
 				setScrollClass( $table );
@@ -81,20 +80,19 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 
 		// Set up sticky captions
 		$content.find( '.content-table > table > caption' ).each( function () {
-			var $container, tableHeight, $table = $( this ).parent(),
+			var $container,
+				tableHeight,
+				$table = $( this ).parent(),
 				$wrapper = $table.parent().parent();
-
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$container = $( this ).parents( '.content-table-wrapper' );
 				$( this ).width( $content.width() );
 				tableHeight = $container.innerHeight() - $( this ).outerHeight();
-
 				$container.find( '.content-table-left' ).height( tableHeight );
 				$container.find( '.content-table-right' ).height( tableHeight );
 			}
 		} );
 	}
-
 	unOverflowTables();
 	$( window ).on( 'resize', unOverflowTables );
 
@@ -103,7 +101,6 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 */
 	$content.find( '.content-table' ).each( function () {
 		var $table, $tableWrapper, $spoof, $scrollbar;
-
 		$tableWrapper = $( this );
 		$table = $tableWrapper.children( 'table' ).first();
 
@@ -119,7 +116,6 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	$content.find( '.content-table' ).on( 'scroll', function () {
 		// Only do this here if we're not already mirroring the spoof
 		var $mirror = $( this ).siblings( '.inactive' ).first();
-
 		$mirror.scrollLeft( $( this ).scrollLeft() );
 	} );
 	$content.find( '.content-table-scrollbar' ).on( 'scroll', function () {
@@ -137,22 +133,23 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 */
 	function determineActiveSpoofScrollbars() {
 		$content.find( '.overflowed .content-table' ).each( function () {
-			var $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first(), tableTop, tableBottom, viewBottom, captionHeight;
+			var $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first(),
+				tableTop,
+				tableBottom,
+				viewBottom,
+				captionHeight;
 
 			// Skip caption
 			captionHeight = $( this ).find( 'caption' ).outerHeight();
-
 			if ( !captionHeight ) {
 				captionHeight = 0;
 			} else {
 				// Pad slightly for reasons
 				captionHeight += 8;
 			}
-
 			tableTop = $( this ).offset().top;
 			tableBottom = tableTop + $( this ).outerHeight();
 			viewBottom = window.scrollY + document.documentElement.clientHeight;
-
 			if ( tableTop + captionHeight < viewBottom && tableBottom > viewBottom ) {
 				$scrollbar.removeClass( 'inactive' );
 			} else {
@@ -160,7 +157,6 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 			}
 		} );
 	}
-
 	determineActiveSpoofScrollbars();
 	$( window ).on( 'scroll resize', determineActiveSpoofScrollbars );
 

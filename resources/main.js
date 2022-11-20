@@ -1,9 +1,10 @@
-'use strict';
 /**
  * Gongbi Skin
  * © 2015-2021 Isarra
  * © 2021-2022 WaitSpring
  */
+'use strict';
+
 $( function () {
 	// sidebar-inner only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
