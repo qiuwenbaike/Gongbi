@@ -11,7 +11,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.37"
+		"MediaWiki": ">= 1.39"
 	},
 	"ValidSkinNames": {
 		"gongbi": {
@@ -20,6 +20,7 @@
 			"args": [
 				{
 					"name": "gongbi",
+					"bodyOnly": true,
 					"template": "MediaWiki\\Skin\\Gongbi\\GongbiTemplate",
 					"responsive": true,
 					"styles": [
