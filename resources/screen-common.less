@@ -29,8 +29,6 @@ body {
 body {
 	font-family: @fonts;
 	color: @text;
-	// Footer colour
-	// Setting it here avoids a jump to white after the footer, which is even more distracting
 	background: @base80;
 	font-size: @font-size;
 	line-height: 1.5;
@@ -139,7 +137,7 @@ html {
 	right: 1.5em;
 	width: 2.25em;
 	height: 2.25em;
-	.icon;
+	.icon();
 	background-image: url( images/search-ltr.svg );
 	/* @noflip */
 	background-position: center;
@@ -747,6 +745,7 @@ ul#filetoc,
 	display: table;
 	background: @base90;
 	padding: 1.25em 1.5em;
+	margin-left: 0;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	font-size: 100%;
