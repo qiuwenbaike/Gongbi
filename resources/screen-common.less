@@ -637,6 +637,20 @@ pre,
 		h1:after {
 			border-bottom-width: 3px;
 		}
+
+		ul,
+		ol {
+			padding: 0;
+			margin-top: 0.25em;
+			margin-bottom: 0.25em;
+			margin-left: 2em;
+		}
+
+		p + ul,
+		p + ol {
+			margin-top: 0;
+			margin-left: 2em;
+		}
 	}
 }
 
@@ -677,20 +691,6 @@ pre {
 
 p {
 	margin: 0.25em 0;
-}
-
-ul,
-ol {
-	padding: 0;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	margin-left: 2em;
-}
-
-p + ul,
-p + ol {
-	margin-top: 0;
-	margin-left: 2em;
 }
 
 /* body */ .mw-hide-empty-elt .mw-parser-output:not( .mw-show-empty-elt ) .mw-empty-elt {
@@ -768,7 +768,7 @@ ul#filetoc,
 	}
 
 	li {
-		margin: 0.3em 0;
+		margin: 0.25em 0;
 
 		&:last-child {
 			margin-bottom: 0.5em;
