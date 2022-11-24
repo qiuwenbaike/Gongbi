@@ -19,14 +19,14 @@
  */
 @import 'variables.less';
 
-// T181484 (firefox and chrome; doesn't fix anything else as yet)
+/* T181484 (firefox and chrome; doesn't fix anything else as yet) */
 body,
 html {
 	scroll-padding-top: @fixed-header-height + 0.5em;
 }
 
-// Override menu display from mobile
-// This also requires !importants where they hover and stuff
+/* Override menu display from mobile */
+/* This also requires !importants where they hover and stuff */
 .dropdown,
 .sidebar-inner {
 	display: block !important;
@@ -71,7 +71,7 @@ div.mw-notification-area {
 	min-height: @fixed-header-height;
 	border-bottom: solid 4px @blue;
 	box-sizing: border-box;
-	// box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.08 ), 0 0 2px rgba( 0, 0, 0, 0.15 );
+	/* box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.08 ), 0 0 2px rgba( 0, 0, 0, 0.15 ); */
 }
 
 #p-logo-text {
@@ -107,7 +107,7 @@ div.mw-notification-area {
 #personal {
 	display: inline-block;
 	position: relative;
-	// padding-left: 1.5em;
+	/* padding-left: 1.5em; */
 	line-height: 1;
 
 	.dropdown {
@@ -176,7 +176,7 @@ div.mw-notification-area {
 		display: none !important;
 		.dropdown-menu();
 		.dropdown-pokey();
-		// Override the mobile thing
+		/* Override the mobile thing */
 		top: 2.25em !important;
 		padding-bottom: 2em;
 		margin-right: 2px;
@@ -207,8 +207,8 @@ div.mw-notification-area {
 		background-image: none;
 
 		img {
-			// Let's not assume our users are sizing these to anything in particular
-			// 135px because that keeps things semi-consistent with logo parts of oldstyle logos
+			/* Let's not assume our users are sizing these to anything in particular */
+			/* 135px because that keeps things semi-consistent with logo parts of oldstyle logos */
 			width: 135px;
 			height: auto;
 			margin: 0.75em 0 0.5em;

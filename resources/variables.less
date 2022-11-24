@@ -19,7 +19,7 @@
  */
 @import 'mediawiki.mixins';
 
-// Default color scheme
+/* Default color scheme */
 @base100: #ffffff;
 @base95: #fbfcfd;
 @base90: #f8f9fa;
@@ -54,7 +54,7 @@
 @link-ext: #37a;
 @link-ext-visited: darken( @link-ext, 10% );
 
-// Fonts are chosen for consistent metrics, not necessarily overall prettiness.
+/* Fonts are chosen for consistent metrics, not necessarily overall prettiness. */
 @fonts-sans: 'Noto Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
 @fonts-serif: 'Noto Serif', 'Times New Roman', 'Times', serif;
 @fonts-mono: 'Noto Mono', 'Consolas', 'Monaco', 'Courier', monospace;
@@ -65,21 +65,21 @@
 @border: 1px;
 @radius: 0.2em;
 
-// Should really be part of the theme, but currently too much alignment/positioning
-// breaks if this is changed.
+/* Should really be part of the theme, but currently too much alignment/positioning */
+/* breaks if this is changed. */
 @font-size: 0.95em;
 
-// Widths
+/* Widths */
 
-// Remember to also update skin.json (and possibly mobile.js) if you change these
-// For some reason doing @mobile-width + 1px doesn't seem to actually work,
-// so we need both for each thing
+/* Remember to also update skin.json (and possibly mobile.js) if you change these */
+/* For some reason doing @mobile-width + 1px doesn't seem to actually work, */
+/* so we need both for each thing */
 @mobile-width: 850px;
 @desktop-mid-floor: 851px;
 @desktop-mid-width: 1199px;
 @desktop-large-floor: 1200px;
 
-// The max-width for the content
+/* The max-width for the content */
 @content-width: 120em;
 
 @content-padding: 2em;
@@ -89,5 +89,5 @@
 
 @fixed-header-height: 3.75em;
 
-// Functions
+/* Functions */
 @import 'mixins.less';

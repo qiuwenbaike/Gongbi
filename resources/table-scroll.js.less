@@ -19,13 +19,13 @@
  */
 @import 'variables.less';
 
-// Experimental overflowing table scrolling
+/* Experimental overflowing table scrolling */
 .overflowed {
 	margin: 1em 0;
 	position: relative;
 	overflow: hidden;
 
-	// Shadow-border containers
+	/* Shadow-border containers */
 	.content-table-left,
 	.content-table-right {
 		height: 100%;
@@ -34,7 +34,7 @@
 		z-index: 1;
 	}
 
-	// Noflips because scrollbar direction depends on the content direction
+	/* Noflips because scrollbar direction depends on the content direction */
 	.content-table-right {
 		/* @noflip */
 		right: 0;
@@ -85,7 +85,7 @@
 	}
 }
 
-// Desktop sticky scrollbars
+/* Desktop sticky scrollbars */
 .content-table-scrollbar.inactive {
 	position: absolute;
 	top: -99999px;

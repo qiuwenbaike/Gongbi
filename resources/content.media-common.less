@@ -15,11 +15,11 @@ figure[ typeof~='mw:Audio' ],
 figure[ typeof~='mw:Image/Frameless' ],
 figure[ typeof~='mw:Video/Frameless' ],
 figure[ typeof~='mw:Audio/Frameless' ] {
-	margin: 0;  // Maybe belongs in element.css for figure
+	margin: 0;  /* Maybe belongs in element.css for figure */
 
 	> a {
-		// The addition of the class is needed for higher specificity
-		// than Vector's print styles
+		/* The addition of the class is needed for higher specificity */
+		/* than Vector's print styles */
 		.mw-body-content & {
 			border: 0;
 		}
@@ -74,21 +74,21 @@ figure[ typeof~='mw:Audio/Thumb' ],
 figure[ typeof~='mw:Image/Frame' ],
 figure[ typeof~='mw:Video/Frame' ],
 figure[ typeof~='mw:Audio/Frame' ] {
-	margin: 0;  // Maybe belongs in element.css for figure
+	margin: 0;  /* Maybe belongs in element.css for figure */
 	margin-bottom: @margin-bottom-thumb;
 	display: table;
 	text-align: center;
 	border-collapse: collapse;
 
 	> a {
-		// The addition of the class is needed for higher specificity
-		// than Vector's print styles
+		/* The addition of the class is needed for higher specificity */
+		/* than Vector's print styles */
 		.mw-body-content & {
 			border: 0;
 		}
 	}
 
-	// Defaults for page content language
+	/* Defaults for page content language */
 
 	.mw-content-ltr & {
 		/* @noflip */
@@ -108,8 +108,8 @@ figure[ typeof~='mw:Audio/Frame' ] {
 		float: left;
 	}
 
-	// Override defaults when explicitly set
-	// Order of application is important, so don't combine with the defaults
+	/* Override defaults when explicitly set */
+	/* Order of application is important, so don't combine with the defaults */
 
 	&.mw-halign-right {
 		/* @noflip */

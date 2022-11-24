@@ -19,7 +19,7 @@
  */
 @import 'variables.less';
 
-// Prevent logo text overlapping icons on small displays
+/* Prevent logo text overlapping icons on small displays */
 @media screen and ( max-width: 480px ) {
 	#p-logo-text {
 		a.long {
@@ -28,18 +28,18 @@
 	}
 }
 
-// Internet Explorer 10-11
+/* Internet Explorer 10-11 */
 /* stylelint-disable media-feature-parentheses-space-inside */
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	/* stylelint-enable media-feature-parentheses-space-inside */
-	// T190991
+	/* T190991 */
 	textarea,
 	#searchInput {
 		box-shadow: none;
 	}
 }
 
-// For special pages
+/* For special pages */
 @media screen {
 	.ns-special table {
 		word-break: break-word;

@@ -23,21 +23,21 @@ input {
 	font-family: @fonts;
 }
 
-// Because weird special cases that get broken by this usually aren't forms?
+/* Because weird special cases that get broken by this usually aren't forms? */
 form {
-	// Special-case out the datetime widget and revision-compare button
+	/* Special-case out the datetime widget and revision-compare button */
 	input:not( .mw-widgets-datetime-dateTimeInputWidget-editField ):not( .mw-history-compareselectedversions-button ) {
 		padding: 0.35em;
 		border: solid 1px @base70;
 	}
 
-	// Special-case out also rather more normal multiselect
+	/* Special-case out also rather more normal multiselect */
 	.oo-ui-tagMultiselectWidget-handle input {
 		margin: unset;
 		padding: unset;
 	}
 
-	// Padding on checkboxes seems to cause misalignment with its text
+	/* Padding on checkboxes seems to cause misalignment with its text */
 	.oo-ui-checkboxInputWidget input:not( .mw-widgets-datetime-dateTimeInputWidget-editField ):not( .mw-history-compareselectedversions-button ) {
 		margin: unset;
 	}
@@ -60,17 +60,17 @@ button {
 }
 
 .mw-input-with-label {
-	display: block; // wat (this is probably an awful idea but aaaaaah whatever)
+	display: block; /* wat (this is probably an awful idea but aaaaaah whatever) */
 }
 
-// Fix for half-arsed date input conversion on special:contributions and anywhere else
-// that's not actually ooui: add just enough margin to keep multiple widgets from fondling
-// each other
+/* Fix for half-arsed date input conversion on special:contributions and anywhere else */
+/* that's not actually ooui: add just enough margin to keep multiple widgets from fondling */
+/* each other */
 .mw-widget-dateInputWidget {
 	margin: 0 0 0.2em 0;
 }
 
-// More fondling, because we’ve removed the default margins in normalise
+/* More fondling, because we’ve removed the default margins in normalise */
 input[ type="radio" ],
 input[ type="checkbox" ] {
 	margin: 0.35em 0.2em 0.25em 0.35em;
@@ -96,7 +96,7 @@ div.editOptions {
 	border-width: 0 1px @border;
 	background: @base80;
 
-	// For Extension:TemplateSandbox and the like
+	/* For Extension:TemplateSandbox and the like */
 	fieldset {
 		margin-top: 1em;
 	}
@@ -143,7 +143,7 @@ form:not( .oo-ui-layout ) {
 	}
 }
 
-// Essentially revert T182320 (core change)
+/* Essentially revert T182320 (core change) */
 .mw-editfont-monospace,
 .mw-editfont-sans-serif,
 .mw-editfont-serif {

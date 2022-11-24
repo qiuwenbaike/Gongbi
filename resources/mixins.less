@@ -17,19 +17,19 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-// Miscellaneous assembly
-// Remember to use this for similar things that need to be consistent, not
-// for things that are basically the same thing repeated, which should use
-// a shared class instead.
+/* Miscellaneous assembly */
+/* Remember to use this for similar things that need to be consistent, not */
+/* for things that are basically the same thing repeated, which should use */
+/* a shared class instead. */
 
-// To hide objects, but keep them accessible for screen-readers
+/* To hide objects, but keep them accessible for screen-readers */
 .hidden() {
 	position: absolute;
 	top: -9999px;
 	left: 0;
 }
 
-// Icons - hides labels, but keep them accessible for screen-readers
+/* Icons - hides labels, but keep them accessible for screen-readers */
 .icon() {
 	text-indent: -99999px;
 	border: 0;
@@ -37,7 +37,7 @@
 	background-repeat: no-repeat;
 }
 
-// Icons for the page actions menus
+/* Icons for the page actions menus */
 .ca-icon( @icon: '' ) {
 	background-image: url( '@{icon}.svg' );
 	border: 0;
@@ -49,7 +49,7 @@
 	padding: 0 2px 0 22px;
 }
 
-// For use after .ca-icon() ...
+/* For use after .ca-icon() ... */
 .ca-icon-only() {
 	text-indent: -99999px;
 	width: 20px;
@@ -107,7 +107,7 @@
 	}
 }
 
-// Dropdowns
+/* Dropdowns */
 .dropdown-header() {
 	cursor: pointer;
 	margin-bottom: -0.45em;
@@ -141,7 +141,7 @@
 .dropdown-pokey() {
 	&:before,
 	&:after {
-		transform: rotate( 360deg ); // to force some smoothing in annoying browsers
+		transform: rotate( 360deg ); /* to force some smoothing in annoying browsers */
 		border-bottom: 9px solid @base70;
 		border-left: 9px solid transparent;
 		border-right: 9px solid transparent;
