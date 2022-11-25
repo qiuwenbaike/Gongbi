@@ -239,13 +239,13 @@ class GongbiTemplate extends BaseTemplate {
 			$contentText .= $options['list-prepend'];
 			foreach ( $content as $key => $item ) {
 				if ( is_array( $options['text-wrapper'] ) ) {
-					$contentText .= $skin->makeListItem(
+					$contentText .= $this->makeListItem(
 						$key,
 						$item,
 						[ 'text-wrapper' => $options['text-wrapper'] ]
 					);
 				} else {
-					$contentText .= $skin->makeListItem(
+					$contentText .= $this->makeListItem(
 						$key,
 						$item
 					);
@@ -735,7 +735,7 @@ class GongbiTemplate extends BaseTemplate {
 		if ( !empty( $extraTools ) ) {
 			$iconList = '';
 			foreach ( $extraTools as $key => $item ) {
-				$iconList .= $skin->makeListItem( $key, $item );
+				$iconList .= $this->makeListItem( $key, $item );
 			}
 
 			$html .= Html::rawElement(
