@@ -474,6 +474,8 @@ class GongbiTemplate extends BaseTemplate {
 			Html::rawElement( 'div', [ 'class' => 'sidebar-inner' ], $content )
 		);
 
+		$html .= Html::rawElement( 'div', [ 'class' => 'mobile-close-button', 'title' => $this->getMsg( 'gongbi-menus-hover-title' )->text() ] );
+
 		return $html;
 	}
 
