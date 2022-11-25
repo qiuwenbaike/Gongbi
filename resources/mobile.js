@@ -27,21 +27,21 @@ $( function () {
 
 	// Open the various menus
 	$( '#user-tools h2' ).on( 'click', function () {
-		if ( $( window ).width() < 851 ) {
+		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
 			$( '#personal .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
-		if ( $( window ).width() < 851 ) {
+		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#site-navigation .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
-		if ( $( window ).width() < 851 ) {
+		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
@@ -50,7 +50,7 @@ $( function () {
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		$( '#page-more .mobile-close-button' ).css( 'top', $( '#ca-more' ).offset().top - 4 ).css( 'right', '1.5em' );
-		if ( $( window ).width() < 851 ) {
+		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#page-more .mobile-close-button' ).fadeToggle( toggleTime );
@@ -59,7 +59,7 @@ $( function () {
 	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
 		$( '#page-tools .mobile-close-button' ).css( 'top', $( '#ca-tools' ).offset().top - 4 ).css( 'right', '5em' );
-		if ( $( window ).width() < 851 ) {
+		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#page-tools .mobile-close-button' ).fadeToggle( toggleTime );
@@ -68,7 +68,7 @@ $( function () {
 	$( '#ca-languages' ).on( 'click', function () {
 		$( '#other-languages .sidebar-inner' ).css( 'top', $( '#ca-languages' ).offset().top + 25 );
 		$( '#other-languages .mobile-close-button' ).css( 'top', $( '#ca-languages' ).offset().top - 4 ).css( 'right', '8.5em' );
-		if ( $( window ).width() < 851 ) {
+		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#other-languages .mobile-close-button' ).fadeToggle( toggleTime );
