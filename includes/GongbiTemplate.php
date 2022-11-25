@@ -103,8 +103,7 @@ class GongbiTemplate extends BaseTemplate {
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
 					$this->getPageToolSidebar() .
-					$this->getInterwikiLinks() .
-					$this->getCategories()
+					$this->getInterwikiLinks()
 				) .
 				$this->getClear()
 			)
