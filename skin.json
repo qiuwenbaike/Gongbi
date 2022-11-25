@@ -11,7 +11,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.37"
+		"MediaWiki": ">= 1.38"
 	},
 	"ValidSkinNames": {
 		"gongbi": {
@@ -61,6 +61,7 @@
 			"features": {
 				"normalize": false,
 				"logo": true,
+				"content-thumbnails": false,
 				"content-media": false,
 				"content-links": true,
 				"content-links-external": true,
@@ -68,7 +69,7 @@
 				"content-tables": false,
 				"interface": false,
 				"interface-category": false,
-				"interface-message-box": true,
+				"interface-message-box": false,
 				"elements": false,
 				"legacy": false,
 				"i18n-ordered-lists": true,
