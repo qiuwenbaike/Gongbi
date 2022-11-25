@@ -1007,60 +1007,6 @@ class GongbiTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Categories for the sidebar
-	 *
-	 * Assemble an array of categories. This doesn't show any categories for the
-	 * action=history view, but that behaviour is consistent with other skins.
-	 *
-	 * @return string html
-	 */
-	protected function getCategories() {
-		$skin = $this->getSkin();
-		$catHeader = 'categories';
-		$catList = '';
-
-		$allCats = $skin->getOutput()->getCategoryLinks();
-		if ( !empty( $allCats ) ) {
-			if ( !empty( $allCats['normal'] ) ) {
-				$catList .= $this->getCatList(
-					$allCats['normal'],
-					'normal-catlinks',
-					'mw-normal-catlinks',
-					'categories'
-				);
-			} else {
-				$catHeader = 'hidden-categories';
-			}
-
-			if ( isset( $allCats['hidden'] ) ) {
-				$hiddenCatClass = [ 'mw-hidden-catlinks' ];
-				if ( MediaWikiServices::getInstance()
-					->getUserOptionsLookup()
-					->getBoolOption( $skin->getUser(), 'showhiddencats' )
-				) {
-					$hiddenCatClass[] = 'mw-hidden-cats-user-shown';
-				} elseif ( $skin->getTitle()->getNamespace() == NS_CATEGORY ) {
-					$hiddenCatClass[] = 'mw-hidden-cats-ns-shown';
-				} else {
-					$hiddenCatClass[] = 'mw-hidden-cats-hidden';
-				}
-				$catList .= $this->getCatList(
-					$allCats['hidden'],
-					'hidden-catlinks',
-					$hiddenCatClass,
-					[ 'hidden-categories', count( $allCats['hidden'] ) ]
-				);
-			}
-		}
-
-		if ( $catList !== '' ) {
-			return $this->getSidebarChunk( 'catlinks-sidebar', $catHeader, $catList );
-		}
-
-		return '';
-	}
-
-	/**
 	 * List of categories
 	 *
 	 * @param array $list
