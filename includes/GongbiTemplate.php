@@ -64,7 +64,10 @@ class GongbiTemplate extends BaseTemplate {
 		$this->pileOfTools = $this->getPageTools();
 		$userLinks = $this->getUserLinks();
 
-		$html = Html::openElement( 'div', [ 'id' => 'mw-wrapper', 'class' => $userLinks['class'] ] );
+		// Open html, body elements, etc
+		$html = $this->get( 'headelement' );
+
+		$html .= Html::openElement( 'div', [ 'id' => 'mw-wrapper', 'class' => $userLinks['class'] ] );
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'mw-header-container', 'class' => 'ts-container' ],
 			Html::rawElement( 'div', [ 'id' => 'mw-header', 'class' => 'ts-inner' ],
@@ -74,10 +77,9 @@ class GongbiTemplate extends BaseTemplate {
 			) .
 			$this->getClear()
 		);
-		$html .= $this->getHeaderHack();
 
 		// For mobile
-		$html .= Html::element( 'div', [ 'id' => 'menus-cover', 'title' => $this->getMsg( 'gongbi-menus-hover-title' )->text() ] );
+		$html .= Html::element( 'div', [ 'id' => 'menus-cover' ] );
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'mw-content-container', 'class' => 'ts-container' ],
 			Html::rawElement( 'div', [ 'id' => 'mw-content-block', 'class' => 'ts-inner' ],
@@ -87,7 +89,17 @@ class GongbiTemplate extends BaseTemplate {
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-site-navigation' ],
 					$this->getLogo( 'p-logo', 'image' ) .
-					$this->getMainNavigation()
+					$this->getMainNavigation() .
+					$this->getSidebarChunk(
+						'site-tools',
+						'gongbi-sitetools',
+						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+						$this->getPortlet(
+							'tb',
+							$this->pileOfTools['general'],
+							'gongbi-sitetools'
+						)
+					)
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
 					$this->getPageToolSidebar() .
@@ -104,6 +116,15 @@ class GongbiTemplate extends BaseTemplate {
 		);
 
 		$html .= Html::closeElement( 'div' );
+
+		// BaseTemplate::printTrail() stuff (has no get version)
+		// Required for RL to run
+		$html .= MWDebug::getDebugHTML( $this->getSkin()->getContext() );
+		$html .= $this->get( 'bottomscripts' );
+		$html .= $this->get( 'reporttime' );
+
+		$html .= Html::closeElement( 'body' );
+		$html .= Html::closeElement( 'html' );
 
 		// The unholy echo
 		echo $html;
@@ -123,18 +144,10 @@ class GongbiTemplate extends BaseTemplate {
 			$this->getSiteNotices() .
 			$this->getIndicators() .
 			$templateData[ 'html-title-heading' ] .
-			Html::rawElement(
-				'h1',
-				[
-					'id' => 'firstHeading',
-					'class' => 'firstHeading',
-					'lang' => $this->get( 'pageLanguage' )
-				],
-				$this->get( 'title' )
-			) .
 			Html::rawElement( 'div', [ 'id' => 'bodyContentOuter' ],
 				Html::rawElement( 'div', [ 'id' => 'siteSub' ], $this->getMsg( 'tagline' )->parse() ) .
 				Html::rawElement( 'div', [ 'id' => 'mw-page-header-links' ],
+					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'namespaces',
 						$this->pileOfTools['namespaces'],
@@ -142,12 +155,14 @@ class GongbiTemplate extends BaseTemplate {
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
 					$this->getVariants() .
+					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'more',
 						$this->pileOfTools['more'],
 						'gongbi-more',
 						[ 'extra-classes' => 'tools-inline' ]
 					) .
+					// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 					$this->getPortlet(
 						'views',
 						$this->pileOfTools['page-primary'],
@@ -268,24 +283,6 @@ class GongbiTemplate extends BaseTemplate {
 			'lang' => $this->get( 'userlang' ),
 			'dir' => $this->get( 'dir' )
 		];
-
-		$iconsHTML = '';
-		if ( count( $validFooterIcons ) > 0 ) {
-			$iconsHTML .= Html::openElement( 'ul', [ 'id' => "{$options['link-prefix']}-icons" ] );
-			foreach ( $validFooterIcons as $blockName => $footerIcons ) {
-				$iconsHTML .= Html::openElement( 'li', [
-					'id' => Sanitizer::escapeIdForAttribute(
-						"{$options['link-prefix']}-{$blockName}ico"
-					),
-					'class' => 'footer-icons'
-				] );
-				foreach ( $footerIcons as $icon ) {
-					$iconsHTML .= $this->getSkin()->makeFooterIcon( $icon );
-				}
-				$iconsHTML .= Html::closeElement( 'li' );
-			}
-			$iconsHTML .= Html::closeElement( 'ul' );
-		}
 
 		$bodyDivOptions = [
 			'class' => $this->mergeClasses( $options['body-class'], $options['body-extra-classes'] )
@@ -532,7 +529,7 @@ class GongbiTemplate extends BaseTemplate {
 			$html .= Html::rawElement( 'a', [
 					'id' => 'p-banner',
 					'class' => [ 'mw-wiki-title', $titleClass ],
-					'href' => $this->data['nav_urls']['mainpage']['href'],
+					'href' => $this->data['nav_urls']['mainpage']['href']
 				],
 				$wordmarkImage ?: $siteTitle
 			);
@@ -540,13 +537,11 @@ class GongbiTemplate extends BaseTemplate {
 		}
 		if ( $part !== 'text' ) {
 			$logoImage = $this->getLogoImage( $config->get( 'GongbiLogo' ) );
-			if ( $logoImage === false ) {
-				$logoSrc = $logos['svg'] ?? $logos['icon'] ?? '';
-				if ( $logoSrc !== '' ) {
-					$logoImage = Html::element( 'img', [
-						'src' => $logoSrc,
-					] );
-				}
+			if ( $logoImage === false && isset( $logos['icon'] ) ) {
+				$logoSrc = $logos['icon'];
+				$logoImage = Html::element( 'img', [
+					'src' => $logoSrc,
+				] );
 			}
 
 			$html .= Html::rawElement(
@@ -583,7 +578,7 @@ class GongbiTemplate extends BaseTemplate {
 		$html .= Html::rawElement( 'div', [ 'class' => 'mobile-close-button', 'title' => $this->getMsg( 'gongbi-menus-hover-title' )->text() ] );
 
 		$html .= Html::openElement( 'div', [ 'class' => 'sidebar-inner'] );
-		
+
 		$html .= Html::rawElement( 'form', [ 'action' => $this->get( 'wgScript' ), 'id' => 'searchform' ],
 			Html::rawElement( 'div', [ 'id' => 'simpleSearch' ],
 				Html::rawElement( 'div', [ 'id' => 'searchInput-container' ],
@@ -603,13 +598,7 @@ class GongbiTemplate extends BaseTemplate {
 			)
 		);
 
-		// End of .sidebar-inner
-		$html .= Html::closeElement( 'div' );
-
-		// End of #p-search
-		$html .= Html::closeElement( 'div' );
-
-		return $html;
+		return $html . Html::closeElement( 'div' );
 	}
 
 	/**
@@ -696,9 +685,8 @@ class GongbiTemplate extends BaseTemplate {
 	 * (for width adjustments)
 	 */
 	protected function getUserLinks() {
-		$skin = $this->getSkin();
-		$user = $skin->getUser();
-		$personalTools = $skin->getPersonalToolsForMakeListItem( $this->get( 'personal_urls' ) );
+		$user = $this->getSkin()->getUser();
+		$personalTools = $this->getPersonalTools();
 		// Preserve standard username label to allow customisation (T215822)
 		$userName = $personalTools['userpage']['links'][0]['text'] ?? $user->getName();
 
@@ -736,7 +724,6 @@ class GongbiTemplate extends BaseTemplate {
 			$dropdownHeader = $this->getMsg( 'gongbi-anonymous' )->text();
 			$headerMsg = 'gongbi-notloggedin';
 		}
-
 		$html = Html::openElement( 'div', [ 'id' => 'user-tools' ] );
 
 		$html .= Html::rawElement( 'div', [ 'id' => 'personal' ],
@@ -785,7 +772,7 @@ class GongbiTemplate extends BaseTemplate {
 		);
 
 		$html .= Html::closeElement( 'div' );
-		
+
 		return [
 			'html' => $html,
 			'class' => $class
@@ -834,9 +821,6 @@ class GongbiTemplate extends BaseTemplate {
 	 */
 	protected function getAfterContent() {
 		$html = '';
-		$skin = $this->getSkin();
-		$config = $skin->getContext()->getConfig();
-		$catSidebarEnbaled = $config->get( 'GongbiCatlinkSidebar' );
 
 		if ( $this->data['catlinks'] || $this->data['dataAfterContent'] ) {
 			$html .= Html::openElement( 'div', [ 'id' => 'content-bottom-stuff' ] );
@@ -878,6 +862,11 @@ class GongbiTemplate extends BaseTemplate {
 		// Tools specific to the page
 		$pileOfEditTools = [];
 		$contentNavigation = $this->data['content_navigation'];
+		// T300100: Do not use categories here. Already added to sidebar
+		unset(
+			$contentNavigation['category-normal'],
+			$contentNavigation['category-hidden']
+		);
 
 		foreach ( $contentNavigation as $navKey => $navBlock ) {
 			// Just use namespaces items as they are
@@ -1022,7 +1011,6 @@ class GongbiTemplate extends BaseTemplate {
 		$skin = $this->getSkin();
 		$catHeader = 'categories';
 		$catList = '';
-		$config = $skin->getContext()->getConfig();
 		$catSidebarEnbaled = $config->get( 'GongbiCatlinkSidebar' );
 
 		$allCats = $skin->getOutput()->getCategoryLinks();
@@ -1090,6 +1078,7 @@ class GongbiTemplate extends BaseTemplate {
 			implode( '', $categoryItems )
 		);
 
+		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$html .= $this->getPortlet( $id, $categoriesHtml, $message );
 
 		return $html . Html::closeElement( 'div' );
@@ -1106,6 +1095,7 @@ class GongbiTemplate extends BaseTemplate {
 		$html = '';
 
 		if ( $this->pileOfTools['variants'] ) {
+			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 			$html .= $this->getPortlet(
 				'variants-desktop',
 				$this->pileOfTools['variants'],
@@ -1130,6 +1120,7 @@ class GongbiTemplate extends BaseTemplate {
 		$variantsOnly = false;
 
 		if ( $this->pileOfTools['variants'] ) {
+			// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 			$variants = $this->getPortlet(
 				'variants',
 				$this->pileOfTools['variants']
