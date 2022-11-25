@@ -9,7 +9,7 @@
 
 ## Design
 
-There are 3 resolution ranges for responsive design: 
+There are 3 resolution ranges for responsive design:
 
 1. Width ≤ 768px: mobile design;
 2. 768px ≤ width ≤ 1200px: tablet design; and
