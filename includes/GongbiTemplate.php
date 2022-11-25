@@ -89,17 +89,7 @@ class GongbiTemplate extends BaseTemplate {
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-site-navigation' ],
 					$this->getLogo( 'p-logo', 'image' ) .
-					$this->getMainNavigation() .
-					$this->getSidebarChunk(
-						'site-tools',
-						'gongbi-sitetools',
-						// @phan-suppress-next-line SecurityCheck-DoubleEscaped
-						$this->getPortlet(
-							'tb',
-							$this->pileOfTools['general'],
-							'gongbi-sitetools'
-						)
-					)
+					$this->getMainNavigation()
 				) .
 				Html::rawElement( 'div', [ 'id' => 'mw-related-navigation' ],
 					$this->getPageToolSidebar() .
