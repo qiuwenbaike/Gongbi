@@ -382,6 +382,24 @@ class GongbiTemplate extends BaseTemplate {
 			'dir' => $this->get( 'dir' )
 		] );
 
+		$iconsHTML = '';
+		if ( count( $validFooterIcons ) > 0 ) {
+			$iconsHTML .= Html::openElement( 'ul', [ 'id' => "{$options['link-prefix']}-icons" ] );
+			foreach ( $validFooterIcons as $blockName => $footerIcons ) {
+				$iconsHTML .= Html::openElement( 'li', [
+					'id' => Sanitizer::escapeIdForAttribute(
+						"{$options['link-prefix']}-{$blockName}ico"
+					),
+					'class' => 'footer-icons'
+				] );
+				foreach ( $footerIcons as $icon ) {
+					$iconsHTML .= $this->getSkin()->makeFooterIcon( $icon );
+				}
+				$iconsHTML .= Html::closeElement( 'li' );
+			}
+			$iconsHTML .= Html::closeElement( 'ul' );
+		}
+
 		$linksHTML = '';
 		if ( count( $validFooterLinks ) > 0 ) {
 			if ( $options['link-style'] === 'flat' ) {
