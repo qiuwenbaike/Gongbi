@@ -362,7 +362,7 @@ class GongbiTemplate extends BaseTemplate {
 		$options = $setOptions + [
 			'id' => 'footer',
 			'class' => 'mw-footer',
-			'order' => 'iconslast',
+			'order' => 'iconsfirst',
 			'link-prefix' => 'footer',
 			'link-style' => null
 		];
