@@ -600,7 +600,13 @@ class GongbiTemplate extends BaseTemplate {
 			)
 		);
 
-		return $html . Html::closeElement( 'div' );
+		// End of .sidebar-inner
+		$html .= Html::closeElement( 'div' );
+
+		// End of #p-search
+		$html .= Html::closeElement( 'div' );
+
+		return $html;
 	}
 
 	/**
