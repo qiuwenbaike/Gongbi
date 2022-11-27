@@ -77,11 +77,13 @@ div.mw-notification-area {
 #p-logo-text {
 	max-width: @column-left-size;
 	.flex(0, 0, auto, 1);
+	.flex-display;
+	justify-content: center;
+    align-items: center;
 
 	/* images */
 	a.wordmark {
-		padding-left: 0.5em;
-		padding-right: 0.5em;
+		object-fit: contain;
 	}
 }
 
@@ -93,7 +95,7 @@ div.mw-notification-area {
 
 #user-tools {
 	.flex(0, 1, auto, 3);
-	display: inline-block;
+	.flex-display;
 
 	h2 span {
 		display: inline-block;
@@ -105,9 +107,9 @@ div.mw-notification-area {
 }
 
 #personal {
+	order: 2;
 	display: inline-block;
 	position: relative;
-	/* padding-left: 1.5em; */
 	line-height: 1;
 
 	.dropdown {
