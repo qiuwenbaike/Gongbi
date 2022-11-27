@@ -129,7 +129,7 @@ div.mw-notification-area {
 
 	h2 {
 		margin: 0;
-		padding-left: 0 0 0 25px;
+		padding-left: 25px;
 		font-family: @fonts-secondary;
 		font-weight: 600;
 		font-size: 1.25em;
@@ -138,7 +138,18 @@ div.mw-notification-area {
 		background-repeat: no-repeat;
 		background-size: 18px;
 
-		.dropdown-header();
+		/* from .dropdown-header(); */
+		cursor: pointer;
+	
+		&:after {
+			display: inline-block;
+			content: '';
+			background-image: url( images/arrow-down-grey.svg );
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 12px;
+			width: 12px;
+		}
 
 		span {
 			display: none;
