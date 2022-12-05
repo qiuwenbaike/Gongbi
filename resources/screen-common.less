@@ -508,6 +508,22 @@ div.magnify a {
 	}
 }
 
+/**
+ * Old-school "you have new messages" notification bar for when the Echo
+ * extension isn't installed
+ * Styles copied from /resources/src/mediawiki.skinning/interface.css@REL1_34
+ * @see https://phabricator.wikimedia.org/T294679
+ */
+.usermessage {
+	background-color: #ffce7b;
+	border: 1px solid #ffa500;
+	color: #000;
+	font-weight: bold;
+	margin: 2em 0 1em;
+	padding: 0.5em 1em;
+	vertical-align: middle;
+}
+
 /* pre and code styles copypasted from core
  * /resources/src/mediawiki.skinning/elements.css and modified a bit
  * @see https://phabricator.wikimedia.org/T177142
@@ -567,6 +583,7 @@ pre,
 		margin: 0.25em 0 0.5em;
 		padding: 0 0 0.125em;
 		border-bottom: solid 4px @blue;
+		display: block;
 	}
 
 	h1 {
@@ -577,6 +594,21 @@ pre,
 	h2 {
 		font-size: 1.8em;
 		border-bottom: solid 2px @base70;
+	}
+
+	h1,
+	h2 {
+		// Introduce a "block formatting context" so that the border-bottom underline doesn't overlap
+		// thumbnails, infoboxes and other floated content.
+		// https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
+		//
+		// It also allows floated content inside the heading to not be affected by those other floats
+		// (e.g. [edit] links when floated by gadgets, or [subscribe] links in DiscussionTools T318872).
+		//
+		// Other skins commonly use 'overflow: hidden' for this, but in our case it causes text in
+		// languages with tall scripts to be cut off (T195822). 'display: flow-root' works in all
+		// browsers supported by MediaWiki except IE 11 (https://caniuse.com/?search=flow-root).
+		display: flow-root;
 	}
 
 	h3 {
@@ -784,12 +816,9 @@ ul#filetoc {
 		font-family: @fonts-serif;
 		font-weight: bold;
 		font-size: 1.125em;
+		border-bottom: 0;
 		margin: 0;
 		display: inline;
-
-		&:after {
-			display: none;
-		}
 	}
 }
 
