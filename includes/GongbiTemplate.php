@@ -51,10 +51,10 @@ class GongbiTemplate extends BaseTemplate {
 		$this->languages = $this->sidebar['LANGUAGES'];
 
 		// WikiBase sidebar thing
-		if ( isset( $this->sidebar['wikibase-otherprojects'] ) ) {
-			$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
-			unset( $this->sidebar['wikibase-otherprojects'] );
-		}
+		// if ( isset( $this->sidebar['wikibase-otherprojects'] ) ) {
+		// 	$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
+		// 	unset( $this->sidebar['wikibase-otherprojects'] );
+		// }
 		// Collection sidebar thing
 		if ( isset( $this->sidebar['coll-print_export'] ) ) {
 			$this->collectionPortlet = $this->sidebar['coll-print_export'];
@@ -960,7 +960,7 @@ class GongbiTemplate extends BaseTemplate {
 				'pagelog',
 				'recentchangeslinked',
 				'permalink',
-				'wikibase',
+				/* 'wikibase', */
 				'cite'
 			] ) ) {
 				$currentSet = 'page-tertiary';
@@ -1083,14 +1083,14 @@ class GongbiTemplate extends BaseTemplate {
 		}
 
 		// if using wikibase for 'in other projects'
-		if ( isset( $this->otherProjects ) ) {
-			$otherprojects = $this->getPortlet(
-				'wikibase-otherprojects',
-				$this->otherProjects
-			);
-			$show = true;
-			$variantsOnly = false;
-		}
+		// if ( isset( $this->otherProjects ) ) {
+		// 	$otherprojects = $this->getPortlet(
+		// 		'wikibase-otherprojects',
+		// 		$this->otherProjects
+		// 	);
+		// 	$show = true;
+		// 	$variantsOnly = false;
+		// }
 
 		if ( $show ) {
 			$html .= $this->getSidebarChunk(
