@@ -960,7 +960,7 @@ class GongbiTemplate extends BaseTemplate {
 				'pagelog',
 				'recentchangeslinked',
 				'permalink',
-				'wikibase',
+				/* 'wikibase', */
 				'cite'
 			] ) ) {
 				$currentSet = 'page-tertiary';
