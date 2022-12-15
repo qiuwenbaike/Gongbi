@@ -488,11 +488,11 @@ class GongbiTemplate extends BaseTemplate {
 		);
 		$logos = ResourceLoaderSkinModule::getAvailableLogos( $config );
 		if ( $part !== 'image' ) {
-			if ( RequestContext::getMain()->getConfig()->get( 'GongbiWordmark' ) || isset( $logos['wordmark'] ) ) {
+			if ( $config->get( 'GongbiWordmark' ) || isset( $logos['wordmark'] ) ) {
 				$wordmarkImage = Html::element( 'img', [
-					'src' => RequestContext::getMain()->getConfig()->get( 'GongbiWordmark' )['src'] ?? $logos['wordmark']['src'],
-					'height' => RequestContext::getMain()->getConfig()->get( 'GongbiWordmark' )['height'] ?? ( $logos['wordmark']['height'] ?? null ),
-					'width' => RequestContext::getMain()->getConfig()->get( 'GongbiWordmark' )['width'] ?? ( $logos['wordmark']['width'] ?? null ),
+					'src' => $config->get( 'GongbiWordmark' )['src'] ?? $logos['wordmark']['src'],
+					'height' => $config->get( 'GongbiWordmark' )['height'] ?? ( $logos['wordmark']['height'] ?? null ),
+					'width' => $config->get( 'GongbiWordmark' )['width'] ?? ( $logos['wordmark']['width'] ?? null ),
 				] );
 			}
 
