@@ -1,9 +1,6 @@
 {
 	"@metadata": {
-		"authors": [
-			"Isarra",
-			"WaitSpring"
-		]
+		"authors": [ "Isarra", "WaitSpring" ]
 	},
 	"skinname-gongbi": "Gongbi",
 	"gongbi-desc": "A new skin for Qiuwen Baike based on Timeless skin",

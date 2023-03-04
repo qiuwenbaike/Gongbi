@@ -1,10 +1,12 @@
 <?php
+
 /** 
  * Gongbi Skin
  * includes/GongbiTemplate.php
  * © 2015-2021 Isarra
  * © 2021-2022 WaitSpring
  */
+
 namespace MediaWiki\Skin\Gongbi;
 
 use SkinTemplate;
@@ -14,13 +16,14 @@ use SkinTemplate;
  *
  * @ingroup Skins
  */
-class SkinGongbi extends SkinTemplate {
-	/**
-	 * @inheritDoc
-	 */
-	public function __construct(
-		array $options = []
-	) {
-		parent::__construct( $options );
-	}
+class SkinGongbi extends SkinTemplate
+{
+    /**
+     * @inheritDoc
+     */
+    public function __construct(
+        array $options = []
+    ) {
+        parent::__construct($options);
+    }
 }
