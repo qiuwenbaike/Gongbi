@@ -356,13 +356,13 @@ class GongbiTemplate extends BaseTemplate
      * (as of 2016)
      *
      * @param array $setOptions Miscellaneous other options
-     * * 'id' for footer id
-     * * 'class' for footer class
-     * * 'order' to determine whether icons or links appear first: 'iconsfirst' or links, though in
+     * - 'id' for footer id
+     * - 'class' for footer class
+     * - 'order' to determine whether icons or links appear first: 'iconsfirst' or links, though in
      *   practice we currently only check if it is or isn't 'iconsfirst'
-     * * 'link-prefix' to set the prefix for all link and block ids; most skins use 'f' or 'footer',
+     * - 'link-prefix' to set the prefix for all link and block ids; most skins use 'f' or 'footer',
      *   as in id='f-whatever' vs id='footer-whatever'
-     * * 'link-style' to pass to getFooterLinks: "flat" to disable categorisation of links in a
+     * - 'link-style' to pass to getFooterLinks: "flat" to disable categorisation of links in a
      *   nested array
      *
      * @return string html
