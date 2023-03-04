@@ -3,7 +3,7 @@
 ## Install
 
 1. Download skin to /skin and place files in folder named Gongbi
-2. add following code to LocalSettings.php: ```wfLoadSkin( 'Gongbi' );```
+2. add following code to LocalSettings.php: `wfLoadSkin( 'Gongbi' );`
 3. Navigate to Special:Version of your wiki.
 4. OK!
 
