@@ -26,8 +26,16 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	}
 
 	// Gotta wrap them for this to work; maybe later the parser etc will do this for us?!
-	$content.find( 'div > table:not( table table )' ).wrap( '<div class="content-table-wrapper"><div class="content-table"></div></div>' );
-	$content.find( '.content-table-wrapper' ).prepend( '<div class="content-table-left"></div><div class="content-table-right"></div>' );
+	$content
+		.find( 'div > table:not( table table )' )
+		.wrap(
+			'<div class="content-table-wrapper"><div class="content-table"></div></div>'
+		);
+	$content
+		.find( '.content-table-wrapper' )
+		.prepend(
+			'<div class="content-table-left"></div><div class="content-table-right"></div>'
+		);
 
 	/**
 	 * Set up borders for experimental overflowing table scrolling
@@ -57,9 +65,13 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	$content.find( '.content-table' ).on( 'scroll', function () {
 		setScrollClass( $( this ).children( 'table' ).first() );
 		if ( $content.attr( 'dir' ) === 'rtl' ) {
-			$( this ).find( 'caption' ).css( 'margin-right', Math.abs( $( this ).scrollLeft() ) + 'px' );
+			$( this )
+				.find( 'caption' )
+				.css( 'margin-right', Math.abs( $( this ).scrollLeft() ) + 'px' );
 		} else {
-			$( this ).find( 'caption' ).css( 'margin-left', $( this ).scrollLeft() + 'px' );
+			$( this )
+				.find( 'caption' )
+				.css( 'margin-left', $( this ).scrollLeft() + 'px' );
 		}
 	} );
 
@@ -74,7 +86,9 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 				$wrapper.addClass( 'overflowed' );
 				setScrollClass( $table );
 			} else {
-				$wrapper.removeClass( 'overflowed scroll-left scroll-right fixed-scrollbar-container' );
+				$wrapper.removeClass(
+					'overflowed scroll-left scroll-right fixed-scrollbar-container'
+				);
 			}
 		} );
 
@@ -105,8 +119,12 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 		$table = $tableWrapper.children( 'table' ).first();
 
 		// Assemble our silly crap and add to page
-		$scrollbar = $( '<div>' ).addClass( 'content-table-scrollbar inactive' ).width( $content.width() );
-		$spoof = $( '<div>' ).addClass( 'content-table-spoof' ).width( $table.outerWidth() );
+		$scrollbar = $( '<div>' )
+			.addClass( 'content-table-scrollbar inactive' )
+			.width( $content.width() );
+		$spoof = $( '<div>' )
+			.addClass( 'content-table-spoof' )
+			.width( $table.outerWidth() );
 		$tableWrapper.parent().prepend( $scrollbar.prepend( $spoof ) );
 	} );
 

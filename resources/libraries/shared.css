@@ -10,7 +10,7 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along
@@ -71,36 +71,36 @@ wbr {
 
 /* Input types that should follow user direction, like buttons */
 /* TODO: What about buttons in wikipage content ? */
-input[ type='submit' ],
-input[ type='button' ],
-input[ type='reset' ],
-input[ type='file' ] {
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="file"] {
 	direction: ltr;
 }
 
 /* Override default values */
-textarea[ dir='ltr' ],
-input[ dir='ltr' ] {
+textarea[dir="ltr"],
+input[dir="ltr"] {
 	/* @noflip */
 	direction: ltr;
 }
 
-textarea[ dir='rtl' ],
-input[ dir='rtl' ] {
+textarea[dir="rtl"],
+input[dir="rtl"] {
 	/* @noflip */
 	direction: rtl;
 }
 
 /* Default style for semantic tags */
-abbr[ title ],
-.explain[ title ] {
+abbr[title],
+.explain[title] {
 	border-bottom: 1px dotted;
 	cursor: help;
 }
 
-@supports ( text-decoration: underline dotted ) {
-	abbr[ title ],
-	.explain[ title ] {
+@supports (text-decoration: underline dotted) {
+	abbr[title],
+	.explain[title] {
 		border-bottom: 0;
 		text-decoration: underline dotted;
 	}
@@ -328,7 +328,8 @@ a.new {
 }
 
 /* External URLs should always be treated as LTR (T6330) */
-/* @noflip */ .rtl a.external.free,
+/* @noflip */
+.rtl a.external.free,
 .rtl a.external.autonumber {
 	direction: ltr;
 	unicode-bidi: embed;
@@ -441,14 +442,16 @@ a.new {
 
 /* Images */
 
-/* @noflip */ div.tright,
+/* @noflip */
+div.tright,
 div.floatright,
 table.floatright {
 	clear: right;
 	float: right;
 }
 
-/* @noflip */ div.tleft,
+/* @noflip */
+div.tleft,
 div.floatleft,
 table.floatleft {
 	float: left;

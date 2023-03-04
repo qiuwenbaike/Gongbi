@@ -34,14 +34,25 @@ $( function () {
 			} ),
 			$portletBody = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUl = $( '#toc>ul' ).html();
-		$div.append( $titleH2 ).append( $divInner.append( $divPortlet.append( $titleH3 ).append( $portletBody.append( $tocUl ) ) ) ).appendTo( $( '#mw-site-navigation' ) );
+		$div
+			.append( $titleH2 )
+			.append(
+				$divInner.append(
+					$divPortlet.append( $titleH3 ).append( $portletBody.append( $tocUl ) )
+				)
+			)
+			.appendTo( $( '#mw-site-navigation' ) );
 
 		/* TOC (Right) */
 		var $divNavi = $( '<div>' ).attr( 'id', 'mw-toc-navigation' ),
-			$divRight = $( '<div>' ).attr( 'id', 'site-toc-right' ).addClass( 'sidebar-chunk' ),
+			$divRight = $( '<div>' )
+				.attr( 'id', 'site-toc-right' )
+				.addClass( 'sidebar-chunk' ),
 			$titleRight = $( '#mw-toc-heading' ).html(),
 			$titleH2Right = $( '<h2>' ).append( $( '<span>' ).text( $titleRight ) ),
-			$titleH3Right = $( '<h3>' ).attr( 'id', 'p-toc-right-label' ).text( $titleRight ),
+			$titleH3Right = $( '<h3>' )
+				.attr( 'id', 'p-toc-right-label' )
+				.text( $titleRight ),
 			$divInnerRight = $( '<div>' ).addClass( 'sidebar-inner' ),
 			$divPortletRight = $( '<div>' ).attr( {
 				id: 'p-toc-right',
@@ -51,6 +62,18 @@ $( function () {
 			} ),
 			$portletBodyRight = $( '<ul>' ).addClass( 'mw-portlet-body' ),
 			$tocUlRight = $( '#toc>ul' ).html();
-		$divNavi.append( $divRight.append( $titleH2Right ).append( $divInnerRight.append( $divPortletRight.append( $titleH3Right ).append( $portletBodyRight.append( $tocUlRight ) ) ) ) ).insertAfter( $( '#mw-related-navigation' ) );
+		$divNavi
+			.append(
+				$divRight
+					.append( $titleH2Right )
+					.append(
+						$divInnerRight.append(
+							$divPortletRight
+								.append( $titleH3Right )
+								.append( $portletBodyRight.append( $tocUlRight ) )
+						)
+					)
+			)
+			.insertAfter( $( '#mw-related-navigation' ) );
 	}
 } );

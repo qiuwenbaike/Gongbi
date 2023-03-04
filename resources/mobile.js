@@ -49,7 +49,9 @@ $( function () {
 	} );
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
-		$( '#page-more .mobile-close-button' ).css( 'top', $( '#ca-more' ).offset().top - 4 ).css( 'right', '1.5em' );
+		$( '#page-more .mobile-close-button' )
+			.css( 'top', $( '#ca-more' ).offset().top - 4 )
+			.css( 'right', '1.5em' );
 		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
@@ -57,8 +59,13 @@ $( function () {
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
-		$( '#page-tools .sidebar-inner' ).css( 'top', $( '#ca-tools' ).offset().top + 25 );
-		$( '#page-tools .mobile-close-button' ).css( 'top', $( '#ca-tools' ).offset().top - 4 ).css( 'right', '5em' );
+		$( '#page-tools .sidebar-inner' ).css(
+			'top',
+			$( '#ca-tools' ).offset().top + 25
+		);
+		$( '#page-tools .mobile-close-button' )
+			.css( 'top', $( '#ca-tools' ).offset().top - 4 )
+			.css( 'right', '5em' );
 		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
@@ -66,8 +73,13 @@ $( function () {
 		}
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
-		$( '#other-languages .sidebar-inner' ).css( 'top', $( '#ca-languages' ).offset().top + 25 );
-		$( '#other-languages .mobile-close-button' ).css( 'top', $( '#ca-languages' ).offset().top - 4 ).css( 'right', '8.5em' );
+		$( '#other-languages .sidebar-inner' ).css(
+			'top',
+			$( '#ca-languages' ).offset().top + 25
+		);
+		$( '#other-languages .mobile-close-button' )
+			.css( 'top', $( '#ca-languages' ).offset().top - 4 )
+			.css( 'right', '8.5em' );
 		if ( $( window ).width() < 769 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
@@ -77,7 +89,10 @@ $( function () {
 
 	// Close menus on click outside
 	$( document ).on( 'click touchstart', function ( e ) {
-		if ( $( e.target ).closest( '#menus-cover' ).length > 0 || $( e.target ).closest( '.mobile-close-button' ).length > 0 ) {
+		if (
+			$( e.target ).closest( '#menus-cover' ).length > 0 ||
+      $( e.target ).closest( '.mobile-close-button' ).length > 0
+		) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
 			$( '#menus-cover' ).fadeOut( toggleTime );
