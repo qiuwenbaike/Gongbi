@@ -17,7 +17,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import 'variables.less';
+@import "variables.less";
 
 /* Override default here because mobile narrow */
 @content-padding: 0.5em;
@@ -65,7 +65,7 @@
 	display: none;
 	.nav-block();
 	background: @background;
-	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.05);
 	position: absolute;
 	padding: 1em 2.5em;
 	margin: 0;
@@ -73,7 +73,7 @@
 	top: 4.75em;
 	min-width: 9em;
 	max-width: 320px;
-	max-height: calc( 90vh - 5em );
+	max-height: calc(90vh - 5em);
 	overflow-y: scroll;
 	overflow-x: visible;
 	z-index: 100;
@@ -161,7 +161,7 @@
 }
 
 #user-tools h2 {
-	background-image: url( images/user-grey.svg );
+	background-image: url(images/user-grey.svg);
 	background-size: 18px;
 	margin-left: 0.5em;
 }
@@ -173,15 +173,15 @@
 }
 
 #sidebar-tools h2 {
-	background-image: url( images/menu-grey.svg );
+	background-image: url(images/menu-grey.svg);
 }
 
 #search-button h2 {
-	background-image: url( images/search-ltr.svg );
+	background-image: url(images/search-ltr.svg);
 }
 
 .mw-content-rtl #search-button h2 {
-	background-image: url( images/search-rtl.svg );
+	background-image: url(images/search-rtl.svg);
 }
 
 #site-navigation {
@@ -208,9 +208,9 @@
 	background-color: @background;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-image: url( images/close-grey.svg );
+	background-image: url(images/close-grey.svg);
 	background-size: 18px;
-	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.05);
 	position: absolute;
 	padding: 1em 0;
 	margin: 0;
@@ -225,7 +225,7 @@
 }
 
 #p-search .mobile-close-button {
-	left: 4.25em
+	left: 4.25em;
 }
 
 #mw-related-navigation .mobile-close-button {
@@ -262,7 +262,7 @@ div.mw-notification-area {
 }
 
 .tools-inline li a,
-.tools-inline li[ id^='ca-nstab-' ] a {
+.tools-inline li[id^="ca-nstab-"] a {
 	.ca-icon-only();
 	background-position: center top !important;
 }
@@ -285,19 +285,19 @@ div.mw-notification-area {
 }
 
 #ca-tools span {
-	background-image: url( images/gear-grey.svg );
+	background-image: url(images/gear-grey.svg);
 	background-repeat: no-repeat;
 	background-size: 20px;
 }
 
 #ca-more span {
-	background-image: url( images/more-grey.svg );
+	background-image: url(images/more-grey.svg);
 	background-repeat: no-repeat;
 	background-size: 20px;
 }
 
 #ca-languages span {
-	background-image: url( images/languages-grey.svg );
+	background-image: url(images/languages-grey.svg);
 	background-repeat: no-repeat;
 	background-size: 20px;
 }
@@ -336,8 +336,8 @@ div.thumb {
 	max-width: 100%;
 }
 
-figure[ typeof~='mw:File/Thumb' ],
-figure[ typeof~='mw:File/Frame' ] {
+figure[typeof~="mw:File/Thumb"],
+figure[typeof~="mw:File/Frame"] {
 	width: 100% !important;
 
 	> a:first-child,
@@ -353,7 +353,7 @@ figure[ typeof~='mw:File/Frame' ] {
 }
 
 // FIXME: Clear the magnify clip for now
-figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
+figure[typeof~="mw:File/Thumb"]:not([typeof~="mw:Error"]) {
 	> figcaption:before {
 		content: none;
 	}

@@ -16,21 +16,21 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import '../variables.less';
+@import "../variables.less";
 
 @media screen {
 	#ca-wikilove a {
-		.ca-icon ( '../images/heart-grey' );
+		.ca-icon ( '../images/heart-grey' );;
 	}
 
-	@media ( min-width: @desktop-mid-floor ) {
+	@media (min-width: @desktop-mid-floor) {
 		/* per setting icon-only */
 		#ca-wikilove.icon a {
 			.ca-icon-only();
 		}
 	}
 
-	@media ( max-width: @mobile-width ) {
+	@media (max-width: @mobile-width) {
 		#ca-wikilove a {
 			.ca-icon-only();
 		}

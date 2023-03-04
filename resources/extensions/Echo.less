@@ -17,7 +17,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import '../variables.less';
+@import "../variables.less";
 
 @media screen {
 	div.mw-echo-ui-overlay {
@@ -27,8 +27,10 @@
 	/* Color of Echo icons */
 	#pt-notifications-alert .mw-echo-notifications-badge,
 	#pt-notifications-notice .mw-echo-notifications-badge,
-	#pt-notifications-alert .mw-echo-notifications-badge.mw-echo-notifications-badge-all-read,
-	#pt-notifications-notice .mw-echo-notifications-badge.mw-echo-notifications-badge-all-read {
+	#pt-notifications-alert
+		.mw-echo-notifications-badge.mw-echo-notifications-badge-all-read,
+	#pt-notifications-notice
+		.mw-echo-notifications-badge.mw-echo-notifications-badge-all-read {
 		opacity: 0.7 !important;
 	}
 
@@ -55,7 +57,7 @@
 		}
 	}
 
-	@media ( min-width: ( @desktop-mid-floor - 1px ) ) {
+	@media (min-width: ( @desktop-mid-floor - 1px )) {
 		div#personal {
 			padding-left: 0;
 		}
@@ -65,7 +67,7 @@
 		}
 	}
 
-	@media ( max-width: @mobile-width ) {
+	@media (max-width: @mobile-width) {
 		#personal-extra {
 			.flex(1, 1, auto, 1);
 
@@ -99,7 +101,8 @@
 					}
 
 					.oo-ui-popupWidget-footer {
-						.mw-echo-ui-notificationBadgeButtonPopupWidget-footer-buttons .oo-ui-buttonElement {
+						.mw-echo-ui-notificationBadgeButtonPopupWidget-footer-buttons
+							.oo-ui-buttonElement {
 							width: 47.5vw !important;
 						}
 					}

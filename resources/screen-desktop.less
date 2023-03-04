@@ -17,7 +17,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import 'variables.less';
+@import "variables.less";
 
 /* T181484 (firefox and chrome; doesn't fix anything else as yet) */
 body,
@@ -36,7 +36,7 @@ html {
 	display: none;
 }
 
-.ts-inner:not( .mw-footer ) {
+.ts-inner:not(.mw-footer) {
 	max-width: @content-width;
 	box-sizing: border-box;
 	padding: 0 1em;
@@ -79,7 +79,7 @@ div.mw-notification-area {
 	.flex(0, 0, auto, 1);
 	.flex-display;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 
 	/* images */
 	a.wordmark {
@@ -129,18 +129,18 @@ div.mw-notification-area {
 		font-family: @fonts-secondary;
 		font-weight: 600;
 		font-size: 1.25em;
-		background-image: url( images/user-grey.svg );
+		background-image: url(images/user-grey.svg);
 		background-position: left center;
 		background-repeat: no-repeat;
 		background-size: 18px;
 
 		/* from .dropdown-header(); */
 		cursor: pointer;
-	
+
 		&:after {
 			display: inline-block;
-			content: '';
-			background-image: url( images/arrow-down-grey.svg );
+			content: "";
+			background-image: url(images/arrow-down-grey.svg);
 			background-position: center center;
 			background-repeat: no-repeat;
 			height: 12px;
@@ -175,7 +175,7 @@ div.mw-notification-area {
 
 	h3 {
 		.dropdown-header();
-		.ca-icon( 'images/languages-grey' );
+		.ca-icon( "images/languages-grey" );
 		font-size: 1em;
 		font-family: @fonts;
 		border-bottom: transparent;
@@ -208,7 +208,7 @@ div.mw-notification-area {
 	margin: 0.75em auto 0;
 
 	&.fallback {
-		content: '';
+		content: "";
 		width: 11em;
 		height: 11em;
 		background-repeat: no-repeat;

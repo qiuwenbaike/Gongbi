@@ -1,12 +1,12 @@
-@import 'variables-content.less';
+@import "variables-content.less";
 
 /**
  * Block media items
  */
 
-figure[ typeof~='mw:File' ],
-figure[ typeof~='mw:File/Frameless' ] {
-	margin: 0;  /* Maybe belongs in element.css for figure */
+figure[typeof~="mw:File"],
+figure[typeof~="mw:File/Frameless"] {
+	margin: 0; /* Maybe belongs in element.css for figure */
 
 	> a {
 		/* The addition of the class is needed for higher specificity */
@@ -54,9 +54,9 @@ figure[ typeof~='mw:File/Frameless' ] {
 	}
 }
 
-figure[ typeof~='mw:File/Thumb' ],
-figure[ typeof~='mw:File/Frame' ] {
-	margin: 0;  /* Maybe belongs in element.css for figure */
+figure[typeof~="mw:File/Thumb"],
+figure[typeof~="mw:File/Frame"] {
+	margin: 0; /* Maybe belongs in element.css for figure */
 	margin-bottom: @margin-bottom-thumb;
 	display: table;
 	text-align: center;
@@ -160,12 +160,12 @@ figure[ typeof~='mw:File/Frame' ] {
 		 *
 		 * The spec suggests it has the same effect as,
 		 *
-		 *   word-break: normal;
-		 *   overflow-wrap: anywhere;
+		 *	 word-break: normal;
+		 *	 overflow-wrap: anywhere;
 		 *
 		 * https://drafts.csswg.org/css-text-3/#word-break-property
 		 *
-		 * So, we should use that.  However, support for "anywhere" is lagging
+		 * So, we should use that.	However, support for "anywhere" is lagging
 		 * at just 72.39%, with Safari being a notable miss.
 		 * https://caniuse.com/mdn-css_properties_overflow-wrap_anywhere
 		 *
@@ -239,7 +239,7 @@ a:first-child {
  */
 .mw-gallery-traditional .gallerybox > .thumb {
 	&:before {
-		content: '';
+		content: "";
 		vertical-align: middle;
 		display: inline-block;
 		height: 100%;

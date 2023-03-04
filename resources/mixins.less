@@ -38,8 +38,8 @@
 }
 
 /* Icons for the page actions menus */
-.ca-icon( @icon: '' ) {
-	background-image: url( '@{icon}.svg' );
+.ca-icon( @icon: "" ) {
+	background-image: url("@{icon}.svg");
 	border: 0;
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -115,8 +115,8 @@
 
 	&:after {
 		display: inline-block;
-		content: '';
-		background-image: url( images/arrow-down-grey.svg );
+		content: "";
+		background-image: url(images/arrow-down-grey.svg);
 		background-position: center center;
 		background-repeat: no-repeat;
 		height: 12px;
@@ -128,7 +128,7 @@
 	.nav-block();
 	background: @background;
 	border: 1px solid @base70;
-	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.15 );
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
 	position: absolute;
 	padding: 20px 2em 0;
 	margin: 0;
@@ -141,11 +141,13 @@
 .dropdown-pokey() {
 	&:before,
 	&:after {
-		transform: rotate( 360deg ); /* to force some smoothing in annoying browsers */
+		transform: rotate(
+			360deg
+		); /* to force some smoothing in annoying browsers */
 		border-bottom: 9px solid @base70;
 		border-left: 9px solid transparent;
 		border-right: 9px solid transparent;
-		content: '';
+		content: "";
 		height: 0;
 		width: 0;
 		position: absolute;

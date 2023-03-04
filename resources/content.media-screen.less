@@ -1,16 +1,16 @@
-@import 'variables-content.less';
+@import "variables-content.less";
 
-figure[ typeof~='mw:File/Thumb' ],
-figure[ typeof~='mw:File/Frame' ] {
+figure[typeof~="mw:File/Thumb"],
+figure[typeof~="mw:File/Frame"] {
 	border: @border-thumbinner-screen;
-	border-bottom: 0;  /* No border to figcaption */
-	border-width: 1px 1px 0.2em;  /* From .box */
-	box-shadow: 0 1px 2px 1px rgba( 0, 0, 0, 0.02 );  /* From .box */
+	border-bottom: 0; /* No border to figcaption */
+	border-width: 1px 1px 0.2em; /* From .box */
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.02); /* From .box */
 	background-color: @background-color-thumbinner-screen;
 
 	> a:first-child,
 	> span:first-child {
-		> *:first-child:not( .mw-broken-media ) {
+		> *:first-child:not(.mw-broken-media) {
 			border: @border-thumbimage-screen;
 		}
 	}
@@ -18,8 +18,8 @@ figure[ typeof~='mw:File/Frame' ] {
 	> figcaption {
 		border: @border-thumbinner-screen;
 		border-top: 0;
-		border-width: 1px 1px 0.2em;  /* From .box */
-		box-shadow: 0 1px 2px 1px rgba( 0, 0, 0, 0.02 );  /* From .box */
+		border-width: 1px 1px 0.2em; /* From .box */
+		box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.02); /* From .box */
 		background-color: @background-color-thumbinner-screen;
 		font-size: @font-size-thumbcaption-screen;
 	}
@@ -28,16 +28,16 @@ figure[ typeof~='mw:File/Frame' ] {
 .mw-image-border {
 	> a:first-child,
 	> span:first-child {
-		> *:first-child:not( .mw-broken-media ) {
+		> *:first-child:not(.mw-broken-media) {
 			border: @border-thumbborder-screen;
 		}
 	}
 }
 
 /* Magnify clip, not present for broken media */
-figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
+figure[typeof~="mw:File/Thumb"]:not([typeof~="mw:Error"]) {
 	> figcaption:before {
-		content: '';
+		content: "";
 		width: 20px;
 		height: 20px;
 
@@ -62,7 +62,7 @@ figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
 	}
 
 	> a:after {
-		content: '';
+		content: "";
 		width: 20px;
 		height: 20px;
 		position: absolute;
