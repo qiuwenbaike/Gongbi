@@ -1,10 +1,7 @@
 {
 	"name": "Gongbi",
 	"version": "1.8.0",
-	"author": [
-		"Isarra Yos",
-		"WaitSpring"
-	],
+	"author": [ "Isarra Yos", "WaitSpring" ],
 	"url": "https://git.qiuwen.wiki/qiuwen/Gongbi",
 	"descriptionmsg": "gongbi-desc",
 	"namemsg": "skinname-gongbi",
@@ -22,21 +19,15 @@
 					"name": "gongbi",
 					"template": "MediaWiki\\Skin\\Gongbi\\GongbiTemplate",
 					"responsive": true,
-					"styles": [
-						"skins.gongbi"
-					],
-					"scripts": [
-						"skins.gongbi.js"
-					],
-                    "bodyOnly": true
+					"styles": [ "skins.gongbi" ],
+					"scripts": [ "skins.gongbi.js" ],
+					"bodyOnly": true
 				}
 			]
 		}
 	},
 	"MessagesDirs": {
-		"Gongbi": [
-			"i18n"
-		]
+		"Gongbi": [ "i18n" ]
 	},
 	"config": {
 		"GongbiLogo": {
@@ -54,10 +45,7 @@
 	},
 	"ResourceModules": {
 		"skins.gongbi": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
+			"targets": [ "desktop", "mobile" ],
 			"class": "MediaWiki\\Skin\\Gongbi\\GongbiVariablesModule",
 			"features": {
 				"normalize": false,
@@ -122,10 +110,7 @@
 			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating."
 		},
 		"skins.gongbi.js": {
-			"targets": [
-				"desktop",
-				"mobile"
-			],
+			"targets": [ "desktop", "mobile" ],
 			"scripts": [
 				"resources/main.js",
 				"resources/mobile.js",

@@ -8,7 +8,7 @@ module.exports = {
 	plugins: [
 		{
 			// Set of built-in plugins enabled by default.
-			name: 'preset-default',
+			name: "preset-default",
 			params: {
 				overrides: {
 					cleanupIDs: false,
@@ -20,21 +20,21 @@ module.exports = {
 					// consequently, MediaWiki's CSSMin CSS minifier. libmagic's default database
 					// currently requires that SVGs contain an XML declaration:
 					// https://github.com/threatstack/libmagic/blob/master/magic/Magdir/sgml#L5
-					removeXMLProcInst: false
-				}
-			}
+					removeXMLProcInst: false,
+				},
+			},
 		},
-		'removeRasterImages',
-		'sortAttrs'
+		"removeRasterImages",
+		"sortAttrs",
 	],
 	// Set whitespace according to Wikimedia Coding Conventions.
 	// @see https://github.com/svg/svgo/blob/v2.8.0/lib/stringifier.js#L41 for available options.
 	js2svg: {
-		eol: 'lf',
+		eol: "lf",
 		finalNewline: true,
 		// Configure the indent to tabs (default 4 spaces) used by `--pretty` here.
-		indent: '\t',
-		pretty: true
+		indent: "\t",
+		pretty: true,
 	},
-	multipass: true
+	multipass: true,
 };
