@@ -270,7 +270,7 @@ div.mw-notification-area {
 #ca-tools,
 #ca-more,
 #ca-languages {
-	&:after {
+	&::after {
 		margin-left: -0.35em;
 	}
 
@@ -353,12 +353,12 @@ figure[typeof~="mw:File/Frame"] {
 }
 
 // FIXME: Clear the magnify clip for now
-figure[typeof~="mw:File/Thumb"]:not([typeof~="mw:Error"]) {
-	> figcaption:before {
+figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
+	> figcaption::before {
 		content: none;
 	}
 
-	> a:after {
+	> a::after {
 		content: none;
 	}
 }
