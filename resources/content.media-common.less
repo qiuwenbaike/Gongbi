@@ -190,6 +190,13 @@ figure[typeof~="mw:File/Frame"] {
 	}
 }
 
+// Remove bogus padding from framed images without captions
+// However, it's still necessary for thumbs because the magnifying icon is present
+figure[ typeof~='mw:File/Frame' ] > figcaption:empty {
+	padding-bottom: 0.25em;  // Accounts for the difference in margin-bottom above
+	min-height: 0;
+}
+
 /**
  * Inline media items
  */
@@ -238,8 +245,8 @@ a:first-child {
  * but let's wait until wgParserEnableLegacyMediaDOM is removed
  */
 .mw-gallery-traditional .gallerybox > .thumb {
-	&:before {
-		content: "";
+	&::before {
+		content: '';
 		vertical-align: middle;
 		display: inline-block;
 		height: 100%;
