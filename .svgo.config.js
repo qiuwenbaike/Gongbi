@@ -11,7 +11,6 @@ module.exports = {
 			name: 'preset-default',
 			params: {
 				overrides: {
-					cleanupIDs: false,
 					removeDesc: false,
 					removeTitle: false,
 					removeViewBox: false,
@@ -32,7 +31,6 @@ module.exports = {
 					removeComments: false, // reduces readability
 					removeEditorsNSData: false, // https://github.com/svg/svgo/issues/1096
 					collapseGroups: false, // https://github.com/svg/svgo/issues/1057
-					removeOffCanvasPaths: false, // https://github.com/svg/svgo/issues/1732
 					removeEmptyContainers: false, // https://github.com/svg/svgo/issues/1194 https://github.com/svg/svgo/issues/1618
 					convertTransform: false, // https://github.com/svg/svgo/issues/988 https://github.com/svg/svgo/issues/1021
 					inlineStyles: false // https://github.com/svg/svgo/issues/1486
