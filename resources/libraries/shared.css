@@ -517,3 +517,40 @@ sup,
 sub {
 	line-height: 1;
 }
+
+/* FIX: background and border color of .mw-message-box */
+.mw-message-box {
+	overflow: hidden;
+	padding: 0.75em 1em;
+	border: 1px solid;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.mw-message-box:only-child {
+	margin: 0;
+}
+
+.mw-message-box .mw-logevent-loglines li {
+	font-size: 90%;
+}
+
+.mw-message-box-error {
+	border-color: #d33;
+	background-color: #fee7e6;
+}
+
+.mw-message-box-warning {
+	border-color: #fc3;
+	background-color: #fef6e7;
+}
+
+.mw-message-box-success {
+	border-color: #14866d;
+	background-color: #d5fdf4;
+}
+
+.mw-message-box-notice {
+	border-color: #a2a9b1;
+	background-color: #eaecf0;
+}
