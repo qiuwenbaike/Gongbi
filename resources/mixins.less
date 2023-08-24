@@ -31,53 +31,53 @@
 
 /* Icons - hides labels, but keep them accessible for screen-readers */
 .icon() {
-	text-indent: -99999px;
 	border: 0;
 	background-color: transparent;
 	background-repeat: no-repeat;
+	text-indent: -99999px;
 }
 
 /* Icons for the page actions menus */
 .ca-icon( @icon: "" ) {
-	background-image: url("@{icon}.svg");
-	border: 0;
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-position: left top;
 	display: inline-block;
-	margin-bottom: -0.35em;
 	padding: 0 2px 0 22px;
+	border: 0;
+	margin-bottom: -0.35em;
+	background-color: transparent;
+	background-image: url( '@{icon}.svg' );
+	background-position: left top;
+	background-repeat: no-repeat;
 }
 
 /* For use after .ca-icon() ... */
 .ca-icon-only() {
-	text-indent: -99999px;
-	width: 20px;
 	overflow: hidden;
+	width: 20px;
 	box-sizing: border-box;
 	padding: 0;
+	text-indent: -99999px;
 }
 
 .nav-block() {
-	background: @base95;
 	padding: 1.5em 1.5em 0.5em;
+	background: @base95;
+	font-size: 0.95em;
 	line-height: 1.125;
 	word-wrap: break-word;
-	font-size: 0.95em;
 
 	ul,
 	li {
-		list-style: none;
-		margin: 0;
 		padding: 0;
+		margin: 0;
+		list-style: none;
 	}
 
 	h3 {
-		font-family: @fonts-serif;
-		font-weight: bold;
-		font-size: 1.125em;
-		margin: 0.25em 0 0.75em 0;
 		padding-bottom: 0.15em;
+		margin: 0.25em 0 0.75em 0;
+		font-family: @fonts-serif;
+		font-size: 1.125em;
+		font-weight: bold;
 	}
 
 	.mw-portlet-body {
@@ -90,8 +90,8 @@
 }
 
 .column-right() {
-	padding-left: 1em;
 	box-sizing: border-box;
+	padding-left: 1em;
 
 	.sidebar-chunk {
 		.nav-block();
@@ -99,8 +99,8 @@
 }
 
 .column-left() {
-	padding-right: 1em;
 	box-sizing: border-box;
+	padding-right: 1em;
 
 	.sidebar-chunk {
 		.nav-block();
@@ -109,50 +109,48 @@
 
 /* Dropdowns */
 .dropdown-header() {
-	cursor: pointer;
-	margin-bottom: -0.45em;
 	padding-bottom: 0.45em;
+	margin-bottom: -0.45em;
+	cursor: pointer;
 
 	&::after {
 		display: inline-block;
-		content: "";
-		background-image: url(images/arrow-down-grey.svg);
+		width: 12px;
+		height: 12px;
+		background-image: url( images/arrow-down-grey.svg );
 		background-position: center center;
 		background-repeat: no-repeat;
-		height: 12px;
-		width: 12px;
+		content: '';
 	}
 }
 
 .dropdown-menu( @direction: right ) {
 	.nav-block();
-	background: @background;
-	border: 1px solid @base70;
-	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
 	position: absolute;
-	padding: 20px 2em 0;
-	margin: 0;
-	min-width: 9em;
-	@{direction}: -1.25em;
-	overflow: visible;
 	z-index: 3;
+	overflow: visible;
+	min-width: 9em;
+	padding: 20px 2em 0;
+	border: 1px solid @base70;
+	margin: 0;
+	background: @background;
+	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.15 );
+	@{direction}: -1.25em;
 }
 
 .dropdown-pokey() {
 	&:before,
 	&:after {
-		transform: rotate(
-			360deg
-		); /* to force some smoothing in annoying browsers */
+		position: absolute;
+		z-index: 4;
+		right: 14px;
+		width: 0;
+		height: 0;
+		border-right: 9px solid transparent;
 		border-bottom: 9px solid @base70;
 		border-left: 9px solid transparent;
-		border-right: 9px solid transparent;
-		content: "";
-		height: 0;
-		width: 0;
-		position: absolute;
-		right: 14px;
-		z-index: 4;
+		content: '';
+		transform: rotate( 360deg ); /* to force some smoothing in annoying browsers */
 	}
 
 	&::before {
@@ -160,7 +158,7 @@
 	}
 
 	&::after {
-		border-bottom-color: @base100;
 		top: -8px;
+		border-bottom-color: @base100;
 	}
 }

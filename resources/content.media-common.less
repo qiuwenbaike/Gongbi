@@ -1,11 +1,11 @@
-@import "variables-content.less";
+@import 'variables-content.less';
 
 /**
  * Block media items
  */
 
-figure[typeof~="mw:File"],
-figure[typeof~="mw:File/Frameless"] {
+figure[ typeof~='mw:File' ],
+figure[ typeof~='mw:File/Frameless' ] {
 	margin: 0; /* Maybe belongs in element.css for figure */
 
 	> a {
@@ -40,9 +40,9 @@ figure[typeof~="mw:File/Frameless"] {
 	}
 
 	&.mw-halign-center {
+		display: table;
 		/* Matches *.center * in element.css */
 		margin: 0 auto;
-		display: table;
 		border-collapse: collapse;
 		clear: none;
 		float: none;
@@ -54,13 +54,13 @@ figure[typeof~="mw:File/Frameless"] {
 	}
 }
 
-figure[typeof~="mw:File/Thumb"],
-figure[typeof~="mw:File/Frame"] {
+figure[ typeof~='mw:File/Thumb' ],
+figure[ typeof~='mw:File/Frame' ] {
+	display: table;
 	margin: 0; /* Maybe belongs in element.css for figure */
 	margin-bottom: @margin-bottom-thumb;
-	display: table;
-	text-align: center;
 	border-collapse: collapse;
+	text-align: center;
 
 	> a {
 		/* The addition of the class is needed for higher specificity */
@@ -140,18 +140,21 @@ figure[typeof~="mw:File/Frame"] {
 		 */
 		> span.mw-broken-media {
 			display: inline-block;
-			margin: 0.75em;
-			margin-bottom: 0.5em;
 			/* This is hardcoded in Linker::makeThumbLink2 for broken media */
 			width: 180px;
+			margin: 0.75em;
+			margin-bottom: 0.5em;
 		}
 	}
 
 	> figcaption {
 		display: table-caption;
+		min-height: 1em;
+
+		/* taken from .thumbcaption, plus .thumbinner */
+		padding: 0 0.75em 0.75em 0.75em;
 		caption-side: bottom;
 		line-height: @line-height-thumbcaption;
-		min-height: 1em;
 
 		/**
 		 * The "break-word" value is deprecated, however, it's well supported
@@ -184,17 +187,14 @@ figure[typeof~="mw:File/Frame"] {
 			/* @noflip */
 			text-align: right;
 		}
-
-		/* taken from .thumbcaption, plus .thumbinner */
-		padding: 0 0.75em 0.75em 0.75em;
 	}
 }
 
 // Remove bogus padding from framed images without captions
 // However, it's still necessary for thumbs because the magnifying icon is present
 figure[ typeof~='mw:File/Frame' ] > figcaption:empty {
-	padding-bottom: 0.25em;  // Accounts for the difference in margin-bottom above
 	min-height: 0;
+	padding-bottom: 0.25em;  // Accounts for the difference in margin-bottom above
 }
 
 /**
@@ -246,14 +246,14 @@ a:first-child {
  */
 .mw-gallery-traditional .gallerybox > .thumb {
 	&::before {
-		content: '';
-		vertical-align: middle;
 		display: inline-block;
 		height: 100%;
+		content: '';
+		vertical-align: middle;
 	}
 
 	> * {
-		vertical-align: middle;
 		display: inline-block;
+		vertical-align: middle;
 	}
 }

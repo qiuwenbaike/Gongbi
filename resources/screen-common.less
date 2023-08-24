@@ -17,19 +17,19 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import "variables.less";
+@import 'variables.less';
 
 /* Page layout */
 html,
 body {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
 body {
-	font-family: @fonts;
-	color: @text;
 	background: @base80;
+	color: @text;
+	font-family: @fonts;
 	font-size: @font-size;
 	line-height: 1.5;
 }
@@ -58,8 +58,8 @@ html {
 	background: @background;
 
 	.toc {
-		background: @base90;
 		border: 1px solid @base70;
+		background: @base90;
 
 		& > ul {
 			margin: 1em 0;
@@ -73,10 +73,6 @@ html {
 	z-index: 0;
 }
 
-.mw-body {
-	word-wrap: break-word;
-}
-
 .mw-footer-container {
 	background-color: @base80;
 	color: #000;
@@ -88,25 +84,25 @@ html {
 }
 
 #p-logo {
-	text-align: center;
 	margin: auto;
+	text-align: center;
 }
 
 #p-logo-text {
-	text-align: center;
 	line-height: 1;
+	text-align: center;
 
 	a {
+		display: block;
 		color: @text;
 		font-family: @fonts-secondary;
-		font-variant: small-caps;
 		font-size: 1.5em;
-		display: block;
+		font-variant: small-caps;
 
 		/* 7+ character names */
 		&.long {
-			font-size: 1.5em;
 			padding: 0 0.75em 0 0;
+			font-size: 1.5em;
 			line-height: 0.8;
 		}
 	}
@@ -115,20 +111,20 @@ html {
 /* Search */
 
 #simpleSearch {
-	background: @background;
 	position: relative;
 	border: solid 1px @base70;
+	background: @background;
 }
 
 #searchInput {
+	width: 100%;
+	height: 2.1em;
+	min-height: 0;
+	padding: 0.25em 4.5em 0.25em 2.5em;
 	border: 0;
 	margin: 0;
-	height: 2.1em;
-	padding: 0.25em 4.5em 0.25em 2.5em;
-	box-shadow: none;
 	background: transparent;
-	width: 100%;
-	min-height: 0;
+	box-shadow: none;
 	font-family: inherit;
 }
 
@@ -136,38 +132,38 @@ html {
 #mw-searchButton {
 	position: absolute;
 	top: 0;
-	margin: 0;
-	padding: 0;
 	right: 1.5em;
 	width: 2.25em;
 	height: 2.25em;
-	.icon();
-	background-image: url(images/search-ltr.svg);
+	padding: 0;
+	margin: 0;
+	background-image: url( images/search-ltr.svg );
 	/* @noflip */
 	background-position: center;
 	box-shadow: none;
+	.icon();
 }
 
 .suggestions {
 	background: @background;
-	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 2px 1px rgba( 0, 0, 0, 0.05 );
 
 	.suggestions-special {
-		background-color: @background;
+		padding: 0.75em 2em;
 		border: 1px solid @base80;
 		border-bottom-width: @border;
-		padding: 0.75em 2em;
+		background-color: @background;
 	}
 
 	.suggestions-results {
-		background-color: @background;
 		border: 1px solid @base80;
 		border-bottom-width: @border;
+		background-color: @background;
 	}
 
 	.suggestions-result {
-		color: @text;
 		padding: 0.65em 2em 0.35em;
+		color: @text;
 	}
 
 	.suggestions-result-current {
@@ -183,14 +179,14 @@ html {
 /* Footer */
 
 .mw-footer {
-	margin: auto;
 	padding: 1.25em 3em;
+	margin: auto;
 
 	ul,
 	li {
+		padding: 0;
 		margin: 1em 0;
 		list-style: none;
-		padding: 0;
 	}
 
 	#footer-icons {
@@ -233,16 +229,16 @@ html {
 	div,
 	ul,
 	li {
-		list-style: none;
 		display: inline-block;
-		margin: 0;
 		padding: 0;
+		margin: 0;
+		list-style: none;
 	}
 }
 
 .tools-inline li {
-	margin: 0.5em 0;
 	border-bottom: solid 3px transparent;
+	margin: 0.5em 0;
 
 	&:hover {
 		border-bottom-color: @base70;
@@ -257,7 +253,7 @@ html {
 	}
 
 	a {
-		.ca-icon( "images/page-tools-grey" );
+		.ca-icon( 'images/page-tools-grey' );
 
 		&:hover {
 			text-decoration: none;
@@ -275,44 +271,44 @@ html {
 }
 
 #ca-watch a {
-	.ca-icon( "images/star" );
+	.ca-icon( 'images/star' );
 	.ca-icon-only();
 }
 
 #ca-unwatch a {
-	.ca-icon( "images/star-filled" );
+	.ca-icon( 'images/star-filled' );
 	.ca-icon-only();
 }
 
 #ca-unwatch.mw-watchlink-temp a {
-	.ca-icon( "images/star-half-filled" );
+	.ca-icon( 'images/star-half-filled' );
 	.ca-icon-only();
 }
 
 #ca-edit a {
-	.ca-icon( "images/pencil-grey" );
+	.ca-icon( 'images/pencil-grey' );
 }
 
 #ca-history a,
 #ca-undelete a {
-	.ca-icon( "images/clock-grey" );
+	.ca-icon( 'images/clock-grey' );
 }
 
 #ca-talk a {
-	.ca-icon( "images/talk-grey" );
+	.ca-icon( 'images/talk-grey' );
 }
 
 #ca-addsection a {
-	.ca-icon( "images/plus-grey" );
+	.ca-icon( 'images/plus-grey' );
 }
 
 #ca-viewsource a {
-	.ca-icon( "images/wikitext-grey" );
+	.ca-icon( 'images/wikitext-grey' );
 }
 
 #ca-view a,
 #ca-view-foreign a {
-	.ca-icon( "images/eyeball-grey" );
+	.ca-icon( 'images/eyeball-grey' );
 }
 
 #ca-view {
@@ -325,21 +321,21 @@ html {
 
 /* Wikiplus */
 #Wikiplus-Edit-TopBtn a {
-	.ca-icon( "images/wikiplus-grey" );
+	.ca-icon( 'images/wikiplus-grey' );
 }
 
 /* ToolsRedirect */
 #ca-redirect a {
-	.ca-icon( "images/redirect-grey-ltr" );
+	.ca-icon( 'images/redirect-grey-ltr' );
 }
 
 .mw-content-rtl #ca-redirect a {
-	.ca-icon( "images/redirect-grey-rtl" );
+	.ca-icon( 'images/redirect-grey-rtl' );
 }
 
 /* MassEditRegex */
 #ca-masseditregex a {
-	.ca-icon( "images/pencil-batch-grey" );
+	.ca-icon( 'images/pencil-batch-grey' );
 }
 
 /* Namespaces */
@@ -352,13 +348,13 @@ html {
 }
 
 /* Fallback */
-.tools-inline li[id^="ca-nstab-"] a {
-	.ca-icon( "images/page-grey" );
+.tools-inline li[ id^='ca-nstab-' ] a {
+	.ca-icon( 'images/page-grey' );
 }
 
 #siteNotice {
-	font-size: 95%;
 	margin: 0.5em auto 1.5em;
+	font-size: 95%;
 }
 
 #localNotice {
@@ -366,19 +362,19 @@ html {
 	text-align: center;
 
 	p {
-		margin-left: 1em;
 		margin-right: 1em;
+		margin-left: 1em;
 	}
 }
 
 /* Misc */
 
 a {
-	text-decoration: none;
 	color: @link;
+	text-decoration: none;
 
 	&:hover {
-		color: darken(@link, 10%);
+		color: darken( @link, 10% );
 		text-decoration: underline;
 	}
 
@@ -386,7 +382,7 @@ a {
 		color: @link-visited;
 
 		&:hover {
-			color: darken(@link-visited, 10%);
+			color: darken( @link-visited, 10% );
 		}
 	}
 }
@@ -396,14 +392,14 @@ a.new,
 	color: @link-red;
 
 	&:hover {
-		color: darken(@link-red, 10%);
+		color: darken( @link-red, 10% );
 	}
 
 	&:visited {
 		color: @link-red-visited;
 
 		&:hover {
-			color: darken(@link-red-visited, 10%);
+			color: darken( @link-red-visited, 10% );
 		}
 	}
 }
@@ -411,22 +407,22 @@ a.new,
 .mw-parser-output a.extiw,
 .mw-parser-output a.extiw:active,
 .mw-parser-output a.external {
-	color: @link-ext;
-	background-image: url(images/external-ltr.svg);
-	background-repeat: no-repeat;
-	background-position: center right;
-	background-size: 12px;
 	padding-right: 14px;
+	background-image: url( images/external-ltr.svg );
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: 12px;
+	color: @link-ext;
 
 	&:hover {
-		color: darken(@link-ext, 10%);
+		color: darken( @link-ext, 10% );
 	}
 
 	&:visited {
 		color: @link-ext-visited;
 
 		&:hover {
-			color: darken(@link-ext-visited, 10%);
+			color: darken( @link-ext-visited, 10% );
 		}
 	}
 }
@@ -434,7 +430,7 @@ a.new,
 .mw-content-rtl .mw-parser-output a.extiw,
 .mw-content-rtl .mw-parser-output a.extiw:active,
 .mw-content-rtl .mw-parser-output a.external {
-	background-image: url(images/external-rtl.svg);
+	background-image: url( images/external-rtl.svg );
 }
 
 a.mw-selflink {
@@ -444,13 +440,13 @@ a.mw-selflink {
 }
 
 .mw-editsection {
-	font-family: @fonts;
-	background-image: url(images/pencil-grey.svg);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	padding-left: 20px;
-	padding-top: 0.5em;
 	display: inline-block;
+	padding-top: 0.5em;
+	padding-left: 20px;
+	background-image: url( images/pencil-grey.svg );
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	font-family: @fonts;
 
 	a {
 		display: inline-block;
@@ -470,9 +466,9 @@ a.mw-selflink {
 }
 
 .mw-indicators {
-	float: right;
 	margin-top: 0.25em;
 	margin-left: 1em;
+	float: right;
 
 	img {
 		/* Line up to baseline; expected indicator icon size is 20px */
@@ -487,21 +483,21 @@ a.mw-selflink {
 
 div.magnify a {
 	display: block;
-	text-indent: 20px;
-	white-space: nowrap;
 	overflow: hidden;
 	width: 20px;
 	height: 20px;
 	margin: 0 0 0.5em 0.5em;
-	background-image: url(images/magnify-ltr.svg);
+	background-image: url( images/magnify-ltr.svg );
+	text-indent: 20px;
+	white-space: nowrap;
 }
 
 /* Subtitle area
  * @see https://phabricator.wikimedia.org/T173951
  */
 #contentSub {
-	font-size: 84%;
 	color: @base20;
+	font-size: 84%;
 
 	/* This forces "redirect page" (on a redirect page) etc. on a new line */
 	.subpages {
@@ -516,12 +512,12 @@ div.magnify a {
  * @see https://phabricator.wikimedia.org/T294679
  */
 .usermessage {
-	background-color: #ffce7b;
+	padding: 0.5em 1em;
 	border: 1px solid #ffa500;
+	margin: 2em 0 1em;
+	background-color: #ffce7b;
 	color: #000;
 	font-weight: bold;
-	margin: 2em 0 1em;
-	padding: 0.5em 1em;
 	vertical-align: middle;
 }
 
@@ -551,9 +547,9 @@ samp,
 code,
 pre,
 .mw-code {
-	color: #000;
-	background-color: @base90;
 	border: 1px solid @base80;
+	background-color: @base90;
+	color: #000;
 }
 
 code {
@@ -568,33 +564,35 @@ pre,
 }
 
 .mw-body {
+	word-wrap: break-word;
+
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
-		font-weight: normal;
-		font-family: @fonts-secondary;
-		line-height: 1.125;
 		margin: 1.25em 0 0.5em;
+		font-family: @fonts-secondary;
+		font-weight: normal;
+		line-height: 1.125;
 	}
 
 	h1.firstHeading {
-		margin: 0.25em 0 0.5em;
+		display: block;
 		padding: 0 0 0.125em;
 		border-bottom: solid 4px @blue;
-		display: block;
+		margin: 0.25em 0 0.5em;
 	}
 
 	h1 {
-		font-size: 2em;
 		border-bottom: solid 3px @base70;
+		font-size: 2em;
 	}
 
 	h2 {
-		font-size: 1.8em;
 		border-bottom: solid 2px @base70;
+		font-size: 1.8em;
 	}
 
 	h1,
@@ -629,10 +627,10 @@ pre,
 	}
 
 	dt {
-		font-weight: bold;
-		font-family: @fonts-secondary;
-		line-height: 1.125;
 		margin: 0.5em 0;
+		font-family: @fonts-secondary;
+		font-weight: bold;
+		line-height: 1.125;
 	}
 
 	dl {
@@ -657,10 +655,10 @@ pre,
 			border-bottom: 0;
 
 			&:after {
-				content: "";
 				display: block;
-				border-bottom: solid 2px @base70;
 				overflow: hidden;
+				border-bottom: solid 2px @base70;
+				content: '';
 			}
 		}
 
@@ -689,21 +687,21 @@ a > img,
 	/* Hopefully these are only templates or something sane to begin with */
 	/* See: T269970 */
 	.mw-body-content table & {
-		height: unset !important;
 		max-width: unset !important;
+		height: unset !important;
 	}
 }
 
 #siteSub {
+	display: none;
 	margin: -0.5em 0 0.5em 0;
 	font-family: @fonts-secondary;
-	display: none;
 }
 
 hr {
 	border-width: 1px;
-	border-color: @base70;
 	border-style: solid none;
+	border-color: @base70;
 	margin: 0.5em 0;
 }
 
@@ -718,12 +716,12 @@ p {
 
 ul,
 ol {
-	margin: 0.25em 0 0.25em 2em;
 	padding-left: 0;
+	margin: 0.25em 0 0.25em 2em;
 }
 
 /* body */
-.mw-hide-empty-elt .mw-parser-output:not(.mw-show-empty-elt) .mw-empty-elt {
+.mw-hide-empty-elt .mw-parser-output:not( .mw-show-empty-elt ) .mw-empty-elt {
 	display: none;
 }
 
@@ -737,36 +735,36 @@ ol {
 /* @noflip */
 .floatright,
 .tright {
-	margin: 0 0 0.5em 0.5em;
 	padding: 0 0 1em 1.5em;
+	margin: 0 0 0.5em 0.5em;
 }
 
 /* @noflip */
 .floatleft,
 .tleft {
-	margin: 0 0.5em 0.5em 0;
 	padding: 0 1.5em 1em 0;
+	margin: 0 0.5em 0.5em 0;
 }
 
 .thumbinner {
-	background: @base90;
-	border: 1px solid @base70;
+	overflow: hidden;
 	padding: 0.75em;
+	border: 1px solid @base70;
+	margin-right: auto;
 	/* Properly center framed thumbnail images (T219717) */
 	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
+	background: @base90;
 }
 
 .thumbcaption {
-	font-size: 95%;
-	padding: 0.5em 0 0;
 	/* For the magnify link on empty captions */
 	min-height: 1em;
+	padding: 0.5em 0 0;
+	font-size: 95%;
 
 	&:empty {
-		padding: 0;
 		min-height: 0;
+		padding: 0;
 	}
 }
 
@@ -776,8 +774,8 @@ ol {
 }
 
 .mw-body li.gallerybox div.thumb {
-	background: @base90;
 	padding: 0;
+	background: @base90;
 }
 
 /* Tables of contents */
@@ -786,10 +784,10 @@ ul#filetoc,
 .toccolours,
 .mw-warning {
 	display: table;
-	background: @base90;
 	padding: 1.25em 1.5em;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	background: @base90;
 	font-size: 100%;
 }
 
@@ -820,12 +818,12 @@ ul#filetoc {
 	text-align: unset;
 
 	h2 {
-		font-family: @fonts-serif;
-		font-weight: bold;
-		font-size: 1.125em;
+		display: inline;
 		border-bottom: 0;
 		margin: 0;
-		display: inline;
+		font-family: @fonts-serif;
+		font-size: 1.125em;
+		font-weight: bold;
 
 		&:after {
 			display: none;
@@ -870,8 +868,8 @@ body :not( :checked ) > .toctogglespan::after {
 .mw_metadata,
 .wikitable,
 .mw-datatable {
-	color: @text;
 	background: @base90;
+	color: @text;
 }
 
 .mw-body .mw-search-profile-tabs {
@@ -882,15 +880,15 @@ body :not( :checked ) > .toctogglespan::after {
 .mw-datatable,
 .wikitable {
 	border-color: @base70;
-	background: @base90;
 	margin: 1em auto;
+	background: @base90;
 
 	> tr > th,
 	> tr > td,
 	> * > tr > th,
 	> * > tr > td {
-		border: 1px solid @base70;
 		padding: 0.5em;
+		border: 1px solid @base70;
 	}
 }
 
@@ -936,10 +934,10 @@ body :not( :checked ) > .toctogglespan::after {
 	padding: 1.25em 2.5em;
 
 	&:before {
-		content: "";
 		display: block;
-		border-top: solid 0.5px @base80;
 		padding: 0.5em 0;
+		border-top: solid 0.5px @base80;
+		content: '';
 	}
 
 	li {

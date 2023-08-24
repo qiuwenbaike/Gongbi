@@ -16,7 +16,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import "../variables.less";
+@import '../variables.less';
 
 @media screen {
 	#upload-wizard {
@@ -26,9 +26,9 @@
 
 	#mwe-upwiz-tutorial {
 		img {
+			max-width: 100%;
 			-o-object-fit: contain;
 			object-fit: contain;
-			max-width: 100%;
 		}
 	}
 
@@ -60,16 +60,16 @@
 	}
 }
 
-@media screen and (max-width: @desktop-mid-floor) {
+@media screen and ( max-width: @desktop-mid-floor ) {
 	ul#mwe-upwiz-steps {
-		margin: 0 auto;
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0 auto;
 
 		li {
-			margin: 0 0 5px 0;
 			flex: 1 1 100px;
 			border: 1px solid #fff;
+			margin: 0 0 5px 0;
 
 			div {
 				padding-left: 0;

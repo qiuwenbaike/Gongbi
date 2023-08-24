@@ -54,16 +54,16 @@
  * Generic HTML elements
  */
 body {
+	padding: 0;
+	margin: 0;
 	background: @content-background;
 	color: @text;
-	margin: 0;
-	padding: 0;
 }
 
 /* Links */
 a {
-	background: none !important;
 	padding: 0 !important;
+	background: none !important;
 }
 
 a,
@@ -84,8 +84,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: bold;
 	margin: 2em 0 0.5em;
+	font-weight: bold;
 	/* Pagination */
 	page-break-after: avoid;
 	page-break-before: avoid;
@@ -118,10 +118,10 @@ img {
 
 pre,
 .mw-code {
+	padding: 1em;
+	border: 1pt dashed @block-border;
 	background: @block-background;
 	color: @text;
-	border: 1pt dashed @block-border;
-	padding: 1em;
 	font-size: 8pt;
 	white-space: pre-wrap;
 	word-wrap: break-word;
@@ -142,9 +142,9 @@ ul {
  */
 
 .toc {
-	border: 1pt solid @block-border;
-	padding: 5px 5px 7px;
 	display: table;
+	padding: 5px 5px 7px;
+	border: 1pt solid @block-border;
 	background: @block-background;
 
 	ul {
@@ -157,8 +157,8 @@ ul {
 	}
 
 	& > ul {
-		margin: 0;
 		padding-left: 0;
+		margin: 0;
 	}
 
 	h2 {
@@ -168,14 +168,14 @@ ul {
 
 /* @noflip */
 .mw-content-ltr .tocnumber {
-	padding-left: 0;
 	padding-right: 0.5em;
+	padding-left: 0;
 }
 
 /* @noflip */
 .mw-content-rtl .tocnumber {
-	padding-left: 0.5em;
 	padding-right: 0;
+	padding-left: 0.5em;
 }
 
 /**
@@ -185,18 +185,18 @@ ul {
 table.floatright,
 div.floatright,
 div.tright {
-	float: right;
-	clear: right;
 	position: relative;
+	clear: right;
+	float: right;
 }
 
 /* @noflip */
 table.floatleft,
 div.floatleft,
 div.tleft {
-	float: left;
-	clear: left;
 	position: relative;
+	clear: left;
+	float: left;
 }
 
 /* @noflip */
@@ -212,15 +212,15 @@ div.tright {
 /* @noflip */
 table.floatright,
 div.floatright {
-	margin: 0 0 0.5em 0.5em;
 	border: 0;
+	margin: 0 0 0.5em 0.5em;
 }
 
 /* @noflip */
 table.floatleft,
 div.floatleft {
-	margin: 0 0.5em 0.5em 0;
 	border: 0;
+	margin: 0 0.5em 0.5em 0;
 }
 
 .center {
@@ -231,9 +231,9 @@ div.floatleft {
  * Thumbnails
  */
 div.thumb {
-	background-color: transparent;
 	width: auto;
 	border: solid 1pt @block-border;
+	background-color: transparent;
 }
 
 div.thumb a {
@@ -241,17 +241,17 @@ div.thumb a {
 }
 
 div.thumbinner {
-	background: @block-background;
-	padding: 5px;
-	font-size: 10pt;
 	overflow: hidden;
 	min-width: 100px;
+	padding: 5px;
+	background: @block-background;
+	font-size: 10pt;
 }
 
 html .thumbcaption {
-	text-align: left;
-	line-height: 1.4;
 	padding: 3px;
+	line-height: 1.4;
+	text-align: left;
 }
 
 img.thumbborder {
@@ -264,9 +264,9 @@ img.thumbborder {
 /* Compare `.wikitable` in shared.css */
 .wikitable,
 .mw_metadata {
-	background: @content-background;
-	margin: 1em auto;
 	border: 1pt solid @block-border;
+	margin: 1em auto;
+	background: @content-background;
 	border-collapse: collapse;
 	font-size: 10pt;
 }
@@ -283,19 +283,19 @@ img.thumbborder {
 .wikitable > * > tr > td,
 .mw_metadata th,
 .mw_metadata td {
+	padding: 0.5em;
+	border: 1pt solid @block-border;
 	/* Important is required to override any inline styles provided by editors */
 	background: @content-background !important;
 	/* We need to also set color in case editors applied a light text color */
 	color: @text !important;
-	border: 1pt solid @block-border;
-	padding: 0.5em;
 }
 
 .wikitable > tr > th,
 .wikitable > * > tr > th,
 .mw_metadata th {
-	text-align: center;
 	background: #eee !important;
+	text-align: center;
 }
 
 table.listing,

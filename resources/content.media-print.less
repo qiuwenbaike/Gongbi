@@ -1,14 +1,14 @@
-@import "variables-content.less";
+@import 'variables-content.less';
 
-figure[typeof~="mw:File/Thumb"],
-figure[typeof~="mw:File/Frame"] {
+figure[ typeof~='mw:File/Thumb' ],
+figure[ typeof~='mw:File/Frame' ] {
 	border: @border-thumbinner-print;
 	border-bottom: 0; /* No border to figcaption */
 	background-color: @background-color-thumbinner-print;
 
 	> a:first-child,
 	> span:first-child {
-		> *:first-child:not(.mw-broken-media) {
+		> *:first-child:not( .mw-broken-media ) {
 			border: @border-thumbimage-print;
 		}
 	}
@@ -17,15 +17,15 @@ figure[typeof~="mw:File/Frame"] {
 		border: @border-thumbinner-print;
 		border-top: 0;
 		background-color: @background-color-thumbinner-print;
-		font-size: @font-size-thumbinner-print;
 		color: @color-thumbinner-print;
+		font-size: @font-size-thumbinner-print;
 	}
 }
 
 .mw-image-border {
 	> a:first-child,
 	> span:first-child {
-		> *:first-child:not(.mw-broken-media) {
+		> *:first-child:not( .mw-broken-media ) {
 			border: @border-thumbborder-print;
 		}
 	}

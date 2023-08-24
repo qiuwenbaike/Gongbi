@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-id */
 /**
  * Gongbi Skin
  * © 2015-2021 Issara
@@ -17,7 +18,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import "variables.less";
+@import 'variables.less';
 
 /* T181484 (firefox and chrome; doesn't fix anything else as yet) */
 body,
@@ -36,7 +37,7 @@ html {
 	display: none;
 }
 
-.ts-inner:not(.mw-footer) {
+.ts-inner:not( .mw-footer ) {
 	max-width: @content-width;
 	box-sizing: border-box;
 	padding: 0 1em;
@@ -55,31 +56,31 @@ div.mw-notification-area {
 }
 
 #mw-header-container {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
 	/* Stupid IE10+ bug requires defining the height property for this to work
 	 * the way it is intended; without doing that this'll break horribly under
 	 * IE10 and IE11.
 	 * @see https://phabricator.wikimedia.org/T173769
 	 */
 	height: 0;
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	width: 100%;
+	min-height: @fixed-header-height;
+	box-sizing: border-box;
+	padding: 0.5em 0;
+	border-bottom: solid 4px @blue;
 	background: @background;
 	color: @text;
-	padding: 0.5em 0;
-	min-height: @fixed-header-height;
-	border-bottom: solid 4px @blue;
-	box-sizing: border-box;
 	/* box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.08 ), 0 0 2px rgba( 0, 0, 0, 0.15 ); */
 }
 
 #p-logo-text {
 	max-width: @column-left-size;
+	align-items: center;
+	justify-content: center;
 	.flex(0, 0, auto, 1);
 	.flex-display;
-	justify-content: center;
-	align-items: center;
 
 	/* images */
 	a.wordmark {
@@ -99,17 +100,17 @@ div.mw-notification-area {
 
 	h2 span {
 		display: inline-block;
-		max-width: 300px;
-		white-space: nowrap;
 		overflow: hidden;
+		max-width: 300px;
 		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 }
 
 #personal {
-	order: 2;
-	display: inline-block;
 	position: relative;
+	display: inline-block;
+	order: 2;
 	line-height: 1;
 
 	.dropdown {
@@ -124,27 +125,27 @@ div.mw-notification-area {
 	}
 
 	h2 {
-		margin: 0;
 		padding-left: 25px;
-		font-family: @fonts-secondary;
-		font-weight: 600;
-		font-size: 1.25em;
-		background-image: url(images/user-grey.svg);
+		margin: 0;
+		background-image: url( images/user-grey.svg );
 		background-position: left center;
 		background-repeat: no-repeat;
 		background-size: 18px;
 
 		/* from .dropdown-header(); */
 		cursor: pointer;
+		font-family: @fonts-secondary;
+		font-size: 1.25em;
+		font-weight: 600;
 
 		&:after {
 			display: inline-block;
-			content: "";
-			background-image: url(images/arrow-down-grey.svg);
+			width: 12px;
+			height: 12px;
+			background-image: url( images/arrow-down-grey.svg );
 			background-position: center center;
 			background-repeat: no-repeat;
-			height: 12px;
-			width: 12px;
+			content: '';
 		}
 
 		span {
@@ -169,29 +170,29 @@ div.mw-notification-area {
 }
 
 #p-variants-desktop {
-	float: right;
-	margin: 0.5em 0 0 1em;
 	position: relative;
+	margin: 0.5em 0 0 1em;
+	float: right;
 
 	h3 {
 		.dropdown-header();
-		.ca-icon( "images/languages-grey" );
-		font-size: 1em;
-		font-family: @fonts;
+		.ca-icon( 'images/languages-grey' );
+		padding-bottom: 1em;
 		border-bottom: transparent;
 		margin: 0 0 -1em;
+		font-family: @fonts;
+		font-size: 1em;
 		line-height: 1.5;
-		padding-bottom: 1em;
 	}
 
 	.dropdown {
-		display: none !important;
-		.dropdown-menu();
-		.dropdown-pokey();
 		/* Override the mobile thing */
 		top: 2.25em !important;
+		display: none !important;
 		padding-bottom: 2em;
 		margin-right: 2px;
+		.dropdown-menu();
+		.dropdown-pokey();
 
 		.selected a {
 			color: @text;
@@ -208,11 +209,11 @@ div.mw-notification-area {
 	margin: 0.75em auto 0;
 
 	&.fallback {
-		content: "";
 		width: 11em;
 		height: 11em;
-		background-repeat: no-repeat;
 		background-position: center center;
+		background-repeat: no-repeat;
+		content: '';
 	}
 
 	&.gongbi-logo {
@@ -239,8 +240,8 @@ div.mw-notification-area {
 
 /* Content */
 #mw-content-container {
-	margin-top: @fixed-header-height;
 	padding: 1em 0;
+	margin-top: @fixed-header-height;
 }
 
 /* Misc */

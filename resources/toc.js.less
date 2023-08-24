@@ -16,14 +16,14 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import "variables.less";
+@import 'variables.less';
 
 /* TOC Styles */
 #site-toc .mw-portlet-body,
 #site-toc-right .mw-portlet-body {
-	margin-bottom: 2em;
-	padding-right: 1px;
 	max-height: 50vh;
+	padding-right: 1px;
+	margin-bottom: 2em;
 	overflow-y: auto;
 }
 
@@ -38,7 +38,7 @@
 	top: 4.375em;
 }
 
-@media screen and (max-width: @desktop-large-floor) {
+@media screen and ( max-width: @desktop-large-floor ) {
 	#site-toc {
 		display: none;
 	}
@@ -47,14 +47,14 @@
 /* TOC Right */
 #mw-toc-navigation {
 	.column-left();
-	display: block;
-	width: @column-left-size;
 	position: sticky;
 	top: 4.375em;
+	display: block;
+	width: @column-left-size;
 }
 
-@media screen and (min-width: @desktop-large-floor),
-	(max-width: @desktop-mid-floor) {
+@media screen and ( min-width: @desktop-large-floor ),
+	( max-width: @desktop-mid-floor ) {
 	#mw-toc-navigation {
 		display: none;
 	}

@@ -71,36 +71,36 @@ wbr {
 
 /* Input types that should follow user direction, like buttons */
 /* TODO: What about buttons in wikipage content ? */
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-input[type="file"] {
+input[ type='submit' ],
+input[ type='button' ],
+input[ type='reset' ],
+input[ type='file' ] {
 	direction: ltr;
 }
 
 /* Override default values */
-textarea[dir="ltr"],
-input[dir="ltr"] {
+textarea[ dir='ltr' ],
+input[ dir='ltr' ] {
 	/* @noflip */
 	direction: ltr;
 }
 
-textarea[dir="rtl"],
-input[dir="rtl"] {
+textarea[ dir='rtl' ],
+input[ dir='rtl' ] {
 	/* @noflip */
 	direction: rtl;
 }
 
 /* Default style for semantic tags */
-abbr[title],
-.explain[title] {
+abbr[ title ],
+.explain[ title ] {
 	border-bottom: 1px dotted;
 	cursor: help;
 }
 
 @supports (text-decoration: underline dotted) {
-	abbr[title],
-	.explain[title] {
+	abbr[ title ],
+	.explain[ title ] {
 		border-bottom: 0;
 		text-decoration: underline dotted;
 	}
@@ -140,9 +140,9 @@ span.comment {
  */
 li span.deleted,
 span.history-deleted {
-	text-decoration: line-through;
 	color: #72777d;
 	font-style: italic;
+	text-decoration: line-through;
 }
 
 /**
@@ -153,8 +153,8 @@ span.history-deleted {
 }
 
 .unpatrolled {
-	font-weight: bold;
 	color: #d33;
+	font-weight: bold;
 }
 
 div.patrollink {
@@ -180,8 +180,8 @@ td.mw-submit {
 }
 
 .mw-input-with-label {
-	white-space: nowrap;
 	display: inline-block;
+	white-space: nowrap;
 }
 
 /**
@@ -223,17 +223,17 @@ td.mw-submit {
 
 .catlinks ul {
 	display: inline;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	list-style: none;
 }
 
 .catlinks li {
 	display: inline-block;
-	line-height: 1.25em;
+	padding: 0 0.5em;
 	border-left: 1px solid #a2a9b1;
 	margin: 0.125em 0;
-	padding: 0 0.5em;
+	line-height: 1.25em;
 	zoom: 1;
 }
 
@@ -289,8 +289,8 @@ p.mw-delete-editreasons {
  */
 div.mw-warning-with-logexcerpt {
 	padding: 0.5em 2em 1em;
-	margin-bottom: 3px;
 	border: 1px solid #2a4b8d;
+	margin-bottom: 3px;
 	clear: both;
 }
 
@@ -323,8 +323,8 @@ a.new {
 /* Plainlinks - this can be used to switch
  * off special external link styling */
 .plainlinks a.external {
-	background: none !important;
 	padding: 0 !important;
+	background: none !important;
 }
 
 /* External URLs should always be treated as LTR (T6330) */
@@ -340,19 +340,19 @@ a.new {
  * keep in sync with commonPrint.css
  */
 .wikitable {
-	background-color: #f8f9fa;
-	color: #222;
-	margin: 1em auto;
 	border: 1px solid #a2a9b1;
+	margin: 1em auto;
+	background-color: #f8f9fa;
 	border-collapse: collapse;
+	color: #222;
 }
 
 .wikitable > tr > th,
 .wikitable > tr > td,
 .wikitable > * > tr > th,
 .wikitable > * > tr > td {
-	border: 1px solid #a2a9b1;
 	padding: 0.2em 0.4em;
+	border: 1px solid #a2a9b1;
 }
 
 .wikitable > tr > th,
@@ -386,16 +386,16 @@ a.new {
 
 /* general info/warning box for SP */
 .mw-infobox {
+	overflow: hidden;
 	border: 2px solid #fc3;
 	margin: 0.5em;
 	clear: left;
-	overflow: hidden;
 }
 
 .mw-infobox-left {
+	width: 35px;
 	margin: 7px;
 	float: left;
-	width: 35px;
 }
 
 .mw-infobox-right {
@@ -424,8 +424,8 @@ a.new {
 
 .mw-datatable td,
 .mw-datatable th {
-	border: 1px solid #a2a9b1;
 	padding: 0.2em 0.4em;
+	border: 1px solid #a2a9b1;
 }
 
 .mw-datatable th {
@@ -454,8 +454,8 @@ table.floatright {
 div.tleft,
 div.floatleft,
 table.floatleft {
-	float: left;
 	clear: left;
+	float: left;
 }
 
 div.floatright,
@@ -491,12 +491,12 @@ table.floatleft {
 /* Display editsection links smaller and next to headings */
 .mw-editsection,
 .mw-editsection-like {
+	margin-left: 1em;
 	font-size: small;
 	font-weight: normal;
-	margin-left: 1em;
-	vertical-align: baseline;
 	/* Reset line-height; headings tend to have it set to larger values */
 	line-height: 1em;
+	vertical-align: baseline;
 }
 
 /* Correct directionality when page dir is different from site/user dir */

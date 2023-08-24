@@ -17,7 +17,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-@import "variables.less";
+@import 'variables.less';
 
 /* Two-column layout */
 #mw-content-block {
@@ -36,9 +36,9 @@
 #mw-site-navigation,
 #mw-related-navigation {
 	.column-left();
+	position: relative;
 	display: block;
 	width: @column-left-size;
-	position: relative;
 }
 
 #mw-site-navigation {
@@ -56,9 +56,9 @@
 }
 
 #mw-content-wrapper {
-	float: right;
-	margin-left: -@column-left-size;
 	width: 100%;
+	margin-left: -@column-left-size;
+	float: right;
 }
 
 #mw-content,
@@ -66,7 +66,7 @@
 	margin-left: @column-left-size;
 }
 
-.ts-inner:not(.mw-footer) {
+.ts-inner:not( .mw-footer ) {
 	max-width: @content-width - @column-right-size;
 }
 
@@ -76,7 +76,7 @@
 
 /* Recent changes */
 .mw-changeslist-legend {
-	float: none;
-	margin: 0 0 0 auto;
 	width: 200px;
+	margin: 0 0 0 auto;
+	float: none;
 }
