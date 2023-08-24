@@ -522,7 +522,9 @@ sub {
 .mw-message-box {
 	overflow: hidden;
 	padding: 0.75em 1em;
-	border: 1px solid;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: 0.25em;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 }
