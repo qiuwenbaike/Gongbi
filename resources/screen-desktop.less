@@ -40,7 +40,6 @@ html {
 .ts-inner:not( .mw-footer ) {
 	max-width: @content-width;
 	box-sizing: border-box;
-	padding: 0 1em;
 	margin: auto;
 }
 
@@ -78,9 +77,9 @@ div.mw-notification-area {
 #p-logo-text {
 	max-width: @column-left-size;
 	align-items: center;
-	justify-content: center;
 	.flex(0, 0, auto, 1);
 	.flex-display;
+	justify-content: center;
 
 	/* images */
 	a.wordmark {
@@ -240,8 +239,7 @@ div.mw-notification-area {
 
 /* Content */
 #mw-content-container {
-	padding: 1em 0;
-	margin-top: @fixed-header-height;
+	margin: @fixed-header-height 0 0;
 }
 
 /* Misc */
