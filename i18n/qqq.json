@@ -11,7 +11,7 @@
 		]
 	},
 	"skinname-gongbi": "{{name}}",
-	"gongbi-desc": "{{desc|what=skin|name=gongbi|url=https://git.qiuwen.wiki/qiuwen/Gongbi}}",
+	"gongbi-desc": "{{desc|what=skin|name=gongbi|url=https://git.qiuwen.net.cn/qiuwen/Gongbi}}",
 	"gongbi-anonymous": "Label for anonymous (not logged in) user menu\n{{Identical|Anonymous}}",
 	"gongbi-loggedinas": "Note for personal menu for logged in users noting their current username\n\nParameters:\n* $1 - username",
 	"gongbi-notloggedin": "Note for personal menu for anonymous users clarifying that they are not logged in\n{{Identical|Not logged in}}",
