@@ -96,6 +96,10 @@ div.mw-notification-area {
 #user-tools {
 	.flex(0, 1, auto, 3);
 	.flex-display;
+	gap: 0.25em;
+	/* For the more responsive user tools support */
+	min-width: @column-right-size - 3.25em * 2;
+	margin: auto 1.75em auto 5.25em;
 
 	h2 span {
 		display: inline-block;
