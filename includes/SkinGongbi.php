@@ -18,12 +18,12 @@ use SkinTemplate;
  */
 class SkinGongbi extends SkinTemplate
 {
-    /**
-     * @inheritDoc
-     */
-    public function __construct(
-        array $options = []
-    ) {
-        parent::__construct($options);
-    }
+	/**
+	 * @inheritDoc
+	 */
+	public function __construct(
+		array $options = []
+	) {
+		parent::__construct($options);
+	}
 }
