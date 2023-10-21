@@ -37,5 +37,8 @@
 	"explorer.fileNesting.patterns": {
 		"package.json": ".babel*, .editorConfig, .eslint*, .git*, .hintrc, .mailmap, pnpm-lock.yaml, .prettier*, .stylelint*, commitlinterrc.json, jsconfig.json, tsconfig.json",
 		"readme*": "*.md"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
 	}
 }
