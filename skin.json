@@ -1,8 +1,8 @@
 {
 	"name": "Gongbi",
-	"version": "1.8.0",
-	"author": [ "Isarra Yos", "WaitSpring" ],
-	"url": "https://git.qiuwen.net.cn/qiuwen/Gongbi",
+	"version": "1.9.0",
+	"author": [ "Isarra Yos", "edg2s", "WaitSpring" ],
+	"url": "https://git.qiuwen.net.cn/Qiuwen/mediawiki-skins-Gongbi",
 	"descriptionmsg": "gongbi-desc",
 	"namemsg": "skinname-gongbi",
 	"license-name": "GPL-2.0-or-later",
