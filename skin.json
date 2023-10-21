@@ -85,16 +85,16 @@
 					"media": "screen"
 				},
 				"resources/screen-desktop.less": {
-					"media": "screen and (min-width: 768px)"
+					"media": "screen and (min-width: 851px)"
 				},
 				"resources/screen-desktop-full.less": {
 					"media": "screen and (min-width: 1200px)"
 				},
 				"resources/screen-desktop-mid.less": {
-					"media": "screen and (min-width: 768px) and (max-width: 1200px)"
+					"media": "screen and (min-width: 851px) and (max-width: 1199px)"
 				},
 				"resources/screen-mobile.less": {
-					"media": "screen and (max-width: 768px)"
+					"media": "screen and (max-width: 850px)"
 				},
 				"resources/screen-mobile-small.less": {
 					"media": "screen and (max-width: 375px)"
