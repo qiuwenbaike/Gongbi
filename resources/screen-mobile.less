@@ -48,6 +48,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
+	padding-top: 0.25em;
 }
 
 #p-search {
@@ -65,7 +66,7 @@
 .dropdown {
 	position: absolute;
 	z-index: 100;
-	top: 5em;
+	top: 2.25em;
 	right: 0;
 	display: none;
 	overflow: visible;
@@ -111,7 +112,7 @@
 #site-functions {
 	.flex-display;
 	align-items: center;
-	.flex(0, 1, auto, 2);
+	.flex(0, 1, auto, 1);
 	margin-left: 1.5em;
 
 	#sidebar-tools {
@@ -204,7 +205,7 @@
 .mobile-close-button {
 	position: absolute;
 	z-index: 100;
-	top: 3em;
+	top: 0.25em;
 	right: 0;
 	display: none;
 	width: 2em;
@@ -217,7 +218,6 @@
 	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
 	cursor: pointer;
 	.nav-block();
-	/* stylelint-disable-next-line order/properties-order */
 	padding: 1em 0;
 }
 
@@ -240,14 +240,22 @@
 /* Logo */
 
 #p-logo-text {
-	.flex(1, 1, 100%, 1);
+	.flex-display;
+	align-items: center;
+	.flex(1, 1, 0, 2);
 
 	a {
 		display: inline;
 		max-width: 6em;
 		margin: auto;
-		line-height: 2;
+		line-height: 1;
 	}
+}
+
+.wordmark img {
+	width: auto;
+	height: 1.25em;
+	object-fit: contain;
 }
 
 /* Notifications */
@@ -382,7 +390,6 @@ figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
 }
 
 #mw-content {
-	padding: 1em 1.5em 2em;
 	border-width: 0;
 }
 
