@@ -1,3 +1,4 @@
+'use strict';
 /**
  * SVGO Configuration
  * Compatible to v2.4.0+
