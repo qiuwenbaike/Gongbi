@@ -142,7 +142,7 @@ class GongbiTemplate extends BaseTemplate
 		$templateData = $this->getSkin()->getTemplateData();
 		$html = Html::rawElement(
 			'div',
-			['id' => 'content', 'class' => 'mw-body',  'role' => 'main'],
+			['id' => 'content', 'class' => 'mw-body', 'role' => 'main'],
 			$this->getSiteNotices() .
 				$this->getIndicators() .
 				$templateData['html-title-heading'] .
