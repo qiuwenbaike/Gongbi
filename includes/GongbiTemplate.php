@@ -521,25 +521,29 @@ class GongbiTemplate extends BaseTemplate
 			]
 		);
 		$logos = ResourceLoaderSkinModule::getAvailableLogos($config);
+
+		$titleClass = '';
+		$siteTitle = '';
+		$langConv = MediaWikiServices::getInstance()->getLanguageConverterFactory()
+			->getLanguageConverter($this->getSkin()->getLanguage());
+		if ($langConv->hasVariants()) {
+			$siteTitle = $langConv->convert($this->getMsg('gongbi-sitetitle')->escaped());
+		} else {
+			$siteTitle = $this->getMsg('gongbi-sitetitle')->escaped();
+		}
+
 		if ($part !== 'image') {
 			if ($config->get('GongbiWordmark') || isset($logos['wordmark'])) {
 				$wordmarkImage = Html::element('img', [
 					'src' => $config->get('GongbiWordmark')['src'] ?? $logos['wordmark']['src'],
 					'height' => $config->get('GongbiWordmark')['height'] ?? ($logos['wordmark']['height'] ?? null),
 					'width' => $config->get('GongbiWordmark')['width'] ?? ($logos['wordmark']['width'] ?? null),
+					'title' => $siteTitle,
+					'alt' => $siteTitle,
 				]);
 			}
 
-			$titleClass = '';
-			$siteTitle = '';
 			if (!$wordmarkImage) {
-				$langConv = MediaWikiServices::getInstance()->getLanguageConverterFactory()
-					->getLanguageConverter($this->getSkin()->getLanguage());
-				if ($langConv->hasVariants()) {
-					$siteTitle = $langConv->convert($this->getMsg('gongbi-sitetitle')->escaped());
-				} else {
-					$siteTitle = $this->getMsg('gongbi-sitetitle')->escaped();
-				}
 				// width is 11em; 7 characters will probably fit?
 				if (mb_strlen($siteTitle) > 7) {
 					$titleClass = 'long';
@@ -552,7 +556,9 @@ class GongbiTemplate extends BaseTemplate
 				[
 					'id' => 'p-banner',
 					'class' => ['mw-wiki-title', $titleClass],
-					'href' => $this->data['nav_urls']['mainpage']['href']
+					'href' => $this->data['nav_urls']['mainpage']['href'],
+					'title' => $siteTitle,
+					'alt' => $siteTitle,
 				],
 				$wordmarkImage ?: $siteTitle
 			);
@@ -563,6 +569,8 @@ class GongbiTemplate extends BaseTemplate
 				$logoSrc = $logos['icon'];
 				$logoImage = Html::element('img', [
 					'src' => $logoSrc,
+					'title' => $siteTitle,
+					'alt' => $siteTitle,
 				]);
 			}
 
@@ -571,7 +579,9 @@ class GongbiTemplate extends BaseTemplate
 				array_merge(
 					[
 						'class' => ['mw-wiki-logo', !$logoImage ? 'fallback' : 'gongbi-logo'],
-						'href' => $this->data['nav_urls']['mainpage']['href']
+						'href' => $this->data['nav_urls']['mainpage']['href'],
+						'title' => $siteTitle,
+						'alt' => $siteTitle,
 					],
 					Linker::tooltipAndAccesskeyAttribs('p-logo')
 				),
