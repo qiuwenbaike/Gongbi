@@ -33,7 +33,7 @@ $( function () {
 				$( '#personal h2' ).offset().left - $( '#personal-inner' ).width()
 			);
 			$( '#personal .mobile-close-button' )
-				.css( 'top', $( '#personal h2' ).offset().top )
+				.css( 'top', $( '#personal h2' ).offset().top - 4 )
 				.css( 'left', $( '#personal h2' ).offset().left );
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
@@ -47,7 +47,7 @@ $( function () {
 				$( '#sidebar-tools h2' ).offset().left
 			);
 			$( '#site-navigation .mobile-close-button' )
-				.css( 'top', $( '#sidebar-tools h2' ).offset().top )
+				.css( 'top', $( '#sidebar-tools h2' ).offset().top - 4 )
 				.css( 'left', $( '#sidebar-tools h2' ).offset().left );
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
