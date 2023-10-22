@@ -56,10 +56,9 @@ $( function () {
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
-			$( '#p-search .mobile-close-button' ).css(
-				'left',
-				$( '#search-button h2' ).offset().left
-			);
+			$( '#p-search .mobile-close-button' )
+				.css( 'top', $( '#search-button h2' ).offset().top - 4 )
+				.css( 'left', $( '#search-button h2' ).offset().left );
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
