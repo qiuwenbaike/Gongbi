@@ -66,7 +66,7 @@
 				"toc": true
 			},
 			"styles": {
-				"resources/content.media-common.less": {
+				"resources/content.media/common.less": {
 					"media": "all"
 				},
 				"resources/libraries/normalise.css": {
@@ -78,7 +78,7 @@
 				"resources/forms.less": {
 					"media": "screen"
 				},
-				"resources/content.media-screen.less": {
+				"resources/content.media/screen.less": {
 					"media": "screen"
 				},
 				"resources/screen-common.less": {
@@ -100,13 +100,13 @@
 					"media": "screen and (max-width: 375px)"
 				},
 				"0": "resources/screen-misc.less",
+				"resources/content.media/print.less": {
+					"media": "print"
+				},
 				"resources/libraries/common-print.less": {
 					"media": "print"
 				},
-				"resources/print.css": {
-					"media": "print"
-				},
-				"resources/content.media-print.less": {
+				"resources/print.less": {
 					"media": "print"
 				}
 			},
@@ -115,16 +115,16 @@
 		"skins.gongbi.js": {
 			"targets": [ "desktop", "mobile" ],
 			"scripts": [
-				"resources/main.js",
-				"resources/mobile.js",
-				"resources/toc.js",
-				"resources/table-scroll.js"
+				"resources/scripts/main.js",
+				"resources/scripts/mobile.js",
+				"resources/scripts/toc.js",
+				"resources/scripts/table-scroll.js"
 			],
 			"styles": {
-				"resources/table-scroll.js.less": {
+				"resources/scripts/table-scroll.js.less": {
 					"media": "screen"
 				},
-				"resources/toc.js.less": {
+				"resources/scripts/toc.js.less": {
 					"media": "screen"
 				}
 			}
