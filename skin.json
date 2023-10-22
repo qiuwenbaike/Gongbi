@@ -81,25 +81,25 @@
 				"resources/content.media/screen.less": {
 					"media": "screen"
 				},
-				"resources/screen/common.less": {
+				"resources/screen-common.less": {
 					"media": "screen"
 				},
-				"resources/screen/desktop.less": {
+				"resources/screen-desktop.less": {
 					"media": "screen and (min-width: 851px)"
 				},
-				"resources/screen/desktop-full.less": {
+				"resources/screen-desktop-full.less": {
 					"media": "screen and (min-width: 1200px)"
 				},
-				"resources/screen/desktop-mid.less": {
+				"resources/screen-desktop-mid.less": {
 					"media": "screen and (min-width: 851px) and (max-width: 1199px)"
 				},
-				"resources/screen/mobile.less": {
+				"resources/screen-mobile.less": {
 					"media": "screen and (max-width: 850px)"
 				},
-				"resources/screen/mobile-small.less": {
+				"resources/screen-mobile-small.less": {
 					"media": "screen and (max-width: 375px)"
 				},
-				"0": "resources/screen/misc.less",
+				"0": "resources/screen-misc.less",
 				"resources/content.media/print.less": {
 					"media": "print"
 				},
@@ -110,7 +110,7 @@
 					"media": "print"
 				}
 			},
-			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen/misc.less and mobile.js may also need updating."
+			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating."
 		},
 		"skins.gongbi.js": {
 			"targets": [ "desktop", "mobile" ],
