@@ -23,25 +23,45 @@
 
 /* eslint-disable no-jquery/no-fade */
 $( function () {
-	var toggleTime = 200;
+	var toggleTime = 150;
 
 	// Open the various menus
 	$( '#user-tools h2' ).on( 'click', function () {
-		if ( $( window ).width() < 769 ) {
+		if ( $( window ).width() < 851 ) {
+			$( '#personal-inner' ).css(
+				'left',
+				$( '#personal h2' ).offset().left - $( '#personal-inner' ).width()
+			);
+			$( '#personal .mobile-close-button' ).css(
+				'left',
+				$( '#personal h2' ).offset().left
+			);
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
 			$( '#personal .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
-		if ( $( window ).width() < 769 ) {
+		if ( $( window ).width() < 851 ) {
+			$( '#site-navigation .sidebar-inner' ).css(
+				'left',
+				$( '#sidebar-tools h2' ).offset().left
+			);
+			$( '#site-navigation .mobile-close-button' ).css(
+				'left',
+				$( '#sidebar-tools h2' ).offset().left
+			);
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#site-navigation .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
-		if ( $( window ).width() < 769 ) {
+		if ( $( window ).width() < 851 ) {
+			$( '#p-search .mobile-close-button' ).css(
+				'left',
+				$( '#search-button h2' ).offset().left
+			);
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
@@ -51,8 +71,8 @@ $( function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		$( '#page-more .mobile-close-button' )
 			.css( 'top', $( '#ca-more' ).offset().top - 4 )
-			.css( 'right', '1.5em' );
-		if ( $( window ).width() < 769 ) {
+			.css( 'left', $( '#ca-more' ).offset().left );
+		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#page-more .mobile-close-button' ).fadeToggle( toggleTime );
@@ -65,8 +85,8 @@ $( function () {
 		);
 		$( '#page-tools .mobile-close-button' )
 			.css( 'top', $( '#ca-tools' ).offset().top - 4 )
-			.css( 'right', '5em' );
-		if ( $( window ).width() < 769 ) {
+			.css( 'right', $( '#ca-tools' ).offset().left );
+		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#page-tools .mobile-close-button' ).fadeToggle( toggleTime );
@@ -79,8 +99,8 @@ $( function () {
 		);
 		$( '#other-languages .mobile-close-button' )
 			.css( 'top', $( '#ca-languages' ).offset().top - 4 )
-			.css( 'right', '8.5em' );
-		if ( $( window ).width() < 769 ) {
+			.css( 'left', $( '#ca-languages' ).offset().left );
+		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
 			$( '#other-languages .mobile-close-button' ).fadeToggle( toggleTime );
