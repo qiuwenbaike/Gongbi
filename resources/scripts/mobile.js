@@ -68,7 +68,7 @@ $( function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		$( '#page-more .mobile-close-button' )
 			.css( 'top', $( '#ca-more' ).offset().top - 4 )
-			.css( 'left', $( '#ca-more' ).offset().left );
+			.css( 'left', $( '#ca-more' ).offset().left + 2 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
@@ -82,7 +82,7 @@ $( function () {
 		);
 		$( '#page-tools .mobile-close-button' )
 			.css( 'top', $( '#ca-tools' ).offset().top - 4 )
-			.css( 'left', $( '#ca-tools' ).offset().left );
+			.css( 'left', $( '#ca-tools' ).offset().left + 2 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
@@ -96,7 +96,7 @@ $( function () {
 		);
 		$( '#other-languages .mobile-close-button' )
 			.css( 'top', $( '#ca-languages' ).offset().top - 4 )
-			.css( 'left', $( '#ca-languages' ).offset().left );
+			.css( 'left', $( '#ca-languages' ).offset().left + 2 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
@@ -108,7 +108,7 @@ $( function () {
 	$( document ).on( 'click touchstart', function ( e ) {
 		if (
 			$( e.target ).closest( '#menus-cover' ).length > 0 ||
-      $( e.target ).closest( '.mobile-close-button' ).length > 0
+			$( e.target ).closest( '.mobile-close-button' ).length > 0
 		) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
