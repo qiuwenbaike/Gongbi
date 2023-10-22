@@ -85,7 +85,7 @@ $( function () {
 		);
 		$( '#page-tools .mobile-close-button' )
 			.css( 'top', $( '#ca-tools' ).offset().top - 4 )
-			.css( 'right', $( '#ca-tools' ).offset().left );
+			.css( 'left', $( '#ca-tools' ).offset().left );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
