@@ -120,6 +120,10 @@
 		},
 		"skins.gongbi.js": {
 			"es6": true,
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"packageFiles": [
 				"resources/scripts/main.js",
 				"resources/scripts/mobile.js",
