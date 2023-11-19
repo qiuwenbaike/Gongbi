@@ -17,16 +17,14 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-'use strict';
-
 /* Popout menus (header) */
 
 /* eslint-disable no-jquery/no-fade */
-$( function () {
-	var toggleTime = 150;
+$( () => {
+	const toggleTime = 150;
 
 	// Open the various menus
-	$( '#user-tools h2' ).on( 'click', function () {
+	$( '#user-tools h2' ).on( 'click', () => {
 		if ( $( window ).width() < 851 ) {
 			$( '#personal-inner' ).css(
 				'left',
@@ -40,7 +38,7 @@ $( function () {
 			$( '#personal .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#sidebar-tools h2' ).on( 'click', function () {
+	$( '#sidebar-tools h2' ).on( 'click', () => {
 		if ( $( window ).width() < 851 ) {
 			$( '#site-navigation .sidebar-inner' ).css(
 				'left',
@@ -54,7 +52,7 @@ $( function () {
 			$( '#site-navigation .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#search-button h2' ).on( 'click', function () {
+	$( '#search-button h2' ).on( 'click', () => {
 		if ( $( window ).width() < 851 ) {
 			$( '#p-search .mobile-close-button' )
 				.css( 'top', $( '#search-button h2' ).offset().top - 4 )
@@ -64,7 +62,7 @@ $( function () {
 			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-more' ).on( 'click', function () {
+	$( '#ca-more' ).on( 'click', () => {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		$( '#page-more .mobile-close-button' )
 			.css( 'top', $( '#ca-more' ).offset().top - 4 )
@@ -75,7 +73,7 @@ $( function () {
 			$( '#page-more .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-tools' ).on( 'click', function () {
+	$( '#ca-tools' ).on( 'click', () => {
 		$( '#page-tools .sidebar-inner' ).css(
 			'top',
 			$( '#ca-tools' ).offset().top + 25
@@ -89,7 +87,7 @@ $( function () {
 			$( '#page-tools .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-languages' ).on( 'click', function () {
+	$( '#ca-languages' ).on( 'click', () => {
 		$( '#other-languages .sidebar-inner' ).css(
 			'top',
 			$( '#ca-languages' ).offset().top + 25
@@ -105,10 +103,10 @@ $( function () {
 	} );
 
 	// Close menus on click outside
-	$( document ).on( 'click touchstart', function ( e ) {
+	$( document ).on( 'click touchstart', ( { target } ) => {
 		if (
-			$( e.target ).closest( '#menus-cover' ).length > 0 ||
-			$( e.target ).closest( '.mobile-close-button' ).length > 0
+			$( target ).closest( '#menus-cover' ).length > 0 ||
+			$( target ).closest( '.mobile-close-button' ).length > 0
 		) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );

@@ -3,12 +3,10 @@
  * © 2015-2021 Isarra
  * © 2021-2023 WaitSpring
  */
-'use strict';
-
-$( function () {
+$( () => {
 	// sidebar-inner only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
-	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
+	const $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
 
 	/**
 	 * Desktop menu click-toggling
@@ -16,13 +14,12 @@ $( function () {
 	 * We're not even checking if it's desktop because the classes in play have no effect
 	 * on mobile regardless... this may break things at some point, though.
 	 */
-
 	/**
 	 * Close all dropdowns
 	 */
-	function closeOpen() {
+	const closeOpen = () => {
 		$dropdowns.removeClass( 'dropdown-active' );
-	}
+	};
 
 	/**
 	 * Click behaviour
@@ -42,8 +39,8 @@ $( function () {
 			$( this ).addClass( 'dropdown-active' );
 		}
 	} );
-	$( document ).on( 'click', function ( e ) {
-		if ( $( e.target ).closest( $dropdowns ).length > 0 ) {
+	$( document ).on( 'click', ( { target } ) => {
+		if ( $( target ).closest( $dropdowns ).length > 0 ) {
 			// Clicked inside an open menu; don't close anything
 		} else {
 			closeOpen();
