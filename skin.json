@@ -1,7 +1,7 @@
 {
 	"name": "Gongbi",
 	"version": "1.9.0",
-	"author": [ "Isarra Yos", "edg2s", "WaitSpring" ],
+	"author": ["Isarra Yos", "edg2s", "WaitSpring"],
 	"url": "https://git.qiuwen.net.cn/Qiuwen/mediawiki-skins-Gongbi",
 	"descriptionmsg": "gongbi-desc",
 	"namemsg": "skinname-gongbi",
@@ -19,15 +19,19 @@
 					"name": "gongbi",
 					"template": "MediaWiki\\Skin\\Gongbi\\GongbiTemplate",
 					"responsive": true,
-					"styles": [ "skins.gongbi" ],
-					"scripts": [ "skins.gongbi.main", "skins.gongbi.mobile", "skins.gongbi.table-scroll" ],
+					"styles": ["skins.gongbi"],
+					"scripts": [
+						"skins.gongbi.main",
+						"skins.gongbi.mobile",
+						"skins.gongbi.table-scroll"
+					],
 					"bodyOnly": true
 				}
 			]
 		}
 	},
 	"MessagesDirs": {
-		"Gongbi": [ "i18n" ]
+		"Gongbi": ["i18n"]
 	},
 	"config": {
 		"GongbiLogo": {
@@ -45,7 +49,7 @@
 	},
 	"ResourceModules": {
 		"skins.gongbi": {
-			"targets": [ "desktop", "mobile" ],
+			"targets": ["desktop", "mobile"],
 			"class": "MediaWiki\\Skin\\Gongbi\\GongbiVariablesModule",
 			"features": {
 				"normalize": false,
@@ -120,43 +124,23 @@
 		},
 		"skins.gongbi.main": {
 			"es6": true,
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"packageFiles": [
-				"resources/scripts/main.js"
-			]
+			"targets": ["desktop", "mobile"],
+			"packageFiles": ["resources/scripts/main.js"]
 		},
 		"skins.gongbi.mobile": {
 			"es6": true,
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"packageFiles": [
-				"resources/scripts/mobile.js"
-			]
+			"targets": ["desktop", "mobile"],
+			"packageFiles": ["resources/scripts/mobile.js"]
 		},
 		"skins.gongbi.toc": {
 			"es6": true,
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"packageFiles": [
-				"resources/scripts/toc.js"
-			]
+			"targets": ["desktop", "mobile"],
+			"packageFiles": ["resources/scripts/toc.js"]
 		},
 		"skins.gongbi.table-scroll": {
 			"es6": true,
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"packageFiles": [
-				"resources/scripts/table-scroll.js"
-			]
+			"targets": ["desktop", "mobile"],
+			"packageFiles": ["resources/scripts/table-scroll.js"]
 		}
 	},
 	"ResourceFileModulePaths": {
