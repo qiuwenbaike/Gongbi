@@ -1,6 +1,9 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/server"
+		"wikimedia/client-common",
+		"wikimedia/language/es2022",
+		"wikimedia/mediawiki",
+		"wikimedia/jquery"
 	]
 }
