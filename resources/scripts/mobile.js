@@ -19,7 +19,8 @@
  */
 /* Popout menus (header) */
 
-/* eslint-disable no-jquery/no-fade */
+'use strict';
+
 $( () => {
 	const toggleTime = 150;
 

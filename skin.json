@@ -20,7 +20,7 @@
 					"template": "MediaWiki\\Skin\\Gongbi\\GongbiTemplate",
 					"responsive": true,
 					"styles": [ "skins.gongbi" ],
-					"scripts": [ "skins.gongbi.js" ],
+					"scripts": [ "skins.gongbi.main", "skins.gongbi.mobile", "skins.gongbi.table-scroll" ],
 					"bodyOnly": true
 				}
 			]
@@ -108,26 +108,53 @@
 				},
 				"resources/print.less": {
 					"media": "print"
-				},				
-				"resources/scripts/table-scroll.js.less": {
+				},
+				"resources/scripts/table-scroll.less": {
 					"media": "screen"
 				},
-				"resources/scripts/toc.js.less": {
+				"resources/scripts/toc.less": {
 					"media": "screen"
 				}
 			},
 			"@NOTE": "Remember to also update variables.less if you change the width cutoffs here. screen-misc.less and mobile.js may also need updating."
 		},
-		"skins.gongbi.js": {
+		"skins.gongbi.main": {
 			"es6": true,
 			"targets": [
 				"desktop",
 				"mobile"
 			],
 			"packageFiles": [
-				"resources/scripts/main.js",
-				"resources/scripts/mobile.js",
-				"resources/scripts/toc.js",
+				"resources/scripts/main.js"
+			]
+		},
+		"skins.gongbi.mobile": {
+			"es6": true,
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"packageFiles": [
+				"resources/scripts/mobile.js"
+			]
+		},
+		"skins.gongbi.toc": {
+			"es6": true,
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"packageFiles": [
+				"resources/scripts/toc.js"
+			]
+		},
+		"skins.gongbi.table-scroll": {
+			"es6": true,
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"packageFiles": [
 				"resources/scripts/table-scroll.js"
 			]
 		}
