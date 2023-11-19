@@ -19,17 +19,18 @@
 @import '../variables.less';
 
 /* TOC Styles */
-#site-toc .mw-portlet-body,
-#site-toc-right .mw-portlet-body {
-	max-height: 50vh;
-	padding-right: 1px;
-	margin-bottom: 2em;
-	overflow-y: auto;
-}
+#site-toc,
+#site-toc-right {
+	.mw-portlet-body {
+		max-height: 50vh;
+		padding-right: 1px;
+		margin-bottom: 2em;
+		overflow-y: auto;
+	}
 
-#site-toc .toclevel-2,
-#site-toc-right .toclevel-2 {
-	display: none;
+	.toclevel-2 {
+		display: none;
+	}
 }
 
 /* TOC Left */
@@ -51,11 +52,8 @@
 	top: 4.375em;
 	display: block;
 	width: @column-left-size;
-}
 
-@media screen and ( min-width: @desktop-large-floor ),
-	( max-width: @desktop-mid-floor ) {
-	#mw-toc-navigation {
+	@media screen and ( min-width: @desktop-large-floor ), ( max-width: @desktop-mid-floor ) {
 		display: none;
 	}
 }
