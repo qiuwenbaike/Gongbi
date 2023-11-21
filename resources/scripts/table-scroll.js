@@ -20,7 +20,7 @@
 
 'use strict';
 
-mw.hook( 'wikipage.content' ).add( ( $content ) => {
+mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	// Skip on Special:Recentchanges
 	if ( mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Recentchanges' ) {
 		return;
@@ -45,11 +45,11 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 	 *
 	 * @param {jQuery} $table
 	 */
-	const setScrollClass = ( $table ) => {
-		const $tableWrapper = $table.parent();
-		const $wrapper = $tableWrapper.parent();
-
-		const scroll = Math.abs( $tableWrapper.scrollLeft() ); // wtf browser rtl implementations
+	function setScrollClass( $table ) {
+		var $tableWrapper = $table.parent(),
+			$wrapper = $tableWrapper.parent(),
+			// wtf browser rtl implementations
+			scroll = Math.abs( $tableWrapper.scrollLeft() );
 
 		// 1 instead of 0 because of weird rtl rounding errors or something
 		if ( scroll > 1 ) {
@@ -62,27 +62,27 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 		} else {
 			$wrapper.removeClass( 'scroll-right' );
 		}
-	};
+	}
 	$content.find( '.content-table' ).on( 'scroll', function () {
 		setScrollClass( $( this ).children( 'table' ).first() );
 		if ( $content.attr( 'dir' ) === 'rtl' ) {
 			$( this )
 				.find( 'caption' )
-				.css( 'margin-right', `${Math.abs( $( this ).scrollLeft() )}px` );
+				.css( 'margin-right', Math.abs( $( this ).scrollLeft() ) + 'px' );
 		} else {
 			$( this )
 				.find( 'caption' )
-				.css( 'margin-left', `${$( this ).scrollLeft()}px` );
+				.css( 'margin-left', $( this ).scrollLeft() + 'px' );
 		}
 	} );
 
 	/**
 	 * Mark overflowed tables for scrolling
 	 */
-	const unOverflowTables = () => {
+	function unOverflowTables() {
 		$content.find( '.content-table > table' ).each( function () {
-			const $table = $( this );
-			const $wrapper = $table.parent().parent();
+			var $table = $( this ),
+				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$wrapper.addClass( 'overflowed' );
 				setScrollClass( $table );
@@ -95,10 +95,10 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 
 		// Set up sticky captions
 		$content.find( '.content-table > table > caption' ).each( function () {
-			let $container;
-			let tableHeight;
-			const $table = $( this ).parent();
-			const $wrapper = $table.parent().parent();
+			var $container,
+				tableHeight,
+				$table = $( this ).parent(),
+				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$container = $( this ).parents( '.content-table-wrapper' );
 				$( this ).width( $content.width() );
@@ -107,7 +107,7 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 				$container.find( '.content-table-right' ).height( tableHeight );
 			}
 		} );
-	};
+	}
 	unOverflowTables();
 	$( window ).on( 'resize', unOverflowTables );
 
@@ -115,14 +115,15 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 	 * Sticky scrollbars maybe?!
 	 */
 	$content.find( '.content-table' ).each( function () {
-		const $tableWrapper = $( this );
-		const $table = $tableWrapper.children( 'table' ).first();
+		var $table, $tableWrapper, $spoof, $scrollbar;
+		$tableWrapper = $( this );
+		$table = $tableWrapper.children( 'table' ).first();
 
 		// Assemble our silly crap and add to page
-		const $scrollbar = $( '<div>' )
+		$scrollbar = $( '<div>' )
 			.addClass( 'content-table-scrollbar inactive' )
 			.width( $content.width() );
-		const $spoof = $( '<div>' )
+		$spoof = $( '<div>' )
 			.addClass( 'content-table-spoof' )
 			.width( $table.outerWidth() );
 		$tableWrapper.parent().prepend( $scrollbar.prepend( $spoof ) );
@@ -133,11 +134,11 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 	 */
 	$content.find( '.content-table' ).on( 'scroll', function () {
 		// Only do this here if we're not already mirroring the spoof
-		const $mirror = $( this ).siblings( '.inactive' ).first();
+		var $mirror = $( this ).siblings( '.inactive' ).first();
 		$mirror.scrollLeft( $( this ).scrollLeft() );
 	} );
 	$content.find( '.content-table-scrollbar' ).on( 'scroll', function () {
-		const $mirror = $( this ).siblings( '.content-table' ).first();
+		var $mirror = $( this ).siblings( '.content-table' ).first();
 
 		// Only do this here if we're not already mirroring the table
 		// eslint-disable-next-line no-jquery/no-class-state
@@ -149,10 +150,13 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 	/**
 	 * Set active when actually over the table it applies to...
 	 */
-	const determineActiveSpoofScrollbars = () => {
+	function determineActiveSpoofScrollbars() {
 		$content.find( '.overflowed .content-table' ).each( function () {
-			const $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first();
-			let captionHeight;
+			var $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first(),
+				tableTop,
+				tableBottom,
+				viewBottom,
+				captionHeight;
 
 			// Skip caption
 			captionHeight = $( this ).find( 'caption' ).outerHeight();
@@ -162,25 +166,25 @@ mw.hook( 'wikipage.content' ).add( ( $content ) => {
 				// Pad slightly for reasons
 				captionHeight += 8;
 			}
-			const tableTop = $( this ).offset().top;
-			const tableBottom = tableTop + $( this ).outerHeight();
-			const viewBottom = window.scrollY + document.documentElement.clientHeight;
+			tableTop = $( this ).offset().top;
+			tableBottom = tableTop + $( this ).outerHeight();
+			viewBottom = window.scrollY + document.documentElement.clientHeight;
 			if ( tableTop + captionHeight < viewBottom && tableBottom > viewBottom ) {
 				$scrollbar.removeClass( 'inactive' );
 			} else {
 				$scrollbar.addClass( 'inactive' );
 			}
 		} );
-	};
+	}
 	determineActiveSpoofScrollbars();
 	$( window ).on( 'scroll resize', determineActiveSpoofScrollbars );
 
 	/**
 	 * Make sure tablespoofs remain correctly-sized?
 	 */
-	$( window ).on( 'resize', () => {
+	$( window ).on( 'resize', function () {
 		$content.find( '.content-table-scrollbar' ).each( function () {
-			const width = $( this ).siblings().first().find( 'table' ).first().width();
+			var width = $( this ).siblings().first().find( 'table' ).first().width();
 			$( this ).find( '.content-table-spoof' ).first().width( width );
 			$( this ).width( $content.width() );
 		} );

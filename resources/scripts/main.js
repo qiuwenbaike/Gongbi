@@ -19,10 +19,10 @@
  */
 'use strict';
 
-$( () => {
+$( function () {
 	// sidebar-inner only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
-	const $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
+	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
 
 	/**
 	 * Desktop menu click-toggling
@@ -30,10 +30,11 @@ $( () => {
 	 * We're not even checking if it's desktop because the classes in play have no effect
 	 * on mobile regardless... this may break things at some point, though.
 	 */
+
 	/**
 	 * Close all dropdowns
 	 */
-	const closeOpen = () => {
+	var closeOpen = function closeOpen() {
 		$dropdowns.removeClass( 'dropdown-active' );
 	};
 
@@ -55,8 +56,8 @@ $( () => {
 			$( this ).addClass( 'dropdown-active' );
 		}
 	} );
-	$( document ).on( 'click', ( { target } ) => {
-		if ( $( target ).closest( $dropdowns ).length > 0 ) {
+	$( document ).on( 'click', function ( e ) {
+		if ( $( e.target ).closest( $dropdowns ).length > 0 ) {
 			// Clicked inside an open menu; don't close anything
 		} else {
 			closeOpen();

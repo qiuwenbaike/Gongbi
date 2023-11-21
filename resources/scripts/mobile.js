@@ -21,11 +21,11 @@
 
 'use strict';
 
-$( () => {
-	const toggleTime = 150;
+$( function () {
+	var toggleTime = 150;
 
 	// Open the various menus
-	$( '#user-tools h2' ).on( 'click', () => {
+	$( '#user-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#personal-inner' ).css(
 				'left',
@@ -39,7 +39,7 @@ $( () => {
 			$( '#personal .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#sidebar-tools h2' ).on( 'click', () => {
+	$( '#sidebar-tools h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#site-navigation .sidebar-inner' ).css(
 				'left',
@@ -53,7 +53,7 @@ $( () => {
 			$( '#site-navigation .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#search-button h2' ).on( 'click', () => {
+	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
 			$( '#p-search .mobile-close-button' )
 				.css( 'top', $( '#search-button h2' ).offset().top - 4 )
@@ -63,7 +63,7 @@ $( () => {
 			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-more' ).on( 'click', () => {
+	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		$( '#page-more .mobile-close-button' )
 			.css( 'top', $( '#ca-more' ).offset().top - 4 )
@@ -74,7 +74,7 @@ $( () => {
 			$( '#page-more .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-tools' ).on( 'click', () => {
+	$( '#ca-tools' ).on( 'click', function () {
 		$( '#page-tools .sidebar-inner' ).css(
 			'top',
 			$( '#ca-tools' ).offset().top + 25
@@ -88,7 +88,7 @@ $( () => {
 			$( '#page-tools .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-languages' ).on( 'click', () => {
+	$( '#ca-languages' ).on( 'click', function () {
 		$( '#other-languages .sidebar-inner' ).css(
 			'top',
 			$( '#ca-languages' ).offset().top + 25
@@ -104,10 +104,10 @@ $( () => {
 	} );
 
 	// Close menus on click outside
-	$( document ).on( 'click touchstart', ( { target } ) => {
+	$( document ).on( 'click touchstart', function ( e ) {
 		if (
-			$( target ).closest( '#menus-cover' ).length > 0 ||
-			$( target ).closest( '.mobile-close-button' ).length > 0
+			$( e.target ).closest( '#menus-cover' ).length > 0 ||
+			$( e.target ).closest( '.mobile-close-button' ).length > 0
 		) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );

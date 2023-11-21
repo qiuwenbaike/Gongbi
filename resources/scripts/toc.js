@@ -18,10 +18,10 @@
  */
 'use strict';
 
-$( () => {
+$( function () {
 	if ( $( '#toc>ul' ).length !== 0 ) {
 		/* TOC (Left) */
-		const $div = $( '<div>' ).attr( 'id', 'site-toc' ).addClass( 'sidebar-chunk' ),
+		var $div = $( '<div>' ).attr( 'id', 'site-toc' ).addClass( 'sidebar-chunk' ),
 			$title = $( '#mw-toc-heading' ).html(),
 			$titleH2 = $( '<h2>' ).append( $( '<span>' ).text( $title ) ),
 			$titleH3 = $( '<h3>' ).attr( 'id', 'p-toc-label' ).text( $title ),
@@ -44,7 +44,7 @@ $( () => {
 			.appendTo( $( '#mw-site-navigation' ) );
 
 		/* TOC (Right) */
-		const $divNavi = $( '<div>' ).attr( 'id', 'mw-toc-navigation' ),
+		var $divNavi = $( '<div>' ).attr( 'id', 'mw-toc-navigation' ),
 			$divRight = $( '<div>' )
 				.attr( 'id', 'site-toc-right' )
 				.addClass( 'sidebar-chunk' ),
