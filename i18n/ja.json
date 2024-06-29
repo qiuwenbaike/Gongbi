@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622",
+			"Ochaochaocha3",
+			"Otokoume",
+			"Sujiniku",
+			"Whym",
+			"Yusuke1109",
+			"しぃ",
+			"Shirayuki"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "Brandon Harris による Winter というプロトタイプやウィキメディア財団によるさまざまなスタイルを基にしてデザインされた不朽 (timeless) の外装。",
+	"gongbi-anonymous": "匿名",
+	"gongbi-loggedinas": "'''$1''' としてログインしています",
+	"gongbi-notloggedin": "ログインしていません",
+	"gongbi-userpage": "{{GENDER:$1|利用者}}ページ",
+	"gongbi-talkpage": "{{GENDER:$1|利用者}}トーク",
+	"gongbi-pagelog": "ページの記録",
+	"gongbi-more": "その他",
+	"gongbi-sitetools": "ウィキツール",
+	"gongbi-pageactions": "ページツール",
+	"gongbi-userpagetools": "利用者ページツール",
+	"gongbi-action-addsection": "新しい話題",
+	"gongbi-view-view": "閲覧",
+	"gongbi-pagemisc": "その他",
+	"gongbi-namespaces": "名前空間",
+	"gongbi-pagetools": "ページ操作",
+	"gongbi-languages": "言語",
+	"gongbi-projects": "他プロジェクト",
+	"gongbi.css": "/* ここにあるすべてのCSSは、Gongbi外装を使用している利用者に対して読み込まれます */",
+	"gongbi.js": "/* ここにあるすべてのJavaScriptは、Gongbi外装を使用している利用者に対して読み込まれます */",
+	"gongbi-view-history": "履歴",
+	"gongbi-action-undelete": "{{PLURAL:$1|$1 編集}}を復元"
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Athena in Wonderland",
+			"Hamilton Abreu",
+			"Macofe",
+			"MokaAkashiyaPT",
+			"Vitorvicentevalente"
+		]
+	},
+	"gongbi-desc": "Um tema intemporal, desenhado com base no protótipo Winter de Brandon Harris e em vários estilos da Wikimedia Foundation",
+	"gongbi-anonymous": "Anónimo",
+	"gongbi-loggedinas": "Autenticado como '''$1'''",
+	"gongbi-notloggedin": "Não autenticado",
+	"gongbi-userpage": "Página {{GENDER:$1|do utilizador|da utilizadora|de utilizador}}",
+	"gongbi-talkpage": "{{GENDER:$1|Utilizador|Utilizadora}} Discussão",
+	"gongbi-pagelog": "Registos da página",
+	"gongbi-more": "Mais",
+	"gongbi-sitetools": "Ferramentas da wiki",
+	"gongbi-pageactions": "Ferramentas de página",
+	"gongbi-userpagetools": "Ferramentas da página de utilizador",
+	"gongbi-action-addsection": "Tópico novo",
+	"gongbi-view-view": "Ler",
+	"gongbi-pagemisc": "Mais",
+	"gongbi-namespaces": "Espaços nominais",
+	"gongbi-pagetools": "Ações de página",
+	"gongbi-languages": "Línguas",
+	"gongbi-projects": "Outros projetos",
+	"gongbi.css": "/* Todo o código CSS colocado aqui será carregado para os utilizadores do tema Gongbi*/",
+	"gongbi.js": "/* Todo o código JavaScript colocado aqui será carregado para os utilizadores do tema Gongbi */",
+	"gongbi-view-history": "Histórico",
+	"gongbi-action-undelete": "Restaurar {{PLURAL:$1|uma edição|$1 edições}}"
+}

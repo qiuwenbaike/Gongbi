@@ -11,18 +11,18 @@
 			"Shizhao",
 			"Xiplus",
 			"Xzonn",
-			"WaitSpring"
+			"铁桶"
 		]
 	},
-	"gongbi-desc": "基于Timeless的新一代求闻百科主题",
+	"gongbi-desc": "基于 Timeless 的新一代求闻百科主题",
 	"gongbi-anonymous": "匿名",
-	"gongbi-loggedinas": "'''$1'''",
+	"gongbi-loggedinas": "以'''$1'''登录",
 	"gongbi-notloggedin": "未登录",
 	"gongbi-userpage": "{{GENDER:$1|用户}}页",
 	"gongbi-talkpage": "{{GENDER:$1|用户}}讨论",
 	"gongbi-pagelog": "页面日志",
 	"gongbi-more": "更多",
-	"gongbi-sitetools": "工具",
+	"gongbi-sitetools": "wiki工具",
 	"gongbi-pageactions": "页面工具",
 	"gongbi-userpagetools": "用户页面工具",
 	"gongbi-action-addsection": "新建话题",
@@ -32,9 +32,8 @@
 	"gongbi-pagetools": "页面操作",
 	"gongbi-languages": "语言",
 	"gongbi-projects": "其他项目",
-	"gongbi-menus-hover-title": "关闭菜单",
 	"gongbi.css": "/* 这里放置的CSS将应用于Gongbi皮肤 */",
-	"gongbi.js": "/* 将为Gongbi皮肤的用户加载此处的所有JavaScript */",
+	"gongbi.js": "/* 将为Gongbi皮肤的用户加载此处的所有JavaScript  */",
 	"gongbi-view-history": "历史",
-	"gongbi-action-undelete": "还原{{PLURAL:$1|1|$1}}次编辑"
+	"gongbi-action-undelete": "还原{{PLURAL:$1|一次编辑|$1次编辑}}"
 }

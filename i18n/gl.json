@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "Unha aparencia atemporal, deseñada por Brandon Harris en base ó prototipo Winter, e varios estilos da Fundación Wikimedia.",
+	"gongbi-anonymous": "Anónimo",
+	"gongbi-loggedinas": "Conectado como '''$1'''",
+	"gongbi-notloggedin": "Non conectado",
+	"gongbi-userpage": "Páxina de {{GENDER:$1|usuario|usuaria}}",
+	"gongbi-talkpage": "Conversa de {{GENDER:$1|usuario|usuaria}}",
+	"gongbi-pagelog": "Rexistros de páxina",
+	"gongbi-more": "Máis",
+	"gongbi-sitetools": "Ferramentas wiki",
+	"gongbi-pageactions": "Ferramentas das páxinas",
+	"gongbi-userpagetools": "Ferramentas de páxina de usuario",
+	"gongbi-action-addsection": "Novo fío",
+	"gongbi-view-view": "Ler",
+	"gongbi-pagemisc": "Máis",
+	"gongbi-namespaces": "Espazos de nomes",
+	"gongbi-pagetools": "Accións de páxina",
+	"gongbi-languages": "Linguas",
+	"gongbi-projects": "Outros proxectos",
+	"gongbi.css": "/* O CSS colocado aquí afectará aos usuarios da aparencia Gongbi */",
+	"gongbi.js": "/* O código JavaScript colocado aquí cargarase para os usuarios que utilicen a aparencia Gongbi */",
+	"gongbi-view-history": "Historial",
+	"gongbi-action-undelete": "Restaurar {{PLURAL:$1|unha edición|$1 edicións}}"
+}

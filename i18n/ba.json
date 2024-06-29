@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pacha Tchernof",
+			"Sagan",
+			"З. ӘЙЛЕ"
+		]
+	},
+	"gongbi-desc": "Gongbi биҙәлеше Брэндон Харрисның Winter прототипыннҙан һәм Викимедиа Фондының башҡа төр стилдәренән  яһалған.",
+	"gongbi-anonymous": "Аноним",
+	"gongbi-loggedinas": "'''$1''' булып танылған",
+	"gongbi-notloggedin": "Танылмағанһығыҙ",
+	"gongbi-userpage": "{{GENDER:$1|Ҡатнашыусы}} бите",
+	"gongbi-talkpage": "{{GENDER:$1|Ҡатнашыусы}} менән фекер алышыу",
+	"gongbi-pagelog": "Бит журналы",
+	"gongbi-more": "Тағы",
+	"gongbi-sitetools": "Вики-ҡоралдар",
+	"gongbi-pageactions": "Бит яһау өсөн ҡоралдар",
+	"gongbi-userpagetools": "Ҡатнашыусы бите ҡоралдары",
+	"gongbi-pagemisc": "Тағы",
+	"gongbi-namespaces": "Исем арауыҡтары",
+	"gongbi-pagetools": "Биттәге ғәмәлдәр",
+	"gongbi-languages": "Телдәр",
+	"gongbi-view-history": "Тарих",
+	"gongbi-action-undelete": "$1 {{PLURAL:$1|үҙгәртеүҙе}} тергеҙергә"
+}

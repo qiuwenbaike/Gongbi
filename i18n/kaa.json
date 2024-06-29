@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nurlan",
+			"Ajiniyaz Nurniyazov"
+		]
+	},
+	"gongbi-loggedinas": "'''$1''' retinde kirgensiz",
+	"gongbi-userpage": "{{GENDER:$1|Paydalanıwshı}} beti",
+	"gongbi-talkpage": "{{GENDER:$1|Paydalanıwshı}} talqılawı",
+	"gongbi-pagelog": "Bet jurnalları",
+	"gongbi-more": "Taǵı",
+	"gongbi-sitetools": "Wiki quralları",
+	"gongbi-pageactions": "Bet ásbapları",
+	"gongbi-userpagetools": "Paydalanıwshı beti ásbapları",
+	"gongbi-pagemisc": "Taǵı",
+	"gongbi-languages": "Tiller",
+	"gongbi-projects": "Basqa joybarlar",
+	"gongbi-view-history": "Tariyxı"
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"AmaryllisGardener",
+			"CiphriusKane"
+		]
+	},
+	"gongbi-loggedinas": "Logged in as '''$1'''",
+	"gongbi-notloggedin": "Nae logged in",
+	"gongbi-userpage": "{{GENDER:$1|Uiser}} page",
+	"gongbi-talkpage": "{{GENDER:$1|Uiser}} tauk",
+	"gongbi-pagelog": "Page logs",
+	"gongbi-more": "Mair",
+	"gongbi-sitetools": "Wiki tuils",
+	"gongbi-pageactions": "Page tuils",
+	"gongbi-view-history": "History",
+	"gongbi-action-undelete": "Undelete {{PLURAL:$1|yin edit|$1 edits}}"
+}

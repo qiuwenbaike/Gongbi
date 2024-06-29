@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Jmarchn",
+			"Macofe",
+			"Toniher",
+			"Vriullop",
+			"SMP"
+		]
+	},
+	"gongbi-desc": "Una aparença atemporal dissenyada a partir del prototip Winter de Brandon Harris i diversos estils de la Fundació Wikimedia",
+	"gongbi-anonymous": "Anònim",
+	"gongbi-loggedinas": "Registrat com a '''$1'''",
+	"gongbi-notloggedin": "Sense sessió iniciada",
+	"gongbi-userpage": "Pàgina d'{{GENDER:$1|usuari}}",
+	"gongbi-talkpage": "Discussió d'{{GENDER:$1|usuari}}",
+	"gongbi-pagelog": "Registres de la pàgina",
+	"gongbi-more": "Més",
+	"gongbi-sitetools": "Eines wiki",
+	"gongbi-pageactions": "Eines de pàgina",
+	"gongbi-userpagetools": "Eines de pàgina d'usuari",
+	"gongbi-action-addsection": "Tema nou",
+	"gongbi-view-view": "Llegeix",
+	"gongbi-pagemisc": "Més",
+	"gongbi-namespaces": "Espais de noms",
+	"gongbi-pagetools": "Accions de pàgina",
+	"gongbi-languages": "Llengües",
+	"gongbi-projects": "Altres projectes",
+	"gongbi.js": "/* Qualsevol codi JavaScript afegit aquí es carregarà per als usuaris que utilitzin l'aparença Gongbi */",
+	"gongbi-view-history": "Historial",
+	"gongbi-action-undelete": "Restaura {{PLURAL:$1|l'edició eliminada|$1 edicions eliminades}}"
+}

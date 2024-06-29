@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib",
+			"Obaid Raza"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "برینڈن ہیرس کے تیار کردہ وِنٹر نمونہ اور ویکیمیڈیا فاؤنڈیشن کی متعدد پوشاکوں کے بعد تیار کی گئی ٹائم لیس پوشاک",
+	"gongbi-anonymous": "گمنام",
+	"gongbi-loggedinas": "«$1» صارف نام سے لاگ ان ہیں",
+	"gongbi-notloggedin": "آپ لاگ ان نہیں ہیں",
+	"gongbi-userpage": "صفحہ {{GENDER:$1|صارف}}",
+	"gongbi-talkpage": "تبادلۂ خیال {{GENDER:$1|صارف}}",
+	"gongbi-pagelog": "صفحے کے نوشتہ جات",
+	"gongbi-more": "مزید",
+	"gongbi-sitetools": "ویکی آلات",
+	"gongbi-pageactions": "آلات صفحہ",
+	"gongbi-userpagetools": "آلات صفحہ صارف",
+	"gongbi-action-addsection": "نیا موضوع",
+	"gongbi-view-view": "مطالعہ",
+	"gongbi-pagemisc": "مزید",
+	"gongbi-namespaces": "نام ہائے فضا",
+	"gongbi-pagetools": "کارروائیاں",
+	"gongbi-languages": "زبانیں",
+	"gongbi-projects": "دیگر منصوبے",
+	"gongbi.css": "/* یہاں درج سی ایس ایس ٹائم لیس پوشاک استعمال کرنے والے تمام صارفین پر اثر انداز ہوگی */",
+	"gongbi.js": "/* یہاں درج جاوا اسکرپٹ محض ان صارفین کے لیے لوڈ ہوگی جو ٹائم لیس پوشاک استعمال کر رہے ہیں */",
+	"gongbi-view-history": "تاریخچہ",
+	"gongbi-action-undelete": "بحال {{PLURAL:$1|ایک ترمیم|$1 ترامیم}}"
+}

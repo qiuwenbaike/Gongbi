@@ -7,11 +7,11 @@
 			"Pamputt",
 			"Robby",
 			"Umherirrender",
-			"WaitSpring"
+			"Shirayuki"
 		]
 	},
 	"skinname-gongbi": "{{name}}",
-	"gongbi-desc": "{{desc|what=skin|name=gongbi|url=https://git.qiuwen.net.cn/qiuwen/Gongbi}}",
+	"gongbi-desc": "{{desc|what=skin|name=Gongbi|url=https://git.qiuwen.net.cn/Qiuwen/mediawiki-skins-Gongbi}}",
 	"gongbi-anonymous": "Label for anonymous (not logged in) user menu\n{{Identical|Anonymous}}",
 	"gongbi-loggedinas": "Note for personal menu for logged in users noting their current username\n\nParameters:\n* $1 - username",
 	"gongbi-notloggedin": "Note for personal menu for anonymous users clarifying that they are not logged in\n{{Identical|Not logged in}}",
@@ -29,10 +29,9 @@
 	"gongbi-pagetools": "Label for other page tools",
 	"gongbi-languages": "Label for the other languages dropdown\n{{Identical|Language}}",
 	"gongbi-projects": "Label for the other projects dropdown",
-	"gongbi-menus-hover-title": "Turn off the menu",
 	"gongbi-sitetitle": "{{ignore}}\nSite title for site banner",
-	"gongbi.css": "{{optional}}\nCSS applied to users using gongbi skin.",
-	"gongbi.js": "{{optional}}\nJS for users using gongbi skin.",
+	"gongbi.css": "{{optional}}\nCSS applied to users using Gongbi Skin.\n{{related/css}}",
+	"gongbi.js": "{{optional}}\nJS for users using Gongbi Skin.\n{{related/js}}",
 	"gongbi-view-history": "Text used on the history tab.\n\n{{Identical|History}}",
 	"gongbi-action-undelete": "It is tab label. It's really can be named ''nstab-undelete''. Parameters:\n* $1 - number of edits"
 }

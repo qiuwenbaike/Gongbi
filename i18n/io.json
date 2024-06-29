@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"gongbi-userpage": "{{GENDER:$1|Uzero-pagino}}",
+	"gongbi-more": "Pluse",
+	"gongbi-pageactions": "Utensili di pagino",
+	"gongbi-pagemisc": "Pluse",
+	"gongbi-namespaces": "'Namespaces'",
+	"gongbi-languages": "Lingui",
+	"gongbi-view-history": "Versionaro",
+	"gongbi-action-undelete": "Restaurar {{PLURAL:$1|1 redakto|$1 redakti}}"
+}

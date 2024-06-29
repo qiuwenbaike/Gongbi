@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung",
+			"Vlad5250"
+		]
+	},
+	"gongbi-anonymous": "Anoniman",
+	"gongbi-loggedinas": "Prijavljeni ste kao '''$1'''",
+	"gongbi-notloggedin": "Niste prijavljeni",
+	"gongbi-userpage": "{{GENDER:$1|Korisnička}} stranica",
+	"gongbi-talkpage": "Razgovor sa {{GENDER:$1|korisnikom|korisnicom}}",
+	"gongbi-pagelog": "Dnevnici stranice",
+	"gongbi-more": "Više",
+	"gongbi-sitetools": "Vikialatke",
+	"gongbi-pageactions": "Alati za stranice",
+	"gongbi-userpagetools": "Alati korisničke stranice",
+	"gongbi-action-addsection": "Nova tema",
+	"gongbi-view-view": "Pročitaj",
+	"gongbi-pagemisc": "Više",
+	"gongbi-namespaces": "Imenski prostori",
+	"gongbi-pagetools": "Radnje na stranicama",
+	"gongbi-languages": "Jezici",
+	"gongbi-projects": "Ostali projekti",
+	"gongbi-view-history": "Historija",
+	"gongbi-action-undelete": "Vrati {{PLURAL:$1|izbrisanu izmjenu|$1 izbrisane izmjene|$1 izbrisanih izmjena}}"
+}

@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"gongbi-desc": "Gongbi кечйаран тема кхоьллина Брэндон Харрисан Winter прототайпан а, тайп-тайпана Викимедиан Фондан хатӀан а тӀаьхьа.",
+	"gongbi-anonymous": "Аноним",
+	"gongbi-loggedinas": "Чуваьлла '''$1''' санна",
+	"gongbi-notloggedin": "ХӀинца а ахьа системин чохь болх беш бац",
+	"gongbi-userpage": "{{GENDER:$1|Декъашхочун}} агӀо",
+	"gongbi-talkpage": "{{GENDER:$1|Декъашхочун}} дийцар",
+	"gongbi-pagelog": "АгӀонан журналаш",
+	"gongbi-more": "Кхин а",
+	"gongbi-sitetools": "Вики-гӀирсаш",
+	"gongbi-pageactions": "ГӀирсаш агӀонашна",
+	"gongbi-userpagetools": "Декъашхочун агӀонан гӀирсаш",
+	"gongbi-pagemisc": "Кхин а",
+	"gongbi-namespaces": "ЦӀерийн меттигаш",
+	"gongbi-pagetools": "АгӀонгахь дийриш",
+	"gongbi-languages": "Меттанаш",
+	"gongbi.js": "/* Кху чуйиллина йолу JavaScript код чуйоккхура йу, Gongbi кечйаран тема лелош йолучу декъашхошна*/",
+	"gongbi-view-history": "Истори",
+	"gongbi-action-undelete": "МеттахӀоттайé $1 {{PLURAL:$1|нисйинарг|нисйинарш}}"
+}

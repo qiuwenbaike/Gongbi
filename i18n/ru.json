@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alexander Yukal",
+			"Edward Chernenko",
+			"Kareyac",
+			"Movses",
+			"Okras",
+			"Redredsonia",
+			"BerryAVGN"
+		]
+	},
+	"gongbi-desc": "Тема оформления Gongbi создана на основе прототипа Winter, созданного Брэндоном Харрисом, и различных стилей Фонда Викимедиа.",
+	"gongbi-anonymous": "Аноним",
+	"gongbi-loggedinas": "Вошли как '''$1'''",
+	"gongbi-notloggedin": "Вы не вошли",
+	"gongbi-userpage": "Страница {{GENDER:$1|участника|участницы}}",
+	"gongbi-talkpage": "Обсуждение {{GENDER:$1|участника|участницы}}",
+	"gongbi-pagelog": "Журналы страницы",
+	"gongbi-more": "Ещё",
+	"gongbi-sitetools": "Вики-инструменты",
+	"gongbi-pageactions": "Инструменты для страниц",
+	"gongbi-userpagetools": "Инструменты страницы участника",
+	"gongbi-action-addsection": "Новая тема",
+	"gongbi-view-view": "Читать",
+	"gongbi-pagemisc": "Ещё",
+	"gongbi-namespaces": "Пространства имён",
+	"gongbi-pagetools": "Действия на странице",
+	"gongbi-languages": "Языки",
+	"gongbi-projects": "Другие проекты",
+	"gongbi.js": "/* Размещённый здесь JavaScript код будет загружаться для пользователей, использующих тему оформления Gongbi */",
+	"gongbi-view-history": "История",
+	"gongbi-action-undelete": "Восстановить {{PLURAL:$1|$1 правку|$1 правки|$1 правок|1=правку}}"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adam-Yourist",
+			"Kaganer"
+		]
+	},
+	"gongbi-userpage": "{{GENDER:$1|Доакъашхочун}} оагӀув",
+	"gongbi-talkpage": "{{GENDER:$1|Доакъашхочун}} къамаьла оагIув",
+	"gongbi-more": "Кхы а",
+	"gongbi-pagemisc": "Кхы а",
+	"gongbi-namespaces": "ЦӀерий аренаш",
+	"gongbi-view-history": "Тархьар",
+	"gongbi-action-undelete": "Меттаоттабе {{PLURAL:$1|$1 хувцам|1=хувцам}}"
+}

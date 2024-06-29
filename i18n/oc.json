@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31",
+			"Lhanars"
+		]
+	},
+	"gongbi-desc": "Un abilhatge intemporal concebut d’aprèp lo prototipe Winter per Brandon Harris, e divèrses estils de la Fondacion Wikimèdia.",
+	"gongbi-anonymous": "Anonim",
+	"gongbi-loggedinas": "Connectat en tant que '''$1'''",
+	"gongbi-notloggedin": "Pas connectat",
+	"gongbi-userpage": "Pagina {{GENDER:$1|utilizaire}}",
+	"gongbi-talkpage": "Discussion {{GENDER:$1|Utilizator}}",
+	"gongbi-pagelog": "Registres de pagina",
+	"gongbi-more": "Mai",
+	"gongbi-sitetools": "Aisinas wiki",
+	"gongbi-pageactions": "Aisinas de pagina",
+	"gongbi-userpagetools": "Aisinas de pagina d'utilizaire",
+	"gongbi-pagemisc": "Mai",
+	"gongbi-namespaces": "Espacis de noms",
+	"gongbi-pagetools": "Accions de pagina",
+	"gongbi-languages": "Lengas",
+	"gongbi-view-history": "Istoric",
+	"gongbi-action-undelete": "Restablir {{PLURAL:$1|1 modificacion| $1 modificacions}}"
+}
