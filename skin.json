@@ -12,8 +12,8 @@
 	},
 	"ValidSkinNames": {
 		"timeless": {
-			"displayname": "Timeless",
-			"class": "MediaWiki\\Skin\\Timeless\\SkinTimeless",
+			"displayname": "Gongbi",
+			"class": "MediaWiki\\Skin\\Gongbi\\SkinGongbi",
 			"args": [
 				{
 					"name": "gongbi",
