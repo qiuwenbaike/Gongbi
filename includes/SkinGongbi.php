@@ -24,6 +24,8 @@ class SkinGongbi extends SkinTemplate
 	public function __construct(
 		array $options = []
 	) {
+		$out = $this->getOutput();
+
 		parent::__construct($options);
 	}
 }
