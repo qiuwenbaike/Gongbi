@@ -1,6 +1,6 @@
 {
 	"name": "Gongbi",
-	"version": "1.9.0",
+	"version": "1.0.0",
 	"author": [ "Isarra Yos", "edg2s", "WaitSpring" ],
 	"url": "https://git.qiuwen.net.cn/Qiuwen/mediawiki-skins-Gongbi",
 	"descriptionmsg": "gongbi-desc",
@@ -8,15 +8,16 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.40.0"
+		"MediaWiki": ">= 1.41"
 	},
 	"ValidSkinNames": {
-		"gongbi": {
-			"displayname": "Gongbi",
-			"class": "MediaWiki\\Skin\\Gongbi\\SkinGongbi",
+		"timeless": {
+			"displayname": "Timeless",
+			"class": "MediaWiki\\Skin\\Timeless\\SkinTimeless",
 			"args": [
 				{
 					"name": "gongbi",
+					"bodyOnly": true,
 					"template": "MediaWiki\\Skin\\Gongbi\\GongbiTemplate",
 					"responsive": true,
 					"styles": [ "skins.gongbi" ],
@@ -24,14 +25,15 @@
 						"skins.gongbi.main",
 						"skins.gongbi.mobile",
 						"skins.gongbi.table-scroll"
-					],
-					"bodyOnly": true
+					]
 				}
 			]
 		}
 	},
 	"MessagesDirs": {
-		"Gongbi": [ "i18n" ]
+		"Gongbi": [
+			"i18n"
+		]
 	},
 	"config": {
 		"GongbiLogo": {
@@ -41,15 +43,10 @@
 		"GongbiWordmark": {
 			"value": null,
 			"description": "To use an image instead of the default Linux Libertine serif text for the header banner wordmark"
-		},
-		"GongbiBackdropImage": {
-			"value": "",
-			"description": "Set it as you would $wgLogo to an appropriate background image. Recommendation is an svg set to 500-750px wide"
 		}
 	},
 	"ResourceModules": {
 		"skins.gongbi": {
-			"targets": [ "desktop", "mobile" ],
 			"class": "MediaWiki\\Skin\\Gongbi\\GongbiVariablesModule",
 			"features": {
 				"normalize": false,
@@ -61,7 +58,7 @@
 				"content-tables": false,
 				"interface": false,
 				"interface-category": false,
-				"interface-message-box": false,
+				"interface-message-box": true,
 				"elements": false,
 				"legacy": false,
 				"i18n-ordered-lists": true,
@@ -151,7 +148,7 @@
 			"+ext.visualEditor.core": "resources/extensions/VisualEditor.core.less",
 			"+ext.visualEditor.desktopArticleTarget.noscript": "resources/extensions/VisualEditor.article.less",
 			"+ext.visualEditor.mwwikitext": "resources/extensions/VisualEditor.mwwikitext.less",
-			"+ext.CodeMirror.visualEditor.init": "resources/extensions/VisualEditor.CodeMirror.less",
+			"+ext.CodeMirror.visualEditor": "resources/extensions/VisualEditor.CodeMirror.less",
 			"+ext.dismissableSiteNotice.styles": "resources/extensions/DismissableSiteNotice.less",
 			"+ext.MWOAuth.AuthorizeForm": "resources/extensions/MWOAuth.AuthorizeForm.less",
 			"+ext.wikiLove.icon": "resources/extensions/WikiLove.icon.less",
