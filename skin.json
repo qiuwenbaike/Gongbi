@@ -11,7 +11,7 @@
 		"MediaWiki": ">= 1.41"
 	},
 	"ValidSkinNames": {
-		"timeless": {
+		"gongbi": {
 			"displayname": "Gongbi",
 			"class": "MediaWiki\\Skin\\Gongbi\\SkinGongbi",
 			"args": [
