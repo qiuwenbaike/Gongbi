@@ -9,7 +9,7 @@
 
 namespace MediaWiki\Skin\Gongbi;
 
-use ResourceLoaderContext;
+use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\SkinModule;
 
 /**
@@ -20,10 +20,10 @@ class GongbiVariablesModule extends SkinModule
 	/**
 	 * Add our LESS variables
 	 *
-	 * @param ResourceLoaderContext $context
+	 * @param Context $context
 	 * @return array LESS variables
 	 */
-	protected function getLessVars(ResourceLoaderContext $context)
+	protected function getLessVars(Context $context)
 	{
 		$vars = parent::getLessVars($context);
 		$config = $this->getConfig();
@@ -41,10 +41,10 @@ class GongbiVariablesModule extends SkinModule
 	/**
 	 * Register the config var with the caching stuff so it properly updates the cache
 	 *
-	 * @param ResourceLoaderContext $context
+	 * @param Context $context
 	 * @return array
 	 */
-	public function getDefinitionSummary(ResourceLoaderContext $context)
+	public function getDefinitionSummary(Context $context)
 	{
 		$summary = parent::getDefinitionSummary($context);
 		$summary[] = [];
