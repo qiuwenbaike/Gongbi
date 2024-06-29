@@ -10,12 +10,12 @@
 namespace MediaWiki\Skin\Gongbi;
 
 use ResourceLoaderContext;
-use ResourceLoaderSkinModule;
+use MediaWiki\ResourceLoader\SkinModule;
 
 /**
  * ResourceLoader module to set some LESS variables for the skin
  */
-class GongbiVariablesModule extends ResourceLoaderSkinModule
+class GongbiVariablesModule extends SkinModule
 {
 	/**
 	 * Add our LESS variables
