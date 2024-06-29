@@ -16,13 +16,12 @@ namespace MediaWiki\Skin\Gongbi;
 
 use BaseTemplate;
 use File;
-use Html;
-use Linker;
+use MediaWiki\Html\Html;
+use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
-use MWDebug;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\ResourceLoader\SkinModule;
-use Sanitizer;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class GongbiTemplate extends BaseTemplate
 {
@@ -54,9 +53,9 @@ class GongbiTemplate extends BaseTemplate
 		$this->languages = $this->sidebar['LANGUAGES'];
 
 		// WikiBase sidebar thing
-		// if ( isset( $this->sidebar['wikibase-otherprojects'] ) ) {
+		// if (isset($this->sidebar['wikibase-otherprojects'])) {
 		// 	$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
-		// 	unset( $this->sidebar['wikibase-otherprojects'] );
+		// 	unset($this->sidebar['wikibase-otherprojects']);
 		// }
 		// Collection sidebar thing
 		if (isset($this->sidebar['coll-print_export'])) {
@@ -122,11 +121,6 @@ class GongbiTemplate extends BaseTemplate
 
 		$html .= Html::closeElement('div');
 
-		// BaseTemplate::printTrail() stuff (has no get version)
-		// Required for RL to run
-		$html .= MWDebug::getDebugHTML($this->getSkin()->getContext());
-		$html .= $this->get('reporttime');
-
 		// The unholy echo
 		echo $html;
 	}
@@ -166,7 +160,6 @@ class GongbiTemplate extends BaseTemplate
 									'gongbi-more',
 									['extra-classes' => 'tools-inline']
 								) .
-								// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 								$this->getPortlet(
 									'views',
 									$this->pileOfTools['page-primary'],
@@ -218,6 +211,7 @@ class GongbiTemplate extends BaseTemplate
 	 */
 	protected function getPortlet($name, $content, $msg = null, $setOptions = [])
 	{
+		$skin = $this->getSkin();
 		// random stuff to override with any provided options
 		$options = array_merge([
 			'role' => 'navigation',
@@ -262,13 +256,13 @@ class GongbiTemplate extends BaseTemplate
 			$contentText .= $options['list-prepend'];
 			foreach ($content as $key => $item) {
 				if (is_array($options['text-wrapper'])) {
-					$contentText .= $this->makeListItem(
+					$contentText .= $skin->makeListItem(
 						$key,
 						$item,
 						['text-wrapper' => $options['text-wrapper']]
 					);
 				} else {
-					$contentText .= $this->makeListItem(
+					$contentText .= $skin->makeListItem(
 						$key,
 						$item
 					);
@@ -600,6 +594,7 @@ class GongbiTemplate extends BaseTemplate
 	 */
 	protected function getSearch()
 	{
+		$skin = $this->getSkin();
 		$html = Html::openElement('div', ['class' => 'mw-portlet', 'id' => 'p-search']);
 
 		$html .= Html::rawElement(
@@ -621,16 +616,16 @@ class GongbiTemplate extends BaseTemplate
 				Html::rawElement(
 					'div',
 					['id' => 'searchInput-container'],
-					$this->makeSearchInput([
+					$skin->makeSearchInput([
 						'id' => 'searchInput'
 					])
 				) .
 					Html::hidden('title', $this->get('searchtitle')) .
-					$this->makeSearchButton(
+					$skin->makeSearchButton(
 						'fulltext',
 						['id' => 'mw-searchButton', 'class' => 'searchButton mw-fallbackSearchButton']
 					) .
-					$this->makeSearchButton(
+					$skin->makeSearchButton(
 						'go',
 						['id' => 'searchButton', 'class' => 'searchButton']
 					)
@@ -733,8 +728,9 @@ class GongbiTemplate extends BaseTemplate
 	 */
 	protected function getUserLinks()
 	{
-		$user = $this->getSkin()->getUser();
-		$personalTools = $this->getPersonalTools();
+		$skin = $this->getSkin();
+		$user = $skin->getUser();
+		$personalTools = $skin->getPersonalToolsForMakeListItem($this->get('personal_urls'));
 		// Preserve standard username label to allow customisation (T215822)
 		$userName = $personalTools['userpage']['links'][0]['text'] ?? $user->getName();
 
@@ -743,6 +739,15 @@ class GongbiTemplate extends BaseTemplate
 		// Remove anon placeholder
 		if (isset($personalTools['anonuserpage'])) {
 			unset($personalTools['anonuserpage']);
+		}
+		// Remove temp user placeholder, as we display the user name in the dropdown header instead.
+		// Removing the use of .mw-userpage-tmp class also prevents the anchored popup from appearing,
+		// which is good, because there's no reasonable place to put it.
+		if (
+			isset($personalTools['userpage']) &&
+			in_array('mw-userpage-tmp', $personalTools['userpage']['links'][0]['class'] ?? [])
+		) {
+			unset($personalTools['userpage']);
 		}
 
 		// Remove Echo badges
@@ -754,7 +759,7 @@ class GongbiTemplate extends BaseTemplate
 			$extraTools['notifications-notice'] = $personalTools['notifications-notice'];
 			unset($personalTools['notifications-notice']);
 		}
-		$class = empty($extraTools) ? '' : 'extension-icons';
+		$class = $extraTools === [] ? '' : 'extension-icons';
 
 		// Re-label some messages
 		if (isset($personalTools['userpage'])) {
@@ -765,9 +770,12 @@ class GongbiTemplate extends BaseTemplate
 		}
 
 		// Labels
-		if ($user->isRegistered()) {
+		if ($user->isNamed()) {
 			$dropdownHeader = $userName;
 			$headerMsg = ['gongbi-loggedinas', $userName];
+		} elseif ($user->isTemp()) {
+			$dropdownHeader = $user->getName();
+			$headerMsg = 'gongbi-notloggedin';
 		} else {
 			$dropdownHeader = $this->getMsg('gongbi-anonymous')->text();
 			$headerMsg = 'gongbi-notloggedin';
@@ -791,10 +799,10 @@ class GongbiTemplate extends BaseTemplate
 		);
 
 		// Extra icon stuff (echo etc)
-		if (!empty($extraTools)) {
+		if ($extraTools !== []) {
 			$iconList = '';
 			foreach ($extraTools as $key => $item) {
-				$iconList .= $this->makeListItem($key, $item);
+				$iconList .= $skin->makeListItem($key, $item);
 			}
 
 			$html .= Html::rawElement(
@@ -1155,7 +1163,7 @@ class GongbiTemplate extends BaseTemplate
 		}
 
 		// if using wikibase for 'in other projects'
-		// if ( isset( $this->otherProjects ) ) {
+		// if (isset($this->otherProjects)) {
 		// 	$otherprojects = $this->getPortlet(
 		// 		'wikibase-otherprojects',
 		// 		$this->otherProjects
