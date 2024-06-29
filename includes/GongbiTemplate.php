@@ -4,7 +4,7 @@
  * Gongbi Skin
  * includes/GongbiTemplate.php
  * © 2015-2021 Isarra
- * © 2021-2023 WaitSpring
+ * © 2021-2024 WaitSpring
  */
 /**
  * BaseTemplate class for the Gongbi skin
