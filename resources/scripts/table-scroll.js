@@ -80,8 +80,8 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 * Mark overflowed tables for scrolling
 	 */
 	function unOverflowTables() {
-		$content.find( '.content-table > table' ).each( function () {
-			var $table = $( this ),
+		$content.find( '.content-table > table' ).each( function ( _index, element ) {
+			var $table = $( element ),
 				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$wrapper.addClass( 'overflowed' );
@@ -94,15 +94,14 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 		} );
 
 		// Set up sticky captions
-		$content.find( '.content-table > table > caption' ).each( function () {
-			var $container,
-				tableHeight,
-				$table = $( this ).parent(),
+		$content.find( '.content-table > table > caption' ).each( function ( _index, element ) {
+			var $container, tableHeight;
+			var $table = $( element ).parent(),
 				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
-				$container = $( this ).parents( '.content-table-wrapper' );
-				$( this ).width( $content.width() );
-				tableHeight = $container.innerHeight() - $( this ).outerHeight();
+				$container = $( element ).parents( '.content-table-wrapper' );
+				$( element ).width( $content.width() );
+				tableHeight = $container.innerHeight() - $( element ).outerHeight();
 				$container.find( '.content-table-left' ).height( tableHeight );
 				$container.find( '.content-table-right' ).height( tableHeight );
 			}
@@ -114,16 +113,15 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	/**
 	 * Sticky scrollbars maybe?!
 	 */
-	$content.find( '.content-table' ).each( function () {
-		var $table, $tableWrapper, $spoof, $scrollbar;
-		$tableWrapper = $( this );
-		$table = $tableWrapper.children( 'table' ).first();
+	$content.find( '.content-table' ).each( function ( _index, element ) {
+		var $tableWrapper = $( element );
+		var $table = $tableWrapper.children( 'table' ).first();
 
 		// Assemble our silly crap and add to page
-		$scrollbar = $( '<div>' )
+		var $scrollbar = $( '<div>' )
 			.addClass( 'content-table-scrollbar inactive' )
 			.width( $content.width() );
-		$spoof = $( '<div>' )
+		var $spoof = $( '<div>' )
 			.addClass( 'content-table-spoof' )
 			.width( $table.outerWidth() );
 		$tableWrapper.parent().prepend( $scrollbar.prepend( $spoof ) );
@@ -151,24 +149,21 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 * Set active when actually over the table it applies to...
 	 */
 	function determineActiveSpoofScrollbars() {
-		$content.find( '.overflowed .content-table' ).each( function () {
-			var $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first(),
-				tableTop,
-				tableBottom,
-				viewBottom,
-				captionHeight;
+		$content.find( '.overflowed .content-table' ).each( function ( _index, element ) {
+			var $scrollbar = $( element ).siblings( '.content-table-scrollbar' ).first();
+			var captionHeight;
 
 			// Skip caption
-			captionHeight = $( this ).find( 'caption' ).outerHeight();
+			captionHeight = $( element ).find( 'caption' ).outerHeight();
 			if ( !captionHeight ) {
 				captionHeight = 0;
 			} else {
 				// Pad slightly for reasons
 				captionHeight += 8;
 			}
-			tableTop = $( this ).offset().top;
-			tableBottom = tableTop + $( this ).outerHeight();
-			viewBottom = window.scrollY + document.documentElement.clientHeight;
+			var tableTop = $( element ).offset().top;
+			var tableBottom = tableTop + $( element ).outerHeight();
+			var viewBottom = window.scrollY + document.documentElement.clientHeight;
 			if ( tableTop + captionHeight < viewBottom && tableBottom > viewBottom ) {
 				$scrollbar.removeClass( 'inactive' );
 			} else {
@@ -183,10 +178,10 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 * Make sure tablespoofs remain correctly-sized?
 	 */
 	$( window ).on( 'resize', function () {
-		$content.find( '.content-table-scrollbar' ).each( function () {
-			var width = $( this ).siblings().first().find( 'table' ).first().width();
-			$( this ).find( '.content-table-spoof' ).first().width( width );
-			$( this ).width( $content.width() );
+		$content.find( '.content-table-scrollbar' ).each( function ( _index, element ) {
+			var width = $( element ).siblings().first().find( 'table' ).first().width();
+			$( element ).find( '.content-table-spoof' ).first().width( width );
+			$( element ).width( $content.width() );
 		} );
 	} );
 } );

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function ( grunt ) {
-	const conf = grunt.file.readJSON( 'skin.json' );
+	var conf = grunt.file.readJSON( 'skin.json' );
 
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
