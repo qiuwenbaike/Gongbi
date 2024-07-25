@@ -667,7 +667,7 @@ pre,
 		h2 {
 			border-bottom: 0;
 
-			&:after {
+			&::after {
 				display: block;
 				overflow: hidden;
 				border-bottom: solid 2px @base70;
@@ -675,7 +675,7 @@ pre,
 			}
 		}
 
-		h1:after {
+		h1::after {
 			border-bottom-width: 3px;
 		}
 
@@ -838,7 +838,7 @@ ul#filetoc {
 		font-size: 1.125em;
 		font-weight: bold;
 
-		&:after {
+		&::after {
 			display: none;
 			border-bottom: 0;
 		}
@@ -946,7 +946,7 @@ body :not( :checked ) > .toctogglespan::after {
 	.nav-block();
 	padding: 1.25em 2.5em;
 
-	&:before {
+	&::before {
 		display: block;
 		padding: 0.5em 0;
 		border-top: solid 0.5px @base80;

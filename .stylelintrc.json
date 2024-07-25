@@ -4,12 +4,12 @@
 		"stylelint-config-wikimedia/mediawiki"
 	],
 	"rules": {
+		"font-weight-notation": null,
 		"selector-class-pattern": null,
-		"no-duplicate-selectors": null,
-		"declaration-no-important": null,
+		"selector-max-id": null,
 		"no-descending-specificity": null,
-		"selector-max-id": 1,
-		"selector-pseudo-element-colon-notation": null,
-		"selector-type-no-unknown": null
+		"declaration-no-important": null,
+		"unit-disallowed-list": null,
+		"declaration-property-unit-disallowed-list": null
 	}
 }
