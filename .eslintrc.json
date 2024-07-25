@@ -2,8 +2,15 @@
 	"root": true,
 	"extends": [
 		"wikimedia/client-common",
-		"wikimedia/language/es2015",
-		"wikimedia/mediawiki",
-		"wikimedia/jquery"
-	]
+		"wikimedia/client-es5",
+		"wikimedia/jquery",
+		"wikimedia/mediawiki"
+	],
+	"rules": {
+		"no-jquery/no-global-selector": "off",
+		"no-jquery/no-fade": "off"
+	},
+	"env": {
+		"browser": true
+	}
 }
