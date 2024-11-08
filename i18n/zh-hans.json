@@ -14,7 +14,7 @@
 			"铁桶"
 		]
 	},
-	"gongbi-desc": "基于 Timeless 的新一代求闻百科主题",
+	"gongbi-desc": "基于Brandon Harris的Winter皮肤原型，和一些来自维基媒体基金会的风格设计的“永恒的”（Timeless）皮肤",
 	"gongbi-anonymous": "匿名",
 	"gongbi-loggedinas": "以'''$1'''登录",
 	"gongbi-notloggedin": "未登录",
@@ -32,8 +32,8 @@
 	"gongbi-pagetools": "页面操作",
 	"gongbi-languages": "语言",
 	"gongbi-projects": "其他项目",
-	"gongbi.css": "/* 这里放置的CSS将应用于Gongbi皮肤 */",
-	"gongbi.js": "/* 将为Gongbi皮肤的用户加载此处的所有JavaScript  */",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "历史",
 	"gongbi-action-undelete": "还原{{PLURAL:$1|一次编辑|$1次编辑}}"
 }

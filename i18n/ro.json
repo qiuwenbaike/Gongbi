@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"NGC 54",
+			"Paloi Sciurala"
+		]
+	},
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Anonim",
+	"gongbi-loggedinas": "{{GENDER:|Autentificat|Autentificată}} ca '''$1'''",
+	"gongbi-notloggedin": "Nu sunteți autentificat",
+	"gongbi-userpage": "Pagină de {{GENDER:$1|utilizator|utilizatoare}}",
+	"gongbi-talkpage": "Pagină de discuție {{GENDER:$1|utilizator|utilizatoare}}",
+	"gongbi-pagelog": "Jurnalele paginii",
+	"gongbi-more": "Mai mult",
+	"gongbi-sitetools": "Unelte wiki",
+	"gongbi-pageactions": "Unelte pentru pagină",
+	"gongbi-userpagetools": "Unelte pentru pagina de utilizator",
+	"gongbi-action-addsection": "Subiect nou",
+	"gongbi-view-view": "Lectură",
+	"gongbi-pagemisc": "Mai mult",
+	"gongbi-namespaces": "Spații de nume",
+	"gongbi-pagetools": "Acțiuni asupra paginii",
+	"gongbi-languages": "Limbi",
+	"gongbi-projects": "Alte proiecte",
+	"gongbi-view-history": "Istoric",
+	"gongbi-action-undelete": "Recuperarea {{PLURAL:$1|unei modificări|a $1 modificări|a $1 de modificări}}"
+}

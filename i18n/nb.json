@@ -6,7 +6,7 @@
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "Ei tidløs drakt designet etter Winter-prototypen av Brandon Harris, og diverse andre stiler av Wikimedia Foundation.",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "Anonym",
 	"gongbi-loggedinas": "Logget inn som '''$1'''",
 	"gongbi-notloggedin": "Ikke innlogget",
@@ -24,8 +24,8 @@
 	"gongbi-pagetools": "Sidehandlinger",
 	"gongbi-languages": "Språk",
 	"gongbi-projects": "Andre prosjekter",
-	"gongbi.css": "/* CSS i denne fila vil gjelde alle som bruker drakta Gongbi */",
-	"gongbi.js": "/* Javascript i denne fila vil gjelde for brukere av drakta Gongbi */",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "Historikk",
 	"gongbi-action-undelete": "Gjenopprett {{PLURAL:$1|én versjon|$1 versjoner}}"
 }

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alexander Yukal",
+			"BerryAVGN",
 			"Edward Chernenko",
 			"Kareyac",
 			"Movses",
@@ -10,7 +11,7 @@
 			"BerryAVGN"
 		]
 	},
-	"gongbi-desc": "Тема оформления Gongbi создана на основе прототипа Winter, созданного Брэндоном Харрисом, и различных стилей Фонда Викимедиа.",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "Аноним",
 	"gongbi-loggedinas": "Вошли как '''$1'''",
 	"gongbi-notloggedin": "Вы не вошли",
@@ -28,7 +29,7 @@
 	"gongbi-pagetools": "Действия на странице",
 	"gongbi-languages": "Языки",
 	"gongbi-projects": "Другие проекты",
-	"gongbi.js": "/* Размещённый здесь JavaScript код будет загружаться для пользователей, использующих тему оформления Gongbi */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "История",
 	"gongbi-action-undelete": "Восстановить {{PLURAL:$1|$1 правку|$1 правки|$1 правок|1=правку}}"
 }

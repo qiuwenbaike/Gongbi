@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kizule",
+			"Milicevic01",
+			"Obsuser",
+			"Zoranzoki21",
+			"BadDog"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Anoniman",
+	"gongbi-loggedinas": "Prijavljeni ste kao '''$1'''",
+	"gongbi-notloggedin": "Niste prijavljeni",
+	"gongbi-userpage": "Stranica {{GENDER:$1|korisnika|korisnice}}",
+	"gongbi-talkpage": "Razgovor sa {{GENDER:$1|korisnikom|korisnicom}}",
+	"gongbi-pagelog": "Dnevnici stranice",
+	"gongbi-more": "Više",
+	"gongbi-sitetools": "Viki alatke",
+	"gongbi-pageactions": "Alatke za stranicu",
+	"gongbi-userpagetools": "Alatke za korisničku stranicu",
+	"gongbi-action-addsection": "Nova tema",
+	"gongbi-view-view": "Čitaj",
+	"gongbi-pagemisc": "Više",
+	"gongbi-namespaces": "Imenski prostori",
+	"gongbi-pagetools": "Radnje za stranicu",
+	"gongbi-languages": "Jezici",
+	"gongbi-projects": "Drugi projekti",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Istorija",
+	"gongbi-action-undelete": "Vrati {{PLURAL:$1|izbrisanu izmenu|$1 izbrisane izmene|$1 izbrisanih izmena}}"
+}

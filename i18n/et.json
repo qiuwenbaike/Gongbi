@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Anonüümne",
+	"gongbi-loggedinas": "Sisse logitud ('''$1''')",
+	"gongbi-notloggedin": "Sisse logimata",
+	"gongbi-userpage": "{{GENDER:$1|Kasutaja}} leht",
+	"gongbi-talkpage": "{{GENDER:$1|Kasutaja}} arutelu",
+	"gongbi-pagelog": "Lehekülg logides",
+	"gongbi-more": "Veel",
+	"gongbi-sitetools": "Viki tööriistad",
+	"gongbi-pageactions": "Lehekülje tööriistad",
+	"gongbi-userpagetools": "Kasutajalehe tööriistad",
+	"gongbi-action-addsection": "Uus teema",
+	"gongbi-view-view": "Loe",
+	"gongbi-pagemisc": "Veel",
+	"gongbi-namespaces": "Nimeruumid",
+	"gongbi-pagetools": "Lehekülje toimingud",
+	"gongbi-languages": "Keeled",
+	"gongbi-projects": "Teistes projektides",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Ajalugu",
+	"gongbi-action-undelete": "Taasta {{PLURAL:$1|üks muudatus|$1 muudatust}}"
+}

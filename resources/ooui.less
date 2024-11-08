@@ -19,16 +19,15 @@
  */
 @import 'variables.less';
 
-.skin-gongbi {
-	.oo-ui-windowManager-modal > .oo-ui-dialog,
-	.ve-ui-overlay-global {
-		z-index: 101;
-	}
+.skin-gongbi .oo-ui-windowManager-modal > .oo-ui-dialog,
+.skin-gongbi .ve-ui-overlay-global {
+	z-index: @z-index-overlay;
 }
 
+// Overlay background containers.
 body > .oo-ui-windowManager,
 .oo-ui-defaultOverlay {
-	z-index: 101;
+	z-index: @z-index-overlay-backdrop;
 	font-size: 0.95em;
 }
 

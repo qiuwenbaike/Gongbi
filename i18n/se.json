@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yupik"
+		]
+	},
+	"gongbi-anonymous": "Anonyma",
+	"gongbi-notloggedin": "It leat čálihuvvon sisa",
+	"gongbi-userpage": "{{GENDER:$1|Geavaheaddji}}siidu",
+	"gongbi-view-view": "Loga",
+	"gongbi-namespaces": "Nammagomuvuođat",
+	"gongbi-languages": "Gielat",
+	"gongbi-view-history": "Historjá",
+	"gongbi-action-undelete": "Máhcat {{PLURAL:$1|ovtta rievdadusa|$1 rievdadusa}}"
+}

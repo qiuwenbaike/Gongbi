@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alirezaaa",
+			"Ebraminio",
+			"FarsiNevis",
+			"Huji",
+			"Reza1615",
+			"Ebrahim"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "گمنام",
+	"gongbi-loggedinas": "ورود به سامانه به عنوان '''$1'''",
+	"gongbi-notloggedin": "عدم ورود به سامانه",
+	"gongbi-userpage": "صفحهٔ {{GENDER:$1|کاربر}}",
+	"gongbi-talkpage": "بحث {{GENDER:$1|کاربر}}",
+	"gongbi-pagelog": "صفحه سیاهه",
+	"gongbi-more": "بیشتر",
+	"gongbi-sitetools": "ابزارهای ویکی",
+	"gongbi-pageactions": "ابزارهای صفحه",
+	"gongbi-userpagetools": "ابزارهای صفحهٔ کاربر",
+	"gongbi-view-view": "خواندن",
+	"gongbi-pagemisc": "بیشتر",
+	"gongbi-namespaces": "فضاهای نام",
+	"gongbi-pagetools": "عملکردهای صفحه",
+	"gongbi-languages": "زبان‌ها",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "تاریخچه",
+	"gongbi-action-undelete": "احیای {{PLURAL:$1|یک ویرایش|$1 ویرایش}}"
+}

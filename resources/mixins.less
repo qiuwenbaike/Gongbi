@@ -85,9 +85,14 @@
 		font-weight: normal;
 	}
 
+	label,
 	h3 {
-		font-size: 1.125em;
-		font-weight: bold;
+		font-weight: normal;
+		font-size: 1em;
+		margin: 0.25em 0 0.75em 0;
+		padding-bottom: 0.15em;
+		border-bottom: solid 2px @base70;
+		display: block;
 	}
 
 	.mw-portlet > div,
@@ -138,30 +143,21 @@
 .dropdown-menu( @direction: right ) {
 	.nav-block();
 	position: absolute;
-	z-index: 3;
-	overflow: visible;
-	min-width: 9em;
 	padding: 20px 2em 0;
-	border: 1px solid @base70;
 	margin: 0;
-	background: @background;
-	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.15 );
-	@{direction}: -1.25em;
+	min-width: 9.153em;
+	top: 2.95em;
+	@{direction}: -1em;
+	overflow: visible;
+	z-index: @z-index-dropdown;
 }
 
 .dropdown-pokey() {
 	&::before,
 	&::after {
 		position: absolute;
-		z-index: 4;
-		right: 14px;
-		width: 0;
-		height: 0;
-		border-right: 9px solid transparent;
-		border-bottom: 9px solid @base70;
-		border-left: 9px solid transparent;
-		content: '';
-		transform: rotate( 360deg ); /* to force some smoothing in annoying browsers */
+		right: 1em;
+		z-index: ( @z-index-dropdown + 1 );
 	}
 
 	&::before {

@@ -8,7 +8,7 @@
 			"Vitorvicentevalente"
 		]
 	},
-	"gongbi-desc": "Um tema intemporal, desenhado com base no protótipo Winter de Brandon Harris e em vários estilos da Wikimedia Foundation",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "Anónimo",
 	"gongbi-loggedinas": "Autenticado como '''$1'''",
 	"gongbi-notloggedin": "Não autenticado",
@@ -26,8 +26,8 @@
 	"gongbi-pagetools": "Ações de página",
 	"gongbi-languages": "Línguas",
 	"gongbi-projects": "Outros projetos",
-	"gongbi.css": "/* Todo o código CSS colocado aqui será carregado para os utilizadores do tema Gongbi*/",
-	"gongbi.js": "/* Todo o código JavaScript colocado aqui será carregado para os utilizadores do tema Gongbi */",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "Histórico",
 	"gongbi-action-undelete": "Restaurar {{PLURAL:$1|uma edição|$1 edições}}"
 }

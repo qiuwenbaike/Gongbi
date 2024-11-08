@@ -13,7 +13,7 @@
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "브랜든 해리스의 윈터 프로토타입 이후 개발된 타임리스 스킨 및 위키미디어 재단의 다양한 스타일",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "익명 사용자",
 	"gongbi-loggedinas": "'''$1'''님으로 로그인됨",
 	"gongbi-notloggedin": "로그인하지 않음",
@@ -31,8 +31,8 @@
 	"gongbi-pagetools": "문서 행위",
 	"gongbi-languages": "언어",
 	"gongbi-projects": "다른 프로젝트",
-	"gongbi.css": "/* 여기의 모든 CSS는 타임리스 스킨을 사용하는 사용자에게 로드됩니다 */",
-	"gongbi.js": "/* 여기의 모든 자바스크립트는 타임리스 스킨을 사용하는 사용자에게 로드됩니다 */",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "역사",
 	"gongbi-action-undelete": "{{PLURAL:$1|편집 한 개|편집 $1개}} 되살리기"
 }

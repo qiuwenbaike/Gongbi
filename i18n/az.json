@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toghrul Rahimli",
+			"Nemoralis"
+		]
+	},
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Anonim",
+	"gongbi-loggedinas": "'''$1''' olaraq giriş edilib",
+	"gongbi-notloggedin": "Giriş edilməyib",
+	"gongbi-userpage": "{{GENDER:$1|İstifadəçi}} səhifəsi",
+	"gongbi-talkpage": "{{GENDER:$1|İstifadəçi}} müzakirəsi",
+	"gongbi-pagelog": "Səhifə jurnalları",
+	"gongbi-more": "Daha çox",
+	"gongbi-sitetools": "Viki alətləri",
+	"gongbi-pageactions": "Səhifə alətləri",
+	"gongbi-userpagetools": "İstifadəçi səhifəsi alətləri",
+	"gongbi-action-addsection": "Yeni mövzu",
+	"gongbi-view-view": "Oxu",
+	"gongbi-pagemisc": "Daha çox",
+	"gongbi-namespaces": "Ad fəzaları",
+	"gongbi-pagetools": "Səhifə fəaliyyətləri",
+	"gongbi-languages": "Dillər",
+	"gongbi-projects": "Digər layihələr",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Tarixçə",
+	"gongbi-action-undelete": "$1 {{PLURAL:$1|dəyişikliyi}} bərpa et"
+}

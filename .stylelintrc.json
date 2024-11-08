@@ -6,6 +6,7 @@
 	"rules": {
 		"font-weight-notation": null,
 		"selector-class-pattern": null,
+		"no-duplicate-selectors": null,
 		"selector-max-id": null,
 		"no-descending-specificity": null,
 		"declaration-no-important": null,

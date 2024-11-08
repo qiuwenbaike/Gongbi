@@ -64,6 +64,13 @@ div.mw-notification-area {
 	 * @see https://phabricator.wikimedia.org/T173769
 	 */
 	height: 0;
+	position: fixed;
+	z-index: @z-index-fixed;
+	top: 0;
+	width: 100%;
+	background: @background;
+	color: @text;
+	padding: 0.5em 0 0;
 	min-height: @fixed-header-height;
 	box-sizing: border-box;
 	padding: 0.5em 0;
@@ -108,6 +115,23 @@ div.mw-notification-area {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+
+	// Because the overflow:hidden above messes up the alignment...
+	#personal h2::after {
+		height: 22px;
+	}
+}
+
+#mw-header-nav-hack,
+#mw-header-hack {
+	position: fixed;
+	z-index: @z-index-fixed - 3;
+	top: @fixed-header-height;
+	box-shadow: 0 3px 3px 2px rgba( 0, 0, 0, 0.075 ), 0 0 2px rgba( 0, 0, 0, 0.2 );
+}
+
+#mw-header-nav-hack {
+	display: none;
 }
 
 #personal {

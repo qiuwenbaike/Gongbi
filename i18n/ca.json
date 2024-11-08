@@ -9,7 +9,7 @@
 			"SMP"
 		]
 	},
-	"gongbi-desc": "Una aparença atemporal dissenyada a partir del prototip Winter de Brandon Harris i diversos estils de la Fundació Wikimedia",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "Anònim",
 	"gongbi-loggedinas": "Registrat com a '''$1'''",
 	"gongbi-notloggedin": "Sense sessió iniciada",
@@ -27,7 +27,7 @@
 	"gongbi-pagetools": "Accions de pàgina",
 	"gongbi-languages": "Llengües",
 	"gongbi-projects": "Altres projectes",
-	"gongbi.js": "/* Qualsevol codi JavaScript afegit aquí es carregarà per als usuaris que utilitzin l'aparença Gongbi */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "Historial",
 	"gongbi-action-undelete": "Restaura {{PLURAL:$1|l'edició eliminada|$1 edicions eliminades}}"
 }

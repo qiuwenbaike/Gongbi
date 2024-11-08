@@ -9,7 +9,7 @@
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "ব্র্যান্ডন হ্যারিসের শীতকালীন প্রোটোটাইপ এবং উইকিমিডিয়া ফাউন্ডেশনের বিভিন্ন শৈলীর পরে ডিজাইন করা একটি নিরবধি আবরণ",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "নামহীন",
 	"gongbi-loggedinas": "'''$1''' হিসাবে প্রবেশ",
 	"gongbi-notloggedin": "প্রবেশ করেন নি",
@@ -27,7 +27,7 @@
 	"gongbi-pagetools": "পৃষ্ঠার ক্রিয়া",
 	"gongbi-languages": "ভাষাসমূহ",
 	"gongbi-projects": "অন্যান্য প্রকল্পে",
-	"gongbi.js": "/* এখানের সকল জাভাস্ক্রিপ্ট টাইমলেস আবরণের ব্যবহারকারীদের জন্য লোড হবে */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "ইতিহাস",
 	"gongbi-action-undelete": "{{PLURAL:$1|১টি সম্পাদনা|$1টি সম্পাদনা}} পুনঃস্থাপন করুন"
 }

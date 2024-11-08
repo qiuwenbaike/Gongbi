@@ -16,12 +16,12 @@ namespace MediaWiki\Skin\Gongbi;
 
 use BaseTemplate;
 use File;
-use MediaWiki\Html\Html;
-use MediaWiki\Linker\Linker;
+use Html;
+use Linker;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Parser\Sanitizer;
-use MediaWiki\ResourceLoader\SkinModule;
-use MediaWiki\SpecialPage\SpecialPage;
+use ResourceLoaderSkinModule;
+use Sanitizer;
+use SpecialPage;
 
 class GongbiTemplate extends BaseTemplate
 {
@@ -53,10 +53,10 @@ class GongbiTemplate extends BaseTemplate
 		$this->languages = $this->sidebar['LANGUAGES'];
 
 		// WikiBase sidebar thing
-		// if (isset($this->sidebar['wikibase-otherprojects'])) {
-		// 	$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
-		// 	unset($this->sidebar['wikibase-otherprojects']);
-		// }
+		/* if ( isset( $this->sidebar['wikibase-otherprojects'] ) ) {
+			$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
+			unset( $this->sidebar['wikibase-otherprojects'] );
+		} */
 		// Collection sidebar thing
 		if (isset($this->sidebar['coll-print_export'])) {
 			$this->collectionPortlet = $this->sidebar['coll-print_export'];
@@ -350,13 +350,13 @@ class GongbiTemplate extends BaseTemplate
 	 * (as of 2016)
 	 *
 	 * @param array $setOptions Miscellaneous other options
-	 * - 'id' for footer id
-	 * - 'class' for footer class
-	 * - 'order' to determine whether icons or links appear first: 'iconsfirst' or links, though in
+	 * * 'id' for footer id
+	 * * 'class' for footer class
+	 * * 'order' to determine whether icons or links appear first: 'iconsfirst' or links, though in
 	 *   practice we currently only check if it is or isn't 'iconsfirst'
-	 * - 'link-prefix' to set the prefix for all link and block ids; most skins use 'f' or 'footer',
+	 * * 'link-prefix' to set the prefix for all link and block ids; most skins use 'f' or 'footer',
 	 *   as in id='f-whatever' vs id='footer-whatever'
-	 * - 'link-style' to pass to getFooterLinks: "flat" to disable categorisation of links in a
+	 * * 'link-style' to pass to getFooterLinks: "flat" to disable categorisation of links in a
 	 *   nested array
 	 *
 	 * @return string html
@@ -514,7 +514,7 @@ class GongbiTemplate extends BaseTemplate
 				'role' => 'banner'
 			]
 		);
-		$logos = SkinModule::getAvailableLogos($config);
+		$logos = ResourceLoaderSkinModule::getAvailableLogos($config);
 
 		$titleClass = '';
 		$siteTitle = '';
@@ -759,7 +759,7 @@ class GongbiTemplate extends BaseTemplate
 			$extraTools['notifications-notice'] = $personalTools['notifications-notice'];
 			unset($personalTools['notifications-notice']);
 		}
-		$class = $extraTools === [] ? '' : 'extension-icons';
+		$class = empty($extraTools) ? '' : 'extension-icons';
 
 		// Re-label some messages
 		if (isset($personalTools['userpage'])) {
@@ -799,7 +799,7 @@ class GongbiTemplate extends BaseTemplate
 		);
 
 		// Extra icon stuff (echo etc)
-		if ($extraTools !== []) {
+		if (!empty($extraTools)) {
 			$iconList = '';
 			foreach ($extraTools as $key => $item) {
 				$iconList .= $skin->makeListItem($key, $item);
@@ -936,11 +936,6 @@ class GongbiTemplate extends BaseTemplate
 		// Tools specific to the page
 		$pileOfEditTools = [];
 		$contentNavigation = $this->data['content_navigation'];
-		// T300100: Do not use categories here. Already added to sidebar
-		unset(
-			$contentNavigation['category-normal'],
-			$contentNavigation['category-hidden']
-		);
 
 		foreach ($contentNavigation as $navKey => $navBlock) {
 			// Just use namespaces items as they are
@@ -1025,7 +1020,6 @@ class GongbiTemplate extends BaseTemplate
 			$currentSet = null;
 
 			if (in_array($navKey, [
-				'contributions',
 				'blockip',
 				'userrights',
 				'log',
@@ -1163,14 +1157,14 @@ class GongbiTemplate extends BaseTemplate
 		}
 
 		// if using wikibase for 'in other projects'
-		// if (isset($this->otherProjects)) {
-		// 	$otherprojects = $this->getPortlet(
-		// 		'wikibase-otherprojects',
-		// 		$this->otherProjects
-		// 	);
-		// 	$show = true;
-		// 	$variantsOnly = false;
-		// }
+		/* if (isset($this->otherProjects)) {
+			$otherprojects = $this->getPortlet(
+				'wikibase-otherprojects',
+				$this->otherProjects
+			);
+			$show = true;
+			$variantsOnly = false;
+		} */
 
 		if ($show) {
 			$html .= $this->getSidebarChunk(

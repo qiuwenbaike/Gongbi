@@ -7,7 +7,7 @@
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "Unha aparencia atemporal, deseñada por Brandon Harris en base ó prototipo Winter, e varios estilos da Fundación Wikimedia.",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "Anónimo",
 	"gongbi-loggedinas": "Conectado como '''$1'''",
 	"gongbi-notloggedin": "Non conectado",
@@ -25,8 +25,8 @@
 	"gongbi-pagetools": "Accións de páxina",
 	"gongbi-languages": "Linguas",
 	"gongbi-projects": "Outros proxectos",
-	"gongbi.css": "/* O CSS colocado aquí afectará aos usuarios da aparencia Gongbi */",
-	"gongbi.js": "/* O código JavaScript colocado aquí cargarase para os usuarios que utilicen a aparencia Gongbi */",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "Historial",
 	"gongbi-action-undelete": "Restaurar {{PLURAL:$1|unha edición|$1 edicións}}"
 }

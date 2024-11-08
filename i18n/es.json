@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Hasley",
+			"Johny Weissmuller Jr",
+			"Julián L",
+			"Macofe",
+			"MarcoAurelio",
+			"SinNovedades",
+			"Qwrop"
+		]
+	},
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Anónimo",
+	"gongbi-loggedinas": "Sesión iniciada como '''$1'''",
+	"gongbi-notloggedin": "No estás accedido",
+	"gongbi-userpage": "Página de {{GENDER:$1|usuario|usuaria}}",
+	"gongbi-talkpage": "Discusión de {{GENDER:$1|usuario|usuaria}}",
+	"gongbi-pagelog": "Registros de página",
+	"gongbi-more": "Más",
+	"gongbi-sitetools": "Herramientas wiki",
+	"gongbi-pageactions": "Herramientas de página",
+	"gongbi-userpagetools": "Herramientas de página de usuario",
+	"gongbi-action-addsection": "Tema nuevo",
+	"gongbi-view-view": "Leer",
+	"gongbi-pagemisc": "Más",
+	"gongbi-namespaces": "Espacios de nombres",
+	"gongbi-pagetools": "Acciones de página",
+	"gongbi-languages": "Idiomas",
+	"gongbi-projects": "Otros proyectos",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Historial",
+	"gongbi-action-undelete": "Restaurar {{PLURAL:$1|una edición|$1 ediciones}}"
+}

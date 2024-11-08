@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton",
+			"Saederup92",
+			"Sarrus",
+			"Jack Phoenix"
+		]
+	},
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Anonym",
+	"gongbi-loggedinas": "Logget på »$1«",
+	"gongbi-notloggedin": "Ikke logget på",
+	"gongbi-userpage": "{{GENDER:$1|Brugerside}}",
+	"gongbi-talkpage": "{{GENDER:$1|Brugerdiskussion}}",
+	"gongbi-pagelog": "Sidelogge",
+	"gongbi-more": "Mere",
+	"gongbi-sitetools": "Wikiværktøjer",
+	"gongbi-pageactions": "Sideværktøjer",
+	"gongbi-userpagetools": "Brugersideværktøjer",
+	"gongbi-action-addsection": "Nyt emne",
+	"gongbi-view-view": "Læs",
+	"gongbi-pagemisc": "Mere",
+	"gongbi-namespaces": "Navnerum",
+	"gongbi-pagetools": "Sidehandlinger",
+	"gongbi-languages": "Sprog",
+	"gongbi-projects": "Andre projekter",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Historik",
+	"gongbi-action-undelete": "Gendan {{PLURAL:$1|én redigering|$1 redigeringer}}"
+}

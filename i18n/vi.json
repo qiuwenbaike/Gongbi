@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Flyplanevn27",
+			"Minh Nguyen",
+			"Nghiemtrongdai VN",
+			"Nguyên Lê",
+			"Doraemonluonbentoi"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Vô danh",
+	"gongbi-loggedinas": "Đã đăng nhập là '''$1'''",
+	"gongbi-notloggedin": "Chưa đăng nhập",
+	"gongbi-userpage": "{{GENDER:$1}}Trang cá nhân",
+	"gongbi-talkpage": "{{GENDER:$1}}Trang thảo luận thành viên",
+	"gongbi-pagelog": "Nhật trình trang",
+	"gongbi-more": "Thêm nữa",
+	"gongbi-sitetools": "Công cụ cho wiki",
+	"gongbi-pageactions": "Công cụ cho trang",
+	"gongbi-userpagetools": "Công cụ cho người dùng",
+	"gongbi-action-addsection": "Đề tài mới",
+	"gongbi-view-view": "Đọc",
+	"gongbi-pagemisc": "Thêm nữa",
+	"gongbi-namespaces": "Không gian tên",
+	"gongbi-pagetools": "Tác vụ trang",
+	"gongbi-languages": "Ngôn ngữ",
+	"gongbi-projects": "Dự án khác",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Lịch sử",
+	"gongbi-action-undelete": "Phục hồi {{PLURAL:$1|một sửa đổi|$1 sửa đổi}}"
+}
