@@ -140,16 +140,17 @@
 	}
 }
 
-.dropdown-menu( @direction: right ) {
+.dropdown-menu( @direction: right, @right: -1em, @top: 2.95em, @z-index: @z-index-dropdown) {
 	.nav-block();
 	position: absolute;
 	padding: 20px 2em 0;
 	margin: 0;
 	min-width: 9.153em;
-	top: 2.95em;
-	@{direction}: -1em;
+	top: ~'@{top}';
+	@{direction}: ~'@{right}';
 	overflow: visible;
-	z-index: @z-index-dropdown;
+	z-index: ~'@{z-index}';
+	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
 }
 
 .dropdown-pokey() {

@@ -118,9 +118,8 @@ div.mw-notification-area {
 	line-height: 1;
 
 	.dropdown {
-		top: 2.5em;
 		display: none !important;
-		.dropdown-menu();
+		.dropdown-menu(@top: 2.5em);
 		.dropdown-pokey();
 	}
 
@@ -191,11 +190,10 @@ div.mw-notification-area {
 
 	.dropdown {
 		/* Override the mobile thing */
-		top: 2.25em !important;
 		display: none !important;
 		padding-bottom: 2em;
 		margin-right: 2px;
-		.dropdown-menu();
+		.dropdown-menu(@top: 2.25em);
 		.dropdown-pokey();
 
 		.selected a {
