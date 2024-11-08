@@ -205,7 +205,6 @@ figure {
  */
 
 hr {
-	box-sizing: content-box;
 	height: 0;
 	box-sizing: content-box;
 }
@@ -347,8 +346,7 @@ input[ type='number' ]::-webkit-outer-spin-button {
  *    (include '-moz' to future-proof).
  */
 
-input[type="search"] {
-	-webkit-appearance: textfield; /* 1 */
+input[ type='search' ] { /* 1 */
 	box-sizing: content-box;
 	-webkit-appearance: textfield; /* 1 */
 	appearance: textfield;

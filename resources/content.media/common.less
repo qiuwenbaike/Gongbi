@@ -9,8 +9,8 @@ figure[ typeof~='mw:File/Frameless' ] {
 	margin: 0; // Maybe belongs in element.css for figure
 
 	> a {
-		/* The addition of the class is needed for higher specificity */
-		/* than Vector's print styles */
+		// The addition of the class is needed for higher specificity
+		// than Vector's print styles
 		.mw-body-content & {
 			border: 0;
 		}
@@ -40,9 +40,9 @@ figure[ typeof~='mw:File/Frameless' ] {
 	}
 
 	&.mw-halign-center {
-		display: table;
 		/* Matches *.center * in element.css */
 		margin: 0 auto;
+		display: table;
 		border-collapse: collapse;
 		clear: none;
 		float: none;
@@ -57,15 +57,13 @@ figure[ typeof~='mw:File/Frameless' ] {
 figure[ typeof~='mw:File/Thumb' ],
 figure[ typeof~='mw:File/Frame' ] {
 	display: table;
-	margin: 0; /* Maybe belongs in element.css for figure */
-	margin-bottom: @margin-bottom-thumb;
-	border-collapse: collapse;
 	text-align: center;
+	border-collapse: collapse;
 	line-height: 0;
 
 	> a {
-		/* The addition of the class is needed for higher specificity */
-		/* than Vector's print styles */
+		// The addition of the class is needed for higher specificity
+		// than Vector's print styles
 		.mw-body-content & {
 			border: 0;
 		}
@@ -97,8 +95,8 @@ figure[ typeof~='mw:File/Frame' ] {
 		float: left;
 	}
 
-	/* Override defaults when explicitly set */
-	/* Order of application is important, so don't combine with the defaults */
+	// Override defaults when explicitly set
+	// Order of application is important, so don't combine with the defaults
 
 	&.mw-halign-right {
 		/* @noflip */
@@ -150,19 +148,14 @@ figure[ typeof~='mw:File/Frame' ] {
 			word-break: break-word; // Same as in the figcaption
 			/* This is hardcoded in Linker::makeThumbLink2 for broken media */
 			width: 180px;
-			margin: 0.75em;
-			margin-bottom: 0.5em;
 		}
 	}
 
 	> figcaption {
 		display: table-caption;
-		min-height: 1em;
-
-		/* taken from .thumbcaption, plus .thumbinner */
-		padding: 0 0.75em 0.75em 0.75em;
 		caption-side: bottom;
 		line-height: @line-height-thumbcaption;
+		min-height: 1em;
 
 		/**
 		 * The "break-word" value is deprecated, however, it's well supported
@@ -171,8 +164,8 @@ figure[ typeof~='mw:File/Frame' ] {
 		 *
 		 * The spec suggests it has the same effect as,
 		 *
-		 *	 word-break: normal;
-		 *	 overflow-wrap: anywhere;
+		 *   word-break: normal;
+		 *   overflow-wrap: anywhere;
 		 *
 		 * https://drafts.csswg.org/css-text-3/#word-break-property
 		 *
@@ -201,6 +194,9 @@ figure[ typeof~='mw:File/Frame' ] {
 			/* @noflip */
 			text-align: right;
 		}
+
+		/* taken from .thumbcaption, plus .thumbinner */
+		padding: 0 0.75em 0.75em 0.75em;
 	}
 }
 
@@ -209,7 +205,6 @@ figure[ typeof~='mw:File/Frame' ] {
 figure[ typeof~='mw:File/Frame' ] > figcaption:empty {
 	padding-bottom: 0.25em; // Accounts for the difference in margin-bottom above
 	min-height: 0;
-	padding-bottom: 0.25em; // Accounts for the difference in margin-bottom above
 }
 
 /**

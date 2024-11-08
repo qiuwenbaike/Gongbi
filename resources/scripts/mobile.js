@@ -1,3 +1,4 @@
+/* eslint-disable no-jquery/no-fade */
 /**
  * Gongbi Skin
  * © 2015-2021 Issara

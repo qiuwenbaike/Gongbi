@@ -33,15 +33,5 @@ module.exports = {
 		},
 		'removeRasterImages',
 		'sortAttrs'
-	],
-	// Set whitespace according to Wikimedia Coding Conventions.
-	// @see https://github.com/svg/svgo/blob/main/lib/stringifier.js#L39 for more config options
-	js2svg: {
-		eol: 'lf',
-		finalNewline: true,
-		// Configure the indent to tabs (default 4 spaces) used by `--pretty` here.
-		indent: '\t',
-		pretty: true
-	},
-	multipass: true
+	]
 };

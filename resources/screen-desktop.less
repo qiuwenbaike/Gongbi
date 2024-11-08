@@ -54,10 +54,6 @@ div.mw-notification-area {
 }
 
 #mw-header-container {
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	width: 100%;
 	/* Stupid IE10+ bug requires defining the height property for this to work
 	 * the way it is intended; without doing that this'll break horribly under
 	 * IE10 and IE11.
@@ -68,9 +64,6 @@ div.mw-notification-area {
 	z-index: @z-index-fixed;
 	top: 0;
 	width: 100%;
-	background: @background;
-	color: @text;
-	padding: 0.5em 0 0;
 	min-height: @fixed-header-height;
 	box-sizing: border-box;
 	padding: 0.5em 0;
