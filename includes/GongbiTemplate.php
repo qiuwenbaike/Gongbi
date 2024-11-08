@@ -1018,7 +1018,6 @@ class GongbiTemplate extends BaseTemplate
 				'userrights',
 				'log',
 				'emailuser'
-
 			])) {
 				$currentSet = 'user';
 			} elseif (in_array($navKey, [
@@ -1035,7 +1034,7 @@ class GongbiTemplate extends BaseTemplate
 			} elseif (in_array($navKey, [
 				'more',
 				'languages',
-				/* 'tools' */
+				'tools'
 			])) {
 				$currentSet = 'more';
 			} else {
