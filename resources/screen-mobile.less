@@ -42,10 +42,13 @@
 	background: @background;
 }
 
-#mw-header-hack {
-	position: relative;
-	z-index: @z-index-stacking-1;
-	box-shadow: 0 3px 3px 2px rgba( 0, 0, 0, 0.075 ), 0 0 2px rgba( 0, 0, 0, 0.2 );
+#mw-header {
+	.flex-display;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 0.25em;
+	gap: 0.25em 1.25em;
 }
 
 #p-search {
