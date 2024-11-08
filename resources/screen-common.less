@@ -577,8 +577,7 @@ pre,
 }
 
 .mw-body {
-	word-wrap: break-word;
-
+	.mw-heading,
 	h1,
 	h2,
 	h3,
@@ -598,17 +597,21 @@ pre,
 		margin: 0.25em 0 0.5em;
 	}
 
+	.mw-heading1,
 	h1 {
 		border-bottom: solid 3px @base70;
 		font-size: 2em;
 	}
 
+	.mw-heading2,
 	h2 {
 		border-bottom: solid 2px @base70;
 		font-size: 1.8em;
 	}
 
+	.mw-heading1,
 	h1,
+	.mw-heading2,
 	h2 {
 		// Introduce a "block formatting context" so that the border-bottom underline doesn't overlap
 		// thumbnails, infoboxes and other floated content.
@@ -623,20 +626,39 @@ pre,
 		display: flow-root;
 	}
 
+	.mw-heading3,
 	h3 {
 		font-size: 1.75em;
 	}
 
+	.mw-heading4,
 	h4 {
 		font-size: 1.5em;
 	}
 
+	.mw-heading5,
 	h5 {
 		font-size: 1.25em;
 	}
 
+	.mw-heading6,
 	h6 {
 		font-size: 1.2em;
+	}
+
+	// Override the styles above for `hN` nested inside `.mw-heading`, as used on wikitext pages.
+	.mw-heading {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-size: inherit;
+			border-bottom: 0;
+			// Must be inline to allow `.mw-editsection` to be shown on the same line
+			display: inline;
+		}
 	}
 
 	dt {
@@ -686,6 +708,12 @@ pre,
 			margin-bottom: 0.25em;
 			margin-left: 2em;
 		}
+	}
+
+	&:lang( ko ),
+	&:lang( ja ),
+	&:lang( zh ) {
+		word-wrap: break-word;
 	}
 }
 

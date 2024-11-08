@@ -16,12 +16,12 @@ namespace MediaWiki\Skin\Gongbi;
 
 use BaseTemplate;
 use File;
-use Html;
-use Linker;
+use MediaWiki\Html\Html;
+use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\ResourceLoader\SkinModule;
-use Sanitizer;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class GongbiTemplate extends BaseTemplate
 {
@@ -53,9 +53,9 @@ class GongbiTemplate extends BaseTemplate
 		$this->languages = $this->sidebar['LANGUAGES'];
 
 		// WikiBase sidebar thing
-		/* if ( isset( $this->sidebar['wikibase-otherprojects'] ) ) {
+		/* if (isset($this->sidebar['wikibase-otherprojects'])) {
 			$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
-			unset( $this->sidebar['wikibase-otherprojects'] );
+			unset($this->sidebar['wikibase-otherprojects']);
 		} */
 		// Collection sidebar thing
 		if (isset($this->sidebar['coll-print_export'])) {
@@ -754,7 +754,7 @@ class GongbiTemplate extends BaseTemplate
 			$extraTools['notifications-notice'] = $personalTools['notifications-notice'];
 			unset($personalTools['notifications-notice']);
 		}
-		$class = empty($extraTools) ? '' : 'extension-icons';
+		$class = $extraTools === [] ? '' : 'extension-icons';
 
 		// Re-label some messages
 		if (isset($personalTools['userpage'])) {
@@ -793,7 +793,7 @@ class GongbiTemplate extends BaseTemplate
 		);
 
 		// Extra icon stuff (echo etc)
-		if (!empty($extraTools)) {
+		if ($extraTools !== []) {
 			$iconList = '';
 			foreach ($extraTools as $key => $item) {
 				$iconList .= $skin->makeListItem($key, $item);
@@ -1018,6 +1018,7 @@ class GongbiTemplate extends BaseTemplate
 				'userrights',
 				'log',
 				'emailuser'
+
 			])) {
 				$currentSet = 'user';
 			} elseif (in_array($navKey, [
@@ -1034,7 +1035,7 @@ class GongbiTemplate extends BaseTemplate
 			} elseif (in_array($navKey, [
 				'more',
 				'languages',
-				'tools'
+				/* 'tools' */
 			])) {
 				$currentSet = 'more';
 			} else {

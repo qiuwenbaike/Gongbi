@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"skinname-gongbi": "Gongbi",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-anonymous": "Анонимен",
+	"gongbi-loggedinas": "Најавени сте како '''$1'''",
+	"gongbi-notloggedin": "Не сте најавени",
+	"gongbi-userpage": "{{GENDER:$1|Корисничка}} страница",
+	"gongbi-talkpage": "{{GENDER:$1|Разговор}} со корисникот",
+	"gongbi-pagelog": "Дневници на страницата",
+	"gongbi-more": "Повеќе",
+	"gongbi-sitetools": "Викиалатки",
+	"gongbi-pageactions": "Алатки за страници",
+	"gongbi-userpagetools": "Алатки за корисничката страница",
+	"gongbi-action-addsection": "Нова тема",
+	"gongbi-view-view": "Прочитај",
+	"gongbi-pagemisc": "Повеќе",
+	"gongbi-namespaces": "Именски простори",
+	"gongbi-pagetools": "Дејства врз страници",
+	"gongbi-languages": "Јазици",
+	"gongbi-projects": "Други проекти",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Историја",
+	"gongbi-action-undelete": "Врати {{PLURAL:$1|едно уредување|$1 уредувања}}"
+}

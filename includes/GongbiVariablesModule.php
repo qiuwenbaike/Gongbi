@@ -47,7 +47,6 @@ class GongbiVariablesModule extends SkinModule
 	public function getDefinitionSummary(Context $context)
 	{
 		$summary = parent::getDefinitionSummary($context);
-		$summary[] = [];
 
 		return $summary;
 	}

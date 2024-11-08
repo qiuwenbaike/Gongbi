@@ -19,16 +19,13 @@
  */
 @import 'variables.less';
 
-.skin-gongbi .oo-ui-windowManager-modal > .oo-ui-dialog,
-.skin-gongbi .ve-ui-overlay-global {
-	z-index: @z-index-overlay;
-}
-
-// Overlay background containers.
-body > .oo-ui-windowManager,
-.oo-ui-defaultOverlay {
-	z-index: @z-index-overlay-backdrop;
+// For compatibility with code older than #mw-teleport-target (T350544)
+body > .oo-ui-windowManager {
 	font-size: 0.95em;
+
+	> .oo-ui-dialog {
+		z-index: @z-index-overlay;
+	}
 }
 
 .oo-ui-textInputWidget.oo-ui-indicatorElement > .oo-ui-indicatorElement-indicator {

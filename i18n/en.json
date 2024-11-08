@@ -5,13 +5,13 @@
 	"skinname-gongbi": "Gongbi",
 	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
 	"gongbi-anonymous": "Anonymous",
-	"gongbi-loggedinas": "'''$1'''",
+	"gongbi-loggedinas": "Logged in as '''$1'''",
 	"gongbi-notloggedin": "Not logged in",
 	"gongbi-userpage": "{{GENDER:$1|User}} page",
 	"gongbi-talkpage": "{{GENDER:$1|User}} talk",
 	"gongbi-pagelog": "Page logs",
 	"gongbi-more": "More",
-	"gongbi-sitetools": "Tools",
+	"gongbi-sitetools": "Wiki tools",
 	"gongbi-pageactions": "Page tools",
 	"gongbi-userpagetools": "User page tools",
 	"gongbi-action-addsection": "New topic",
@@ -21,10 +21,9 @@
 	"gongbi-pagetools": "Page actions",
 	"gongbi-languages": "Languages",
 	"gongbi-projects": "Other projects",
-	"gongbi-menus-hover-title": "Turn off the menu",
 	"gongbi-sitetitle": "{{int:Sitetitle}}",
 	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
 	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "History",
-	"gongbi-action-undelete": "Undelete {{PLURAL:$1|1 edit|$1 edits}}"
+	"gongbi-action-undelete": "Undelete {{PLURAL:$1|one edit|$1 edits}}"
 }
