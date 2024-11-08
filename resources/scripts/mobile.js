@@ -32,12 +32,8 @@ $( function () {
 				'left',
 				$( '#personal h2' ).offset().left - $( '#personal-inner' ).width()
 			);
-			$( '#personal .mobile-close-button' )
-				.css( 'top', $( '#personal h2' ).offset().top - 4 )
-				.css( 'left', $( '#personal h2' ).offset().left );
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#personal-inner' ).fadeToggle( toggleTime );
-			$( '#personal .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#sidebar-tools h2' ).on( 'click', function () {
@@ -46,33 +42,21 @@ $( function () {
 				'left',
 				$( '#sidebar-tools h2' ).offset().left
 			);
-			$( '#site-navigation .mobile-close-button' )
-				.css( 'top', $( '#sidebar-tools h2' ).offset().top - 4 )
-				.css( 'left', $( '#sidebar-tools h2' ).offset().left );
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '#site-navigation .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#search-button h2' ).on( 'click', function () {
 		if ( $( window ).width() < 851 ) {
-			$( '#p-search .mobile-close-button' )
-				.css( 'top', $( '#search-button h2' ).offset().top - 4 )
-				.css( 'left', $( '#search-button h2' ).offset().left );
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '#p-search .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-more' ).on( 'click', function () {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
-		$( '#page-more .mobile-close-button' )
-			.css( 'top', $( '#ca-more' ).offset().top - 4 )
-			.css( 'left', $( '#ca-more' ).offset().left + 2 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '#page-more .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-tools' ).on( 'click', function () {
@@ -80,13 +64,9 @@ $( function () {
 			'top',
 			$( '#ca-tools' ).offset().top + 25
 		);
-		$( '#page-tools .mobile-close-button' )
-			.css( 'top', $( '#ca-tools' ).offset().top - 4 )
-			.css( 'left', $( '#ca-tools' ).offset().left + 2 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '#page-tools .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 	$( '#ca-languages' ).on( 'click', function () {
@@ -94,26 +74,20 @@ $( function () {
 			'top',
 			$( '#ca-languages' ).offset().top + 25
 		);
-		$( '#other-languages .mobile-close-button' )
-			.css( 'top', $( '#ca-languages' ).offset().top - 4 )
-			.css( 'left', $( '#ca-languages' ).offset().left + 2 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#other-languages .sidebar-inner' ).fadeToggle( toggleTime );
-			$( '#other-languages .mobile-close-button' ).fadeToggle( toggleTime );
 		}
 	} );
 
 	// Close menus on click outside
 	$( document ).on( 'click touchstart', function ( e ) {
 		if (
-			$( e.target ).closest( '#menus-cover' ).length > 0 ||
-			$( e.target ).closest( '.mobile-close-button' ).length > 0
+			$( e.target ).closest( '#menus-cover' ).length > 0
 		) {
 			$( '#personal-inner' ).fadeOut( toggleTime );
 			$( '.sidebar-inner' ).fadeOut( toggleTime );
 			$( '#menus-cover' ).fadeOut( toggleTime );
-			$( '.mobile-close-button' ).fadeOut( toggleTime );
 		}
 	} );
 } );

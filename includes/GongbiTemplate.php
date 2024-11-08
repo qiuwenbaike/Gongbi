@@ -484,11 +484,8 @@ class GongbiTemplate extends BaseTemplate
 					$this->getMsg($headerMessage)->text()
 				)
 			) .
-				Html::rawElement('div', ['class' => 'mobile-close-button', 'title' => $this->getMsg('gongbi-menus-hover-title')->text()]) .
 				Html::rawElement('div', ['class' => 'sidebar-inner'], $content)
 		);
-
-		$html .= Html::rawElement('div', ['class' => 'mobile-close-button', 'title' => $this->getMsg('gongbi-menus-hover-title')->text()]);
 
 		return $html;
 	}
@@ -602,8 +599,6 @@ class GongbiTemplate extends BaseTemplate
 			['lang' => $this->get('userlang'), 'dir' => $this->get('dir')],
 			Html::rawElement('label', ['for' => 'searchInput'], $this->getMsg('search')->escaped())
 		);
-
-		$html .= Html::rawElement('div', ['class' => 'mobile-close-button', 'title' => $this->getMsg('gongbi-menus-hover-title')->text()]);
 
 		$html .= Html::openElement('div', ['class' => 'sidebar-inner']);
 
@@ -790,7 +785,6 @@ class GongbiTemplate extends BaseTemplate
 				[],
 				Html::element('span', [], $dropdownHeader)
 			) .
-				Html::rawElement('div', ['class' => 'mobile-close-button', 'title' => $this->getMsg('gongbi-menus-hover-title')->text()]) .
 				Html::rawElement(
 					'div',
 					['id' => 'personal-inner', 'class' => 'dropdown'],

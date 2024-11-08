@@ -74,7 +74,7 @@
 	margin: 0;
 	min-width: 9.153em;
 	max-width: 80%;
-	top: 3.25em;
+	top: (0.8 * @fixed-header-height);
 	right: 0;
 	overflow: visible;
 	z-index: @z-index-off-canvas;
@@ -201,25 +201,6 @@
 	}
 }
 
-/* Toggle buttons */
-
-.mobile-close-button {
-	position: absolute;
-	z-index: 100;
-	display: none;
-	width: 2em;
-	margin: 0;
-	background-color: @background;
-	background-image: url( images/close-grey.svg );
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 18px;
-	box-shadow: 0 2px 3px 1px rgba( 0, 0, 0, 0.05 );
-	cursor: pointer;
-	.nav-block();
-	padding: 1em 0;
-}
-
 /* Logo */
 
 #p-logo-text {
@@ -244,7 +225,7 @@
 /* Notifications */
 
 div.mw-notification-area {
-	top: @fixed-header-height + 3.25em;
+	top: (2 * @fixed-header-height);
 }
 
 /* Page actions */
@@ -349,7 +330,6 @@ figure[ typeof~='mw:File/Frame' ] {
 figure[ typeof~='mw:File/Thumb' ] {
 	> .mw-file-description::after,
 	> .mw-file-magnify::after {
-
 		// Default where page content language is not set
 		// Allow to flip
 		right: 1.5em;
