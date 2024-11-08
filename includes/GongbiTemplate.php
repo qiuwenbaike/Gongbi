@@ -19,7 +19,7 @@ use File;
 use Html;
 use Linker;
 use MediaWiki\MediaWikiServices;
-use ResourceLoaderSkinModule;
+use MediaWiki\ResourceLoader\SkinModule;
 use Sanitizer;
 use SpecialPage;
 
@@ -514,7 +514,7 @@ class GongbiTemplate extends BaseTemplate
 				'role' => 'banner'
 			]
 		);
-		$logos = ResourceLoaderSkinModule::getAvailableLogos($config);
+		$logos = SkinModule::getAvailableLogos($config);
 
 		$titleClass = '';
 		$siteTitle = '';
