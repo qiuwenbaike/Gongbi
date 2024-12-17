@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tow",
+			"Cabal"
+		]
+	},
+	"gongbi-anonymous": "ਬੇਪਛਾਣ",
+	"gongbi-loggedinas": "'''$1''' ਵਜੋਂ ਦਾਖ਼ਲ",
+	"gongbi-notloggedin": "ਦਾਖ਼ਲ ਨਹੀਂ ਹੋ",
+	"gongbi-userpage": "{{GENDER:$1|ਵਰਤੋਂਕਾਰ}} ਸਫ਼ਾ",
+	"gongbi-talkpage": "{{GENDER:$1| ਵਰਤੋਂਕਾਰ}} ਗੱਲਬਾਤ",
+	"gongbi-pagelog": "ਸਫ਼ੇ ਦੇ ਚਿੱਠੇ",
+	"gongbi-more": "ਹੋਰ",
+	"gongbi-sitetools": "ਵਿਕੀ ਸੰਦ",
+	"gongbi-pageactions": "ਸਫ਼ੇ ਦੇ ਸੰਦ",
+	"gongbi-userpagetools": "ਵਰਤੋਂਕਾਰ ਸਫ਼ਾ ਸੰਦ",
+	"gongbi-action-addsection": "ਨਵਾਂ ਵਿਸ਼ਾ",
+	"gongbi-view-view": "ਪੜ੍ਹੋ",
+	"gongbi-pagemisc": "ਹੋਰ",
+	"gongbi-namespaces": "ਨਾਂ-ਥਾਂ",
+	"gongbi-pagetools": "ਸਫ਼ੇ ਦੀਆਂ ਕਾਰਵਾਈਆਂ",
+	"gongbi-languages": "ਭਾਸ਼ਾਵਾਂ",
+	"gongbi-projects": "ਹੋਰ ਪ੍ਰੋਜੈਕਟ",
+	"gongbi-view-history": "ਅਤੀਤ",
+	"gongbi-action-undelete": "{{PLURAL:$1|ਇੱਕ ਸੋਧ|$1 ਸੋਧਾਂ}} ਹਟਾਉਣਾ-ਵਾਪਸ"
+}

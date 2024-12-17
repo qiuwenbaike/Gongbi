@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby",
+			"Volvox"
+		]
+	},
+	"gongbi-anonymous": "Anonym",
+	"gongbi-loggedinas": "Als '''$1''' ageloggt",
+	"gongbi-notloggedin": "Net ageloggt",
+	"gongbi-userpage": "{{GENDER:$1|Benotzer}}säit",
+	"gongbi-talkpage": "{{GENDER:$1|Benotzerdiskussioun}}",
+	"gongbi-pagelog": "Logbicher fir Säiten",
+	"gongbi-more": "Méi",
+	"gongbi-sitetools": "Wiki-Handwierksgeschir",
+	"gongbi-pageactions": "Handwierksgeschir fir Säiten",
+	"gongbi-userpagetools": "Handwierksgeschir fir Benotzersäiten",
+	"gongbi-action-addsection": "Neie Sujet",
+	"gongbi-view-view": "Liesen",
+	"gongbi-pagemisc": "Méi",
+	"gongbi-namespaces": "Nummraim",
+	"gongbi-pagetools": "Säitenaktiounen",
+	"gongbi-languages": "Sproochen",
+	"gongbi-projects": "Aner Projeten",
+	"gongbi-view-history": "Versiounen",
+	"gongbi-action-undelete": "$1 {{PLURAL:$1|Versioun|Versioune}} restauréieren"
+}

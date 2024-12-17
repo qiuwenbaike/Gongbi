@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"DaBler",
+			"Dvorapa",
+			"LTM3",
+			"Matěj Suchánek",
+			"Mormegil",
+			"Patriccck",
+			"Patrik L."
+		]
+	},
+	"gongbi-anonymous": "Neregistrovaný",
+	"gongbi-loggedinas": "{{GENDER:$1|Přihlášen|Přihlášena}} jako '''$1'''",
+	"gongbi-notloggedin": "Nepřihlášen(a)",
+	"gongbi-userpage": "Stránka {{GENDER:$1|uživatele|uživatelky}}",
+	"gongbi-talkpage": "Diskuze {{GENDER:$1|uživatele|uživatelky}}",
+	"gongbi-pagelog": "Protokolovací záznamy",
+	"gongbi-more": "Více",
+	"gongbi-sitetools": "Wiki nástroje",
+	"gongbi-pageactions": "Nástroje ke stránkám",
+	"gongbi-userpagetools": "Uživatelské nástroje",
+	"gongbi-action-addsection": "Nové téma",
+	"gongbi-view-view": "Číst",
+	"gongbi-pagemisc": "Více",
+	"gongbi-namespaces": "Jmenné prostory",
+	"gongbi-pagetools": "Možnosti stránky",
+	"gongbi-languages": "Jazyky",
+	"gongbi-projects": "Na jiných projektech",
+	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
+	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
+	"gongbi-view-history": "Historie",
+	"gongbi-action-undelete": "Obnovit $1 {{PLURAL:$1|verzi|verze|verzí}}"
+}
