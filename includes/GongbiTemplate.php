@@ -511,7 +511,7 @@ class GongbiTemplate extends BaseTemplate
 				'role' => 'banner'
 			]
 		);
-		$logos = SkinModule::getAvailableLogos($config);
+		$logos = SkinModule::getAvailableLogos($config, $this->getSkin()->getLanguage()->getCode());
 
 		$titleClass = '';
 		$siteTitle = '';
