@@ -53,10 +53,10 @@ class GongbiTemplate extends BaseTemplate
 		$this->languages = $this->sidebar['LANGUAGES'];
 
 		// WikiBase sidebar thing
-		/* if (isset($this->sidebar['wikibase-otherprojects'])) {
+		if (isset($this->sidebar['wikibase-otherprojects'])) {
 			$this->otherProjects = $this->sidebar['wikibase-otherprojects'];
 			unset($this->sidebar['wikibase-otherprojects']);
-		} */
+		}
 		// Collection sidebar thing
 		if (isset($this->sidebar['coll-print_export'])) {
 			$this->collectionPortlet = $this->sidebar['coll-print_export'];
@@ -66,7 +66,6 @@ class GongbiTemplate extends BaseTemplate
 		$this->pileOfTools = $this->getPageTools();
 		$userLinks = $this->getUserLinks();
 
-		// Open body elements, etc
 		$html = Html::openElement('div', ['id' => 'mw-wrapper', 'class' => $userLinks['class']]);
 
 		$html .= Html::rawElement(
@@ -524,11 +523,13 @@ class GongbiTemplate extends BaseTemplate
 		}
 
 		if ($part !== 'image') {
-			if ($config->get('GongbiWordmark') || isset($logos['wordmark'])) {
+			$wordmarkImage = $this->getLogoImage($config->get('GongbiWordmark'), true);
+			if (!$wordmarkImage && isset($logos['wordmark'])) {
+				$wordmarkData = $logos['wordmark'];
 				$wordmarkImage = Html::element('img', [
-					'src' => $config->get('GongbiWordmark')['src'] ?? $logos['wordmark']['src'],
-					'height' => $config->get('GongbiWordmark')['height'] ?? ($logos['wordmark']['height'] ?? null),
-					'width' => $config->get('GongbiWordmark')['width'] ?? ($logos['wordmark']['width'] ?? null),
+					'src' => $wordmarkData['src'],
+					'height' => $wordmarkData['height'] ?? null,
+					'width' => $wordmarkData['width'] ?? null,
 					'title' => $siteTitle,
 					'alt' => $siteTitle,
 				]);
@@ -557,12 +558,14 @@ class GongbiTemplate extends BaseTemplate
 		if ($part !== 'text') {
 			$logoImage = $this->getLogoImage($config->get('GongbiLogo'));
 			if ($logoImage === false && isset($logos['icon'])) {
-				$logoSrc = $logos['icon'];
-				$logoImage = Html::element('img', [
-					'src' => $logoSrc,
-					'title' => $siteTitle,
-					'alt' => $siteTitle,
-				]);
+				$logoSrc = $logos['icon'] ?? $logos['svg'] ?? '';
+				if ($logoSrc !== '') {
+					$logoImage = Html::element('img', [
+						'src' => $logoSrc,
+						'title' => $siteTitle,
+						'alt' => $siteTitle,
+					]);
+				}
 			}
 
 			$html .= Html::rawElement(
@@ -676,43 +679,29 @@ class GongbiTemplate extends BaseTemplate
 	 */
 	protected function getPageToolSidebar()
 	{
-		$html = '';
-		$pageTools = '';
-		$pageMore = '';
-
-		if ($this->pileOfTools['page-secondary']) {
-			$pageTools .= $this->getPortlet(
-				'cactions',
-				$this->pileOfTools['page-secondary'],
-				'gongbi-pageactions'
-			);
-
-			$html .= $this->getSidebarChunk('page-tools', 'gongbi-pageactions', $pageTools);
-		}
-
-		if ($this->pileOfTools['user']) {
-			$pageMore .= $this->getPortlet(
-				'userpagetools',
-				$this->pileOfTools['user'],
-				'gongbi-userpagetools'
-			);
-		}
-		$pageMore .= $this->getPortlet(
+		$pageTools = $this->getPortlet(
+			'cactions',
+			$this->pileOfTools['page-secondary'],
+			'gongbi-pageactions'
+		);
+		$pageTools .= $this->getPortlet(
+			'userpagetools',
+			$this->pileOfTools['user'],
+			'gongbi-userpagetools'
+		);
+		$pageTools .= $this->getPortlet(
 			'pagemisc',
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
 		);
-		if (isset($this->collectionPortlet)) {
-			$pageMore .= $this->getPortlet(
+		if ($this->collectionPortlet !== null) {
+			$pageTools .= $this->getPortlet(
 				'coll-print_export',
 				$this->collectionPortlet
 			);
 		}
-		if ($this->pileOfTools['page-tertiary'] || $this->pileOfTools['user'] || isset($this->collectionPortlet)) {
-			$html .= $this->getSidebarChunk('page-more', 'gongbi-pagemisc', $pageMore);
-		}
 
-		return $html;
+		return $this->getSidebarChunk('page-tools', 'gongbi-pageactions', $pageTools);
 	}
 
 	/**
@@ -959,7 +948,7 @@ class GongbiTemplate extends BaseTemplate
 		// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 		if (
 			!empty($this->sidebar['LANGUAGES']) || $sortedPileOfTools['variants']
-			|| isset($this->otherProjects)
+			|| $this->otherProjects !== null
 		) {
 			$pileOfTools['languages'] = [
 				'text' => $this->getMsg('gongbi-languages')->escaped(),
@@ -1027,7 +1016,7 @@ class GongbiTemplate extends BaseTemplate
 				'pagelog',
 				'recentchangeslinked',
 				'permalink',
-				/* 'wikibase', */
+				'wikibase',
 				'cite'
 			])) {
 				$currentSet = 'page-tertiary';
@@ -1151,14 +1140,14 @@ class GongbiTemplate extends BaseTemplate
 		}
 
 		// if using wikibase for 'in other projects'
-		/* if (isset($this->otherProjects)) {
+		if ($this->otherProjects !== null) {
 			$otherprojects = $this->getPortlet(
 				'wikibase-otherprojects',
 				$this->otherProjects
 			);
 			$show = true;
 			$variantsOnly = false;
-		} */
+		}
 
 		if ($show) {
 			$html .= $this->getSidebarChunk(
