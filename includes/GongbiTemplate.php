@@ -684,24 +684,32 @@ class GongbiTemplate extends BaseTemplate
 			$this->pileOfTools['page-secondary'],
 			'gongbi-pageactions'
 		);
-		$pageTools .= $this->getPortlet(
+		$pageMore = $this->getPortlet(
 			'userpagetools',
 			$this->pileOfTools['user'],
 			'gongbi-userpagetools'
 		);
-		$pageTools .= $this->getPortlet(
+		$pageMore .= $this->getPortlet(
 			'pagemisc',
 			$this->pileOfTools['page-tertiary'],
 			'gongbi-pagemisc'
 		);
 		if ($this->collectionPortlet !== null) {
-			$pageTools .= $this->getPortlet(
+			$pageMore .= $this->getPortlet(
 				'coll-print_export',
 				$this->collectionPortlet
 			);
 		}
 
-		return $this->getSidebarChunk('page-tools', 'gongbi-pageactions', $pageTools);
+		if ($this->pileOfTools['page-secondary']) {
+			$html = $this->getSidebarChunk('page-tools', 'gongbi-pageactions', $pageTools);
+		}
+
+		if ($this->pileOfTools['page-tertiary'] || $this->pileOfTools['user'] || isset($this->collectionPortlet)) {
+			$html .= $this->getSidebarChunk('page-more', 'gongbi-pagemisc', $pageMore);
+		}
+
+		return $html;
 	}
 
 	/**
