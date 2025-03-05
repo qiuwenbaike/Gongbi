@@ -20,7 +20,7 @@
 
 'use strict';
 
-mw.hook( 'wikipage.content' ).add( function ( $content ) {
+mw.hook( 'wikipage.content' ).add( ( $content ) => {
 	// Skip on Special:Recentchanges
 	if ( mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Recentchanges' ) {
 		return;
@@ -46,7 +46,7 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 * @param {jQuery} $table
 	 */
 	function setScrollClass( $table ) {
-		var $tableWrapper = $table.parent(),
+		const $tableWrapper = $table.parent(),
 			// wtf browser rtl implementations
 			scroll = Math.abs( $tableWrapper.scrollLeft() );
 
@@ -72,8 +72,8 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 * Mark overflowed tables for scrolling
 	 */
 	function unOverflowTables() {
-		$content.find( '.content-table > table' ).each( function ( _index, element ) {
-			var $table = $( element ),
+		$content.find( '.content-table > table' ).each( ( _index, element ) => {
+			const $table = $( element ),
 				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$wrapper.addClass( 'overflowed' );
@@ -86,9 +86,9 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 		} );
 
 		// Set up sticky captions
-		$content.find( '.content-table > table > caption' ).each( function ( _index, element ) {
-			var $container, tableHeight;
-			var $table = $( element ).parent(),
+		$content.find( '.content-table > table > caption' ).each( ( _index, element ) => {
+			let $container, tableHeight;
+			const $table = $( element ).parent(),
 				$wrapper = $table.parent().parent();
 			if ( $table.outerWidth() > $wrapper.outerWidth() ) {
 				$container = $( element ).parents( '.content-table-wrapper' );
@@ -105,15 +105,15 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	/**
 	 * Sticky scrollbars maybe?!
 	 */
-	$content.find( '.content-table' ).each( function ( _index, element ) {
-		var $tableWrapper = $( element );
-		var $table = $tableWrapper.children( 'table' ).first();
+	$content.find( '.content-table' ).each( ( _index, element ) => {
+		const $tableWrapper = $( element );
+		const $table = $tableWrapper.children( 'table' ).first();
 
 		// Assemble our silly crap and add to page
-		var $scrollbar = $( '<div>' )
+		const $scrollbar = $( '<div>' )
 			.addClass( 'content-table-scrollbar inactive' )
 			.width( $content.width() );
-		var $spoof = $( '<div>' )
+		const $spoof = $( '<div>' )
 			.addClass( 'content-table-spoof' )
 			.width( $table.outerWidth() );
 		$tableWrapper.parent().prepend( $scrollbar.prepend( $spoof ) );
@@ -124,11 +124,11 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 */
 	$content.find( '.content-table' ).on( 'scroll', function () {
 		// Only do this here if we're not already mirroring the spoof
-		var $mirror = $( this ).siblings( '.inactive' ).first();
+		const $mirror = $( this ).siblings( '.inactive' ).first();
 		$mirror.scrollLeft( $( this ).scrollLeft() );
 	} );
 	$content.find( '.content-table-scrollbar' ).on( 'scroll', function () {
-		var $mirror = $( this ).siblings( '.content-table' ).first();
+		const $mirror = $( this ).siblings( '.content-table' ).first();
 
 		// Only do this here if we're not already mirroring the table
 		// eslint-disable-next-line no-jquery/no-class-state
@@ -142,16 +142,16 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	 */
 	function determineActiveSpoofScrollbars() {
 		$content.find( '.overflowed .content-table' ).each( function () {
-			var $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first();
+			const $scrollbar = $( this ).siblings( '.content-table-scrollbar' ).first();
 
 			// Skip caption
-			var captionHeight = $( this ).find( 'caption' ).outerHeight() || 0;
+			let captionHeight = $( this ).find( 'caption' ).outerHeight() || 0;
 			if ( captionHeight ) {
 				// Pad slightly for reasons
 				captionHeight += 8;
 			}
 
-			var tableTop = $( this ).offset().top,
+			const tableTop = $( this ).offset().top,
 				tableBottom = tableTop + $( this ).outerHeight(),
 				viewBottom = window.scrollY + document.documentElement.clientHeight,
 				active = tableTop + captionHeight < viewBottom && tableBottom > viewBottom;
@@ -164,9 +164,9 @@ mw.hook( 'wikipage.content' ).add( function ( $content ) {
 	/**
 	 * Make sure tablespoofs remain correctly-sized?
 	 */
-	$( window ).on( 'resize', function () {
-		$content.find( '.content-table-scrollbar' ).each( function ( _index, element ) {
-			var width = $( element ).siblings().first().find( 'table' ).first().width();
+	$( window ).on( 'resize', () => {
+		$content.find( '.content-table-scrollbar' ).each( ( _index, element ) => {
+			const width = $( element ).siblings().first().find( 'table' ).first().width();
 			$( element ).find( '.content-table-spoof' ).first().width( width );
 			$( element ).width( $content.width() );
 		} );

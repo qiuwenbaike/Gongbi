@@ -11,6 +11,7 @@
 		"lint:styles": "stylelint \"**/*.{less,css}\""
 	},
 	"devDependencies": {
+		"eslint": "^8.57.0",
 		"eslint-config-wikimedia": "0.29.1",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",

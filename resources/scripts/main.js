@@ -19,10 +19,10 @@
  */
 'use strict';
 
-$( function () {
+$( () => {
 	// sidebar-inner only applies to desktop-small, but the toggles are hidden at
 	// other resolutions regardless and the css overrides any visible effects.
-	var $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
+	const $dropdowns = $( '#personal, #p-variants-desktop, .sidebar-inner' );
 
 	/**
 	 * Desktop menu click-toggling
@@ -34,7 +34,7 @@ $( function () {
 	/**
 	 * Close all dropdowns
 	 */
-	var closeOpen = function closeOpen() {
+	const closeOpen = function closeOpen() {
 		$dropdowns.removeClass( 'dropdown-active' );
 	};
 
@@ -56,7 +56,7 @@ $( function () {
 			$( this ).addClass( 'dropdown-active' );
 		}
 	} );
-	$( document ).on( 'click', function ( e ) {
+	$( document ).on( 'click', ( e ) => {
 		if ( $( e.target ).closest( $dropdowns ).length > 0 ) {
 			// Clicked inside an open menu; don't close anything
 		} else {

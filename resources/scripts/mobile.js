@@ -22,11 +22,11 @@
 
 'use strict';
 
-$( function () {
-	var toggleTime = 150;
+$( () => {
+	const toggleTime = 150;
 
 	// Open the various menus
-	$( '#user-tools h2' ).on( 'click', function () {
+	$( '#user-tools h2' ).on( 'click', () => {
 		if ( $( window ).width() < 851 ) {
 			$( '#personal-inner' ).css(
 				'left',
@@ -36,7 +36,7 @@ $( function () {
 			$( '#personal-inner' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#sidebar-tools h2' ).on( 'click', function () {
+	$( '#sidebar-tools h2' ).on( 'click', () => {
 		if ( $( window ).width() < 851 ) {
 			$( '#site-navigation .sidebar-inner' ).css(
 				'left',
@@ -46,20 +46,20 @@ $( function () {
 			$( '#site-navigation .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#search-button h2' ).on( 'click', function () {
+	$( '#search-button h2' ).on( 'click', () => {
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#p-search .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-more' ).on( 'click', function () {
+	$( '#ca-more' ).on( 'click', () => {
 		$( '#page-more .sidebar-inner' ).css( 'top', $( '#ca-more' ).offset().top + 25 );
 		if ( $( window ).width() < 851 ) {
 			$( '#menus-cover' ).fadeToggle( toggleTime );
 			$( '#page-more .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-tools' ).on( 'click', function () {
+	$( '#ca-tools' ).on( 'click', () => {
 		$( '#page-tools .sidebar-inner' ).css(
 			'top',
 			$( '#ca-tools' ).offset().top + 25
@@ -69,7 +69,7 @@ $( function () {
 			$( '#page-tools .sidebar-inner' ).fadeToggle( toggleTime );
 		}
 	} );
-	$( '#ca-languages' ).on( 'click', function () {
+	$( '#ca-languages' ).on( 'click', () => {
 		$( '#other-languages .sidebar-inner' ).css(
 			'top',
 			$( '#ca-languages' ).offset().top + 25
@@ -81,7 +81,7 @@ $( function () {
 	} );
 
 	// Close menus on click outside
-	$( document ).on( 'click touchstart', function ( e ) {
+	$( document ).on( 'click touchstart', ( e ) => {
 		if (
 			$( e.target ).closest( '#menus-cover' ).length > 0
 		) {
