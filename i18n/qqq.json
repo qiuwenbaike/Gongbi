@@ -11,7 +11,7 @@
 		]
 	},
 	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "A new skin for Qiuwen Baike based on Gongbi skin",
+	"gongbi-desc": "A new skin for Qiuwen Baike based on Timeless skin",
 	"gongbi-anonymous": "Label for anonymous (not logged in) user menu\n{{Identical|Anonymous}}",
 	"gongbi-loggedinas": "Note for personal menu for logged in users noting their current username\n\nParameters:\n* $1 - username",
 	"gongbi-notloggedin": "Note for personal menu for anonymous users clarifying that they are not logged in\n{{Identical|Not logged in}}",
