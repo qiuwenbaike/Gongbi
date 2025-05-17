@@ -8,11 +8,14 @@ importers:
 
   .:
     devDependencies:
-      eslint:
-        specifier: ^9.27.0
+      '@eslint/eslintrc':
+        specifier: ^3.3.1
+        version: 3.3.1
+      '@eslint/js':
+        specifier: ^9.26.0
         version: 9.27.0
       eslint-config-wikimedia:
-        specifier: 0.29.1
+        specifier: ^0.29.1
         version: 0.29.1(typescript@5.8.2)
       grunt:
         specifier: 1.6.1

@@ -1,18 +1,20 @@
 {
 	"name": "gongbi",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images",
 		"test": "grunt test",
-		"lint": "npm -s run lint:js && npm -s run lint:styles",
-		"lint:fix:js": "npm -s run lint:js -- --fix",
-		"lint:fix:styles": "npm -s run lint:styles -- --fix",
-		"lint:js": "eslint --cache --max-warnings 0 .",
+		"lint": "npm run lint:js && npm run lint:styles",
+		"lint:fix:js": "eslint . --fix",
+		"lint:fix:styles": "stylelint \"**/*.{less,css}\" --fix",
+		"lint:js": "eslint .",
 		"lint:styles": "stylelint \"**/*.{less,css}\""
 	},
 	"devDependencies": {
-		"eslint": "^9.27.0",
-		"eslint-config-wikimedia": "0.29.1",
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.26.0",
+		"eslint-config-wikimedia": "^0.29.1",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",
 		"grunt-eslint": "25.0.0",
