@@ -1,7 +1,6 @@
 {
 	"name": "gongbi",
 	"private": true,
-	"type": "module",
 	"scripts": {
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/images",
 		"test": "grunt test",
