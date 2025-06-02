@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@eslint/eslintrc": "^3.3.1",
 		"@eslint/js": "^9.28.0",
-		"eslint-config-wikimedia": "^0.29.1",
+		"eslint-config-wikimedia": "^0.30.0",
 		"grunt": "1.6.1",
 		"grunt-banana-checker": "0.13.0",
 		"grunt-eslint": "25.0.0",
