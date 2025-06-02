@@ -29,7 +29,6 @@ export default [
 		]
 	},
 	...compat.extends(
-		'wikimedia/client-common',
 		"wikimedia/jquery",
 		'wikimedia/language/es2022',
 		'wikimedia/mediawiki'
