@@ -6,11 +6,9 @@
 			"Milicevic01",
 			"Obsuser",
 			"Zoranzoki21",
-			"BadDog"
+			"Aca"
 		]
 	},
-	"skinname-gongbi": "Gongbi",
-	"gongbi-desc": "A new skin for Qiuwen Baike based on Timeless skin",
 	"gongbi-anonymous": "Anoniman",
 	"gongbi-loggedinas": "Prijavljeni ste kao '''$1'''",
 	"gongbi-notloggedin": "Niste prijavljeni",
@@ -28,8 +26,6 @@
 	"gongbi-pagetools": "Radnje za stranicu",
 	"gongbi-languages": "Jezici",
 	"gongbi-projects": "Drugi projekti",
-	"gongbi.css": "/* All CSS here will be loaded for users of the Gongbi skin */",
-	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "Istorija",
 	"gongbi-action-undelete": "Vrati {{PLURAL:$1|izbrisanu izmenu|$1 izbrisane izmene|$1 izbrisanih izmena}}"
 }

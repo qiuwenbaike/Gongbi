@@ -5,7 +5,6 @@
 			"Lhanars"
 		]
 	},
-	"gongbi-desc": "A new skin for Qiuwen Baike based on Timeless skin",
 	"gongbi-anonymous": "Anonim",
 	"gongbi-loggedinas": "Connectat en tant que '''$1'''",
 	"gongbi-notloggedin": "Pas connectat",
@@ -16,6 +15,7 @@
 	"gongbi-sitetools": "Aisinas wiki",
 	"gongbi-pageactions": "Aisinas de pagina",
 	"gongbi-userpagetools": "Aisinas de pagina d'utilizaire",
+	"gongbi-action-addsection": "Tèma nòu",
 	"gongbi-pagemisc": "Mai",
 	"gongbi-namespaces": "Espacis de noms",
 	"gongbi-pagetools": "Accions de pagina",

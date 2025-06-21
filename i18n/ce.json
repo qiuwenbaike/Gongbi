@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Умар"
+			"Умар",
+			"Исмаил Садуев"
 		]
 	},
-	"gongbi-desc": "A new skin for Qiuwen Baike based on Timeless skin",
 	"gongbi-anonymous": "Аноним",
 	"gongbi-loggedinas": "Чуваьлла '''$1''' санна",
-	"gongbi-notloggedin": "ХӀинца а ахьа системин чохь болх беш бац",
+	"gongbi-notloggedin": "Хьо чу ца ваьлла",
 	"gongbi-userpage": "{{GENDER:$1|Декъашхочун}} агӀо",
 	"gongbi-talkpage": "{{GENDER:$1|Декъашхочун}} дийцар",
 	"gongbi-pagelog": "АгӀонан журналаш",
@@ -22,7 +22,6 @@
 	"gongbi-pagetools": "АгӀонгахь дийриш",
 	"gongbi-languages": "Меттанаш",
 	"gongbi-projects": "Кхин проекташ",
-	"gongbi.js": "/* All JavaScript here will be loaded for users of the Gongbi skin */",
 	"gongbi-view-history": "Истори",
 	"gongbi-action-undelete": "МеттахӀоттайé $1 {{PLURAL:$1|нисйинарг|нисйинарш}}"
 }

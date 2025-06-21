@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Acamicamacaraca",
+			"BadDog",
+			"Kizule",
+			"Milicevic01",
+			"Obsuser",
+			"Zoranzoki21",
+			"Aca"
+		]
+	},
+	"gongbi-anonymous": "Анониман",
+	"gongbi-loggedinas": "Пријављени сте као '''$1'''",
+	"gongbi-notloggedin": "Нисте пријављени",
+	"gongbi-userpage": "Страница {{GENDER:$1|корисника|кориснице}}",
+	"gongbi-talkpage": "Разговор са {{GENDER:$1|корисником|корисницом}}",
+	"gongbi-pagelog": "Дневници странице",
+	"gongbi-more": "Више",
+	"gongbi-sitetools": "Вики алатке",
+	"gongbi-pageactions": "Алатке за страницу",
+	"gongbi-userpagetools": "Алатке за корисничку страницу",
+	"gongbi-action-addsection": "Нова тема",
+	"gongbi-view-view": "Читај",
+	"gongbi-pagemisc": "Више",
+	"gongbi-namespaces": "Именски простори",
+	"gongbi-pagetools": "Радње за страницу",
+	"gongbi-languages": "Језици",
+	"gongbi-projects": "Други пројекти",
+	"gongbi-view-history": "Историја",
+	"gongbi-action-undelete": "Врати {{PLURAL:$1|избрисану измену|$1 избрисане измене|$1 избрисаних измена}}"
+}

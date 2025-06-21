@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Automatik",
+			"Derugon",
+			"Djiboun",
+			"Eneelk",
+			"Framawiki",
+			"Gomoko",
+			"Macofe",
+			"Noé",
+			"Thibaut120094",
+			"Urhixidur",
+			"Verdy p",
+			"Wladek92",
+			"Danÿa"
+		]
+	},
+	"gongbi-anonymous": "Anonyme",
+	"gongbi-loggedinas": "Connecté{{GENDER:$1||e|·e}} en tant que '''$1'''",
+	"gongbi-notloggedin": "Non connecté·e",
+	"gongbi-userpage": "Page de l’utilisat{{GENDER:$1|eur|rice|eur·rice}}",
+	"gongbi-talkpage": "Discussion avec l’utilisat{{GENDER:$1|eur|rice|eur·rice}}",
+	"gongbi-pagelog": "Journaux de la page",
+	"gongbi-more": "Plus",
+	"gongbi-sitetools": "Outils wiki",
+	"gongbi-pageactions": "Outils de la page",
+	"gongbi-userpagetools": "Outils de la page utilisateur",
+	"gongbi-action-addsection": "Nouveau sujet",
+	"gongbi-view-view": "Lire",
+	"gongbi-pagemisc": "Plus",
+	"gongbi-namespaces": "Espaces de noms",
+	"gongbi-pagetools": "Actions de la page",
+	"gongbi-languages": "Langues",
+	"gongbi-projects": "Autres projets",
+	"gongbi.css": "/* Tout CSS placé ici sera chargé avec les pages accédées par les utilisateurs de l’habillage Gongbi */",
+	"gongbi.js": "/* Tout code JavaScript placé ici sera chargé avec les pages accédées par les utilisateurs de l’habillage Gongbi */",
+	"gongbi-view-history": "Historique",
+	"gongbi-action-undelete": "Restaurer {{PLURAL:$1|une modification|$1 modifications}}"
+}
