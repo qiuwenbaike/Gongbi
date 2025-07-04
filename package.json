@@ -19,7 +19,7 @@
 		"grunt-banana-checker": "0.13.0",
 		"grunt-eslint": "25.0.0",
 		"grunt-stylelint": "0.20.1",
-		"stylelint": "^16.21.0",
+		"stylelint": "^16.21.1",
 		"stylelint-config-wikimedia": "^0.18.0",
 		"svgo": "4.0.0"
 	}
