@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Vlad5250",
-			"Winston Sung"
+			"Winston Sung",
+			"Aca"
 		]
 	},
-	"gongbi-anonymous": "Anoniman",
+	"gongbi-anonymous": "Neprijavljen",
 	"gongbi-loggedinas": "Prijavljeni ste kao '''$1'''",
 	"gongbi-notloggedin": "Niste prijavljeni",
 	"gongbi-userpage": "{{GENDER:$1|Korisnička}} stranica",

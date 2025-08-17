@@ -5,7 +5,6 @@
 			"شاه زمان پټان"
 		]
 	},
-	"gongbi-desc": "يو بې‌وخته پوښۍ چې د برانډون هاريس او ويکيمېډيا بنسټ له خوا د ژمي لومړنۍ‌بڼې د بېلابېلو ښودبڼو وروسته سکښتل شوی",
 	"gongbi-anonymous": "ورکنومی",
 	"gongbi-loggedinas": "د '''$1''' په توگه ورننوتئ",
 	"gongbi-notloggedin": "غونډال کې نه ياست ننوتي",
@@ -16,10 +15,13 @@
 	"gongbi-sitetools": "ويکي اوزارونه",
 	"gongbi-pageactions": "د مخ اوزارونه",
 	"gongbi-userpagetools": "د کارن مخ اوزارونه",
+	"gongbi-action-addsection": "نوې سکالو",
+	"gongbi-view-view": "لوستل",
 	"gongbi-pagemisc": "نور",
 	"gongbi-namespaces": "نوم‌تشيالونه",
 	"gongbi-pagetools": "د مخ چارې",
 	"gongbi-languages": "ژبې",
+	"gongbi-projects": "نورې پروژې",
 	"gongbi-view-history": "پېښليک",
 	"gongbi-action-undelete": "{{PLURAL:$1|يو سمون|$1 سمونې}} ناړنگول"
 }

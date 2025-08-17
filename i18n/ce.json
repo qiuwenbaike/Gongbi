@@ -19,9 +19,10 @@
 	"gongbi-view-view": "Йеша",
 	"gongbi-pagemisc": "Кхин а",
 	"gongbi-namespaces": "ЦӀерийн меттигаш",
-	"gongbi-pagetools": "АгӀонгахь дийриш",
+	"gongbi-pagetools": "АгӀонгахь ардамаш",
 	"gongbi-languages": "Меттанаш",
 	"gongbi-projects": "Кхин проекташ",
+	"gongbi.js": "/* Кху чуйиллина йолу JavaScript код чуйоккхура йу, Timeless кечйаран тема лелош йолучу декъашхошна*/",
 	"gongbi-view-history": "Истори",
 	"gongbi-action-undelete": "МеттахӀоттайé $1 {{PLURAL:$1|нисйинарг|нисйинарш}}"
 }
